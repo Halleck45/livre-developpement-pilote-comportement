@@ -1118,7 +1118,7 @@ scénario devient alors un Plan de scénario) : </p>
     | 50                | 50            |</span></pre>
 </div>
 
-<p>Pratique non ? Les symboles \&lt; et &#62; indiquent une valeur d'exemple, à
+<p>Pratique non ? Les symboles &lt; et &#62; indiquent une valeur d'exemple, à
 rechercher dans le tableau juste en dessous.</p>
 
 <h2 id="travaillez-en-equipe">4.5 Travaillez en équipe</h2>
@@ -1162,11 +1162,11 @@ cas, le pari est réussi !</p>
 <p>Dans tous les cas, gardez vos scénarios clairs et concis. Personne n'a
 envie de lire des scénarios de 20 ou 30 lignes...</p>
 
-<p><em>"Ecrivez vos scénarios avec l'équipe technique ; le temps passé sera
-compensé par le gain de compréhension et l'inutilité d'avoir à faire des
-va-et-vient incessants au cours du développement"</em></p>
-
-<p>**</p>
+<blockquote>
+  <p>"Ecrivez vos scénarios avec l'équipe technique ; le temps passé sera
+  compensé par le gain de compréhension et l'inutilité d'avoir à faire des
+  va-et-vient incessants au cours du développement"</p>
+</blockquote>
 
 <h2 id="des-assistants-visuels">4.6 Des assistants visuels</h2>
 
@@ -1184,11 +1184,626 @@ vous permettre de rédiger vos features selon une approche plus agréable,
 tandis même qu'ils vont présenter à vos développeurs votre besoin sous
 forme de fichiers clairs qu'ils pourront directement exploiter.</p>
 
+<div class="figure center" id="figure-4-1">
+    <img src="images/behat-wizard-edit.jpg" alt="Il existe des assistants visuels pour faciliter votre expressionde besoin" />
+
+    <p class="caption"><strong>Figure 4.1</strong> Il existe des assistants visuels pour faciliter votre expressionde besoin</p>
+</div>
+
+
 <p>Il existe plusieurs outils, qui ont tous leurs avantages. On peut penser
 par exemple à BehatViewer, ou à BehatWizard... N'hésitez pas à demander
 vos équipes techniques de vous installer ces outils.</p>
 
-<p>----------- IMAGE ----------</p>
+</div>
+        <div class="item chapter">
+    <h1 id="un-peu-de-recul-sur-le-developpement-pilote-par-le-comportement"><span>Chapitre 5</span> Un peu de recul sur le Développement piloté par le Comportement</h1>
+    <h2 id="votre-fonctionnalite-se-specifie-elle-meme">5.1 Votre fonctionnalité se spécifie elle-même</h2>
+
+<p>Vous savez désormais décrire votre besoin dans une Langue et une
+grammaire compréhensible par tous les acteurs de votre projet.</p>
+
+<p>Vous avez peut-être déjà rencontré cette difficulté : au fur-et-à-mesure
+de la vie d’un projet, la documentation, fruit d’un travail difficile et
+chronophage, se détache généralement de la réalité.</p>
+
+<p>Cette difficulté a en réalité une origine simple : lorsque l’on ajoute
+une nouvelle fonctionnalité, mettre à jour la documentation prend
+parfois plus de  temps que la réalisation même de la fonctionnalité.</p>
+
+<p>Maintenant, examinez ceci : avec le Développement piloté par le
+Comportement, c’est-à-dire grâce à la Langue Commune, grâce une
+grammaire spécifique, la documentation fonctionnelle est écrite en même
+temps que les spécifications. Et oui! Vos Fonctionnalités sont aussi de
+la documentation.</p>
+
+<p>Il est assez facile d’imaginer, par exemple, prendre l’ensemble de vos
+fichiers de Fonctionnalités et les transformer en un fichier .pdf, ou
+encore d’en faire un manuel en ligne.</p>
+
+<p>Bien plus, aucun changement fonctionnel de code source ne peut être
+réalisé sans que l’un de vos fichiers de Fonctionnalités  n’ait été
+modifié. C’est le principe même du Développement piloté par le
+Comportement : vous ne pouvez pas avoir de delta entre votre expression
+de besoin et ce que vos développeurs vous livreront.</p>
+
+<p>Par conséquent, vous l’aurez compris, vous avez ainsi un énorme avantage
+:  <strong>les Fonctionnalités que vous avez constituées  reflètent en
+permanence l’état réel de votre Produit</strong>. </p>
+
+<p>Si ce n'est pas le cas, c'est :</p>
+
+<ul>
+<li>que vous avez modifié votre Fonctionnalité sans en rédiger les Scénarios directement avec l'équipe technique. Votre erreur sera d'avoir rompu le dialogue avec vos équipes,</li>
+<li>ou que les équipes n'auront pas encore réalisé votre demande de changement. Il faudra dans ce cas prioriser ce changement parmi l'ensemble de fonctionnalités qu'ils ont à développer.</li>
+</ul>
+
+<h2 id="servez-vous-de-vos-fonctionnalites-pour-prioriser">5.2 Servez-vous de vos fonctionnalités pour prioriser</h2>
+
+<p>Pensez à ceci : vous pouvez si vous le souhaitez associer un état à
+chacun de vos fonctionnalités et scénarios. Par exemple :</p>
+
+<ul>
+<li>En attente</li>
+<li>En cours de développement</li>
+<li>Réalisé</li>
+</ul>
+
+<p>Vous verrez qu'il existe des outils pour vous aider dans cette tâche.
+Grâce à ces indicateurs, vous disposez de la possibilité de visualiser à
+chaque instant l'état de votre produit.</p>
+
+<p>Si, donc, vous connaissez la phase de développement de chacun de ces
+scénarios et fonctionnalités, pourquoi ne pas vous servir de cette
+information pour changer leur priorité ? </p>
+
+<p>Vous le savez, votre Produit a besoin d'être confronté rapidement au
+feedback de vos utilisateurs. Profitez en pour faire en sorte de vous
+faire livrer régulièrement des versions simplifiées de votre projet ;
+regardez ce qui plaît à vos utilisateurs... C'est justement ce qui plaît
+qu'il va falloir développer en priorité dans votre projet, tout le reste
+peut être remis à plus tard.</p>
+
+<p>Vous l'aurez compris : ce découpage en fonctionnalités, puis en
+scénarios, va vous permettre de prioriser intelligemment votre projet.
+Bien plus, cela va vous pousser à abandonner certains points pour en
+introduire de nouveaux, plus pertinents pour vos utilisateurs finaux ;
+et puisque ça fait partie de votre Produit même, ce changement
+fonctionnel sera à la fois rapide et peu coûteux !</p>
+
+<blockquote>
+  <p>Vous avez un aperçu en temps réel de l'état de votre Produit</p>
+</blockquote>
+
+<h2 id="mesurez-le-chemin-parcouru-pas-lenergie-depensee">5.3 Mesurez le chemin parcouru, pas l'énergie dépensée</h2>
+
+<p>C'est souvent la même chose : on surveille le temps passé, les tâches
+réalisées... Mais on a tous le même problème : passer beaucoup de temps
+ne veut pas dire obtenir un résultat. <strong>Pourquoi mesurer ce temps passé
+si vous n'avez pas le résultat attendu</strong> <strong>?</strong> Ce qui compte, c'est
+uniquement les fonctionnalités.</p>
+
+<p>Les outils classiques vous proposent de découper chaque besoin en tâche,
+puis chaque tâche en temps. Or une tâche n'a aucun sens fonctionnel !
+Vraiment ! C'est comme si vous demandiez à une chauffeur routier combien
+de litres d'essence il a consommé ; oui c'est important d'un point de
+vue financier, mais ce qui compte c'est quand même de savoir s'il a pu
+livrer tous ses clients, vous ne croyez pas ?</p>
+
+<p>Dans un projet informatique c'est pareil : focalisez-vous sur les
+fonctionnalités développées. Après tout, c'est ce qui compte vraiment...
+Uniquement !</p>
+
+<p>Bien entendu, peut-être que les équipes techniques, elles, travailleront
+en tâches, mais :</p>
+
+<ul>
+<li>rien ne les y oblige.</li>
+<li>ça ne vous concerne pas, seules les fonctionnalités vous intéressent</li>
+</ul>
+
+<p><strong>On n'a jamais vu un client obtenir un bénéfice métier parce qu'une
+équipe a accompli une tâche</strong>. Non, le bénéfice ne s'obtient qu'en
+fournissant un service, autrement dit une fonctionnalité.</p>
+
+<blockquote>
+  <p>Le client final n'est pas content parce qu'une tâche est accomplie ;
+  il est content parce qu'une fonctionnalité lui est offerte et qu'elle
+  répond a son besoin"</p>
+</blockquote>
+
+<h2 id="une-bonne-fonctionnalite-sert-la-vision-produit">5.4 Une bonne fonctionnalité sert la Vision Produit</h2>
+
+<p>Prenez le réflexe : demandez-vous systématiquement si votre
+fonctionnalité sert votre Vision. Si ce n'est pas le cas ... Et bien
+oubliez la !</p>
+
+<p>A contrario, ne vous limitez pas à un cadre. Après tout ce qui compte ce
+n'est pas la somme de fonctionnalités, c'est de réussir à satisfaire
+votre Vision.</p>
+
+<p>Prenez GMail, de Google, par exemple. Chaque fonctionnalité est
+sélectionnée pour répondre à cette vision simple : "permettre à chacun
+de communiquer facilement avec ses proches". Peut importe le cadre, du
+moment qu'une fonctionnalité sert cette vision, elle est bonne.</p>
+
+<p>Sans Vision, GMail ne serait qu'une application, c'est à dire un simple
+webmail. Mais c'est  justement pour cela que GMail c'est :</p>
+
+<ul>
+<li>un webmail</li>
+<li>un service de communication instantané (GTalk) </li>
+<li>une application mobile</li>
+<li>un tchat vidéo (hangout)</li>
+<li>un rappel des anniversaires de vos amis</li>
+<li>un carnet de contacts</li>
+<li>...</li>
+</ul>
+
+<p>Tous ces services desservent la même vision. C'est ce qui fait que GMail
+plait autant. Et c'est cette vision qui assure la cohérence de
+l'ensemble : <strong>il vous faudra parfois refuser certaines
+fonctionnalités</strong>, même si à court terme elles semblent rentables. </p>
+
+<p>Si elles ne répondent pas à la même vision, ces fonctionnalités vont
+rendre votre produit incohérent et illogique. Pourquoi dépenser de
+l'argent pour rendre votre Produit illogique ? <strong>Tout le monde aime les
+choses simples, claires et cohérentes</strong> ; pire : si vous enlevez cette
+clarté, vos développeurs eux-mêmes risquent de ne plus comprendre ce que
+vous voulez !</p>
+
+<p>Si vous tenez absolument à ajouter une fonctionnalité qui sert une autre
+vision, créez une autre projet, avec d'autres équipes, mais ne la
+greffez par artificiellement à celui-ci.</p>
+
+<blockquote>
+  <p>Respecter scrupuleusement une Vision assure la cohérence et la clarté
+  du Produit</p>
+</blockquote>
+
+<h2 id="oubliez-linterface-graphique">5.5 Oubliez l'interface graphique</h2>
+
+<p>Fatigué ? Pourquoi ne pas faire un petit jeu ? Vous connaissez Google
+Calendar ? mais si, vous savez, le calendrier de Google, très pratique,
+que vous retrouvez sur calendar.google.com ?</p>
+
+<p>A votre avis :</p>
+
+<div class="table" id="table-5-1">
+
+    <table>
+<thead>
+<tr>
+  <th>Google Calendar serait-il toujours le même produit :</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Si le site web n'affichait plus la date du jour ?</td>
+  <td>☐&nbsp;oui&nbsp;☐&nbsp;non</td>
+</tr>
+<tr>
+  <td>Sans page web pour y accéder ?</td>
+  <td>☐&nbsp;oui&nbsp;☐&nbsp;non</td>
+</tr>
+<tr>
+  <td>S'il n'affichait pas de calendrier mensuel</td>
+  <td>☐&nbsp;oui&nbsp;☐&nbsp;non</td>
+</tr>
+<tr>
+  <td>S'il ne vous permettait pas d'ajouter un rendez-vous en cliquant sur le bouton "nouveau rendez-vous" ?</td>
+  <td>☐&nbsp;oui&nbsp;☐&nbsp;non</td>
+</tr>
+<tr>
+  <td>Si Internet n’existait pas ?</td>
+  <td>☐&nbsp;oui&nbsp;☐&nbsp;non</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<p>A risque de surprendre, la réponse est partout la même : "oui" ! Oui,
+même sans page web !</p>
+
+<p>Arès tout, qui nous dit que le web que nous connaissons ne va pas
+disparaître ? Google Calendar pourrait très bien n'exister que sur
+téléphone mobile. Mieux, sans électronique. Arès tout, si Google avait
+existé au début du XXème siècle, il lui aurait fallu trouver un autre
+moyen pour délivrer ses services.</p>
+
+<p>Considérez en effet cette Vision de Google Calendar : "permettre à
+chacun de connaître facilement  les événements à venir qui le
+concernent". Pas besoin de page web, d'application mobile... Un simple
+courrier pour ajouter un événement, puis quelqu'un qui vient frapper à
+notre porte à chaque fois qu'un événement va arriver suffit, non ? </p>
+
+<p>Certes commercialement ce n'est pas l'idéal, mais même si Google
+Calendar changeait pour désormais envoyer quelqu'un frapper chez nous à
+chaque événement, le Produit serait inchangé ; seul le support matériel
+serait modifié. Autrement dit : <strong>le support n'a aucune importance
+lorsque vous décrivez votre Produit !</strong></p>
+
+<p>Quand vous décrivez votre produit, écrivez vos fonctionnalités de sorte
+à ce qu'elles soient valables même sur internet, même sur application
+mobile, et même par courrier postal. c'est la seule façon de pérenniser
+votre projet. Si vous avez un site web, vos Fonctionnalités et Scénarios
+ne doivent pas changer d'un pouce lorsque vous décrivez votre
+application mobile.</p>
+
+<blockquote>
+  <p>Focalisez-vous sur le Comportement de votre Produit, et laissez
+  l'interface graphique aux ergonomes et aux graphistes.</p>
+</blockquote>
+
+<h2 id="le-scenario-nest-pas-un-critere-dacceptation">5.6 Le scénario n'est pas un critère d'acceptation</h2>
+
+<p>Considérez ce scénario, mis en évidence par Liz Keogh:</p>
+
+<div class="code gherkin">
+<pre class="gherkin"><span class="kw1">Scénario</span> <span class="sy2">: </span>pouvoir acheter un animal domestique adulte
+    <span class="kw2">Etant donné</span> qu'un chiot est trop petit pour être vendu
+    <span class="kw2">Quand</span> j'essaye de l'acheter
+    <span class="kw2">Alors</span> je suis informé qu'il ne peut être vendu car trop jeune</pre>
+</div>
+
+<p>Bien. Bien ? Non, pas vraiment... Vous n'avez pas décrit votre besoin,
+vous venez en réalité de fournir un Critère d'acceptation générique à
+vos développeurs. Leur réaction face à ce scénario ne peut être que
+"d'accord, mais à quel âge par exemple le chiot ne peut pas être vendu
+?".</p>
+
+<p>Tant qu'il reste des questions en suspend, quelque chose ne va pas.
+N'oubliez pas que <strong>vous décrivez vos Fonctionnalités et Scénarios, non
+pas d'abord pour valider un travail fourni, mais avant tout pour être
+sûr que tout le monde a bien compris votre besoin</strong> et pour éviter les
+allers et retours inutiles.</p>
+
+<p>Chaque scénario doit contenir ses propres exemples. Notre scénario
+pourrait être changé en :</p>
+
+<div class="code gherkin">
+<pre class="gherkin"><span class="kw1">Scénario</span> <span class="sy2">: </span>pouvoir acheter un animal domestique adulte
+    <span class="kw2">Etant donné</span> qu'un chiot ne peut être vendu avant qu'il n'ait <span class="st0">&quot;2 mois&quot;</span>
+    <span class="kw2">Et</span> que <span class="st0">&quot;Médor le chien&quot;</span> a actuellement <span class="st0">&quot;1 mois&quot;</span>
+    <span class="kw2">Quand</span> j'essaye d'acheter <span class="st0">&quot;Médor le chien&quot;</span>
+    <span class="kw2">Alors</span> on doit me dire <span class="st0">&quot;Médor le chient est trop jeune. Veuillez revenir dans 1 mois&quot;</span></pre>
+</div>
+
+<p>C’est un peu plus explicite non ? Et il reste moins de questions. De
+cette manière vous limitez les aller-et-venues inutiles et exprimez
+votre besoin clairement.</p>
+
+<blockquote>
+  <p>Si on vous demande: "Pouvez-vous me donner un exemple où cette
+  situation arrive?", vous n'avez pas rédigé un Scénario mais un Critère
+  d'acceptation. Effacez le.</p>
+</blockquote>
+
+<h2 id="les-principales-causes-dechec-du-bdd">5.7 Les principales causes d'échec du BDD</h2>
+
+<p>Je vais être franc : cette voie de communication, le Développement
+Piloté par le Comportement, n'est pas une recette miracle et peut
+échouer.</p>
+
+<p>Vous pouvez, comme pour tout, y perdre de l'argent si vous échouez à
+appliquer ce principe fondamental : <strong>ce qui compte c'est de réussir à
+ce que chacun comprenne clairement votre besoin vis-à-vis de votre
+Vision</strong>.</p>
+
+<p>Je pense que la première cause d'échec vient de la <strong>difficulté à
+identifier clairement les fonctionnalités d'un Produit</strong>. On a tous en
+tête des idées géniales, le site web qui va tuer Facebook et Ebay ; le
+vrai souci est de savoir comment dans la pratique ce site web va rendre
+service aux utilisateurs, quelles sont les fonctionnalités qu'on va lui
+offrir.</p>
+
+<p>La seconde difficulté réside dans notre propension à avoir besoin d'un
+support visuel pour réfléchir à quelque chose. <strong>Il n'est pas simple de
+ne se focaliser uniquement sur le Comportement d'un Produit, sans se
+soucier de son apparence</strong>, de son interface graphique. Ce sera d'autant
+plus vrai si vous avez un profil technique ou si vous êtes très
+familiarisé avec les nouvelles technologiques. </p>
+
+<p>Pour résoudre cette difficulté, tentez systématiquement de vous
+représenter votre produit sur différents supports : un ordinateur, un
+téléphone, mais aussi par courrier ou par pigeon voyageur ! Bref, faites
+abstraction totale du support matériel.</p>
+
+<p>Ne vous focalisez pas sur le cheminement qui permet à votre application
+ou site web de délivrer un service. Partez en sens inverse depuis
+l'utilisateur : quel comportement peut-il avoir avec mon Produit ?
+Comment mon Produit peut-il l'aider ?</p>
+
+<p>Enfin, et c'est le plus important : <strong>vous aurez besoin de vous faire
+conseiller, surtout si ce n'est pas votre premier projet informatique</strong>.
+Il est quasiment impossible de réussir du premier coup à se défaire des
+habitudes antérieures.</p>
+
+<p>Il existe aujourd'hui de nombreuses sociétés de conseil en Agilité qui
+sauront vous conseiller, surtout dans la démarche de dialogue qu'il vous
+faudra engager avec vos équipes. L'investissement risque fort d'en
+valoir la peine... Si vous n'en avez pas les moyens vous pouvez (très
+sérieusement) effectuer en parallèle ce dialogue auprès de personnes
+totalement novices dans le domaine fonctionnel abordé et peu familières
+des nouvelles technologies : vos parents, grand-parents, enfants ou vos
+amis ermites.</p>
+
+<blockquote>
+  <p>Il n'existe pas de recette miracle. Faites abstraction de tout
+  support, oubliez vos habitudes et demandez de l'aide</p>
+</blockquote>
+
+</div>
+        <div class="item chapter">
+    <h1 id="recette-et-maintenabilite"><span>Chapitre 6</span> Recette et maintenabilité</h1>
+    <h2 id="chaque-recette-fonctionnelle-peut-etre-automatisee">6.1 Chaque recette fonctionnelle peut être automatisée</h2>
+
+<p>La démarche et la syntaxe du Développement piloté a l'avantage d'être
+claire et de faciliter la communication.</p>
+
+<p>J'ai une excellente nouvelle pour vous : <strong>cette syntaxe va vous
+permettre d'automatiser la recette de votre application</strong>. Vraiment !</p>
+
+<p>Et je nous vous parle pas d'outils, si vous en avez déjà utilisé, qui
+vont enregistrer puis reproduire les click et saisies que vous faites
+sur une page web (Selenium...). Non, surtout pas ! Je vous parle
+d'outils pour lesquels vous n'avez rien à faire...</p>
+
+<p>Après tout, <strong>si vous avez fait l'effort de respecter une syntaxe
+spécifique pour décrire vos Scénario, un programme informatique doit
+être capable de les interpréter</strong>.</p>
+
+<p>Il existe aujourd'hui deux principaux outils sur le marché : Cucumber et
+Behat. Le choix de l'outil dépendra du socle technique choisi par vos
+développeurs pour votre Projet.</p>
+
+<p>Concrètement, ces outils vont transformer vos Scénarios en code
+informatique. Ce code informatique sera adapté par vos développeurs qui
+lui donneront un sens et s'assureront qu'il signifie bien ce que vous
+avez demandé.</p>
+
+<p>Par la suite vous disposerez d'une interface où chaque fonctionnalité,
+chaque scénario et chaque étape seront, soit verte (terminée), soit
+jaune (pas encore développé), soit rouge (ne répond pas au besoin
+initial).</p>
+
+<div class="figure center" id="figure-6-1">
+    <img src="images/behat-wizard-home.jpg" alt="Retrouvez toutes vos fonctionnalités au sein d'une même interface." />
+
+    <p class="caption"><strong>Figure 6.1</strong> Retrouvez toutes vos fonctionnalités au sein d'une même interface.</p>
+</div>
+
+
+<p>Utiliser de tels outils a donc un coût puisqu'il exige un travail de
+traduction par l'équipe technique. Ce coût peut être important, cela
+peut demander du temps non négligeable, en plus d'une montée en
+compétence des équipes techniques (très rapide en général),</p>
+
+<p>Cependant, en utilisant ces outils :</p>
+
+<ul>
+<li>Les équipes techniques savent si oui ou non elles ont répondu au besoin</li>
+<li>Les équipes techniques sont rassurées dans leur travail</li>
+<li>Vous connaissez exactement l'avancée de votre projet</li>
+<li>Vous pouvez sans risque gérer votre besoin de changement : si une autre fonctionnalité est "cassée" par ce changement, vous le savez tout de suite et pouvez agir en conséquent</li>
+<li>Vous augmentez le niveau de qualité de votre projet. C'est autant de gains lors de la vie du Produit et de sa maintenance, qui sans cela peut être très coûteuse</li>
+<li>Vous-même savez en un instant si le livrable est conforme à vos attentes</li>
+</ul>
+
+<p>Rien ne vous oblige à utiliser ces composants d'automatisation de
+recette. Ne pas les utiliser peut certes être dommage, mais n'enlève
+rien à la démarche générale.</p>
+
+<blockquote>
+  <p>Facilitez le changement en automatisant la recette fonctionnel</p>
+</blockquote>
+
+<h2 id="assurez-vous-que-les-equipes-techniques-automatisent-leurs-recettes-techniques">6.2 Assurez-vous que les équipes techniques automatisent leurs recettes techniques</h2>
+
+<p>Tester automatiquement qu'un livrable correspond à vos <strong>attentes</strong>
+fonctionnelles c'est bien ; mais être certain de la <strong>fiabilité</strong> de
+votre produit c'est encore mieux !</p>
+
+<p>La pratique du développement piloté par le comportement, c'est-à-dire de
+tout ce que l'on a présenté ici (les fonctionnalités, les scénarios...)
+nécessite quelque chose de fondamental : que <strong>vos équipes mobilisent
+leur énergie sur votre besoin, pas sur leurs bugs</strong>.</p>
+
+<p>Pour cela il n'y a pas énormément de solutions : <strong>vos équipes
+techniques doivent créer des tests automatisés de leur code source</strong>. </p>
+
+<p>C'est un impératif fort : c'est le seul moyen pour qu'elles ne vous
+disent pas "nous ne pouvons pas développer cette fonctionnalité, c'est
+impossible car on risque de casser tout l'existant et d'introduire des
+bugs". Non, avec des tests automatisés, une équipe compétente ne peut
+pas vous répondre ça. Elle vous dira peut-être que la nouvelle
+fonctionnalité a un coût, mais aucune fonctionnalité ne doit être
+impossible à implémenter parce qu'elle risque de casser l'existant.</p>
+
+<p>Si quelque chose casse lorsque vous introduisez du changement, vous
+perdrez beaucoup d'argent : il va falloir identifier (et ça peut être
+très long!) et corriger ce qui a cassé, corriger la nouvelle
+fonctionnalité, la tester, ajouter des ressources pour le support
+applicatif... </p>
+
+<p>Tous ces coûts, très importants sur le long terme, peuvent être réduits
+en laissant à court terme une plus grande marge de manœuvre aux équipes
+techniques pour fiabiliser leur code source et en écrivant des tests
+automatisés. Ne soyez pas un mauvais économe : laissez leur le temps
+qu'il faut pour vous fournir un produit plus stable et plus fiable. Vous
+y  gagnerez sur le long terme.</p>
+
+<blockquote>
+  <p>Laissez le temps aux développeurs de fiabiliser leur code : aucune
+  fonctionnalité ne doit être impossible à implémenter sous prétexte
+  qu'elle risque de casser l'existant</p>
+</blockquote>
+
+</div>
+        <div class="item chapter">
+    <h1 id="le-mot-de-la-fin"><span>Chapitre 7</span> Le mot de la fin</h1>
+    <h2 id="parlons-la-meme-langue">7.1 Parlons la même langue</h2>
+
+<p>Nous avons discuté des idées, des concepts... Il est temps d'établir
+notre Langue Commune.</p>
+
+<dl>
+<dt><strong>Produit</strong></dt>
+<dd>
+<p>Concept dont l'application sera à terme la réalisation. Ce concept vise
+à rendre possible la Vision.</p>
+</dd>
+
+<dt><strong>Vision</strong></dt>
+<dd>
+<p>Guide et oriente votre projet. Son but est de changer ce qui, dans la
+vie de vos utilisateurs, peut les gêner, leur manquer ou les
+insatisfaire.</p>
+</dd>
+
+<dt><strong>Bénéfice fonctionnel</strong></dt>
+<dd>
+<p>Confort métier tiré par les utilisateurs de votre Produit. </p>
+</dd>
+
+<dt><strong>Langue Commune</strong></dt>
+<dd>
+<p>Langage clair pour l'ensemble des acteurs d'un projet. Ce langage est
+défini en commun.</p>
+</dd>
+
+<dt><strong>Cartographie du Produit</strong></dt>
+<dd>
+<p>Représentation visuelle simple du Comportement de votre Produit. Cette
+représentation peut concerner l'ensemble ou une partie de votre Produit.</p>
+</dd>
+
+<dt><strong>Fonctionnalité</strong></dt>
+<dd>
+<p>Besoin métier spécifique. Elle est représentée par un texte court qui
+communique ce besoin métier au reste de l'équipe. Elle concerne le
+service rendu à un utilisateur, et décrit le bénéfice fonctionnelle qui
+en est tiré.</p>
+</dd>
+
+<dt><strong>Scénario</strong></dt>
+<dd>
+<p>Illustration des situations dans lesquelles se manifeste une
+Fonctionnalité. Elle est représentée par une situation initiale, un
+événement et un résultat attendu.</p>
+</dd>
+
+<dt><strong>Exemple</strong></dt>
+<dd>
+<p>Illustre un Scénario de manière concrète. Il enlève toute ambiguïté
+possible sur une étape d'un scénario ou sur le scénario lui-même.</p>
+</dd>
+
+<dt><strong>Livrable</strong></dt>
+<dd>
+<p>Application concrète livrée au client. Il délivre le Comportement
+raconté par les Fonctionnalités et les Scénarios. Il est possible de
+fournir un livrable régulièrement au cours de la vie du Projet.</p>
+</dd>
+
+<dt><strong>Recette</strong></dt>
+<dd>
+<p>Opération qui contrôle que le Livrable correspond au Produit, en se
+basant sur les Fonctionnalités et les Scénarios. Peut être automatisée
+avec des outils spécialisés.</p>
+</dd>
+</dl>
+
+<h2 id="cartographie-du-developpement-pilote-par-le-comportement">7.2 Cartographie du Développement piloté par le Comportement</h2>
+
+<div class="figure center" id="figure-7-1">
+    <img src="images/cartographie.png" alt="Cartographie du Développement piloté par le Comportement" />
+
+    <p class="caption"><strong>Figure 7.1</strong> Cartographie du Développement piloté par le Comportement</p>
+</div>
+
+
+<h2 id="les-10-commandements-pour-vous-mettre-au-developpement-pilote-par-le-comportement">7.3 Les 10 commandements pour vous mettre au Développement piloté par le Comportement</h2>
+
+<dl>
+<dt>1) <strong>Votre Vision est le seul guide du projet</strong></dt>
+<dd>
+<p>Chaque fonctionnalité, chaque ressource consacrée au projet, tout doit
+servir cette Vision. Elle est le point de repère et la motivation de
+chacun des acteurs de votre Produit. </p>
+</dd>
+
+<dt>2) <strong>Créez une Langue Commune</strong>.</dt>
+<dd>
+<p>Un développeur ne parle pas la même langue que vous. Créez un
+référentiel et un vocabulaire commun ensemble, et utilisez la syntaxe
+proposée par le Développement piloté par le Comportement, claire pour la
+majorité des gens.</p>
+</dd>
+
+<dt>3) <strong>Concevez vos scénarios ensemble</strong>.</dt>
+<dd>
+<p>C'est le seul moyen de retirer toutes les ambiguïtés qui peuvent exister
+entre vous, votre produit et vos équipes. Ne laissez personne rédiger un
+scénario tout seul.</p>
+</dd>
+
+<dt>4) <strong>Vos scénarios ne concernent pas l'interface graphique</strong></dt>
+<dd>
+<p>Faites abstraction du support matériel de votre Produit : site web,
+application mobile... Ce qui compte vraiment c'est le comportement de
+votre Produit.</p>
+</dd>
+
+<dt>5) <strong>L'automatisation des recettes n'est qu'un bonus</strong></dt>
+<dd>
+<p>Automatiser des recettes fonctionnelles n'a de sens que si au préalable
+vous avez réussi à faire comprendre votre besoin. Sans dialogue ni
+échanges, les tests automatisés testeront que l'application fait bien
+quelque chose, mais pas forcément ce que vous attendez.</p>
+</dd>
+
+<dt>6) <strong>L'automatisation des tests du code source est primordiale</strong></dt>
+<dd>
+<p>Laissez le temps aux équipes techniques et poussez-les à écrire des
+tests automatisés de code source (test unitaire). C'est le seul moyen
+pour eux de réaliser vos demandes légitimes de changements sans faire
+exploser vos coûts.</p>
+</dd>
+
+<dt>7) <strong>KISS : Keep It Simple and Stupid</strong></dt>
+<dd>
+<p>Gardez vos scénarios simples et explicites, et n'employez pas dix mots
+quand cinq suffisent. Si votre scénario est long, c'est probablement
+qu'il recouvre un domaine fonctionnel trop large : découpez-le.</p>
+</dd>
+
+<dt>8) <strong>Soyez conscient que vos scénarios changeront</strong></dt>
+<dd>
+<p>En confrontant régulièrement votre Produit aux avis des utilisateurs,
+une grande partie de vos scénarios va changer, voire disparaître.
+Acceptez-le, et faites en sorte que les équipes techniques l'acceptent
+en les faisant participer à ce processus de changement.</p>
+</dd>
+
+<dt>9) <strong>Utilisez des exemples</strong></dt>
+<dd>
+<p>Vous ne rédigez pas des tests d'acceptation, mais établissez une
+communication pour décrire votre besoin. Illustrez votre besoin par des
+exemples, pourquoi pas avec humour, pour effacer toute ambiguïté.  </p>
+</dd>
+
+<dt>10) <strong>Le Développement piloté par le Comportement n'est pas un miracle</strong></dt>
+<dd>
+<p>La recette miracle n'existe pas. Mais c'est au moins un bonne démarche,
+éprouvée, pour vous faire comprendre et faciliter la communication entre
+fonctionnels et techniques. Elle aidera chacun des acteurs de votre
+projet à comprendre son rôle et ce que vous attendez de lui ; il ne
+reste plus à chacun qu'à être un bon acteur.</p>
+</dd>
+</dl>
 
 </div>
         <div class="item part">
@@ -1554,6 +2169,51 @@ en prendre le maximum !</p>
         </li>
             <li class="chapter level-2">
             <span>4.6</span> <a href="#des-assistants-visuels">Des assistants visuels</a>
+        </li>
+                <li class="chapter level-1">
+            <span>Chapitre 5</span> <a href="#un-peu-de-recul-sur-le-developpement-pilote-par-le-comportement">Un peu de recul sur le Développement piloté par le Comportement</a>
+        </li>
+            <li class="chapter level-2">
+            <span>5.1</span> <a href="#votre-fonctionnalite-se-specifie-elle-meme">Votre fonctionnalité se spécifie elle-même</a>
+        </li>
+            <li class="chapter level-2">
+            <span>5.2</span> <a href="#servez-vous-de-vos-fonctionnalites-pour-prioriser">Servez-vous de vos fonctionnalités pour prioriser</a>
+        </li>
+            <li class="chapter level-2">
+            <span>5.3</span> <a href="#mesurez-le-chemin-parcouru-pas-lenergie-depensee">Mesurez le chemin parcouru, pas l'énergie dépensée</a>
+        </li>
+            <li class="chapter level-2">
+            <span>5.4</span> <a href="#une-bonne-fonctionnalite-sert-la-vision-produit">Une bonne fonctionnalité sert la Vision Produit</a>
+        </li>
+            <li class="chapter level-2">
+            <span>5.5</span> <a href="#oubliez-linterface-graphique">Oubliez l'interface graphique</a>
+        </li>
+            <li class="chapter level-2">
+            <span>5.6</span> <a href="#le-scenario-nest-pas-un-critere-dacceptation">Le scénario n'est pas un critère d'acceptation</a>
+        </li>
+            <li class="chapter level-2">
+            <span>5.7</span> <a href="#les-principales-causes-dechec-du-bdd">Les principales causes d'échec du BDD</a>
+        </li>
+                <li class="chapter level-1">
+            <span>Chapitre 6</span> <a href="#recette-et-maintenabilite">Recette et maintenabilité</a>
+        </li>
+            <li class="chapter level-2">
+            <span>6.1</span> <a href="#chaque-recette-fonctionnelle-peut-etre-automatisee">Chaque recette fonctionnelle peut être automatisée</a>
+        </li>
+            <li class="chapter level-2">
+            <span>6.2</span> <a href="#assurez-vous-que-les-equipes-techniques-automatisent-leurs-recettes-techniques">Assurez-vous que les équipes techniques automatisent leurs recettes techniques</a>
+        </li>
+                <li class="chapter level-1">
+            <span>Chapitre 7</span> <a href="#le-mot-de-la-fin">Le mot de la fin</a>
+        </li>
+            <li class="chapter level-2">
+            <span>7.1</span> <a href="#parlons-la-meme-langue">Parlons la même langue</a>
+        </li>
+            <li class="chapter level-2">
+            <span>7.2</span> <a href="#cartographie-du-developpement-pilote-par-le-comportement">Cartographie du Développement piloté par le Comportement</a>
+        </li>
+            <li class="chapter level-2">
+            <span>7.3</span> <a href="#les-10-commandements-pour-vous-mettre-au-developpement-pilote-par-le-comportement">Les 10 commandements pour vous mettre au Développement piloté par le Comportement</a>
         </li>
                 <li class="chapter level-1">
             <span>Chapitre 1</span> <a href="#le-client-ne-sait-pas-ce-quil-veut-sauf-si-vous-communiquez">Le client ne sait pas ce qu'il veut. Sauf si... vous communiquez.</a>

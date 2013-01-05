@@ -272,7 +272,7 @@ scénario devient alors un Plan de scénario) : 
         | 1000              | 1000          |
         | 50                | 50            |
 
-Pratique non ? Les symboles \< et \> indiquent une valeur d'exemple, à
+Pratique non ? Les symboles < et \> indiquent une valeur d'exemple, à
 rechercher dans le tableau juste en dessous.
 
 
@@ -323,11 +323,11 @@ Dans tous les cas, gardez vos scénarios clairs et concis. Personne n'a
 envie de lire des scénarios de 20 ou 30 lignes...
 
 
-*"Ecrivez vos scénarios avec l'équipe technique ; le temps passé sera
+> "Ecrivez vos scénarios avec l'équipe technique ; le temps passé sera
 compensé par le gain de compréhension et l'inutilité d'avoir à faire des
-va-et-vient incessants au cours du développement"*
+va-et-vient incessants au cours du développement"
 
-**
+
 ## Des assistants visuels
 
 Vous aviez déjà le vocabulaire (la Langue Commune), vous voici désormais
@@ -346,10 +346,10 @@ vous permettre de rédiger vos features selon une approche plus agréable,
 tandis même qu'ils vont présenter à vos développeurs votre besoin sous
 forme de fichiers clairs qu'ils pourront directement exploiter.
 
+![ Il existe des assistants visuels pour faciliter votre expressionde besoin ](behat-wizard-edit.jpg)
 
 Il existe plusieurs outils, qui ont tous leurs avantages. On peut penser
 par exemple à BehatViewer, ou à BehatWizard... N'hésitez pas à demander
 vos équipes techniques de vous installer ces outils.
 
 
- ----------- IMAGE ----------

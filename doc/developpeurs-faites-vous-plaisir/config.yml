@@ -21,7 +21,9 @@ book:
         - { element: chapter, number: 2, content: func-communiquez.md }
         - { element: chapter, number: 3, content: func-impliquez-les-parties-prenantes.md }
         - { element: chapter, number: 4, content: func-exprimez-le-besoin.md }
-
+        - { element: chapter, number: 5, content: func-un-peu-de-recul.md }
+        - { element: chapter, number: 6, content: func-recette-maintenabilite.md }
+        - { element: chapter, number: 7, content: func-conclusion.md }
 
 
         - { element: part, title: "Développeurs, faites-vous plaisir !"  }
