@@ -1,0 +1,67 @@
+book:
+    title:            "Développeurs, faites-vous plaisir !"
+    author:           "Jean-François Lépine"
+    edition:          "First edition"
+    language:         fr
+    publication_date: ~
+
+    generator: { name: easybook, version: 5.0-DEV }
+
+    contents:
+        # available content types: acknowledgement, afterword, appendix, author,
+        # chapter, conclusion, cover, dedication, edition, epilogue, foreword,
+        # glossary, introduction, license, lof (list of figures), lot (list of
+        # tables), part, preface, prologue, title, toc (table of contents)
+        - { element: cover }
+        - { element: toc   }
+        - { element: introduction, content: le-dev-est-un-plaisir.md }
+        - { element: chapter, number: 1, content: le-client-ne-sait-pas-ce-quil-veut.md }
+        - { element: chapter, number: 2, content: votre-code-doit-refléter-le-besoin-fonctionnel.md }
+        - { element: chapter, number: 3, content: comprenez-la-demande-du-client.md }
+        - { element: chapter, number: 4, content: automatisez-votre-recette.md }
+        - { element: chapter, number: 5, content: optimisez-vos-tests-fonctionnels.md }
+
+
+
+    editions:
+        ebook:
+            format:         epub
+            highlight_code: false
+            include_styles: true
+            labels:         ['appendix', 'chapter']  # labels also available for: "figure", "table"
+            theme:          clean
+            toc:
+                deep:       1
+                elements:   ["appendix", "chapter", "part"]
+
+        print:
+            format:         pdf
+            highlight_code: true
+            include_styles: true
+            isbn:           ~
+            labels:         ["appendix", "chapter"]  # labels also available for: "figure", "table"
+            margin:
+                top:        25mm
+                bottom:     25mm
+                inner:      30mm
+                outter:     20mm
+            page_size:      A4
+            theme:          clean
+            toc:
+                deep:       2
+                elements:   ["appendix", "chapter", "part"]
+            two_sided:      true
+
+        web:
+            format:         html
+            highlight_code: true
+            include_styles: true
+            labels:         ["appendix", "chapter"]  # labels also available for: "figure", "table"
+            theme:          clean
+            toc:
+                deep:       2
+                elements:   ["appendix", "chapter"]
+
+        website:
+            extends:        web
+            format:         html_chunked

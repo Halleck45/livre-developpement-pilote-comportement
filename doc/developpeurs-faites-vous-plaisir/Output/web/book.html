@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Jean-François Lépine" />
+    <meta name="date" content="05/01/2013"/>
+    <meta name="generator" content="easybook 5.0-DEV"/>
+
+    <title>Développeurs, faites-vous plaisir !</title>
+
+    <link rel="stylesheet" href="./css/easybook.css" />
+
+</head>
+
+<body>
+
+<div class="container">
+<div class="row">
+    <div class="span12">
+    <div class="item cover">
+    <h1>Développeurs, faites-vous plaisir !</h1>
+    <h2>Jean-François Lépine</h2>
+</div>    </div>
+    <div class="span9">
+        <div class="item ">
+    <h1>Le développement est un plaisir</h1>
+
+    <p>"Le client ne sait jamais ce qu’il veut". Comment-pouvez-vous dans ce cas faire en sorte qu’il soit satisfait ?
+Etes-vous condamné à délivrer des logiciels, sites web ou applications dont le client ne sera pas réellement
+satisfait ?</p>
+
+<p>Et vous-même, êtes-vous vraiment obligé de subir les contraintes fonctionnelles, de brider vos compétences
+techniques ? Après tout, le métier de développeur est passionnant, et mérite qu’on y prenne le maximum de
+plaisir ! Et c’est tellement décevant d’entendre cette fameuse phrase : "ce n’est pas ce que je voulais"...</p>
+
+<p>Il m’arrive de poser cette question aux personnes que je rencontre : "avez-vous, au moins une fois,
+participé à un projet informatique où le projet a été livré à l’heure, et où, non seulement le client,
+mais aussi le développeur, ont été pleinement satisfaits?" . A l’heure où j’écris ces lignes, seule
+une personne m’a répondu "oui".</p>
+
+<p>Quoi ?! Une seule personne ? Mais pourtant tous les projets devraient se passer comme ça.
+Tous les projets devraient être livrés à l’heure, devraient être intéressants, enrichissants...
+Toutes les personnes qui travaillent sur un projet devraient y prendre plaisir. Sinon, à quoi bon travailler ?</p>
+
+<p>L’émergence des méthodes agiles, ces dernières années, a permis de remettre l’humain, et ses valeurs,
+au centre des projets. Je vous propose de découvrir ici l’autre versant, la face technique, des méthodes
+agiles : le Développement piloté par le Comportement.</p>
+
+</div>
+        <div class="item chapter">
+    <h1 id="le-client-ne-sait-pas-ce-quil-veut-sauf-si-vous-communiquez"><span>Chapitre 1</span> Le client ne sait pas ce qu'il veut. Sauf si... vous communiquez.</h1>
+    <h2 id="le-client-doit-vous-fournir-sa-vision">1.1 Le client doit vous fournir sa Vision</h2>
+
+<p>J'ai souvent été confronté, en tant que développeur, et sur des projets de toutes tailles
+(très grosses applications financières, petits intranet, sites web...) à cette situation : des
+clients étaient incapables de me décrire ce qu'ils voulaient que je réalise pour eux.</p>
+
+<p>A chaque fois, il m'a fallu moi-même interpréter leurs souhaits, à partir de captures d'écrans de
+sites concurrents, de discussions interminables... Et pour un résultat pas toujours très heureux.</p>
+
+<p>A quoi la faute ? Au client ? Pas forcément : après tout, ce n'est pas parce qu'on est patron d'entreprise
+ou que l'on a un besoin bien précis que l'on sait comment résoudre ce besoin, ou l'exprimer clairement.</p>
+
+<p>Est-ce la faute du développeur, qui semble incapable de comprendre ce qu'on lui demande ? Personnellement
+j'ai toujours essayé de faire de mon mieux, même si je suis conscient de ne pas toujours été à la hauteur.
+Et je crois que la plupart des développeurs fait de même.</p>
+
+<p>Alors ? Et si personne n'était en tort ? En réalité, la plupart des projets informatiques échouent car
+ils ne sont pas motivés par une Vision. Certes on veut délivrer un super site web, avec plein de fonctionnalités
+qui vont tuer la concurrence, on veut faire mieux que son voisin... Mais on oublie l'essentiel : un projet doit
+voir un but.</p>
+
+<p>Quel est ce but ? Peu importe : changer le monde, rendre service à une catégorie de personne, se faire de
+l'argent... Tout est bon à prendre, du moment que cet objectif, cette Vision, reste le seul et unique maître
+du projet.</p>
+
+<p>On le comprend bien alors : ce n'est pas parce qu'un concurrent propose un service qu'il faut le recopier.
+Non, on propose un nouveau service parce qu'il sert la Vision du projet.</p>
+
+<p>Vous l'aurez compris : la Vision est essentielle, et c'est justement le rôle de votre client de la fournir.
+Sans Vision, le projet est condamné à être un échec, ou au mieux une semi-réussite.</p>
+
+<p>Votre client doit impérativement vous fournir cette Vision. S'il en est incapable, insistez pour qu'il soit
+aidé : faites lui lire le premier tome de ce livre, faites le coacher par une société spécialisée...
+Sans cela, vous ne pourrez pas travailler efficacement avec lui et ne prendrez pas autant de plaisir
+que vous le mériter dans votre travail.</p>
+
+<blockquote>
+  <p>La plupart des projets informatiques échouent car ils ne sont pas motivés par une Vision.</p>
+</blockquote>
+
+<h2 id="votre-client-ne-parle-pas-la-meme-langue-que-vous">1.2 Votre Client ne parle pas la même langue que vous</h2>
+
+<p>Vous l'avez vécu : votre client et vous ne vous comprenez pas toujours. Pour vous, un "réseau social"
+c'est une plate-forme communautaire, avec des amis, relations, des groupes, des flux de messages...
+Bref c'est Facebook.</p>
+
+<p>Pour votre client, un "réseau social" c'est (par exemple) un espace où des employés font des demandes
+de documents, découvrent les actualités de l'entreprises, échangent des informations sur les commandes...
+Bref, c'est un intranet.</p>
+
+<p>Attendez... Mais comment donc voulez-vous réussir à satisfaire votre client si vous ne vous n'employez
+pas le même vocabulaire sur des choses si fondamentales ?</p>
+
+<p>Ajoutez à cela que votre client va toujours avoir tendance à faire deux choses :
++ employer des acronymes, sigles et autre vocabulaire fonctionnel
++ employer des termes techniques ("base de données", "formulaire", "sauvegarder") sans savoir précisément ce qu'ils signifient</p>
+
+<p>La première chose à faire lorsque vous démarrez un projet avec un client, c'est donc de vous
+créer un vocabulaire commun. Il va falloir inventer une nouvelle langue, qui ne laisse plus la
+place aux ambiguïtés, où chaque mot n'a qu'une seule signification.</p>
+
+<p>J'ai une mauvaise nouvelle pour vous : ce nouveau vocabulaire, c'est à vous de l'apprendre, pas
+à votre client. Cela vous évitera des débats interminables et vous permettra de mieux comprendre
+le besoin du Client.</p>
+
+<p>Si votre client, lorsqu'il dit "bus", parle en réalité d'un véhicule avec des ailes et que vous
+retrouvez dans un aéroport, ne lui dites pas qu'il a tort. Non, désormais, lorsque vous parlerez
+avec lui, vous emploierez le mot "bus" pour désigner ce que LUI entend par "bus".</p>
+
+<p>Bien entendu, ce vocabulaire commun, vous devez le constituer ensemble. Si votre client parle de
+"bus", et que c'est important dans le projet, discutez-en ensemble, et mettez noir sur blanc une
+définition simple de ce qu'il entend par là.</p>
+
+<p>Faites de même pour chaque expression que votre client emploie régulièrement. De cette manière vous
+n'aurez plus aucune ambiguïté dans votre quotidien.</p>
+
+<p>C'est le postulat de base du Développement piloté par le Comportement : vous devez élaborer avec votre
+client une Langue Commune.</p>
+
+<h2 id="engagez-vous-a-livrer-regulierement">1.3 Engagez-vous à livrer régulièrement</h2>
+
+<p>Quoi de plus frustrant, après de longues semaines de travail acharné, d'entendre un si triste
+"Mais ce n'est pas du tout ce que j'avais demandé" ?</p>
+
+<p>Et même un simple "ne pourrait-on pas juste changer..." peut s'avérer totalement démoralisant,
+compte-tenu de tout ce qu'il faudra refaire techniquement pour gérer cette demande, et sachant
+surtout combien cela aurait été simple si seulement on vous avait prévenu quelques semaines à l'avance.</p>
+
+<p>Comment éviter d'être touché par ce malheureux constat d'échec, ou de semi-réussite ?</p>
+
+<p>La réponse en théorie simple : il suffit de livrer plus régulièrement au client, de sorte qu'il
+puisse rapidement s'apercevoir le plus tôt possible que le projet n'est pas parti dans la direction
+à laquelle il s'attendait.</p>
+
+<p>Cette démarche est celle des méthodes agiles, particulièrement de Scrum. Le principe est le suivant :
+plutôt que de livrer votre projet une bonne fois pour toute à la fin, vous vous engagez à livrer des
+bouts de fonctionnalités très régulièrement (une fois toutes les deux semaines par exemple).</p>
+
+<p>C'est ce qu'on appelle le développement par itérations, par opposition au cycle en V. Vous développez
+grossièrement une fonctionnalité, puis vous l'affinez, l'affinez encore si besoin, jusqu'à arriver au
+résultat final. De cette manière le client peut réorienter le projet à chaque itération sans que n'en
+soyez affecté négativement.</p>
+
+<p>Imaginez, par exemple, que votre travail consiste à peindre le célèbre tableau La Joconde. Avec la
+méthodologie classique, votre devriez travailler de manière à finir chaque fonctionnalité de bout
+en bout, puis, une fois qu'elle est entièrement terminée, passer à la suivante.</p>
+
+<div class="figure center" id="figure-1-1">
+    <img src="images/mona-lisa-incremential.jpg" alt="￼Méthodologie classique : le travail et découpé en lots, chaque lot est totalement réalisé avant de passer à la suite. Le changement fonctionnel en cours de route est difficile." />
+
+    <p class="caption"><strong>Figure 1.1</strong> ￼Méthodologie classique : le travail et découpé en lots, chaque lot est totalement réalisé avant de passer à la suite. Le changement fonctionnel en cours de route est difficile.</p>
+</div>
+
+
+<p>Avec les méthodes agiles la démarche est inverse : vous esquissez d'abord les traits de ce que vous avez
+à développer, afin de permettre au client d'avoir un aperçu du produit final et de bénéficier rapidement
+du feedback des utilisateurs, puis vous affinez, selon la priorité de chaque fonctionnalité : une
+fonctionnalité plus complète par là, un autre lors de l'itération suivante...</p>
+
+<div class="figure right" id="figure-1-2">
+    <img src="images/mona-lisa-iterative.jpg" alt="￼Méthodologie agile : le tableau s'affine petit à petit. Le changement fonctionnel est facile, même en cours de route" />
+
+    <p class="caption"><strong>Figure 1.2</strong> ￼Méthodologie agile : le tableau s'affine petit à petit. Le changement fonctionnel est facile, même en cours de route</p>
+</div>
+
+
+<p>Bien entendu, cela ne vas pas sans un changement des méthodologies de travail : il va falloir découper
+les fonctionnalités pour faire en sorte qu'elle puisse être développées rapidement, il faut optimiser
+les recettes (pourquoi ne pas en profiter pour utiliser des tests automatisés, comme des tests
+unitaires ?)...</p>
+
+<p>Mais, croyez-moi, ces efforts valent la peine : non seulement les relations avec votre client / patron
+seront de plus en plus saines (le projet devient totalement transparent pour tous), mais en plus vous
+arriverez vite à livrer du code fonctionnel régulièrement.</p>
+
+<p>Et ô combien cela fait plaisir de voir que l'on avance ! Cela vous permettra même de gérer plus
+facilement les demandes de changements fonctionnels : il est toujours plus facile de revenir sur
+deux semaines de travail que sur trois mois, et c'est bien moins démoralisant.</p>
+
+<p>Je vous conseille même de faire quelque chose qui peut sembler assez étrange : à chaque fois que vous
+livrerez un lot fonctionnel, n'hésitez pas à présenter, pendant une heure ou deux, le fruit de votre
+travail à votre client. Oui, comme un commercial ! Prenez même un vidéo-projecteur.</p>
+
+<p>Calez systématiquement une réunion à chaque fin d'itération, et prenez la parole : montrez ce que
+vous avez fait, et soyez-en fier ! Après tout, si vous avez donné le meilleur de vous même, il est
+légitime que tout le monde sache de quoi il était question.</p>
+
+<blockquote>
+  <p>Prenez la parole ! N'entendez plus jamais le fameux "Ce n'est pas ce que j'avais demandé".</p>
+</blockquote>
+
+<h2 id="adoptez-le-point-de-vue-de-lutilisateur-final">1.4 Adoptez le point de vue de l'utilisateur final</h2>
+
+<p>Chaque projet informatique, qu'il s'agisse d'un site web, d'un intranet, d'une application... tout
+projet dessert un objectif : rendre service à quelqu'un. Il faut vous mettre dans la peau de cette personne.</p>
+
+<p>Lorsque vous développez une boutique eCommerce, le service est rendu à un potentiel acheteur; lorsque
+vous développez un intranet, ce sont les employés qui utiliseront l'intranet qui sont les bénéficiaires
+du service.</p>
+
+<p>Dans les deux cas, vous aurez besoin de comprendre comment le Produit va être utilisé. Finalement, à quoi
+sert cette fonctionnalité ? Pourquoi est-elle utile ? Comment va elle rendre service ? Va t-elle faciliter
+la vie de l'utilisateur ? Va t-elle lui permettre de réaliser quelque chose de nouveau ? Lui faire gagner
+du temps ? Bref, quel est le bénéfice métier de la fonctionnalité que je vais développer ?</p>
+
+<p>Pourquoi se poser ces questions ? Tout simplement pour prendre plus de plaisir dans votre travail, et pour
+être plus efficace. Tant que ça ? Oui oui...</p>
+
+<p>Après tout, si vous connaissez les personnes qui vont utiliser ce que vous êtes en train de développer, vous
+pouvez discuter avec elles, adopter leur vocabulaire, et donc profitez directement de leur feedback. Petit à
+petit, ce feedback sera de plus en plus positif ; ce sera alors de plus en plus agréable de voir que les gens
+sont contents de ce que vous leurs offrez.</p>
+
+<p>Cela vous permettra aussi de quitter à l'occasion de casquette de développeur pour, pourquoi pas, proposer
+des améliorations, discuter de l'orientation du projet... Si vous savez comment va être utilisé le Produit,
+qu'est-ce qui vous empêche d'essayer de l'améliorer ?</p>
+
+<p>Changer de casquette peut parfois être difficile. Vous pouvez très bien travailler sur des projets dont
+vous n'avez rien à faire ; c'est triste, mais ça arrive fréquemment. Il arrive de devoir travailler sur
+un projet pour des besoins alimentaires. C'est légitime. Mais autant faire en sorte que même ces projets,
+alimentaires, vous apportent de la satisfaction humaine. Adopter la vision de l'utilisateur final vous
+obligera toujours à discuter : discuter avec votre client, les utilisateurs finaux, vos collègues...</p>
+
+<p>J'ai il y a quelques temps lancé un sondage auprès des développeurs de la société dans laquelle je
+travaille. Une des questions était à peu près la suivante : "Prenez-vous plaisir dans votre travail?".
+Près d'un quart des réponses était négatif. Quel dommage !</p>
+
+<p>N'oubliez pas que vous travaillez dans un monde d'humains : plus vous interagirez avec eux, plus vous
+fournirez un travail qui leur procurera satisfaction, plus vous même éprouverez du plaisir à travailler.
+Le métier de développeur offre une chance unique : il permet de prendre plaisir en travaillant ; autant
+en prendre le maximum !</p>
+
+<blockquote>
+  <p>Changez de casquette pour prendre le maximum de plaisir dans votre métier de développeur.</p>
+</blockquote>
+
+</div>
+        <div class="item chapter">
+    <h1 id="votre-code-doit-refleter-le-besoin-fonctionnel"><span>Chapitre 2</span> Votre code doit refléter le Besoin fonctionnel</h1>
+    <h2 id="la-programmation-par-contrat">2.1 La programmation par Contrat</h2>
+
+<h2 id="le-domain-driven-design">2.2 Le Domain Driven Design</h2>
+
+<h2 id="coder-une-regle-metier-efficacement-le-pattern-specification">2.3 Coder une règle métier efficacement : le Pattern Specification</h2>
+
+<h2 id="representer-une-information-le-pattern-object-value">2.4 Représenter une information : le Pattern Object-Value</h2>
+
+<h2 id="tout-objet-a-une-identite-le-pattern-entity">2.5 Tout objet a une identité : le Pattern Entity</h2>
+
+<h2 id="manipulez-les-objets-metiers-le-pattern-repository">2.6 Manipulez les objets métiers : le Pattern Repository</h2>
+
+<h2 id="superposez-le-besoin-metier-a-votre-code-source-le-pattern-service">Superposez le besoin métier à votre code source : le pattern Service</h2>
+
+</div>
+        <div class="item chapter">
+    <h1 id="comprenez-enfin-ce-que-votre-client-vous-demande"><span>Chapitre 3</span> Comprenez (enfin!) ce que votre client vous demande</h1>
+    <h2 id="le-besoin-fonctionnel-changera-et-cest-normal-">3.1 Le besoin fonctionnel changera. Et c’est normal !</h2>
+
+<h2 id="facilitez-la-communication-acceptez-le-changement">3.2 Facilitez la communication, acceptez le changement</h2>
+
+<h2 id="le-besoin-doit-etre-exprime-par-des-fonctionnalites">3.3 Le besoin doit être exprimé par des Fonctionnalités</h2>
+
+<h2 id="chaque-fonctionnalite-peut-etre-decoupe-en-scenarios">3.4 Chaque Fonctionnalité peut être découpé en Scénarios</h2>
+
+<h2 id="demandez-exigez-des-exemples-precis">Demandez (exigez) des exemples précis</h2>
+
+</div>
+        <div class="item chapter">
+    <h1 id="automatisez-votre-recette"><span>Chapitre 4</span> Automatisez votre recette</h1>
+    <h2 id="installez-et-utilisez-behat-en-php">4.1 Installez et utilisez Behat en PHP</h2>
+
+<h2 id="traduire-une-fonctionnalite-en-code-source">4.2 Traduire une Fonctionnalité en code source</h2>
+
+<h2 id="testez-dans-un-vrai-navigateur">4.3 Testez dans un vrai navigateur</h2>
+
+<h2 id="organisez-vos-contextes-de-tests">4.4 Organisez vos Contextes de tests</h2>
+
+<h2 id="reutilisez-vos-precedents-tests">Réutilisez vos précédents tests</h2>
+
+</div>
+        <div class="item chapter">
+    <h1 id="optimisez-vos-tests-fonctionnels"><span>Chapitre 5</span> Optimisez vos tests fonctionnels</h1>
+    <h2 id="ne-misez-pas-sur-linterface-graphique">5.1 Ne misez pas sur l’Interface graphique</h2>
+
+<h2 id="creez-une-couche-disolation-de-lihm">5.2 Créez une couche d’isolation de l’IHM</h2>
+
+<h2 id="exploitez-les-compte-rendus-de-tests-html-xml-txt">5.3 Exploitez les compte-rendus de tests (html, xml, txt)</h2>
+
+<h2 id="anticipez-les-problemes">5.4 Anticipez les problèmes</h2>
+
+<h2 id="ne-jetez-pas-le-duck-typing-tout-ne-pourra-pas-etre-teste">Ne jetez pas le "duck typing" : tout ne pourra pas être testé</h2>
+
+</div>
+    </div>
+    <div class="span3">
+    <div class="item toc">
+
+<h1>Table des matières</h1>
+
+<ul class="unstyled">
+            <li class="chapter level-1">
+            <span>Chapitre 1</span> <a href="#le-client-ne-sait-pas-ce-quil-veut-sauf-si-vous-communiquez">Le client ne sait pas ce qu'il veut. Sauf si... vous communiquez.</a>
+        </li>
+            <li class="chapter level-2">
+            <span>1.1</span> <a href="#le-client-doit-vous-fournir-sa-vision">Le client doit vous fournir sa Vision</a>
+        </li>
+            <li class="chapter level-2">
+            <span>1.2</span> <a href="#votre-client-ne-parle-pas-la-meme-langue-que-vous">Votre Client ne parle pas la même langue que vous</a>
+        </li>
+            <li class="chapter level-2">
+            <span>1.3</span> <a href="#engagez-vous-a-livrer-regulierement">Engagez-vous à livrer régulièrement</a>
+        </li>
+            <li class="chapter level-2">
+            <span>1.4</span> <a href="#adoptez-le-point-de-vue-de-lutilisateur-final">Adoptez le point de vue de l'utilisateur final</a>
+        </li>
+                <li class="chapter level-1">
+            <span>Chapitre 2</span> <a href="#votre-code-doit-refleter-le-besoin-fonctionnel">Votre code doit refléter le Besoin fonctionnel</a>
+        </li>
+            <li class="chapter level-2">
+            <span>2.1</span> <a href="#la-programmation-par-contrat">La programmation par Contrat</a>
+        </li>
+            <li class="chapter level-2">
+            <span>2.2</span> <a href="#le-domain-driven-design">Le Domain Driven Design</a>
+        </li>
+            <li class="chapter level-2">
+            <span>2.3</span> <a href="#coder-une-regle-metier-efficacement-le-pattern-specification">Coder une règle métier efficacement : le Pattern Specification</a>
+        </li>
+            <li class="chapter level-2">
+            <span>2.4</span> <a href="#representer-une-information-le-pattern-object-value">Représenter une information : le Pattern Object-Value</a>
+        </li>
+            <li class="chapter level-2">
+            <span>2.5</span> <a href="#tout-objet-a-une-identite-le-pattern-entity">Tout objet a une identité : le Pattern Entity</a>
+        </li>
+            <li class="chapter level-2">
+            <span>2.6</span> <a href="#manipulez-les-objets-metiers-le-pattern-repository">Manipulez les objets métiers : le Pattern Repository</a>
+        </li>
+            <li class="chapter level-2">
+            <span>2.7</span> <a href="#superposez-le-besoin-metier-a-votre-code-source-le-pattern-service">Superposez le besoin métier à votre code source : le pattern Service</a>
+        </li>
+                <li class="chapter level-1">
+            <span>Chapitre 3</span> <a href="#comprenez-enfin-ce-que-votre-client-vous-demande">Comprenez (enfin!) ce que votre client vous demande</a>
+        </li>
+            <li class="chapter level-2">
+            <span>3.1</span> <a href="#le-besoin-fonctionnel-changera-et-cest-normal-">Le besoin fonctionnel changera. Et c’est normal !</a>
+        </li>
+            <li class="chapter level-2">
+            <span>3.2</span> <a href="#facilitez-la-communication-acceptez-le-changement">Facilitez la communication, acceptez le changement</a>
+        </li>
+            <li class="chapter level-2">
+            <span>3.3</span> <a href="#le-besoin-doit-etre-exprime-par-des-fonctionnalites">Le besoin doit être exprimé par des Fonctionnalités</a>
+        </li>
+            <li class="chapter level-2">
+            <span>3.4</span> <a href="#chaque-fonctionnalite-peut-etre-decoupe-en-scenarios">Chaque Fonctionnalité peut être découpé en Scénarios</a>
+        </li>
+            <li class="chapter level-2">
+            <span>3.5</span> <a href="#demandez-exigez-des-exemples-precis">Demandez (exigez) des exemples précis</a>
+        </li>
+                <li class="chapter level-1">
+            <span>Chapitre 4</span> <a href="#automatisez-votre-recette">Automatisez votre recette</a>
+        </li>
+            <li class="chapter level-2">
+            <span>4.1</span> <a href="#installez-et-utilisez-behat-en-php">Installez et utilisez Behat en PHP</a>
+        </li>
+            <li class="chapter level-2">
+            <span>4.2</span> <a href="#traduire-une-fonctionnalite-en-code-source">Traduire une Fonctionnalité en code source</a>
+        </li>
+            <li class="chapter level-2">
+            <span>4.3</span> <a href="#testez-dans-un-vrai-navigateur">Testez dans un vrai navigateur</a>
+        </li>
+            <li class="chapter level-2">
+            <span>4.4</span> <a href="#organisez-vos-contextes-de-tests">Organisez vos Contextes de tests</a>
+        </li>
+            <li class="chapter level-2">
+            <span>4.5</span> <a href="#reutilisez-vos-precedents-tests">Réutilisez vos précédents tests</a>
+        </li>
+                <li class="chapter level-1">
+            <span>Chapitre 5</span> <a href="#optimisez-vos-tests-fonctionnels">Optimisez vos tests fonctionnels</a>
+        </li>
+            <li class="chapter level-2">
+            <span>5.1</span> <a href="#ne-misez-pas-sur-linterface-graphique">Ne misez pas sur l’Interface graphique</a>
+        </li>
+            <li class="chapter level-2">
+            <span>5.2</span> <a href="#creez-une-couche-disolation-de-lihm">Créez une couche d’isolation de l’IHM</a>
+        </li>
+            <li class="chapter level-2">
+            <span>5.3</span> <a href="#exploitez-les-compte-rendus-de-tests-html-xml-txt">Exploitez les compte-rendus de tests (html, xml, txt)</a>
+        </li>
+            <li class="chapter level-2">
+            <span>5.4</span> <a href="#anticipez-les-problemes">Anticipez les problèmes</a>
+        </li>
+            <li class="chapter level-2">
+            <span>5.5</span> <a href="#ne-jetez-pas-le-duck-typing-tout-ne-pourra-pas-etre-teste">Ne jetez pas le "duck typing" : tout ne pourra pas être testé</a>
+        </li>
+    </ul>
+
+</div>    </div>
+</div>
+</div>
+
+</body>
+</html>

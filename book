@@ -1,0 +1,31 @@
+#!/usr/bin/env php
+<?php
+/* book app inspired from easybook/book */
+
+/** autoload **/
+// composer autoloader
+//require_once __DIR__.'/vendor/.composer/autoload.php';
+
+require_once __DIR__.'/vendor/autoload.php';
+
+// custom autoloader
+require_once __DIR__.'/vendor/symfony/class-loader/Symfony/Component/ClassLoader/UniversalClassLoader.php';
+ 
+use Symfony\Component\ClassLoader\UniversalClassLoader;
+ 
+$loader = new UniversalClassLoader();
+
+$loader->registerNamespaces(array(
+    'Easybook' => __DIR__.'/vendor/easybook/easybook/src/',
+));
+
+$loader->register();
+
+
+/** book app **/
+use Easybook\DependencyInjection\Application;
+use Easybook\Console\ConsoleApplication;
+
+$app = new Application();
+$console = new ConsoleApplication($app);
+$console->run();
