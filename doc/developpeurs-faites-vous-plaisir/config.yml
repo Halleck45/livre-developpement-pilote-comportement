@@ -14,12 +14,23 @@ book:
         # tables), part, preface, prologue, title, toc (table of contents)
         - { element: cover }
         - { element: toc   }
-        - { element: introduction, content: le-dev-est-un-plaisir.md }
-        - { element: chapter, number: 1, content: le-client-ne-sait-pas-ce-quil-veut.md }
-        - { element: chapter, number: 2, content: votre-code-doit-refléter-le-besoin-fonctionnel.md }
-        - { element: chapter, number: 3, content: comprenez-la-demande-du-client.md }
-        - { element: chapter, number: 4, content: automatisez-votre-recette.md }
-        - { element: chapter, number: 5, content: optimisez-vos-tests-fonctionnels.md }
+
+        - { element: part, title: "Communiquez avec vos développeurs"}
+        - { element: introduction, content: func-introduction.md }
+        - { element: chapter, number: 1, content: func-le-besoin-metier.md }
+        - { element: chapter, number: 2, content: func-communiquez.md }
+        - { element: chapter, number: 3, content: func-impliquez-les-parties-prenantes.md }
+        - { element: chapter, number: 4, content: func-exprimez-le-besoin.md }
+
+
+
+        - { element: part, title: "Développeurs, faites-vous plaisir !"  }
+        - { element: introduction, content: dev-le-dev-est-un-plaisir.md }
+        - { element: chapter, number: 1, content: dev-le-client-ne-sait-pas-ce-quil-veut.md }
+        - { element: chapter, number: 2, content: dev-votre-code-doit-refléter-le-besoin-fonctionnel.md }
+        - { element: chapter, number: 3, content: dev-comprenez-la-demande-du-client.md }
+        - { element: chapter, number: 4, content: dev-automatisez-votre-recette.md }
+        - { element: chapter, number: 5, content: dev-optimisez-vos-tests-fonctionnels.md }
 
 
 
