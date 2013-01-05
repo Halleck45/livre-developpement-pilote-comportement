@@ -27,7 +27,7 @@ book:
         - { element: part, title: "Développeurs, faites-vous plaisir !"  }
         - { element: introduction, content: dev-le-dev-est-un-plaisir.md }
         - { element: chapter, number: 1, content: dev-le-client-ne-sait-pas-ce-quil-veut.md }
-        - { element: chapter, number: 2, content: dev-votre-code-doit-refléter-le-besoin-fonctionnel.md }
+        - { element: chapter, number: 2, content: dev-votre-code-doit-refleter-le-besoin-fonctionnel.md }
         - { element: chapter, number: 3, content: dev-comprenez-la-demande-du-client.md }
         - { element: chapter, number: 4, content: dev-automatisez-votre-recette.md }
         - { element: chapter, number: 5, content: dev-optimisez-vos-tests-fonctionnels.md }
