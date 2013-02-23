@@ -2249,8 +2249,8 @@ va dévoir recencer la liste des Fonctionnalités qu'il souhaite voir dans son a
 <p>Pour cela, il va devoir identifier chaque fonctionnalité par un titre simple, court, expli-
 cite et unique :</p>
 
-<div class="code gherkin">
-<pre class="gherkin"># Le client va distinguer les fonctionnalités en leur donnant un titre 
+<div class="code code gherkin">
+<pre class="codegherkin"># Le client va distinguer les fonctionnalités en leur donnant un titre 
 Fonctionnalité : Avoir accès à la liste des animaux de compagnie
 Fonctionnalité : Choisir un animal de compagnie
 Fonctionnalité : Acheter un animal de compagnie
@@ -2262,8 +2262,8 @@ Fonctionnalité : ...</pre>
 <p>Ensuite, il va lui suffire de contextualiser un peu cette fonctionnalité. Par exemple, il devra 
 indiquer qui est le bénéficiaire de cette fonctionnalité :</p>
 
-<div class="code gherkin">
-<pre class="gherkin">En tant que vendeur
+<div class="code code gherkin">
+<pre class="codegherkin">En tant que vendeur
 En tant que acheteur
 En tant que propriétaire de la boutique
 En tant que ...</pre>
@@ -2272,8 +2272,8 @@ En tant que ...</pre>
 <p>Vous avez donc désormais connaissance de l'acteur bénéficiaire de la fonctionnalité. Il
 reste encore à identifier le service offert par la fonctionnalité. C'est cela que vous aurez, finalement, à programmer :</p>
 
-<div class="code gherkin">
-<pre class="gherkin">Je veux acheter un animal de compagnie
+<div class="code code gherkin">
+<pre class="codegherkin">Je veux acheter un animal de compagnie
 Je veux connaître la liste des animaux de compagnie de mon magasin
 Je veux connaître la liste des vendeurs
 Je veux ...</pre>
@@ -2287,8 +2287,8 @@ Lorsque vous travaillez, le fruit de votre travail est vraiment utile ; et il es
 de voir que l'on a rendu service à quelqu'un. C'est pour cela qu'il est important que le
 client exprime le bénéfice obtenu par la fonctionnalité :</p>
 
-<div class="code gherkin">
-<pre class="gherkin">De telle sorte que je puisse repartir avec un nouveau compagnon
+<div class="code code gherkin">
+<pre class="codegherkin">De telle sorte que je puisse repartir avec un nouveau compagnon
 De telle sorte que je sache s'il me faut renouveler le stock
 De telle sorte que je puisse organiser les congés de chacun
 De telle sorte que ...</pre>
@@ -2296,8 +2296,8 @@ De telle sorte que ...</pre>
 
 <p>Chaque fonctionnalité peut donc être exprimée en quatre lignes, très simples et compréhensibles par tous :</p>
 
-<div class="code gherkin">
-<pre class="gherkin">Fonctionnalité : Connaître la liste des animaux de compagnie disponibles
+<div class="code code gherkin">
+<pre class="codegherkin">Fonctionnalité : Connaître la liste des animaux de compagnie disponibles
   En tant que vendeur
   Je veux connaître la liste des animaux de compagnie disponibles à la vente
   De telle sorte que je sache s'il me faut renouveler le stock</pre>
@@ -2354,8 +2354,8 @@ avec le fonctionnel et les équipes techniques.</p>
 <p>Chaque Fonctionnalité peut contenir un ou plusieurs Scénarios, et chaque Scénario doit
 pouvoir se distinguer facilement des autres par un titre :</p>
 
-<div class="code gherkin">
-<pre class="gherkin">Fonctionnalité : acheter un animal de compagnie
+<div class="code code gherkin">
+<pre class="codegherkin">Fonctionnalité : acheter un animal de compagnie
   (...)
   Scénario : acheter un animal de compagnie disponible à la vente
   Scénario : tenter d'acheter un animal de compagnie qui est trop jeune
@@ -2371,8 +2371,8 @@ donc exactement ce qu'il vous reste à faire.</p>
 Posez par exemple cette question : "dans quel cadre ce scénario se situe t-il ?". Cela vous 
 permettra de connaître le <em>Contexte de votre Scénario</em>:</p>
 
-<div class="code gherkin">
-<pre class="gherkin">Scénario : ...
+<div class="code code gherkin">
+<pre class="codegherkin">Scénario : ...
   Etant donné que tel contexte existe
   Etant donné que je souhaite acheter un chien
   Etant donné qu'il n'y a plus un seul animal disponible
@@ -2382,8 +2382,8 @@ permettra de connaître le <em>Contexte de votre Scénario</em>:</p>
 <p>Une application consiste généralement à réagir à des <em>événements</em>. Précisez-donc quels
 sont ces événéments :</p>
 
-<div class="code gherkin">
-<pre class="gherkin">Scénario : ...
+<div class="code code gherkin">
+<pre class="codegherkin">Scénario : ...
   (...)
   Quand j'essaye d'acheter un chien
   Quand je regarde quels sont les animaux disponibles
@@ -2393,8 +2393,8 @@ sont ces événéments :</p>
 <p>Dès lors, il ne vous reste plus qu'à préciser le <em>Résultat attendu</em> lorsque cet événement
 survient :</p>
 
-<div class="code gherkin">
-<pre class="gherkin">Scénario : ...
+<div class="code code gherkin">
+<pre class="codegherkin">Scénario : ...
   (...)
   Alors je peux repartir avec un petit chien
   Alors je dois être informé que le chien est trop jeune pour être
@@ -2408,8 +2408,8 @@ sans ambiguïté ce qui vous ai demandé.</p>
 
 <p>Voici un exemple de Fonctionnalité :</p>
 
-<div class="code gherkin">
-<pre class="gherkin">Fonctionnalité : acheter un chiot
+<div class="code code gherkin">
+<pre class="codegherkin">Fonctionnalité : acheter un chiot
 En tant que client du magasin
 Je veux pouvoir acheter un chiot
 De telle sorte que je puisse avoir un animal de compagnie
@@ -2432,8 +2432,8 @@ Scénario: acheter un chiot sevré
 <p>Rappelez-vous que l'objectif du Développement piloté par le comportement est de lever
 toutes les ambiguïtés. Pourtant, dans le scénario suivant, il reste des questions :</p>
 
-<div class="code gherkin">
-<pre class="gherkin">Scénario:  acheter un chiot sevré
+<div class="code code gherkin">
+<pre class="codegherkin">Scénario:  acheter un chiot sevré
   Etant donné qu'un chiot est trop jeune pour être vendu
   Quand j'essaye d'acheter ce chiot
   Alors je suis informé qu'il est trop jeune pour être vendu</pre>
@@ -2454,8 +2454,8 @@ recommencer son développement !</p>
 <p>Heureusement, il est tout à fait possible, avec Gherkin, de préciser des valeurs à utiliser. Il
 suffit de les encadrer dans des guillemets :</p>
 
-<div class="code gherkin">
-<pre class="gherkin">Scénario : acheter un chiot sevré
+<div class="code code gherkin">
+<pre class="codegherkin">Scénario : acheter un chiot sevré
   Etant donné qu'un chiot ne peut être vendu avant qu'il n'ait &quot;2 mois&quot;
   Et que &quot;Médor le chien&quot; a actuellement &quot;1 mois&quot;
   Quand j'essaye d'acheter &quot;Médor le chien&quot;
@@ -2468,8 +2468,8 @@ de problèmes, Gherkin vous permet d'utiliser des exemples facilement ; il suffi
 sous forme de tableaux. Les variables sont alors à encadrer par les symboles "&lt;" (plus petit que) 
 et ">" (plus grand que).</p>
 
-<div class="code gherkin">
-<pre class="gherkin">Plan de Scénario : acheter un chiot sevré
+<div class="code code gherkin">
+<pre class="codegherkin">Plan de Scénario : acheter un chiot sevré
   Etant donné qu'un chiot ne peut être vendu avant qu'il n'ait &quot;2 mois&quot;
   Et que &quot;&lt;nom-du-chien&gt;&quot; a actuellement &quot;&lt;age-du-chien&gt;&quot;
   Quand j'essaye d'acheter &quot;&lt;nom-du-chien&gt;&quot;
@@ -2544,21 +2544,21 @@ L'installation de PHP est résumée sur cette page : http://php.net/manual/fr/in
 
 <p>Windows :</p>
 
-<div class="code bash">
-<pre class="bash">Utilisez WampServer <span class="br0">&#40;</span>http:<span class="sy0">//</span>www.wampserver.com<span class="br0">&#41;</span></pre>
+<div class="code code bash">
+<pre class="codebash">Utilisez WampServer (http://www.wampserver.com)</pre>
 </div>
 
 <p>Ubuntu, Debian :</p>
 
-<div class="code bash">
-<pre class="bash"><span class="co0"># en ligne de commande</span>
-<span class="kw2">apt-get install</span> php5-common php5-cli php5-curl</pre>
+<div class="code code bash">
+<pre class="codebash"># en ligne de commande
+apt-get install php5-common php5-cli php5-curl</pre>
 </div>
 
 <p>Mac :</p>
 
-<div class="code bash">
-<pre class="bash">Utilisez MampServer <span class="br0">&#40;</span>http:<span class="sy0">//</span>www.mamp.info<span class="br0">&#41;</span></pre>
+<div class="code code bash">
+<pre class="codebash">Utilisez MampServer (http://www.mamp.info)</pre>
 </div>
 
 <p>Installer Behat est simple, peut être fait de plusieurs manières : sous forme d'archive PHP
@@ -2582,9 +2582,9 @@ L'installation de PHP est résumée sur cette page : http://php.net/manual/fr/in
 <p>Exécutez ensuite la commande suivante dans votre terminal, en vous plaçant àa la racine
 de votre projet :</p>
 
-<div class="code bash">
-<pre class="bash">curl http:<span class="sy0">//</span>getcomposer.org<span class="sy0">/</span>installer <span class="sy0">|</span> php
-php composer.phar <span class="kw2">install</span> <span class="re5">--prefer-source</span></pre>
+<div class="code code bash">
+<pre class="codebash">curl http://getcomposer.org/installer | php
+php composer.phar install --prefer-source</pre>
 </div>
 
 <h3 id="-installation-sous-forme-darchive-phar">4.1.2  Installation sous forme d'archive Phar</h3>
@@ -2593,10 +2593,10 @@ php composer.phar <span class="kw2">install</span> <span class="re5">--prefer-so
 downloads/behat.phar, et de le placer dans un dossier <code>bin</code> à la racine de votre projet. Vous
 aurez donc l'arborescence suivante :</p>
 
-<div class="code bash">
-<pre class="bash"><span class="sy0">/</span>chemin<span class="sy0">/</span>vers<span class="sy0">/</span>mon<span class="sy0">/</span>projet
-    <span class="br0">&#40;</span>...<span class="br0">&#41;</span>
-    - bin<span class="sy0">/</span>
+<div class="code code bash">
+<pre class="codebash">/chemin/vers/mon/projet
+    (...)
+    - bin/
         - behat.phar</pre>
 </div>
 
@@ -2608,20 +2608,346 @@ PHP que vous utilisez, y compris Behat.</p>
 
 <p>Une fois que Behat est installé, il vous suffit d'exécuter la commande suivante :</p>
 
-<div class="code bash">
-<pre class="bash">php .<span class="sy0">/</span>bin<span class="sy0">/</span>behat <span class="re5">--init</span></pre>
+<div class="code code bash">
+<pre class="codebash">php ./bin/behat --init</pre>
 </div>
 
 <p>Cela aura pour effet de créer dans votre projet tous les éléments dont Behat a besoin pour
 fonctionner. Votre arboresence ressemble désormais à :</p>
 
-<p><em>Screenshot</em></p>
+<p>Vous voici désormais avec les dossiers suivants :</p>
+
+<ul>
+<li><code>features</code> : contient la listes des fonctionnalités, sous forme de fichier <code>.feature</code></li>
+<li><code>features/bootstrap</code> : contient les fichiers PHP de traduction de Fonctionnalité en code source</li>
+</ul>
+
+<p>Chaque nouvelle fonctionnalité devra donc être ajoutée dans le dossier ̀ features<code>, sous forme d'un 
+fichier</code>.feature<code>. Créez par exemple le fichier</code>features/calculer-mon-age.feature`, avec le 
+contenu suivant :</p>
+
+<div class="figure center" id="figure-4-1-3">
+    <img src="images/dev-qr-exo1-step1.png" alt="Les sources de cet exercice sont disponibles sur http://goo.gl/4usXU" />
+
+    <p class="caption"><strong>Figure 4.1</strong> Les sources de cet exercice sont disponibles sur http://goo.gl/4usXU</p>
+</div>
+
+
+<div class="code code gherkin">
+<pre class="codegherkin"># language: fr
+Fonctionnalité: Calculer l'âge d'une personne
+    En tant qu'utilisateur de l'application
+    Je veux connaître le nombre d'années écoulées entre deux dates
+    De telle sorte que je puisse connaître mon age</pre>
+</div>
+
+<div class="code code">
+<pre class="code">Scénario: Calculer l'âge d'une personne depuis une date antérieure à aujourd'hui
+    Etant donné que je suis né le 06/07/1986
+    Et que nous sommes le 20/09/013
+    Quand je calcule mon âge
+    Alors je suis informé que j'ai 27 ans</pre>
+</div>
+
+<div class="code code">
+<pre class="code">Scénario: Calculer l'âge d'une personne depuis une date postérieure à aujourd'hui
+    Etant donné que je suis né le 06/07/3013
+    Et que nous sommes le 20/09/2013
+    Quand je calcule mon âge
+    Alors je suis informé que je ne suis pas encore né</pre>
+</div>
+
+<div class="code code">
+<pre class="code">Scénario: Calculer l'âge d'une personne dont c'est l'anniversaire aujourd'hui
+    Etant donné que je suis né le 06/07/1986
+    Et que nous sommes le 06/07/2013
+    Quand je calcule mon âge
+    Alors je suis informé que j'ai 27 ans
+    Et on me souhaite un joyeux anniversaire</pre>
+</div>
+
+<p>Puis exécutez la commande suivante pour lancer Behat :</p>
+
+<div class="code code bash">
+<pre class="codebash">./bin/behat</pre>
+</div>
+
+<div class="figure center" id="figure-4-2">
+    <img src="images/dev-behat-exo-date-undefined.jpg" alt="Les étapes de la fonctionnalité ne sont pas encore traduites : elles sont jaunes" />
+
+    <p class="caption"><strong>Figure 4.2</strong> Les étapes de la fonctionnalité ne sont pas encore traduites : elles sont jaunes</p>
+</div>
+
+
+<p>Comme vous pouvez le voir, le résultat de cette commande est jaune. Cela veut tout simplement dire 
+que les phrases utilisées pour exprimer le besoin n'ont pas encore de signification pour Behat. Il va falloir 
+les traduire.</p>
 
 <h2 id="traduire-une-fonctionnalite-en-code-source">4.2 Traduire une Fonctionnalité en code source</h2>
 
-<h2 id="testez-dans-un-vrai-navigateur">4.3 Testez dans un vrai navigateur</h2>
+<p>Par chance, Behat est suffisammet bien fait pour vous fournir une base de travail pour traduire vos fonctionnalités. Il suffit 
+de copier-coller dans le fichier <code>features/bootstrap/FeatureContext.php</code> le code PHP qui a été généré par la commande :</p>
 
-<h2 id="organisez-vos-contextes-de-tests">4.4 Organisez vos Contextes de tests</h2>
+<div class="code code bash">
+<pre class="codebash">./bin/behat</pre>
+</div>
+
+<p>Pourquoi copier ce code dans ce fichier ? Tout simplement parce que les fichiers <code>features/bootstrap/*Context.php</code> vont servir 
+de passerelle entre le besoin exprimé (sous forme de phrases) et votre application.</p>
+
+<p>Il vous appartient de modifier ces fichiers pour faire la traduction du besoin fonctionnel. C'est un travail 
+qui semble long, mais en réalité il n'est pas beaucoup plus long que de tester vous-même à main que la demande initiale 
+est respectée, mais à surtout l'avantage de rendre ce travail de recette interne totalement automatique.</p>
+
+<p>Traduisez maintenant la fonctionnalité en code source dans le fichier <code>features/bootstrap/FeatureContext.php</code>, en adaptant 
+le code PHP fourni par Behat selon votre besoin. Par exemple :</p>
+
+<div class="code code php">
+<pre class="codephp">&lt;?php
+// (...)</pre>
+</div>
+
+<div class="code code">
+<pre class="code">class FeatureContext extends BehatContext
+{</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    private $birthDate;
+    private $today;
+    private $output;</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * Initializes context.
+     * Every scenario gets it's own context object.
+     *
+     * @param array $parameters context parameters (set them up through behat.yml)
+     */
+    public function __construct(array $parameters)
+    {</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    }</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * @Given /^que je suis né le (\d+)\/(\d+)\/(\d+)$/
+     */
+    public function queJeSuisNeLe($day, $month, $year)
+    {
+        $this-&gt;birthDate = new \DateTime(sprintf('%d-%d-%d', $year, $month, $day));
+    }</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * @Given /^que nous sommes le (\d+)\/(\d+)\/(\d+)$/
+     */
+    public function queNousSommesLe($day, $month, $year)
+    {
+        $this-&gt;today = new \DateTime(sprintf('%d-%d-%d', $year, $month, $day));
+    }</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * @Given /^je calcule mon âge$/
+     */
+    public function jeCalculeMonAge()
+    {
+        $this-&gt;output = shell_exec(sprintf('php src/age.php --birthdate=%s --today=%s', $this-&gt;birthDate-&gt;format('Y-m-d'), $this-&gt;today-&gt;format('Y-m-d')));
+    }</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * @Given /^je suis informé que j\'ai (\d+) ans$/
+     */
+    public function jeSuisInformeQueJAiAns($age)
+    {
+        if(!preg_match('!'.$age.' ans!', $this-&gt;output)) {
+            throw new Exception();
+        }
+    }</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * @Given /^je suis informé que je ne suis pas encore né$/
+     */
+    public function jeSuisInformeQueJeNeSuisPasEncoreNe()
+    {
+        if(!preg_match('!Vous n\'êtes pas encore né!', $this-&gt;output)) {
+            throw new Exception();
+        }
+    }</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * @Given /^on me souhaite un joyeux anniversaire$/
+     */
+    public function onMeSouhaiteUnJoyeuxAnniversaire()
+    {
+        if(!preg_match('!Joyeux anniversaire!', $this-&gt;output)) {
+            throw new Exception();
+        }
+    }
+}</pre>
+</div>
+
+<p>Notez ces différents aspects :</p>
+
+<ul>
+<li>chaque phrase est convertie en une méthode PHP</li>
+<li>le lien entre les phrases et les méthodes PHP est effectué par un expression régulière (par exemple : <code>/^on me souhaite un joyeux anniversaire$/</code>)</li>
+<li>vous devez traduire chaque étape. Behat comprendra qu'une étape n'est pas valide si vous levez une exception, comme c'est le cas dans la méthode <code>onMeSouhaiteUnJoyeuxAnniversaire()</code></li>
+<li>il est possible de recevoir certaines informations (nombres, exemples...) sous forme de paramètres de méthodes.</li>
+</ul>
+
+<p>Maintenant, il vous suffit de relancer Behat pour vérifier automatiquement que votre application a bien 
+le comportement attendu :</p>
+
+<div class="code code bash">
+<pre class="codebash">./bin/behat</pre>
+</div>
+
+<div class="figure center" id="figure-4-3">
+    <img src="images/dev-behat-exo-date-fail.jpg" alt="Les fonctionnalités échouent : elles sont rouges" />
+
+    <p class="caption"><strong>Figure 4.3</strong> Les fonctionnalités échouent : elles sont rouges</p>
+</div>
+
+
+<p>Il vous suffit finalement de développer votre application PHP, conforme aux attentes fonctionnelles, puis de relancer 
+Behat pour vous assurer que vous avez bien traité la demande initiale.</p>
+
+<div class="figure center" id="figure-4-4">
+    <img src="images/dev-qr-exo1-step1.png" alt="Vous trouverez un exemple d'application conforme à ce besoin fonctionnel sur http://goo.gl/4usXU" />
+
+    <p class="caption"><strong>Figure 4.4</strong> Vous trouverez un exemple d'application conforme à ce besoin fonctionnel sur http://goo.gl/4usXU</p>
+</div>
+
+
+<h2 id="exploitez-les-jeux-dexemples">4.3 Exploitez les jeux d'exemples</h2>
+
+<div class="figure center" id="figure-4-5">
+    <img src="images/dev-qr-exo1-step2.png" alt="Les sources de cet exercice sont disponibles sur http://goo.gl/fYZHv" />
+
+    <p class="caption"><strong>Figure 4.5</strong> Les sources de cet exercice sont disponibles sur http://goo.gl/fYZHv</p>
+</div>
+
+
+<p>Vous l'avez vu, votre fonctionnel peut vous fournir des exemples, grâce à la syntaxe Gherkin.</p>
+
+<p>On pourrait par exemple modifier notre fonctionnalité de la façon suivante :</p>
+
+<div class="code code gherkin">
+<pre class="codegherkin"># language: fr
+Fonctionnalité: Calculer l'âge d'une personne
+    En tant qu'utilisateur de l'application
+    Je veux connaître le nombre d'années écoulées entre deux dates
+    De telle sorte que je puisse connaître mon age</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    Plan du Scénario: Calculer l'âge d'une personne
+      Etant donné que je suis né le &quot;&lt;dateNaissance&gt;&quot;
+      Et que nous sommes le &quot;&lt;dateDuJour&gt;&quot;
+      Quand je calcule mon âge
+      Alors on me répond &quot;&lt;reponseAttendu&gt;&quot;</pre>
+</div>
+
+<div class="code code">
+<pre class="code">      Exemples:
+        | dateNaissance | dateDuJour | reponseAttendu                           |
+        | 06/07/1986    | 20/09/2013 | Vous avez 27 ans                         |
+        | 06/07/1985    | 20/09/2013 | Vous avez 28 ans                         |
+        | 26/11/2020    | 20/09/2013 | Vous n'êtes pas encore né                |
+        | 06/07/1986    | 06/07/2013 | Vous avez 27 ans. Joyeux anniversaire    |</pre>
+</div>
+
+<p>Vous voici avec une fonctionnalité simple, claire et complète.</p>
+
+<p>Travailler avec des exemples ne change strictement rien pour vous. En réalité, Behat 
+va travailler avec chaque jeu d'exemple, un à un, et va vous envoyer chaque information 
+sous forme de paramètre de méthode, sans que cela n'ait le moindre impact sur votre code.</p>
+
+<p>Voici une traduction possible de cette fonctionnalité :</p>
+
+<div class="code code php">
+<pre class="codephp">&lt;?php
+// file features/bootstrap/FeatureContext.php
+// (...)</pre>
+</div>
+
+<div class="code code">
+<pre class="code">class FeatureContext extends BehatContext
+{</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    private $birthDate;
+    private $today;
+    private $output;</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * @Given /^que je suis né le &quot;([^&quot;]*)&quot;$/
+     */
+    public function queJeSuisNeLe($date)
+    {
+        $this-&gt;birthDate = DateTime::createFromFormat('d/m/Y', $date);
+    }</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * @Given /^que nous sommes le &quot;([^&quot;]*)&quot;$/
+     */
+    public function queNousSommesLe($date)
+    {
+        $this-&gt;today = DateTime::createFromFormat('d/m/Y', $date);
+    }</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * @Given /^je calcule mon âge$/
+     */
+    public function jeCalculeMonAge()
+    {
+        $this-&gt;output = shell_exec(sprintf('php src/age.php --birthdate=%s --today=%s', $this-&gt;birthDate-&gt;format('Y-m-d'), $this-&gt;today-&gt;format('Y-m-d')));
+    }</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * @Given /^on me répond &quot;([^&quot;]*)&quot;$/
+     */
+    public function onMeRepond($response)
+    {
+        if (false === strpos($this-&gt;output, $response)) {
+            throw new Exception;
+        }
+    }
+}</pre>
+</div>
+
+<p>Votre fonctionnel peut désormais ajouter autant d'exemples qui le souhaite, votre travail de traduction ne changera plus.</p>
+
+<blockquote>
+  <p>Utiliser des exemples est très simple avec Behat.</p>
+</blockquote>
+
+<h2 id="testez-dans-un-vrai-navigateur">4.4 Testez dans un vrai navigateur</h2>
+
+<h2 id="organisez-vos-contextes-de-tests">4.5 Organisez vos Contextes de tests</h2>
 
 <h2 id="reutilisez-vos-precedents-tests">Réutilisez vos précédents tests</h2>
 
@@ -2815,13 +3141,16 @@ fonctionner. Votre arboresence ressemble désormais à :</p>
             <span>4.2</span> <a href="#traduire-une-fonctionnalite-en-code-source">Traduire une Fonctionnalité en code source</a>
         </li>
             <li class="chapter level-2">
-            <span>4.3</span> <a href="#testez-dans-un-vrai-navigateur">Testez dans un vrai navigateur</a>
+            <span>4.3</span> <a href="#exploitez-les-jeux-dexemples">Exploitez les jeux d'exemples</a>
         </li>
             <li class="chapter level-2">
-            <span>4.4</span> <a href="#organisez-vos-contextes-de-tests">Organisez vos Contextes de tests</a>
+            <span>4.4</span> <a href="#testez-dans-un-vrai-navigateur">Testez dans un vrai navigateur</a>
         </li>
             <li class="chapter level-2">
-            <span>4.5</span> <a href="#reutilisez-vos-precedents-tests">Réutilisez vos précédents tests</a>
+            <span>4.5</span> <a href="#organisez-vos-contextes-de-tests">Organisez vos Contextes de tests</a>
+        </li>
+            <li class="chapter level-2">
+            <span>4.6</span> <a href="#reutilisez-vos-precedents-tests">Réutilisez vos précédents tests</a>
         </li>
                 <li class="chapter level-1">
             <span>Chapitre 5</span> <a href="#optimisez-vos-tests-fonctionnels">Optimisez vos tests fonctionnels</a>
