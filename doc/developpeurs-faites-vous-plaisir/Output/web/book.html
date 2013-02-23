@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="author" content="Jean-François Lépine" />
-    <meta name="date" content="05/01/2013"/>
+    <meta name="date" content="23/02/2013"/>
     <meta name="generator" content="easybook 5.0-DEV"/>
 
     <title>Développeurs, faites-vous plaisir !</title>
@@ -908,9 +908,9 @@ titre de votre fonctionnalité.</p>
 titre</strong>. Prenez les fonctionnalités suivantes :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"><span class="co1"># Distinguez vos fonctionnalités en leur donnant un titre :</span>
-<span class="kw1">Fonctionnalité</span> <span class="sy2">: </span>Retirer de l’argent au distributeur
-<span class="kw1">Fonctionnalité</span> <span class="sy2">: </span>Consulter le solde de son compte au distributeur</pre>
+<pre class="gherkin"># Distinguez vos fonctionnalités en leur donnant un titre :
+Fonctionnalité : Retirer de l’argent au distributeur
+Fonctionnalité : Consulter le solde de son compte au distributeur</pre>
 </div>
 
 <p>Il est facile de les distinguer et de les comprendre non ?</p>
@@ -926,11 +926,11 @@ l'utiliser. <strong>Précisez donc qui est l'utilisateur de votre
 fonctionnalité</strong> :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"><span class="co1"># Précisez qui est l’acteur bénéficiaire de votre fonctionnalité :</span>
-<span class="kw3">En tant que</span> rôle
-<span class="kw3">En tant que</span> administrateur du site
-<span class="kw3">En tant que</span> conseiller clientèle
-<span class="kw3">En tant que</span> <span class="sy1">...</span></pre>
+<pre class="gherkin"># Précisez qui est l’acteur bénéficiaire de votre fonctionnalité :
+En tant que rôle
+En tant que administrateur du site
+En tant que conseiller clientèle
+En tant que ...</pre>
 </div>
 
 <p>Voilà une bonne chose de faite ! <strong>Identifiez maintenant le Service
@@ -940,11 +940,11 @@ dit "c'est génial, en tant que ... vous pouvez faire ça !". Par exemple
 :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"><span class="co1"># Identifiez le service délivré par votre fonctionnalité à l’utilisateur :</span>
-<span class="kw3">Je veux</span> un service rendu
-<span class="kw3">Je veux</span> retirer de l’argent au distributeur
-<span class="kw3">Je veux</span> connaître la quantité d’argent qu’il me reste sur mon compte
-<span class="kw3">Je veux</span> <span class="sy1">...</span></pre>
+<pre class="gherkin"># Identifiez le service délivré par votre fonctionnalité à l’utilisateur :
+Je veux un service rendu
+Je veux retirer de l’argent au distributeur
+Je veux connaître la quantité d’argent qu’il me reste sur mon compte
+Je veux ...</pre>
 </div>
 
 <p>On commence déjà à y voir plus clair. <strong>Il ne reste plus qu'à préciser
@@ -954,20 +954,20 @@ ne voyez pas de bénéfice pour votre fonctionnalité, c'est qu'elle ne
 mérite pas d'être développée. Décrivez ce bénéfice ainsi :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"><span class="co1"># Décrivez le bénéfice fonctionnel obtenu par votre fonctionnalité :</span>
-<span class="kw3">De telle sorte que</span> bénéfice attendu
-<span class="kw3">De telle sorte que</span> je puisse obtenir de l’argent même quand la banque est fermée
-<span class="kw3">De telle sorte que</span> <span class="sy1">...</span></pre>
+<pre class="gherkin"># Décrivez le bénéfice fonctionnel obtenu par votre fonctionnalité :
+De telle sorte que bénéfice attendu
+De telle sorte que je puisse obtenir de l’argent même quand la banque est fermée
+De telle sorte que ...</pre>
 </div>
 
 <p>Ce qui fait que <strong>toute fonctionnalité peut être décrite, de manière
 explicite, en quatre courtes lignes</strong> :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"><span class="kw1">Fonctionnalité</span> <span class="sy2">: </span>Retirer de l’argent au distributeur
-    <span class="kw3">En tant que</span> client de la banque
-    <span class="kw3">Je veux</span> retirer de l’argent au distributeur
-    <span class="kw3">De telle sorte que</span> je puisse obtenir de l’argent même quand la banque est fermée</pre>
+<pre class="gherkin">Fonctionnalité : Retirer de l’argent au distributeur
+    En tant que client de la banque
+    Je veux retirer de l’argent au distributeur
+    De telle sorte que je puisse obtenir de l’argent même quand la banque est fermée</pre>
 </div>
 
 <p>N'importe quel membre de votre équipe comprendra ce qu'est cette
@@ -986,14 +986,16 @@ et explicites</strong>. Ils représentent le comportement concret que vous
 attendez pour votre fonctionnalité. Par exemple :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"><span class="co1"># Un Scénario est une situation concrète de votre Fonctionnalité :</span>
-<span class="kw1">Fonctionnalité</span> <span class="sy2">: </span>Retirer de l’argent au distributeur
-&nbsp;
-<span class="kw1">Scénario</span> <span class="sy2">: </span>Retirer de l’argent avec une carte valide
-<span class="kw1">Scénario</span> <span class="sy2">: </span>Retirer de l’argent avec une carte expirée
-<span class="kw1">Scénario</span> <span class="sy2">: </span>Retirer de l’argent sur un distributeur qui ne contient
+<pre class="gherkin"># Un Scénario est une situation concrète de votre Fonctionnalité :
+Fonctionnalité : Retirer de l’argent au distributeur</pre>
+</div>
+
+<div class="code code">
+<pre class="code">Scénario : Retirer de l’argent avec une carte valide
+Scénario : Retirer de l’argent avec une carte expirée
+Scénario : Retirer de l’argent sur un distributeur qui ne contient
   plus d’argent
-<span class="kw1">Scénario</span> <span class="sy2">: </span><span class="sy1">...</span></pre>
+Scénario : ...</pre>
 </div>
 
 <p>La réalisation ou non de ces scénarios détermine l'avancée de votre
@@ -1012,12 +1014,12 @@ un contexte, un événement déclencheur ou un résultat attendu.</p>
 conditions d'existence de votre scénario :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"><span class="co1"># Un Scénario s’inscrit dans un contexte, une situation initiale :</span>
-<span class="kw1">Scénario</span> <span class="sy2">: </span><span class="sy1">...</span>
-    <span class="kw2">Etant donné</span> que tel contexte existe
-    <span class="kw2">Etant donné</span> que que je n’ai plus d’argent sur mon compte
-    <span class="kw2">Etant donné</span> que ma carte est expirée
-    <span class="kw2">Etant donné</span> que <span class="sy1">...</span></pre>
+<pre class="gherkin"># Un Scénario s’inscrit dans un contexte, une situation initiale :
+Scénario : ...
+    Etant donné que tel contexte existe
+    Etant donné que que je n’ai plus d’argent sur mon compte
+    Etant donné que ma carte est expirée
+    Etant donné que ...</pre>
 </div>
 
 <p>Toute interaction de l'utilisateur avec votre produit peut se traduire
@@ -1025,13 +1027,13 @@ sous forme d'événement. Un événement est le déclencheur de votre
 scénario, qui vient juste après que le contexte initiale soit situé :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"><span class="co1"># Un Scénario se démarque par un événement :</span>
-<span class="kw1">Scénario</span> <span class="sy2">: </span><span class="sy1">...</span>
-    <span class="sy1">...</span>
-    <span class="kw2">Quand</span> tel événement déclencheur survient
-    <span class="kw2">Quand</span> je demande à retirer de l’argent
-    <span class="kw2">Quand</span> je demande le solde de mon compte
-    <span class="kw2">Quand</span> <span class="sy1">...</span></pre>
+<pre class="gherkin"># Un Scénario se démarque par un événement :
+Scénario : ...
+    ...
+    Quand tel événement déclencheur survient
+    Quand je demande à retirer de l’argent
+    Quand je demande le solde de mon compte
+    Quand ...</pre>
 </div>
 
 <dl>
@@ -1040,13 +1042,13 @@ scénario, qui vient juste après que le contexte initiale soit situé :</p>
 </dl>
 
 <div class="code gherkin">
-<pre class="gherkin"><span class="co1"># Chaque Scénario aboutit à un résultat :</span>
-<span class="kw1">Scénario</span> <span class="sy2">: </span><span class="sy1">...</span>
-    <span class="sy1">...</span>
-    <span class="kw2">Alors</span> tel résultat est attendu
-    <span class="kw2">Alors</span> je reçois <span class="nu0">20</span> euros
-    <span class="kw2">Alors</span> ma carte est aspirée
-    <span class="kw2">Alors</span> <span class="sy1">...</span></pre>
+<pre class="gherkin"># Chaque Scénario aboutit à un résultat :
+Scénario : ...
+    ...
+    Alors tel résultat est attendu
+    Alors je reçois 20 euros
+    Alors ma carte est aspirée
+    Alors ...</pre>
 </div>
 
 <p>Toute cette syntaxe, qui permet de rendre vos fonctionnalités
@@ -1056,27 +1058,33 @@ pas très compliquée, si ?</p>
 <p>Au final, voici une fonctionnalité plus complète :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"><span class="co1"># Toute personne qui connaître votre Langue Commune comprend</span>
-<span class="co1"># votre fonctionnalité :</span>
-&nbsp;
-<span class="kw1">Fonctionnalité</span> <span class="sy2">: </span>Retirer de l’argent au distributeur
-    <span class="kw3">En tant que</span> client de la banque
-    <span class="kw3">Je veux</span> retirer de l’argent au distributeur
-    <span class="kw3">De telle sorte que</span> je puisse obtenir de l’argent
-      même quand la banque est fermée
-&nbsp;
-<span class="kw1">Scénario</span> <span class="sy2">: </span>Retirer de l’argent avec une carte valide et un
+<pre class="gherkin"># Toute personne qui connaître votre Langue Commune comprend
+# votre fonctionnalité :</pre>
+</div>
+
+<div class="code code">
+<pre class="code">Fonctionnalité : Retirer de l’argent au distributeur
+    En tant que client de la banque
+    Je veux retirer de l’argent au distributeur
+    De telle sorte que je puisse obtenir de l’argent
+      même quand la banque est fermée</pre>
+</div>
+
+<div class="code code">
+<pre class="code">Scénario : Retirer de l’argent avec une carte valide et un
   compte approvisionné
-    <span class="kw2">Etant donné</span> que je détiens un compte bancaire soldé de <span class="nu0">100</span> euros
-    <span class="kw2">Et</span> que ma carte expire l’an prochain
-    <span class="kw2">Quand</span> je demande à retirer <span class="nu0">20</span> euros
-    <span class="kw2">Alors</span> je reçois <span class="nu0">20</span> euros
-    <span class="kw2">Et</span> ma carte m’est restituée
-&nbsp;
-<span class="kw1">Scénario</span> <span class="sy2">: </span>Retirer de l’argent avec une carte expirée
-    <span class="kw2">Etant donné</span> que ma carte est expirée
-    <span class="kw2">Quand</span> je demande à retirer <span class="nu0">20</span> euros
-    <span class="kw2">Alors</span> ma carte est aspirée</pre>
+    Etant donné que je détiens un compte bancaire soldé de 100 euros
+    Et que ma carte expire l’an prochain
+    Quand je demande à retirer 20 euros
+    Alors je reçois 20 euros
+    Et ma carte m’est restituée</pre>
+</div>
+
+<div class="code code">
+<pre class="code">Scénario : Retirer de l’argent avec une carte expirée
+    Etant donné que ma carte est expirée
+    Quand je demande à retirer 20 euros
+    Alors ma carte est aspirée</pre>
 </div>
 
 <h2 id="illustrez-le-tout-avec-des-exemples">4.4 Illustrez le tout avec des exemples</h2>
@@ -1090,12 +1098,14 @@ vous pouvez y ajouter vos exemples. Car on est bien d'accords, <strong>rien de
 mieux que des exemples</strong>. Prenons celui-ci :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"><span class="co1"># Votre fonctionnalité peut contenir un exemple :</span>
-&nbsp;
-<span class="kw1">Scénario</span> <span class="sy2">: </span>Retirer de l’argent avec un compte approvisionné
-    <span class="kw2">Etant donné</span> que ma carte expire l’an prochain
-    <span class="kw2">Quand</span> je demande à retirer <span class="st0">&quot;20&quot;</span> euros
-    <span class="kw2">Alors</span> je reçois <span class="st0">&quot;20&quot;</span> euros</pre>
+<pre class="gherkin"># Votre fonctionnalité peut contenir un exemple :</pre>
+</div>
+
+<div class="code code">
+<pre class="code">Scénario : Retirer de l’argent avec un compte approvisionné
+    Etant donné que ma carte expire l’an prochain
+    Quand je demande à retirer &quot;20&quot; euros
+    Alors je reçois &quot;20&quot; euros</pre>
 </div>
 
 <p>Bon, c'est simple, mais limité, car cela nous oblige à recopier le
@@ -1104,18 +1114,22 @@ grammaire est riche, et vous pouvez utiliser la syntaxe suivante (votre
 scénario devient alors un Plan de scénario) : </p>
 
 <div class="code gherkin">
-<pre class="gherkin"><span class="co1"># Votre fonctionnalité peut contenir plusieurs exemples facilement :</span>
-&nbsp;
-<span class="kw1">Plan de Scénario</span> <span class="sy2">: </span>Retirer de l’argent avec un compte approvisionné
-    <span class="kw2">Etant donné</span> que ma carte expire l’an prochain
-    <span class="kw2">Quand</span> je demande à retirer <span class="st0">&quot;&lt;montant-demandé&gt;&quot;</span> euros
-    <span class="kw2">Alors</span> je reçois <span class="st0">&quot;&lt;montant-reçu&gt;&quot;</span> euros
-&nbsp;
-<span class="kw1">Exemples</span> <span class="sy2">:
-</span>    | montant-demandé   | montant-reçu  <span class="sy2">|
-</span><span class="co0">    | 20                | 20            |
+<pre class="gherkin"># Votre fonctionnalité peut contenir plusieurs exemples facilement :</pre>
+</div>
+
+<div class="code code">
+<pre class="code">Plan de Scénario : Retirer de l’argent avec un compte approvisionné
+    Etant donné que ma carte expire l’an prochain
+    Quand je demande à retirer &quot;&lt;montant-demandé&gt;&quot; euros
+    Alors je reçois &quot;&lt;montant-reçu&gt;&quot; euros</pre>
+</div>
+
+<div class="code code">
+<pre class="code">Exemples :
+    | montant-demandé   | montant-reçu  |
+    | 20                | 20            |
     | 1000              | 1000          |
-    | 50                | 50            |</span></pre>
+    | 50                | 50            |</pre>
 </div>
 
 <p>Pratique non ? Les symboles &lt; et &#62; indiquent une valeur d'exemple, à
@@ -1442,10 +1456,10 @@ application mobile.</p>
 <p>Considérez ce scénario, mis en évidence par Liz Keogh:</p>
 
 <div class="code gherkin">
-<pre class="gherkin"><span class="kw1">Scénario</span> <span class="sy2">: </span>pouvoir acheter un animal domestique adulte
-    <span class="kw2">Etant donné</span> qu'un chiot est trop petit pour être vendu
-    <span class="kw2">Quand</span> j'essaye de l'acheter
-    <span class="kw2">Alors</span> je suis informé qu'il ne peut être vendu car trop jeune</pre>
+<pre class="gherkin">Scénario : pouvoir acheter un animal domestique adulte
+    Etant donné qu'un chiot est trop petit pour être vendu
+    Quand j'essaye de l'acheter
+    Alors je suis informé qu'il ne peut être vendu car trop jeune</pre>
 </div>
 
 <p>Bien. Bien ? Non, pas vraiment... Vous n'avez pas décrit votre besoin,
@@ -1464,11 +1478,11 @@ allers et retours inutiles.</p>
 pourrait être changé en :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"><span class="kw1">Scénario</span> <span class="sy2">: </span>pouvoir acheter un animal domestique adulte
-    <span class="kw2">Etant donné</span> qu'un chiot ne peut être vendu avant qu'il n'ait <span class="st0">&quot;2 mois&quot;</span>
-    <span class="kw2">Et</span> que <span class="st0">&quot;Médor le chien&quot;</span> a actuellement <span class="st0">&quot;1 mois&quot;</span>
-    <span class="kw2">Quand</span> j'essaye d'acheter <span class="st0">&quot;Médor le chien&quot;</span>
-    <span class="kw2">Alors</span> on doit me dire <span class="st0">&quot;Médor le chient est trop jeune. Veuillez revenir dans 1 mois&quot;</span></pre>
+<pre class="gherkin">Scénario : pouvoir acheter un animal domestique adulte
+    Etant donné qu'un chiot ne peut être vendu avant qu'il n'ait &quot;2 mois&quot;
+    Et que &quot;Médor le chien&quot; a actuellement &quot;1 mois&quot;
+    Quand j'essaye d'acheter &quot;Médor le chien&quot;
+    Alors on doit me dire &quot;Médor le chient est trop jeune. Veuillez revenir dans 1 mois&quot;</pre>
 </div>
 
 <p>C’est un peu plus explicite non ? Et il reste moins de questions. De
@@ -1844,14 +1858,14 @@ agiles : le Développement piloté par le Comportement.</p>
 (très grosses applications financières, petits intranet, sites web...) à cette situation : des
 clients étaient incapables de me décrire ce qu'ils voulaient que je réalise pour eux.</p>
 
-<p>A chaque fois, il m'a fallu moi-même interpréter leurs souhaits, à partir de captures d'écrans de
+<p>A chaque fois, dans ce cas, il m'a fallu moi-même interpréter leurs souhaits, à partir de captures d'écrans de
 sites concurrents, de discussions interminables... Et pour un résultat pas toujours très heureux.</p>
 
 <p>A quoi la faute ? Au client ? Pas forcément : après tout, ce n'est pas parce qu'on est patron d'entreprise
 ou que l'on a un besoin bien précis que l'on sait comment résoudre ce besoin, ou l'exprimer clairement.</p>
 
 <p>Est-ce la faute du développeur, qui semble incapable de comprendre ce qu'on lui demande ? Personnellement
-j'ai toujours essayé de faire de mon mieux, même si je suis conscient de ne pas toujours été à la hauteur.
+j'ai toujours essayé de faire de mon mieux, même si je suis conscient de ne pas avoir toujours été à la hauteur.
 Et je crois que la plupart des développeurs fait de même.</p>
 
 <p>Alors ? Et si personne n'était en tort ? En réalité, la plupart des projets informatiques échouent car
@@ -1891,9 +1905,12 @@ Bref, c'est un intranet.</p>
 <p>Attendez... Mais comment donc voulez-vous réussir à satisfaire votre client si vous ne vous n'employez
 pas le même vocabulaire sur des choses si fondamentales ?</p>
 
-<p>Ajoutez à cela que votre client va toujours avoir tendance à faire deux choses :
-+ employer des acronymes, sigles et autre vocabulaire fonctionnel
-+ employer des termes techniques ("base de données", "formulaire", "sauvegarder") sans savoir précisément ce qu'ils signifient</p>
+<p>Ajoutez à cela que votre client va toujours avoir tendance à faire deux choses :</p>
+
+<ul>
+<li>employer des acronymes, sigles et autre vocabulaire fonctionnel</li>
+<li>employer des termes techniques ("base de données", "formulaire", "sauvegarder") sans savoir précisément ce qu'ils signifient</li>
+</ul>
 
 <p>La première chose à faire lorsque vous démarrez un projet avec un client, c'est donc de vous
 créer un vocabulaire commun. Il va falloir inventer une nouvelle langue, qui ne laisse plus la
@@ -1928,12 +1945,12 @@ surtout combien cela aurait été simple si seulement on vous avait prévenu que
 
 <p>Comment éviter d'être touché par ce malheureux constat d'échec, ou de semi-réussite ?</p>
 
-<p>La réponse en théorie simple : il suffit de livrer plus régulièrement au client, de sorte qu'il
+<p>La réponse est en théorie simple : il suffit de livrer son travail très régulièrement au client, de sorte qu'il
 puisse rapidement s'apercevoir le plus tôt possible que le projet n'est pas parti dans la direction
 à laquelle il s'attendait.</p>
 
 <p>Cette démarche est celle des méthodes agiles, particulièrement de Scrum. Le principe est le suivant :
-plutôt que de livrer votre projet une bonne fois pour toute à la fin, vous vous engagez à livrer des
+plutôt que de livrer votre projet une bonne fois pour toute (lorsque le travail est terminé), vous vous engagez à livrer des
 bouts de fonctionnalités très régulièrement (une fois toutes les deux semaines par exemple).</p>
 
 <p>C'est ce qu'on appelle le développement par itérations, par opposition au cycle en V. Vous développez
@@ -2019,9 +2036,9 @@ qu'est-ce qui vous empêche d'essayer de l'améliorer ?</p>
 vous n'avez rien à faire ; c'est triste, mais ça arrive fréquemment. Il arrive de devoir travailler sur
 un projet pour des besoins alimentaires. C'est légitime. Mais autant faire en sorte que même ces projets,
 alimentaires, vous apportent de la satisfaction humaine. Adopter la vision de l'utilisateur final vous
-obligera toujours à discuter : discuter avec votre client, les utilisateurs finaux, vos collègues...</p>
+permettra toujours d'échanger : échanger avec votre client, les utilisateurs finaux, vos collègues...</p>
 
-<p>J'ai il y a quelques temps lancé un sondage auprès des développeurs de la société dans laquelle je
+<p>Il y a quelques temps, j'ai lancé un sondage auprès des développeurs de la société dans laquelle je
 travaille. Une des questions était à peu près la suivante : "Prenez-vous plaisir dans votre travail?".
 Près d'un quart des réponses était négatif. Quel dommage !</p>
 
@@ -2037,37 +2054,568 @@ en prendre le maximum !</p>
 </div>
         <div class="item chapter">
     <h1 id="votre-code-doit-refleter-le-besoin-fonctionnel"><span>Chapitre 2</span> Votre code doit refléter le Besoin fonctionnel</h1>
-    <h2 id="la-programmation-par-contrat">2.1 La programmation par Contrat</h2>
+    <p>Vous le savez, il arrive très souvent qu'un besoin fonctionnel évolue au cours de 
+la vie d'un projet. Et, parfois, une évolution fonctionnelle, même mineure, peut 
+entraîner une refonte majeure d'un code source.</p>
 
-<h2 id="le-domain-driven-design">2.2 Le Domain Driven Design</h2>
+<p>C'est l'effet boule de neige : modifier un bloc de code va avoir un impact sur une 
+grande partie de code source, qui elle même va concerner des domaines fonctionnels très variés, 
+entraînant des régression fonctionnelle nombreuses et imprévisibles.</p>
 
-<h2 id="coder-une-regle-metier-efficacement-le-pattern-specification">2.3 Coder une règle métier efficacement : le Pattern Specification</h2>
+<p>Si vous l'avez vécu, vous savez que c'est quelque chose qui est totalement 
+incompréhensible pour une personne qui n'est pas développeur. Ce n'est pas de la mauvaise 
+volonté, non ; c'est simplement que, s'il est déjà difficile de saisir pleinement qu'écrire 
+du code source permet au final d'avoir une application qui marche, comprendre qu'il existe 
+dans le code source des interactions fines, complexes et non liées aux domaines fonctionnels est 
+une chose quasiment impossible pour un fonctionnel.</p>
 
-<h2 id="representer-une-information-le-pattern-object-value">2.4 Représenter une information : le Pattern Object-Value</h2>
+<p>Il faut donc trouver une solution pour répondre à ceux deux questions fondamentales :</p>
 
-<h2 id="tout-objet-a-une-identite-le-pattern-entity">2.5 Tout objet a une identité : le Pattern Entity</h2>
+<ul>
+<li>comment assurer la cohérence des changements techniques face aux changements fonctionnels ?</li>
+<li>comment permettre aux fonctionnels d'anticiper le coût technique d'un changement fonctionnel ?</li>
+</ul>
 
-<h2 id="manipulez-les-objets-metiers-le-pattern-repository">2.6 Manipulez les objets métiers : le Pattern Repository</h2>
+<h2 id="le-domain-driven-design">2.1 Le Domain Driven Design</h2>
 
-<h2 id="superposez-le-besoin-metier-a-votre-code-source-le-pattern-service">Superposez le besoin métier à votre code source : le pattern Service</h2>
+<p>C'est justement l'enjeu du Domain Driven Design de répondre à ces questions. L'objet de 
+cet ouvrage n'est pas de faire de vous des spécialistes du Domain Driven Design (ou DDD) en 
+quelques pages. Non, il existe des livres très bien conçus, que je ne peux que vous inviter à 
+lire <em>(cf. Domain Driven Design Vite Fait + DDD de Eric Envans) - Liens à mettre</em></p>
+
+<p>Non, l'objectif ici est de comprendre qu'il existe des démarches de travail et de conception 
+logicielle qui permette de faciliter la gestion du besoin fonctionnel. Et c'est là, justement, l'objet du DDD.</p>
+
+<p>Le DDD est une démarche d'échange, de conception et de développement, dont l'objectif est de calquer 
+le code source (code, base de données, ressources...) sur le besoin métier.</p>
+
+<p>Impossible ? Si, et même très profitable. Sitôt que vous aurez commencé à travailler de cette manière, 
+vous ne pourrez plus vous en passer.</p>
+
+<p>L'idée générale est d'élaborer une Langue commune (cette Langue dont nous avons déjà parlé) avec 
+le fonctionnel, puis de concevoir une cartographie fonctionnelle de l'application, afin 
+de n'utiliser, dans le code source, uniquement des concepts présents dans le domaine fonctionnel.</p>
+
+<p>Dès lors, si cette démarche a été accomplie, il devient facile pour le développeur 
+d'identifier quelle proportion de code et quels modules techniques seront impactés par une 
+demande de changement fonctionnel : il lui "suffit" de superposer le nouveau besoin fonctionnel 
+sur l'ancien code source.</p>
+
+<p>De cette manière, toute modification technique devient représentative des modifications fonctionnelles : 
+une modification fonctionnelle mineure ne peut plus entraîner une refonte technique longue et coûteuse. 
+Et a contrario, il est totalement légitime qu'une évolution fonctionnelle lourde nécessite une refonte 
+tout autant importante du code source.</p>
+
+<p>De manière générale, il est important de prendre conscience que le travail du développeur est de répondre à 
+un besoin fonctionnel. Il est donc important de structurer son code, de quelque manière que ce soit, de 
+façon à répondre au mieux et le plus facilement à ce besoin.</p>
+
+<blockquote>
+  <p>Les impacts techniques doivent être à la mesure des changements fonctionnels</p>
+</blockquote>
+
+<h2 id="-les-tests-unitaires-sont-indispensables">2.2  Les tests unitaires sont indispensables</h2>
+
+<p>En informatique on adore les sigles ; connaissez-vous le VDD ? C'est un sigle à la mode qui désigne
+le "var_dump driven development", ou autrement dit, le développement piloté par la fonction var_dump() de PHP.</p>
+
+<p>Pourquoi est-ce une expression à la mode ? Tout simplement parce qu'elle désigne une pratique de développement 
+vouée à l'extinction, qui consiste pour le développeur à afficher à l'écran les valeurs de certaines variables pour 
+en vérifier le contenu manuellement.</p>
+
+<p>La raison pour laquelle cette pratique est vouée à disparaître est simple : lorsque l'on vérifie à la main 
+une valeur d'une variable, c'est long, ennuyant, et on risque de faire des erreurs.</p>
+
+<p>En réalité, faire un var_dump() pour afficher une information à l'écran n'est ni plus ni moins qu'un contrôle sur 
+l'état d'une variable. Or il est très facile d'imaginer des robots dont la seule fonction est de s'assurer en permanence 
+de l'état d'une variable. Et ces robots, infatiguables et extrêmement rapides, ne se tromperont jamais.</p>
+
+<p>Ces robots, ce sont les tests unitaires automatisés. Ecrire des tests unitaires est, à ce jour, l'un des seuls moyens vraiment efficaces 
+pour faciliter la vie d'un développeur, fiabiliser son code et réduire les coûts de maintenance d'une application.</p>
+
+<p>Il existe dans tous les langages de programmation des outils qui facilitent la rédaction de tests unitaires : JUnit en Java, QUnit en JavaScript...
+En PHP, deux outils se démarquent par leur fiabilité et leur grande communauté: <a href="http://phpunit.de">PHPUnit</a>, développé par Sebastian Bergmann, 
+et [atoum][http://docs.atoum.org], développé par Frédéric Hardy. Ces deux outils proposent une approche légèrement différente des tests unitaires, 
+mais sont tous les deux simples, efficaces et complets.</p>
+
+<p>De manière générale, rédiger un test unitaire consiste à dérouler un processus simple :</p>
+
+<ul>
+<li>mettre en condition un code que l'on souhaite tester : ce sont les conditions du test</li>
+<li>exécuter une commande : il s'agit de ce que l'on souhaite tester</li>
+<li>décrire quel doit être l'effet de la commande : il s'agit alors du résultat attendu</li>
+</ul>
+
+<p>Lors que l'on affiche une variable à l'écran pour vérifier sa valeur, finalement ce que l'on fait c'est exiger que 
+cette variable ait telle ou telle valeur. En d'autres termes, on fait une assertion sur la valeur de la variable.</p>
+
+<p>On peut imaginer, par exemple, créer un test unitaire automatisé pour une fonction d'addition, qui utiliserait la 
+fonction PHP native <code>assert()</code> :</p>
+
+<div class="code php">
+<pre class="php"><span class="re0">$resultat</span> <span class="sy0">=</span> addition<span class="br0">&#40;</span><span class="nu0">5</span><span class="sy0">,</span><span class="nu0">5</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw3">assert</span><span class="br0">&#40;</span><span class="re0">$resultat</span> <span class="sy0">===</span> <span class="nu0">10</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Ce code PHP génerera une erreur si la fonction addition() ne renvoie pas "10".</p>
+
+<p>L'avantage d'utiliser un outil de tests automatisés sera de pouvoir organiser ses tests facilement et efficacement. Chaque 
+assertion valide sera afficée en vert, les erreurs seront remontées aux développeur en un instant.</p>
+
+<blockquote>
+  <p>Les tests unitaires sont le seul moyen efficaces de fiabiliser un code source</p>
+</blockquote>
+
+<h2 id="-tester-le-besoin-metier-est-indispensable">2.3  Tester le besoin métier est indispensable</h2>
+
+<p>Tester son code source est bien. C'est même déjà pas mal du tout ! Mais une application web est plus qu'un code source : c'est 
+un assemblage de comportements (code source) vis-à-vis d'informations (données, souvent issues d'une base de données), pour 
+délivrer un message (par exemple une page web), le tout exécuté dans un environnement spécifique (serveur), le tout 
+vis-à-vis d'un utilisateur (navigateur).</p>
+
+<p>On comprend vite du coup que ce n'est pas parce qu'un code source fonctionne de la manière attendue que l'application, elle aussi, 
+aura le comportement désiré.</p>
+
+<p>Bien plus, il est en réalité difficile de tester unitairement l'ensemble d'un code source : c'est long et coûteux, et cela 
+exige des changements importants dans les pratiques de développement (Développement piloté par les tests, génération de 
+tests aléatoires, etc.).</p>
+
+<p>C'est pour ces raisons qu'il existe différents niveaux de tests automatisés :</p>
+
+<ul>
+<li>les <em>tests d'intégration</em>, qui s'assurent de l'environnement donné (version de PHP, présence d'un module apache...)</li>
+<li>les <em>tests de charge</em>, qui s'assurent de la performance d'une application</li>
+<li>les <em>tests unitaires</em>, qui vérifient le comportement du code source</li>
+<li>les <em>tests d'interface</em>, qui vérifient qu'une application a bien l'aspect attendu</li>
+<li>les <em>tests fonctionnels</em>, qui s'assurent que l'application délivre bien un service métier à l'utilisateur</li>
+</ul>
+
+<p>Il existe bien entendu d'autres niveaux de tests (sécurité, cohérence...), mais ceux-ci sont les plus 
+répandus.</p>
+
+<p>Le dernier niveau de test (le test fonctionnel) est sans doute parmi les plus importants. Finalement, tout votre travail 
+consiste justement à faire en sorte que l'utilisateur tire un bénéfice fonctionnel d'une application. S'assurer que 
+ce bénéfice fonctionnel est bien présent est indispensable pour votre client.</p>
+
+<p>Mais justement, ce contrôle, autrement dit ce travail de Recette client, est long et laborieux. Il est source 
+d'erreurs, et surtout il est impossible de contrôler à la main, lors de chaque évolution fonctionnelle, que 
+l'ensemble de l'application fonctionne toujours de la manière attendue.</p>
+
+<p>C'est pour cela qu'il existe désormais des outils de tests fonctionnels automatisés. C'est outils sont 
+infatiguables: ils traquent en permanence votre application à la recherche d'anomalies fonctionnelles.</p>
 
 </div>
         <div class="item chapter">
     <h1 id="comprenez-enfin-ce-que-votre-client-vous-demande"><span>Chapitre 3</span> Comprenez (enfin!) ce que votre client vous demande</h1>
-    <h2 id="le-besoin-fonctionnel-changera-et-cest-normal-">3.1 Le besoin fonctionnel changera. Et c'est normal !</h2>
+    <p>Vous l'avez compris : votre client ne parle pas la même langue que vous. Comment comprendre ce qu'il vous demande dans ce cas ?
+Certains vous répondront : "utilisez UML". D'autres vous diront qu'il faut demander à
+votre client de s'exprimer sous forme de "si...alors". J'imagine que cela doit être possible
+dans certain cas. Mais dans la majorité des situations, exiger de vos clients qu'ils apprennent l'UML, 
+ou leur demander de formaliser leur pensée sous forme de logique booléenne, est un contre-sens ! 
+Ils n'y arriveront pas efficacement : ce n'est pas leur métier, et probablement pas leur mode de pensée.</p>
 
-<h2 id="facilitez-la-communication-acceptez-le-changement">3.2 Facilitez la communication, acceptez le changement</h2>
+<p>C'est pour cela qu'il existe ce que l'on appelle le "Développement piloté par le Comportement" 
+("Behavior Driven Development", ou "BDD" en anglais). Ce qui se cache derrière ce terme barbare est 
+en réalité très simple : il s'agit d'une démarche pour faciliter la communication entre fonctionnels
+ et techniques, démarche soutenue par l'utilisation d'une langue et d'une grammaire commune.</p>
 
-<h2 id="le-besoin-doit-etre-exprime-par-des-fonctionnalites">3.3 Le besoin doit être exprimé par des Fonctionnalités</h2>
+<p>Cette grammaire commune (appelée "Gherkin") est simple, facile à apprendre, et compréhensible tout 
+autant par un informaticien que par votre voisin, votre coinjoint(e)..., et par là-même par votre client.</p>
 
-<h2 id="chaque-fonctionnalite-peut-etre-decoupe-en-scenarios">3.4 Chaque Fonctionnalité peut être découpé en Scénarios</h2>
+<p>Utiliser cette grammaire vous offrira un certain nombre d'avantages :</p>
 
-<h2 id="demandez-exigez-des-exemples-precis">Demandez (exigez) des exemples précis</h2>
+<ul>
+<li>vous éviterez les quiproquos</li>
+<li>les spécifications vous serviront de documentation</li>
+<li>il sera plus facile d'identifier et de gérer les changements fonctionnels de dernière minute</li>
+<li>vous saurez à tout moment ce qu'il vous reste à faire</li>
+</ul>
+
+<p>Attention, le Développement piloté par le comporement a un pré-requis majeur et non
+négociable : <em>le client doit s'investir</em>. Il faudra que le client (ou son représentant fonctionnel) 
+soit disponible pour répondre à chacune de vos questions, en permanence. Si personne autour de vous 
+n'est prêt à s'investir pour exprimer le besoin clairement, oubliez l'idée de pratiquer le Développement 
+piloté par le comportement : vous n'aurez pas les moyens d'y parvenir.</p>
+
+<blockquote>
+  <p>Gherkin est une grammaire accessible à tous pour structurer l'expression de besoin</p>
+</blockquote>
+
+<h2 id="le-besoin-doit-etre-exprime-par-des-fonctionnalites">3.1 Le besoin doit être exprimé par des Fonctionnalités</h2>
+
+<p>Concrètement, comment démarrer ? La première tâche revient à votre client. C'est lui qui
+va dévoir recencer la liste des Fonctionnalités qu'il souhaite voir dans son application.</p>
+
+<p>Pour cela, il va devoir identifier chaque fonctionnalité par un titre simple, court, expli-
+cite et unique :</p>
+
+<div class="code gherkin">
+<pre class="gherkin"># Le client va distinguer les fonctionnalités en leur donnant un titre 
+Fonctionnalité : Avoir accès à la liste des animaux de compagnie
+Fonctionnalité : Choisir un animal de compagnie
+Fonctionnalité : Acheter un animal de compagnie
+Fonctionnalité : ...</pre>
+</div>
+
+<p>Il est impératif qu'à cette étape les titres des fonctionnalités soient clairs et explicites.</p>
+
+<p>Ensuite, il va lui suffire de contextualiser un peu cette fonctionnalité. Par exemple, il devra 
+indiquer qui est le bénéficiaire de cette fonctionnalité :</p>
+
+<div class="code gherkin">
+<pre class="gherkin">En tant que vendeur
+En tant que acheteur
+En tant que propriétaire de la boutique
+En tant que ...</pre>
+</div>
+
+<p>Vous avez donc désormais connaissance de l'acteur bénéficiaire de la fonctionnalité. Il
+reste encore à identifier le service offert par la fonctionnalité. C'est cela que vous aurez, finalement, à programmer :</p>
+
+<div class="code gherkin">
+<pre class="gherkin">Je veux acheter un animal de compagnie
+Je veux connaître la liste des animaux de compagnie de mon magasin
+Je veux connaître la liste des vendeurs
+Je veux ...</pre>
+</div>
+
+<p>Pour lever toute ambiguïté, il est important pour vous de comprendre quel est le bénéfice
+de la fonctionnalité que vous aller développer : à quoi sert-elle vraiment ?</p>
+
+<p>Après tout, c'est indispensable de comprendre et de connaître le pourquoi de votre métier.
+Lorsque vous travaillez, le fruit de votre travail est vraiment utile ; et il est toujours gratifiant 
+de voir que l'on a rendu service à quelqu'un. C'est pour cela qu'il est important que le
+client exprime le bénéfice obtenu par la fonctionnalité :</p>
+
+<div class="code gherkin">
+<pre class="gherkin">De telle sorte que je puisse repartir avec un nouveau compagnon
+De telle sorte que je sache s'il me faut renouveler le stock
+De telle sorte que je puisse organiser les congés de chacun
+De telle sorte que ...</pre>
+</div>
+
+<p>Chaque fonctionnalité peut donc être exprimée en quatre lignes, très simples et compréhensibles par tous :</p>
+
+<div class="code gherkin">
+<pre class="gherkin">Fonctionnalité : Connaître la liste des animaux de compagnie disponibles
+  En tant que vendeur
+  Je veux connaître la liste des animaux de compagnie disponibles à la vente
+  De telle sorte que je sache s'il me faut renouveler le stock</pre>
+</div>
+
+<p>Pratique non ? Cette manière d'exprimer les fonctionnalités (dénommée "Gherkin"), est
+simple, mais surtout est compréhensible par tous. C'est le rôle de votre client (ou fonctionnel) 
+de recencer l'ensemble des fonctionnalités du projet de cette manière.
+Mais, vous vous en doutez, cela ne suffit pas. Il va falloir maintenant comprendre en détail 
+chaque fonctionnalité ; c'est un travail que vous ferez en commun</p>
+
+<h2 id="vous-etes-un-journaliste-interviewez-">3.2 Vous êtes un journaliste : interviewez !</h2>
+
+<p>Chaque Fonctionnalité peut donc être traduite en quatre petites phrases. Mais dans la majorité 
+des cas cela ne suffira pas : il reste des ambiguïtés, ce n'est pas très précis...</p>
+
+<p>C'est là que vous entrez en scène. A partir du moment où les fonctionnalités sont décrites
+dans leurs grandes lignes, vous allez devoir les détailler. Oui, vous-même !
+Comment ? Tout simplement en prenant quelques instants la casquette d'un journaliste :
+interviewez votre fonctionnel !</p>
+
+<p>Attention, je vous parle d'une vraie interview. Prenez le temps, pour chaque Fonctionnalité, 
+de poser un maximum de questions pertinentes : "et qu'est-ce qui se passe quand ... ?" ;
+ou encore "je ne comprend pas le bénéfice tiré de cette fonctionnalité pour l'utilisateur."</p>
+
+<p>Posez, donc, toutes ces questions. Et surtout planifiez systématiquement un moment,
+avant chaque itération, où votre fonctionnel et l'ensemble des équipes techniques (oui,
+toutes lers personnes qui sont concernées), vont se réunir pour cette interview.</p>
+
+<p>J'insiste : il ne s'agit pas d'une réunion facultative : comment ferait-on sans cela pour être
+sûr d'avoir bien compris la demande du client ? Le temps passé n'est pas perdu, loin de là :
+c'est du temps de gagné sur la future maintenance, les futures recettes et les futurs vas-et-vients 
+entre le client et les équipes techniques.</p>
+
+<p>L'objectif de ces interviews est de comprendre exactement, sans aucune ambiguïté possible, 
+ce qui vous est demandé fonctionnellement. Pour cela, il faudra découper les prochaines 
+Fonctionnalités que vous aurez à développer en "Scénarios".</p>
+
+<h2 id="chaque-fonctionnalite-peut-etre-decoupe-en-scenarios">3.3 Chaque Fonctionnalité peut être découpé en Scénarios</h2>
+
+<p>Chaque Fonctionnalité peut être décrite en quatre points :</p>
+
+<ul>
+<li>un titre</li>
+<li>un rôle</li>
+<li>un service rendu</li>
+<li>un bénéfice métier</li>
+</ul>
+
+<p>Mais cela ne suffira probablement pas. Il reste des questions en suspens. C'est le rôle des
+Scénarios de lever ces incertitudes. Ce sera d'autant plus vrai qu'ils seront rédigés en commun 
+avec le fonctionnel et les équipes techniques.</p>
+
+<p>Chaque Fonctionnalité peut contenir un ou plusieurs Scénarios, et chaque Scénario doit
+pouvoir se distinguer facilement des autres par un titre :</p>
+
+<div class="code gherkin">
+<pre class="gherkin">Fonctionnalité : acheter un animal de compagnie
+  (...)
+  Scénario : acheter un animal de compagnie disponible à la vente
+  Scénario : tenter d'acheter un animal de compagnie qui est trop jeune
+  Scénario : tenter d'acheter un animal de compagnie qui est réservé
+  ...</pre>
+</div>
+
+<p>Votre travail de développeur va consister à rendre ces Scénarios effectifs dans
+l'application. En identifiant les Scénarios réalisés et ceux qui ne le sont pas vous saurez
+donc exactement ce qu'il vous reste à faire.</p>
+
+<p>Vous vous en doutez : un simple titre ne suffit pas ; il va falloir compléter chaque Scénario.
+Posez par exemple cette question : "dans quel cadre ce scénario se situe t-il ?". Cela vous 
+permettra de connaître le <em>Contexte de votre Scénario</em>:</p>
+
+<div class="code gherkin">
+<pre class="gherkin">Scénario : ...
+  Etant donné que tel contexte existe
+  Etant donné que je souhaite acheter un chien
+  Etant donné qu'il n'y a plus un seul animal disponible
+  Etant donné ...</pre>
+</div>
+
+<p>Une application consiste généralement à réagir à des <em>événements</em>. Précisez-donc quels
+sont ces événéments :</p>
+
+<div class="code gherkin">
+<pre class="gherkin">Scénario : ...
+  (...)
+  Quand j'essaye d'acheter un chien
+  Quand je regarde quels sont les animaux disponibles
+  Quand ...</pre>
+</div>
+
+<p>Dès lors, il ne vous reste plus qu'à préciser le <em>Résultat attendu</em> lorsque cet événement
+survient :</p>
+
+<div class="code gherkin">
+<pre class="gherkin">Scénario : ...
+  (...)
+  Alors je peux repartir avec un petit chien
+  Alors je dois être informé que le chien est trop jeune pour être
+  vendu
+  Alors ...</pre>
+</div>
+
+<p>Cette syntaxe, simple, que l'on nomme Gherkin, va suffire dans la majorité des cas pour
+que le fonctionnel puisse exprimer son besoin et surtout pour que vous puissez comprendre 
+sans ambiguïté ce qui vous ai demandé.</p>
+
+<p>Voici un exemple de Fonctionnalité :</p>
+
+<div class="code gherkin">
+<pre class="gherkin">Fonctionnalité : acheter un chiot
+En tant que client du magasin
+Je veux pouvoir acheter un chiot
+De telle sorte que je puisse avoir un animal de compagnie
+&nbsp;
+Scénario : acheter un chiot disponible à la vente
+  Etant donné qu'un chiot est disponible en stock
+  Quand j'achète un chiot
+  Alors on me donne un chiot
+&nbsp;
+Scénario: acheter un chiot sevré
+  Etant donné qu'un chiot est trop jeune pour être vendu
+  Quand j'essaye d'acheter ce chiot
+  Alors je suis informé qu'il est trop jeune pour être vendu</pre>
+</div>
+
+<p>Pratique non ?</p>
+
+<h2 id="-demandez-exigez-des-exemples-precis">3.4  Demandez (exigez) des exemples précis</h2>
+
+<p>Rappelez-vous que l'objectif du Développement piloté par le comportement est de lever
+toutes les ambiguïtés. Pourtant, dans le scénario suivant, il reste des questions :</p>
+
+<div class="code gherkin">
+<pre class="gherkin">Scénario:  acheter un chiot sevré
+  Etant donné qu'un chiot est trop jeune pour être vendu
+  Quand j'essaye d'acheter ce chiot
+  Alors je suis informé qu'il est trop jeune pour être vendu</pre>
+</div>
+
+<p>Ces questions sont nombreuses :</p>
+
+<ul>
+<li>à partir de quel âge un chiot peut-il être vendu ?</li>
+<li>quel est l'âge du chiot que l'on essaye d'acheter ?</li>
+<li>comment suis-je informé ? par quelle phrase ?</li>
+</ul>
+
+<p>Autant de questions auxquelles, si vous ne les posez pas maintenant, vous serez obligé de
+répondre vous-même, avec tous les risques que cela comporte, notamment celui de devoir
+recommencer son développement !</p>
+
+<p>Heureusement, il est tout à fait possible, avec Gherkin, de préciser des valeurs à utiliser. Il
+suffit de les encadrer dans des guillemets :</p>
+
+<div class="code gherkin">
+<pre class="gherkin">Scénario : acheter un chiot sevré
+  Etant donné qu'un chiot ne peut être vendu avant qu'il n'ait &quot;2 mois&quot;
+  Et que &quot;Médor le chien&quot; a actuellement &quot;1 mois&quot;
+  Quand j'essaye d'acheter &quot;Médor le chien&quot;
+  Alors on doit me dire &quot;Médor le chient est trop jeune !&quot;</pre>
+</div>
+
+<p>Pas mal d'ambiguïtés sont levées non ? Et ça ne prend pas beaucoup plus de temps à écrire.
+Maintenant, il peut arriver qu'un seul exemple ne suffise pas ; il en faudrait plusieurs. Pas
+de problèmes, Gherkin vous permet d'utiliser des exemples facilement ; il suffit de les passer 
+sous forme de tableaux. Les variables sont alors à encadrer par les symboles "&lt;" (plus petit que) 
+et ">" (plus grand que).</p>
+
+<div class="code gherkin">
+<pre class="gherkin">Plan de Scénario : acheter un chiot sevré
+  Etant donné qu'un chiot ne peut être vendu avant qu'il n'ait &quot;2 mois&quot;
+  Et que &quot;&lt;nom-du-chien&gt;&quot; a actuellement &quot;&lt;age-du-chien&gt;&quot;
+  Quand j'essaye d'acheter &quot;&lt;nom-du-chien&gt;&quot;
+  Alors on doit me dire &quot;&lt;nom-du-chien&gt; est trop jeune !&quot;
+&nbsp;
+Exemples :
+  | nom-du-chien  | age-du-chien        |
+  | médor       | 1 mois            |
+  | rex         | 1 mois et 3 jours     |
+  | rantanplan    | 15 jours            |</pre>
+</div>
+
+<p>Remarquez qu'il ne s'agit plus dans ce cas d'un "Scénario" mais d'un "Plan de Scénario".</p>
+
+<p>Vous voici donc avec un besoin simple, découpé et exprimé clairement. A vous de jouer !</p>
 
 </div>
         <div class="item chapter">
     <h1 id="automatisez-votre-recette"><span>Chapitre 4</span> Automatisez votre recette</h1>
-    <h2 id="installez-et-utilisez-behat-en-php">4.1 Installez et utilisez Behat en PHP</h2>
+    <p>Vous l'avez vu, Gherkin est un moyen simple pour votre fonctionnel pour vous fournir
+une expression de besoin claire et précise.</p>
+
+<p>Que diriez-vous maintenant de traduire ce besoin en tests automatisés ? Car, oui, c'est possible !</p>
+
+<p>Tout besoin, s'il est exprimé clairement, peut être testé. Si ce besoin est exprimé dans une
+grammaire solide et complète, tout système d'information peut le tester automatiquement.</p>
+
+<p>Je vous propose de voir comment traduire ce besoin en tests automatisés, de telle sorte
+qu'une simple ligne de commande dans un terminal vous indique si ce que vous avez développé est 
+conforme ou non.</p>
+
+<p>L'ensemble des exemples que nous allons voir sont écrits en PHP. Pourquoi ? Tout simplement 
+parce que la communauté PHP a très fortement et très rapidement adheré au Déve-
+loppement piloté par le comportement. Les outils PHP pour le Développement piloté par
+le comportement sont matures, nombreux, et surtout offrent une souplesse qui, à ce jour,
+ne se retrouve pas dans d'autres langages.</p>
+
+<p>Cependant, il existe des outils pour écrire et lancer des tests automatisés dans n'importe
+quel langage :</p>
+
+<ul>
+<li>Ruby : Cucumber (http://cukes.info)</li>
+<li>Java : JBehave (http://jbehave.org)</li>
+<li>C# : NBehave (https://github.com/nbehave/NBehave)</li>
+<li>Python : Behave (http://packages.python.org/behave/)</li>
+<li>PHP : Behat (http://behat.org) , PHPSpec (http://www.phpspec.net)</li>
+<li>JavaScript : Jasmine (http://pivotal.github.com/jasmine/)</li>
+<li>.Net: NBehave (http://nbehave.org)</li>
+</ul>
+
+<p>Il en existe bien d'autres, la liste est loin d'être exhaustive, mais ceux-ci sont particulièrement 
+utilisés dans le monde du développement aujourd'hui.</p>
+
+<h2 id="installez-et-utilisez-behat-en-php">4.1 Installez et utilisez Behat en PHP</h2>
+
+<p>Behat est un outil développé en PHP par Konstantin Kudryashov (@everzet) et soutenu
+par la société KnpLabs. Cet outil efficace est aujourd'hui mature et largement utilisé.
+Behat permet d'exécuter des tests automatisés sur tous types d'applications, PHP ou non.
+Il peut tester :</p>
+
+<ul>
+<li>des applications web, en pilotant un vrai navigateur ou non</li>
+<li>des applications console (terminal)</li>
+<li>des morceaux de code source</li>
+</ul>
+
+<p>Du moment que ce qui est testé dispose d'un point d'entrée et d'une information de sortie,
+Behat va vous permettre d'automatiser votre recette métier.</p>
+
+<p>Dans tous les cas, il vous faudra PHP installé sur la machine qui exécutera les tests.
+L'installation de PHP est résumée sur cette page : http://php.net/manual/fr/install.php.</p>
+
+<p>Windows :</p>
+
+<div class="code bash">
+<pre class="bash">Utilisez WampServer <span class="br0">&#40;</span>http:<span class="sy0">//</span>www.wampserver.com<span class="br0">&#41;</span></pre>
+</div>
+
+<p>Ubuntu, Debian :</p>
+
+<div class="code bash">
+<pre class="bash"><span class="co0"># en ligne de commande</span>
+<span class="kw2">apt-get install</span> php5-common php5-cli php5-curl</pre>
+</div>
+
+<p>Mac :</p>
+
+<div class="code bash">
+<pre class="bash">Utilisez MampServer <span class="br0">&#40;</span>http:<span class="sy0">//</span>www.mamp.info<span class="br0">&#41;</span></pre>
+</div>
+
+<p>Installer Behat est simple, peut être fait de plusieurs manières : sous forme d'archive PHP
+(phar) ou en utilisant un gestionnaire de dépendance.</p>
+
+<h3 id="installation-avec-composer">4.1.1 Installation avec Composer</h3>
+
+<p>Créez un fichier composer.json à la racine de votre projet, avec le contenu suivant :</p>
+
+<div class="code json">
+<pre class="json">{
+    &quot;require&quot;: {
+        &quot;behat/behat&quot;: &quot;2.4.*@stable&quot;
+    },
+    &quot;config&quot;: {
+        &quot;bin-dir&quot;: &quot;bin/&quot;
+    }
+}</pre>
+</div>
+
+<p>Exécutez ensuite la commande suivante dans votre terminal, en vous plaçant àa la racine
+de votre projet :</p>
+
+<div class="code bash">
+<pre class="bash">curl http:<span class="sy0">//</span>getcomposer.org<span class="sy0">/</span>installer <span class="sy0">|</span> php
+php composer.phar <span class="kw2">install</span> <span class="re5">--prefer-source</span></pre>
+</div>
+
+<h3 id="-installation-sous-forme-darchive-phar">4.1.2  Installation sous forme d'archive Phar</h3>
+
+<p>Il vous suffit de télécharger le fichier behat.phar à l'adresse suivante : http://behat.org/
+downloads/behat.phar, et de le placer dans un dossier <code>bin</code> à la racine de votre projet. Vous
+aurez donc l'arborescence suivante :</p>
+
+<div class="code bash">
+<pre class="bash"><span class="sy0">/</span>chemin<span class="sy0">/</span>vers<span class="sy0">/</span>mon<span class="sy0">/</span>projet
+    <span class="br0">&#40;</span>...<span class="br0">&#41;</span>
+    - bin<span class="sy0">/</span>
+        - behat.phar</pre>
+</div>
+
+<p>Pour des raisons de maintenabilité, il est préferable d'utiliser la méthode d'installation
+avec Composer, qui vous permettra de mettre à jour très facilement l'ensemble des librairies 
+PHP que vous utilisez, y compris Behat.</p>
+
+<h3 id="preparer-le-projet">4.1.3 Préparer le projet</h3>
+
+<p>Une fois que Behat est installé, il vous suffit d'exécuter la commande suivante :</p>
+
+<div class="code bash">
+<pre class="bash">php .<span class="sy0">/</span>bin<span class="sy0">/</span>behat <span class="re5">--init</span></pre>
+</div>
+
+<p>Cela aura pour effet de créer dans votre projet tous les éléments dont Behat a besoin pour
+fonctionner. Votre arboresence ressemble désormais à :</p>
+
+<p><em>Screenshot</em></p>
 
 <h2 id="traduire-une-fonctionnalite-en-code-source">4.2 Traduire une Fonctionnalité en code source</h2>
 
@@ -2234,43 +2782,28 @@ en prendre le maximum !</p>
             <span>Chapitre 2</span> <a href="#votre-code-doit-refleter-le-besoin-fonctionnel">Votre code doit refléter le Besoin fonctionnel</a>
         </li>
             <li class="chapter level-2">
-            <span>2.1</span> <a href="#la-programmation-par-contrat">La programmation par Contrat</a>
+            <span>2.1</span> <a href="#le-domain-driven-design">Le Domain Driven Design</a>
         </li>
             <li class="chapter level-2">
-            <span>2.2</span> <a href="#le-domain-driven-design">Le Domain Driven Design</a>
+            <span>2.2</span> <a href="#-les-tests-unitaires-sont-indispensables"> Les tests unitaires sont indispensables</a>
         </li>
             <li class="chapter level-2">
-            <span>2.3</span> <a href="#coder-une-regle-metier-efficacement-le-pattern-specification">Coder une règle métier efficacement : le Pattern Specification</a>
-        </li>
-            <li class="chapter level-2">
-            <span>2.4</span> <a href="#representer-une-information-le-pattern-object-value">Représenter une information : le Pattern Object-Value</a>
-        </li>
-            <li class="chapter level-2">
-            <span>2.5</span> <a href="#tout-objet-a-une-identite-le-pattern-entity">Tout objet a une identité : le Pattern Entity</a>
-        </li>
-            <li class="chapter level-2">
-            <span>2.6</span> <a href="#manipulez-les-objets-metiers-le-pattern-repository">Manipulez les objets métiers : le Pattern Repository</a>
-        </li>
-            <li class="chapter level-2">
-            <span>2.7</span> <a href="#superposez-le-besoin-metier-a-votre-code-source-le-pattern-service">Superposez le besoin métier à votre code source : le pattern Service</a>
+            <span>2.3</span> <a href="#-tester-le-besoin-metier-est-indispensable"> Tester le besoin métier est indispensable</a>
         </li>
                 <li class="chapter level-1">
             <span>Chapitre 3</span> <a href="#comprenez-enfin-ce-que-votre-client-vous-demande">Comprenez (enfin!) ce que votre client vous demande</a>
         </li>
             <li class="chapter level-2">
-            <span>3.1</span> <a href="#le-besoin-fonctionnel-changera-et-cest-normal-">Le besoin fonctionnel changera. Et c'est normal !</a>
+            <span>3.1</span> <a href="#le-besoin-doit-etre-exprime-par-des-fonctionnalites">Le besoin doit être exprimé par des Fonctionnalités</a>
         </li>
             <li class="chapter level-2">
-            <span>3.2</span> <a href="#facilitez-la-communication-acceptez-le-changement">Facilitez la communication, acceptez le changement</a>
+            <span>3.2</span> <a href="#vous-etes-un-journaliste-interviewez-">Vous êtes un journaliste : interviewez !</a>
         </li>
             <li class="chapter level-2">
-            <span>3.3</span> <a href="#le-besoin-doit-etre-exprime-par-des-fonctionnalites">Le besoin doit être exprimé par des Fonctionnalités</a>
+            <span>3.3</span> <a href="#chaque-fonctionnalite-peut-etre-decoupe-en-scenarios">Chaque Fonctionnalité peut être découpé en Scénarios</a>
         </li>
             <li class="chapter level-2">
-            <span>3.4</span> <a href="#chaque-fonctionnalite-peut-etre-decoupe-en-scenarios">Chaque Fonctionnalité peut être découpé en Scénarios</a>
-        </li>
-            <li class="chapter level-2">
-            <span>3.5</span> <a href="#demandez-exigez-des-exemples-precis">Demandez (exigez) des exemples précis</a>
+            <span>3.4</span> <a href="#-demandez-exigez-des-exemples-precis"> Demandez (exigez) des exemples précis</a>
         </li>
                 <li class="chapter level-1">
             <span>Chapitre 4</span> <a href="#automatisez-votre-recette">Automatisez votre recette</a>

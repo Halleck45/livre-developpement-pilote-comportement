@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="author" content="Jean-François Lépine" />
-    <meta name="date" content="05/01/2013"/>
+    <meta name="date" content="23/02/2013"/>
     <meta name="generator" content="easybook 5.0-DEV"/>
 
     <title>Automatisez votre recette | Développeurs, faites-vous plaisir !</title>
@@ -18,9 +18,9 @@
     <div class="row">
         <h1 class="span9"><a href="./index.html">Développeurs, faites-vous plaisir !</a></h1>
         <p class="span3">
-                        <a href="/developpeurs-faites-vous-plaisir/chapitre-3.html"><span>&larr;</span> Précédent</a>
+                        <a href="./chapitre-3.html"><span>&larr;</span> Précédent</a>
             
-                        <a href="/developpeurs-faites-vous-plaisir/chapitre-5.html">Suivant <span>&rarr;</span></a>
+                        <a href="./chapitre-5.html">Suivant <span>&rarr;</span></a>
                     </p>
     </div>
 </div>
@@ -28,7 +28,133 @@
 <div class="row">
     <div class="span9">
         <h1 id="chapitre-4"><span>Chapitre 4</span> Automatisez votre recette</h1>
-        <h2 id="installez-et-utilisez-behat-en-php">4.1 Installez et utilisez Behat en PHP</h2>
+        <p>Vous l'avez vu, Gherkin est un moyen simple pour votre fonctionnel pour vous fournir
+une expression de besoin claire et précise.</p>
+
+<p>Que diriez-vous maintenant de traduire ce besoin en tests automatisés ? Car, oui, c'est possible !</p>
+
+<p>Tout besoin, s'il est exprimé clairement, peut être testé. Si ce besoin est exprimé dans une
+grammaire solide et complète, tout système d'information peut le tester automatiquement.</p>
+
+<p>Je vous propose de voir comment traduire ce besoin en tests automatisés, de telle sorte
+qu'une simple ligne de commande dans un terminal vous indique si ce que vous avez développé est 
+conforme ou non.</p>
+
+<p>L'ensemble des exemples que nous allons voir sont écrits en PHP. Pourquoi ? Tout simplement 
+parce que la communauté PHP a très fortement et très rapidement adheré au Déve-
+loppement piloté par le comportement. Les outils PHP pour le Développement piloté par
+le comportement sont matures, nombreux, et surtout offrent une souplesse qui, à ce jour,
+ne se retrouve pas dans d'autres langages.</p>
+
+<p>Cependant, il existe des outils pour écrire et lancer des tests automatisés dans n'importe
+quel langage :</p>
+
+<ul>
+<li>Ruby : Cucumber (http://cukes.info)</li>
+<li>Java : JBehave (http://jbehave.org)</li>
+<li>C# : NBehave (https://github.com/nbehave/NBehave)</li>
+<li>Python : Behave (http://packages.python.org/behave/)</li>
+<li>PHP : Behat (http://behat.org) , PHPSpec (http://www.phpspec.net)</li>
+<li>JavaScript : Jasmine (http://pivotal.github.com/jasmine/)</li>
+<li>.Net: NBehave (http://nbehave.org)</li>
+</ul>
+
+<p>Il en existe bien d'autres, la liste est loin d'être exhaustive, mais ceux-ci sont particulièrement 
+utilisés dans le monde du développement aujourd'hui.</p>
+
+<h2 id="installez-et-utilisez-behat-en-php">4.1 Installez et utilisez Behat en PHP</h2>
+
+<p>Behat est un outil développé en PHP par Konstantin Kudryashov (@everzet) et soutenu
+par la société KnpLabs. Cet outil efficace est aujourd'hui mature et largement utilisé.
+Behat permet d'exécuter des tests automatisés sur tous types d'applications, PHP ou non.
+Il peut tester :</p>
+
+<ul>
+<li>des applications web, en pilotant un vrai navigateur ou non</li>
+<li>des applications console (terminal)</li>
+<li>des morceaux de code source</li>
+</ul>
+
+<p>Du moment que ce qui est testé dispose d'un point d'entrée et d'une information de sortie,
+Behat va vous permettre d'automatiser votre recette métier.</p>
+
+<p>Dans tous les cas, il vous faudra PHP installé sur la machine qui exécutera les tests.
+L'installation de PHP est résumée sur cette page : http://php.net/manual/fr/install.php.</p>
+
+<p>Windows :</p>
+
+<div class="code bash">
+<pre class="bash">Utilisez WampServer <span class="br0">&#40;</span>http:<span class="sy0">//</span>www.wampserver.com<span class="br0">&#41;</span></pre>
+</div>
+
+<p>Ubuntu, Debian :</p>
+
+<div class="code bash">
+<pre class="bash"><span class="co0"># en ligne de commande</span>
+<span class="kw2">apt-get install</span> php5-common php5-cli php5-curl</pre>
+</div>
+
+<p>Mac :</p>
+
+<div class="code bash">
+<pre class="bash">Utilisez MampServer <span class="br0">&#40;</span>http:<span class="sy0">//</span>www.mamp.info<span class="br0">&#41;</span></pre>
+</div>
+
+<p>Installer Behat est simple, peut être fait de plusieurs manières : sous forme d'archive PHP
+(phar) ou en utilisant un gestionnaire de dépendance.</p>
+
+<h3 id="installation-avec-composer">4.1.1 Installation avec Composer</h3>
+
+<p>Créez un fichier composer.json à la racine de votre projet, avec le contenu suivant :</p>
+
+<div class="code json">
+<pre class="json">{
+    &quot;require&quot;: {
+        &quot;behat/behat&quot;: &quot;2.4.*@stable&quot;
+    },
+    &quot;config&quot;: {
+        &quot;bin-dir&quot;: &quot;bin/&quot;
+    }
+}</pre>
+</div>
+
+<p>Exécutez ensuite la commande suivante dans votre terminal, en vous plaçant àa la racine
+de votre projet :</p>
+
+<div class="code bash">
+<pre class="bash">curl http:<span class="sy0">//</span>getcomposer.org<span class="sy0">/</span>installer <span class="sy0">|</span> php
+php composer.phar <span class="kw2">install</span> <span class="re5">--prefer-source</span></pre>
+</div>
+
+<h3 id="-installation-sous-forme-darchive-phar">4.1.2  Installation sous forme d'archive Phar</h3>
+
+<p>Il vous suffit de télécharger le fichier behat.phar à l'adresse suivante : http://behat.org/
+downloads/behat.phar, et de le placer dans un dossier <code>bin</code> à la racine de votre projet. Vous
+aurez donc l'arborescence suivante :</p>
+
+<div class="code bash">
+<pre class="bash"><span class="sy0">/</span>chemin<span class="sy0">/</span>vers<span class="sy0">/</span>mon<span class="sy0">/</span>projet
+    <span class="br0">&#40;</span>...<span class="br0">&#41;</span>
+    - bin<span class="sy0">/</span>
+        - behat.phar</pre>
+</div>
+
+<p>Pour des raisons de maintenabilité, il est préferable d'utiliser la méthode d'installation
+avec Composer, qui vous permettra de mettre à jour très facilement l'ensemble des librairies 
+PHP que vous utilisez, y compris Behat.</p>
+
+<h3 id="preparer-le-projet">4.1.3 Préparer le projet</h3>
+
+<p>Une fois que Behat est installé, il vous suffit d'exécuter la commande suivante :</p>
+
+<div class="code bash">
+<pre class="bash">php .<span class="sy0">/</span>bin<span class="sy0">/</span>behat <span class="re5">--init</span></pre>
+</div>
+
+<p>Cela aura pour effet de créer dans votre projet tous les éléments dont Behat a besoin pour
+fonctionner. Votre arboresence ressemble désormais à :</p>
+
+<p><em>Screenshot</em></p>
 
 <h2 id="traduire-une-fonctionnalite-en-code-source">4.2 Traduire une Fonctionnalité en code source</h2>
 

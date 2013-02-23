@@ -7,14 +7,14 @@ J'ai souvent été confronté, en tant que développeur, et sur des projets de t
 (très grosses applications financières, petits intranet, sites web...) à cette situation : des
 clients étaient incapables de me décrire ce qu'ils voulaient que je réalise pour eux.
 
-A chaque fois, il m'a fallu moi-même interpréter leurs souhaits, à partir de captures d'écrans de
+A chaque fois, dans ce cas, il m'a fallu moi-même interpréter leurs souhaits, à partir de captures d'écrans de
 sites concurrents, de discussions interminables... Et pour un résultat pas toujours très heureux.
 
 A quoi la faute ? Au client ? Pas forcément : après tout, ce n'est pas parce qu'on est patron d'entreprise
 ou que l'on a un besoin bien précis que l'on sait comment résoudre ce besoin, ou l'exprimer clairement.
 
 Est-ce la faute du développeur, qui semble incapable de comprendre ce qu'on lui demande ? Personnellement
-j'ai toujours essayé de faire de mon mieux, même si je suis conscient de ne pas toujours été à la hauteur.
+j'ai toujours essayé de faire de mon mieux, même si je suis conscient de ne pas avoir toujours été à la hauteur.
 Et je crois que la plupart des développeurs fait de même.
 
 Alors ? Et si personne n'était en tort ? En réalité, la plupart des projets informatiques échouent car
@@ -54,6 +54,7 @@ Attendez... Mais comment donc voulez-vous réussir à satisfaire votre client si
 pas le même vocabulaire sur des choses si fondamentales ?
 
 Ajoutez à cela que votre client va toujours avoir tendance à faire deux choses :
+
 + employer des acronymes, sigles et autre vocabulaire fonctionnel
 + employer des termes techniques ("base de données", "formulaire", "sauvegarder") sans savoir précisément ce qu'ils signifient
 
@@ -91,12 +92,12 @@ surtout combien cela aurait été simple si seulement on vous avait prévenu que
 
 Comment éviter d'être touché par ce malheureux constat d'échec, ou de semi-réussite ?
 
-La réponse en théorie simple : il suffit de livrer plus régulièrement au client, de sorte qu'il
+La réponse est en théorie simple : il suffit de livrer son travail très régulièrement au client, de sorte qu'il
 puisse rapidement s'apercevoir le plus tôt possible que le projet n'est pas parti dans la direction
 à laquelle il s'attendait.
 
 Cette démarche est celle des méthodes agiles, particulièrement de Scrum. Le principe est le suivant :
-plutôt que de livrer votre projet une bonne fois pour toute à la fin, vous vous engagez à livrer des
+plutôt que de livrer votre projet une bonne fois pour toute (lorsque le travail est terminé), vous vous engagez à livrer des
 bouts de fonctionnalités très régulièrement (une fois toutes les deux semaines par exemple).
 
 C'est ce qu'on appelle le développement par itérations, par opposition au cycle en V. Vous développez
@@ -177,9 +178,9 @@ Changer de casquette peut parfois être difficile. Vous pouvez très bien travai
 vous n'avez rien à faire ; c'est triste, mais ça arrive fréquemment. Il arrive de devoir travailler sur
 un projet pour des besoins alimentaires. C'est légitime. Mais autant faire en sorte que même ces projets,
 alimentaires, vous apportent de la satisfaction humaine. Adopter la vision de l'utilisateur final vous
-obligera toujours à discuter : discuter avec votre client, les utilisateurs finaux, vos collègues...
+permettra toujours d'échanger : échanger avec votre client, les utilisateurs finaux, vos collègues...
 
-J'ai il y a quelques temps lancé un sondage auprès des développeurs de la société dans laquelle je
+Il y a quelques temps, j'ai lancé un sondage auprès des développeurs de la société dans laquelle je
 travaille. Une des questions était à peu près la suivante : "Prenez-vous plaisir dans votre travail?".
 Près d'un quart des réponses était négatif. Quel dommage !
 
