@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="author" content="Jean-François Lépine" />
-    <meta name="date" content="23/02/2013"/>
+    <meta name="date" content="24/02/2013"/>
     <meta name="generator" content="easybook 5.0-DEV"/>
 
     <title>Développeurs, faites-vous plaisir !</title>
@@ -2826,19 +2826,12 @@ le comportement attendu :</p>
 <p>Il vous suffit finalement de développer votre application PHP, conforme aux attentes fonctionnelles, puis de relancer 
 Behat pour vous assurer que vous avez bien traité la demande initiale.</p>
 
-<div class="figure center" id="figure-4-4">
-    <img src="images/dev-qr-exo1-step1.png" alt="Vous trouverez un exemple d'application conforme à ce besoin fonctionnel sur http://goo.gl/4usXU" />
-
-    <p class="caption"><strong>Figure 4.4</strong> Vous trouverez un exemple d'application conforme à ce besoin fonctionnel sur http://goo.gl/4usXU</p>
-</div>
-
-
 <h2 id="exploitez-les-jeux-dexemples">4.3 Exploitez les jeux d'exemples</h2>
 
-<div class="figure center" id="figure-4-5">
+<div class="figure center" id="figure-4-4">
     <img src="images/dev-qr-exo1-step2.png" alt="Les sources de cet exercice sont disponibles sur http://goo.gl/fYZHv" />
 
-    <p class="caption"><strong>Figure 4.5</strong> Les sources de cet exercice sont disponibles sur http://goo.gl/fYZHv</p>
+    <p class="caption"><strong>Figure 4.4</strong> Les sources de cet exercice sont disponibles sur http://goo.gl/fYZHv</p>
 </div>
 
 
@@ -2945,11 +2938,191 @@ sous forme de paramètre de méthode, sans que cela n'ait le moindre impact sur 
   <p>Utiliser des exemples est très simple avec Behat.</p>
 </blockquote>
 
-<h2 id="testez-dans-un-vrai-navigateur">4.4 Testez dans un vrai navigateur</h2>
+<h2 id="reutilisez-vos-precedents-tests">4.4 Réutilisez vos précédents tests</h2>
 
-<h2 id="organisez-vos-contextes-de-tests">4.5 Organisez vos Contextes de tests</h2>
+<div class="figure center" id="figure-4-5">
+    <img src="images/dev-qr-exo2-step1.png" alt="Les sources de cet exercice sont disponibles sur http://goo.gl/klmDP" />
 
-<h2 id="reutilisez-vos-precedents-tests">Réutilisez vos précédents tests</h2>
+    <p class="caption"><strong>Figure 4.5</strong> Les sources de cet exercice sont disponibles sur http://goo.gl/klmDP</p>
+</div>
+
+
+<p>Vous l'avez vu, la phase de traduction d'une phrase (étape) en code source peut parfois être longue.</p>
+
+<p>C'est pour cela que vous devez faire en sorte de faciliter votre travail : réutilisez au maximum vos définitions. Attention, je ne 
+vous parle en aucun cas ici de découper votre code comme vous le feriez dans une application (refractoring, respect des 
+principes SOLID, découpage des méthodes...).</p>
+
+<p>Non, la réutilisabilité dans les Contextes de traduction (fichiers <code>*Context.php</code>) ne passe pas par une réutilisation du code source, 
+mais bel et bien par une réutilisation de phrases. <em>En réalité, vous devez apprendre à faire du refractoring de phrases</em>.</p>
+
+<p>Cette tâche n'est pas simple au départ, mais est en réalité assez naturelle. Chaque phrase, qui correspond à un contexte, un 
+élément déclencheur ou un résultat attendu, peut être découpée en différentes étapes, qui <em>elles-mêmes pourront être décomposées 
+jusqu'à arriver à des expressions atomiques simples</em>.</p>
+
+<p>Prenez par exemple la phrase suivante :</p>
+
+<div class="code code gherkin">
+<pre class="codegherkin">Quand j'ajoute dans mon panier &quot;télévision Sony&quot;  depuis le catalogue produit</pre>
+</div>
+
+<p>Cette phrase peut être découpée, par exemple :</p>
+
+<div class="code code gherkin">
+<pre class="codegherkin">Etant donné que je consulte le catalogue produit
+Quand j'ajoute dans mon panier &quot;télévision Sony&quot;</pre>
+</div>
+
+<p>Qui elles-mêmes peuvent être découpées pour créer des expressions atomiques réutilisables :</p>
+
+<div class="code code gherkin">
+<pre class="codegherkin">Etant donné que je suis sur la page &quot;/catalogue/produits&quot;
+Quand je coche &quot;télévision Sony&quot;
+Et je clique sur &quot;Ajouter au panier&quot;</pre>
+</div>
+
+<p>Vous pouvez constater que les trois dernières expressions sont en réalité des étapes (web) atomiques réutilisables à l'infini. 
+Cela signifie qu'une fois que vous les aurez traduites, vous n'aurez plus jamais à revenir dessus, et vous pourrez vous en servir à votre gré.</p>
+
+<p>Vous pourriez désormais écrire, par exemple :</p>
+
+<div class="code code gherkin">
+<pre class="codegherkin">Etant donné que je suis sur la page &quot;/home&quot;
+Etant donné que je suis sur la page &quot;/mon-compte&quot;
+...
+&nbsp;</pre>
+</div>
+
+<p>Cette démarche permet donc de faire du refractoring de phrases pour arriver à des expressions atomiques. Par chance, c'est 
+extrêmement simple à faire avec Behat. Regardez plutôt :</p>
+
+<div class="code code php">
+<pre class="codephp">&lt;?php
+// (...)</pre>
+</div>
+
+<div class="code code">
+<pre class="code">use Behat\Behat\Context\Step;</pre>
+</div>
+
+<div class="code code">
+<pre class="code">class FeatureContext extends BehatContext
+{</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * @When /^j\'ajoute dans mon panier &quot;([^&quot;]*)&quot;  depuis le catalogue produit$/
+     */
+    public function jAjouteDansMonPanierDepuisLeCatalogueProduit($produit)
+    {
+        return array(
+            new Step\Given('que je consulte le catalogue produit')
+            , new Step\When(sprintf('j\'ajoute dans mon panier &quot;%s&quot;', $produit))
+        );
+    }</pre>
+</div>
+
+<p>Comme vous le voyez, il suffit simplement, dans la méthode de définition, de retourner un tableau d'étapes. Chaque 
+étape est en réalité un objet (<code>Given</code>, <code>When</code> ou <code>Then</code>) qui accepte en paramètre de constructeur la phrase que l'on souhaite 
+utiliser. Pratique non ?</p>
+
+<p>Ce qui donnerait par exemple dans notre cas :</p>
+
+<div class="code code php">
+<pre class="codephp">&lt;?php
+// (...)</pre>
+</div>
+
+<div class="code code">
+<pre class="code">use Behat\Behat\Context\Step;</pre>
+</div>
+
+<div class="code code">
+<pre class="code">class FeatureContext extends BehatContext
+{</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * @When /^j\'ajoute dans mon panier &quot;([^&quot;]*)&quot;  depuis le catalogue produit$/
+     */
+    public function jAjouteDansMonPanierDepuisLeCatalogueProduit($produit)
+    {
+        return array(
+            new Step\Given('que je consulte le catalogue produit')
+            , new Step\When(sprintf('j\'ajoute dans mon panier &quot;%s&quot;', $produit))
+        );
+    }</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * @Given /^que je consulte le catalogue produit$/
+     */
+    public function queJeConsulteLeCatalogueProduit()
+    {
+        return array(
+            new Step\Given('que je suis sur la page &quot;/catalogue/produits&quot;')
+        );
+    }</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * @When /^j\'ajoute dans mon panier &quot;([^&quot;]*)&quot;$/
+     */
+    public function jAjouteDansMonPanier($produit)
+    {
+        return array(
+            new Step\When(sprintf('je coche &quot;%s&quot;', $produit))
+            , new Step\When('je clique sur &quot;Ajouter au panier&quot;')
+        );
+    }</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * @Given /^que je suis sur la page &quot;([^&quot;]*)&quot;$/
+     */
+    public function queJeSuisSurLaPage($url)
+    {
+        // ?
+    }</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * @When /^je coche &quot;([^&quot;]*)&quot;$/
+     */
+    public function jeCoche($produit)
+    {
+        // ?
+    }</pre>
+</div>
+
+<div class="code code">
+<pre class="code">    /**
+     * @When /^je clique sur &quot;([^&quot;]*)&quot;$/
+     */
+    public function jeCliqueSur($bouton)
+    {
+        // ?
+    }
+}</pre>
+</div>
+
+<p>Notez les trois dernières traduction (les méthodes ̀ queJeSuisSurLaPage()<code>,</code>jeCoche()<code>et</code>jeCliqueSur()`). Ces méthodes 
+de traduction concernent le comportement d'un navigateur web, comme Firefox ou Chrome... Il arrive en effet très souvent 
+qu'il faille effectuer des actions qui n'existent que dans un navigateur. Vous allez voir qu'avec Behat c'est très facile !</p>
+
+<blockquote>
+  <p>Oubliez le refractoring de code. Vous devez apprendre à faire du refractoring de phrases.</p>
+</blockquote>
+
+<h2 id="testez-dans-un-vrai-navigateur">4.5 Testez dans un vrai navigateur</h2>
+
+<h2 id="organisez-vos-contextes-de-tests">Organisez vos Contextes de tests</h2>
 
 </div>
         <div class="item chapter">
@@ -3144,13 +3317,13 @@ sous forme de paramètre de méthode, sans que cela n'ait le moindre impact sur 
             <span>4.3</span> <a href="#exploitez-les-jeux-dexemples">Exploitez les jeux d'exemples</a>
         </li>
             <li class="chapter level-2">
-            <span>4.4</span> <a href="#testez-dans-un-vrai-navigateur">Testez dans un vrai navigateur</a>
+            <span>4.4</span> <a href="#reutilisez-vos-precedents-tests">Réutilisez vos précédents tests</a>
         </li>
             <li class="chapter level-2">
-            <span>4.5</span> <a href="#organisez-vos-contextes-de-tests">Organisez vos Contextes de tests</a>
+            <span>4.5</span> <a href="#testez-dans-un-vrai-navigateur">Testez dans un vrai navigateur</a>
         </li>
             <li class="chapter level-2">
-            <span>4.6</span> <a href="#reutilisez-vos-precedents-tests">Réutilisez vos précédents tests</a>
+            <span>4.6</span> <a href="#organisez-vos-contextes-de-tests">Organisez vos Contextes de tests</a>
         </li>
                 <li class="chapter level-1">
             <span>Chapitre 5</span> <a href="#optimisez-vos-tests-fonctionnels">Optimisez vos tests fonctionnels</a>
