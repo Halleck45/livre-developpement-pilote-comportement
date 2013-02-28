@@ -27,7 +27,7 @@ quel langage :
 + Python : Behave (http://packages.python.org/behave/)
 + PHP : Behat (http://behat.org) , PHPSpec (http://www.phpspec.net)
 + JavaScript : Jasmine (http://pivotal.github.com/jasmine/)
-+ .Net: NBehave (http://nbehave.org)
++ Net : NBehave (http://nbehave.org)
 
 Il en existe bien d'autres, la liste est loin d'être exhaustive, mais ceux-ci sont particulièrement 
 utilisés dans le monde du développement aujourd'hui.
@@ -532,8 +532,127 @@ qu'il faille effectuer des actions qui n'existent que dans un navigateur. Vous a
 
 > Oubliez le refractoring de code. Vous devez apprendre à faire du refractoring de phrases.
 
-## Testez dans un navigateur
+## Testez une application Web
+
+Vous savez désormais automatiser une recette fonctionnelle d'une applicatif. Cependant, dans le cadre d'une application internet, 
+la recette fonctionnelle consiste le plus souvent à parcourir des pages web, vérifier leur conformité (délivrent-elles le service 
+attendu ?), en soumettant un formulaire, en cliquant sur un lien...
+
+Heureusement, il est aujourd'hui très simple d'automatiser une recette fonctionnelle, quand bien même elle concerne une 
+application web. Allons-y !
+
+Une fois de plus nous allons utiliser Behat. Plus précisément, nous allons utiliser un module de Behat, appelé Mink, qui permet de 
+naviguer dans une application web et de lancer des tests automatisés lors decette navigation.
+
+Concrètement, Mink permet une double approche :
+
++ Exécuter des tests fonctionnels dans un navigateur virtuel (émulateur)
++ Exécuter des tests fonctionnels au sein d'un vrai navigateur, comme Chrome ou Firefox par exemple
+
+Il peut sembler étrange d'exécuter des tests dans un navigateur virtuel. Cependant, bien souvent le comportement fonctionnel 
+que l'on souhaite tester est en réalité disponible driectement au sein des pages web, dans le HTML. On préferera alors priviléger 
+les tests lancés dans un vrai navigateur lorsque le test porte sur des fonctionnalités complexes (en Javascript ou en Ajax 
+par exemple), ces tests étant en général beaucoup plus lourd et long à s'exécuter que les autres.
+
+Pour commencer, installez `Mink` :
+
+*Code ici*
+
+Ensuite, il suffit de configurer Behat pour lui indiquer que l'on utilise Mink. Mink étant une extension de Behat, C'est très simple :
+
+*Code ici*
+
+Voilà, Mink est installé !
+
+Rappelez-vous, le travail de Spécification fonctionelle passe par l'utilisation d'expressions, elles-mêmes organisés autour 
+d'une grammaire : Gherkin. Mink a ceci d'intéressant qu'il propose nativement un panel assez large d'expressions qui concernent 
+un navigateur, que vous pouvez donc réutiliser (`comme "Quand je vais sur "http://..."`, ou encore `Quand je remplis "Votre prénom" avec 
+"Jean-François"`...). 
+
+Un besoin exprimé de la façon suivante sera donc automatiquement compris par Behat lorsque Mink est installé:
+
+    [code gherkin]
+    Scenario: s'identifier au sein de l'application
+      Etant donné que je suis sur "/accueil"
+      Quand je suis le lien "Me connecter"
+      Et que je remplis "Identifiant" avec "Jean-François"
+      Et que je remplis "Mot de passe" avec "azerty"
+      Et que je clique sur "Valider"
+      Alors je dois voir "Bienvenue Jean-François"
+
+Pratique non ? Constatez que vous n'avez même pas besoin de parler de nom (attribut `name`) des champs HTML ; non, Behat 
+fera le lien pour vous entre les `label`, `title`, `class`... de vos champs de formulaire et l'expression que vous avez utilisée.
+
+Au fait, vous avez lancé Behat pour vérifier que cela fonctionne ? Allez-y ; Utiliser Mink ne change rien, il suffit toujours d'exécuter 
+la même commande :
+
+    [code bash]
+    php ./bin/behat
+
+Bien entendu, il va souvent arriver que vous ayez besoin de gérer des cas plus complexes que ce qu'il est possible de faire avec
+les exprpessions disponibles nativement dans Mink. 
+
+Dans ce cas, il va s'agir, ni plus ni moins, de piloter votre navigateur (quel qu'il soit). Un très large éventail 
+de méthodes sont disponibles :
+
+    [code php]
+    <?php
+    class FeatureContext extends MinkContext {
+
+        // (...)
+        $browser = $this->getMink()->getBrowser();
+        $page = $browser->getPage();
+
+        $button = $page->find('css', '.class-css-du-bouton');
+        $button->click();
+    }
+
+Notez que désormais notre classe n'hérite plus de `BehatContext` mais de `MinkContext`.
+
+Examinons ce code ensemble. Tout d'abord, nous récupérons la page courante affichée par le navigateur :
+
+    [code php]
+        $browser = $this->getMink()->getBrowser();
+        $page = $browser->getPage();
 
 
+Ensuite, il suffit de récupérer un élément HTML dans la page, puis d'exécuter l'action souhaitée sur cet élément (ici un click, 
+mais on pourrait imaginer saisir une valeur, le cocher...) :
 
-## Organisez vos Contextes de tests
+    [code php]
+        $button = $page->find('css', '.class-css-du-bouton');
+        $button->click();
+
+Vous avez bien vu : la méthode `find()` permet de récupérer des éléments en utilisant des sélecteurs CSS. Ce sont les mêmes 
+que ce que vous utilisez dans vos feuilles de style CSS. Attention, les pseudo-styles (':hover', etc) ne sont pas supportés. 
+Bien entendu, il est également possible de récupérer des éléments HTML par des expressions xPath. La 
+[documentation de Mink est assez complète](http://lien-a-mettre.org) sur ce sujet.
+
+Il ne vous reste plus qu'à traduire les expressions fonctionnelles de vos clients en différentes actions au sein 
+d'un navigateur, et vous saurez traiter la majorité des cas.
+
+Pour des exemples concrets d'utilisation de `Mink`, je vous invite à consulter le projet Open Source 
+[`BehatCh`](http://lien-a-mettre.org), qui lui-même enrichit considérablement le vocabulaire de base de `Mink`.
+
+Pour finir sur Mink, il est très simple de piloter un vrai navigateur. C'est utile lorsque l'on souhaite, par exemple, tester 
+des fonctionnalités qui nécessite un environnement Ajax ou JavaScript. Dans ce cas, il suffit d'ajouter, juste au dessus des 
+Scénarios ou des Fonctionnalités concernées, d'ajouter le tag `@javascript`. Ce tag indiquera à Behat que vous souhaitez, dans ces 
+cas spécifiques, lancer un vrai navigateur pour les tests. Bien entendu, dans ce cas, la machine qui exécute les tests doit posséder un 
+environnement graphique (comme c'est le cas pour les ordinateurs de Bureau zt pour la majorité des ordinateurs).
+
+
+Lorsque l'on souhaite piloter un vrai navigateur, Behat délègue en réalité le travail à des outils spécialisés, comme `Sahi`, ou encore 
+comme `Selenium`. Dans ce cas, ces outils doivent être installés sur votre machine. La procédure pour les installer est en 
+général très simple, et est expliquée dans la [documentation officielle](http://lien-a-mettre.org).
+
+Voici la configuration à ajouter dans le fichier `behat.yml` pour indiquer que vous souhaitez utiliser Chrome par exemple :
+
+*CODE*
+
+Voici celle que vous pourriez utiliser pour piloter Firefox :
+
+*CODE*
+
+Vous avez désormais toutes les connaissances requises pour commencer à tester automatiquement un projet web.
+
+> Mink permet de piloter un navigateur pour tester vos applications web.
