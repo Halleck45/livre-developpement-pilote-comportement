@@ -454,7 +454,7 @@ extrêmement simple à faire avec Behat. Regardez plutôt :
         }
 
 Comme vous le voyez, il suffit simplement, dans la méthode de définition, de retourner un tableau d'étapes. Chaque 
-étape est en réalité un objet (`Given`, `When` ou `Then`) qui accepte en paramètre de constructeur la phrase que l'on souhaite 
+étape est en réalité un objet PHP (`Given`, `When` ou `Then`) qui accepte en paramètre de constructeur la phrase que l'on souhaite 
 utiliser. Pratique non ?
 
 Ce qui donnerait par exemple dans notre cas :
@@ -536,7 +536,7 @@ qu'il faille effectuer des actions qui n'existent que dans un navigateur. Vous a
 
 Vous savez désormais automatiser une recette fonctionnelle d'une applicatif. Cependant, dans le cadre d'une application internet, 
 la recette fonctionnelle consiste le plus souvent à parcourir des pages web, vérifier leur conformité (délivrent-elles le service 
-attendu ?), en soumettant un formulaire, en cliquant sur un lien...
+attendu ?), en soumettant un formulaire, en cliquant sur un lien... Bref, en surfant sur un site web.
 
 Heureusement, il est aujourd'hui très simple d'automatiser une recette fonctionnelle, quand bien même elle concerne une 
 application web. Allons-y !
@@ -550,9 +550,9 @@ Concrètement, Mink permet une double approche :
 + Exécuter des tests fonctionnels au sein d'un vrai navigateur, comme Chrome ou Firefox par exemple
 
 Il peut sembler étrange d'exécuter des tests dans un navigateur virtuel. Cependant, bien souvent le comportement fonctionnel 
-que l'on souhaite tester est en réalité disponible driectement au sein des pages web, dans le HTML. On préferera alors priviléger 
-les tests lancés dans un vrai navigateur lorsque le test porte sur des fonctionnalités complexes (en Javascript ou en Ajax 
-par exemple), ces tests étant en général beaucoup plus lourd et long à s'exécuter que les autres.
+que l'on souhaite tester est en réalité disponible driectement au sein des pages web, dans le HTML. *On préferera alors priviléger 
+les tests lancés dans un vrai navigateur uniquement lorsque le test porte sur des fonctionnalités complexes (en Javascript ou en Ajax 
+par exemple), ces tests étant en général beaucoup plus lourd et long à s'exécuter que les autres*.
 
 Pour commencer, installez `Mink` :
 
@@ -583,8 +583,8 @@ Un besoin exprimé de la façon suivante sera donc automatiquement compris par B
 Pratique non ? Constatez que vous n'avez même pas besoin de parler de nom (attribut `name`) des champs HTML ; non, Behat 
 fera le lien pour vous entre les `label`, `title`, `class`... de vos champs de formulaire et l'expression que vous avez utilisée.
 
-Au fait, vous avez lancé Behat pour vérifier que cela fonctionne ? Allez-y ; Utiliser Mink ne change rien, il suffit toujours d'exécuter 
-la même commande :
+Au fait, avez-vous lancé Behat pour vérifier que cela fonctionne ? Allez-y ; Utiliser Mink ne change rien à l'utilisation de Behat, 
+il suffit comme avant d'exécuter la commande suivante :
 
     [code bash]
     php ./bin/behat
@@ -625,25 +625,25 @@ mais on pourrait imaginer saisir une valeur, le cocher...) :
 
 Vous avez bien vu : la méthode `find()` permet de récupérer des éléments en utilisant des sélecteurs CSS. Ce sont les mêmes 
 que ce que vous utilisez dans vos feuilles de style CSS. Attention, les pseudo-styles (':hover', etc) ne sont pas supportés. 
-Bien entendu, il est également possible de récupérer des éléments HTML par des expressions xPath. La 
+Bien entendu, il est également possible de récupérer des éléments HTML en utilisant des expressions xPath. La 
 [documentation de Mink est assez complète](http://lien-a-mettre.org) sur ce sujet.
 
 Il ne vous reste plus qu'à traduire les expressions fonctionnelles de vos clients en différentes actions au sein 
-d'un navigateur, et vous saurez traiter la majorité des cas.
+d'un navigateur, et vous saurez traiter alors la majorité des cas.
 
 Pour des exemples concrets d'utilisation de `Mink`, je vous invite à consulter le projet Open Source 
 [`BehatCh`](http://lien-a-mettre.org), qui lui-même enrichit considérablement le vocabulaire de base de `Mink`.
 
 Pour finir sur Mink, il est très simple de piloter un vrai navigateur. C'est utile lorsque l'on souhaite, par exemple, tester 
-des fonctionnalités qui nécessite un environnement Ajax ou JavaScript. Dans ce cas, il suffit d'ajouter, juste au dessus des 
-Scénarios ou des Fonctionnalités concernées, d'ajouter le tag `@javascript`. Ce tag indiquera à Behat que vous souhaitez, dans ces 
+des fonctionnalités qui nécessite un environnement Ajax ou JavaScript. Dans ce cas, juste au dessus des 
+Scénarios ou des Fonctionnalités concernées, il suffit d'ajouter le tag `@javascript`. Ce tag indiquera à Behat que vous souhaitez, dans ces 
 cas spécifiques, lancer un vrai navigateur pour les tests. Bien entendu, dans ce cas, la machine qui exécute les tests doit posséder un 
-environnement graphique (comme c'est le cas pour les ordinateurs de Bureau zt pour la majorité des ordinateurs).
+environnement graphique (comme c'est le cas pour les ordinateurs de Bureau).
 
 
 Lorsque l'on souhaite piloter un vrai navigateur, Behat délègue en réalité le travail à des outils spécialisés, comme `Sahi`, ou encore 
 comme `Selenium`. Dans ce cas, ces outils doivent être installés sur votre machine. La procédure pour les installer est en 
-général très simple, et est expliquée dans la [documentation officielle](http://lien-a-mettre.org).
+général très simple, et est bien expliquée dans la [documentation officielle](http://lien-a-mettre.org).
 
 Voici la configuration à ajouter dans le fichier `behat.yml` pour indiquer que vous souhaitez utiliser Chrome par exemple :
 
