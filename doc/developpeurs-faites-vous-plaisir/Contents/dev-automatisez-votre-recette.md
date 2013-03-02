@@ -54,18 +54,18 @@ L'installation de PHP est résumée sur cette page : http://php.net/manual/fr/in
 
 Windows :
 
-    [code bash]
+    [bash]
     Utilisez WampServer (http://www.wampserver.com)
 
 Ubuntu, Debian :
 
-    [code bash]
+    [bash]
     # en ligne de commande
     apt-get install php5-common php5-cli php5-curl
 
 Mac :
 
-    [code bash]
+    [bash]
     Utilisez MampServer (http://www.mamp.info)
 
 
@@ -90,7 +90,7 @@ Créez un fichier composer.json à la racine de votre projet, avec le contenu su
 Exécutez ensuite la commande suivante dans votre terminal, en vous plaçant àa la racine
 de votre projet :
 
-    [code bash]
+    [bash]
     curl http://getcomposer.org/installer | php
     php composer.phar install --prefer-source
 
@@ -100,7 +100,7 @@ Il vous suffit de télécharger le fichier behat.phar à l'adresse suivante : ht
 downloads/behat.phar, et de le placer dans un dossier `bin` à la racine de votre projet. Vous
 aurez donc l'arborescence suivante :
 
-    [code bash]
+    [bash]
     /chemin/vers/mon/projet
         (...)
         - bin/
@@ -115,7 +115,7 @@ PHP que vous utilisez, y compris Behat.
 
 Une fois que Behat est installé, il vous suffit d'exécuter la commande suivante :
 
-    [code bash]
+    [bash]
     php ./bin/behat --init
 
 Cela aura pour effet de créer dans votre projet tous les éléments dont Behat a besoin pour
@@ -131,29 +131,29 @@ fichier `.feature`. Créez par exemple le fichier  `features/calculer-mon-age.fe
 contenu suivant :
 
 
-![ Les sources de cet exercice sont disponibles sur http://goo.gl/4usXU ]
+![ Les sources de cet exercice sont disponibles sur http://goo.gl/lgWvy ]
 (dev-qr-exo1-step1.png)
 
 
-    [code gherkin]
+    [gherkin]
     # language: fr
     Fonctionnalité: Calculer l'âge d'une personne
         En tant qu'utilisateur de l'application
         Je veux connaître le nombre d'années écoulées entre deux dates
         De telle sorte que je puisse connaître mon age
-
+        
     Scénario: Calculer l'âge d'une personne depuis une date antérieure à aujourd'hui
         Etant donné que je suis né le 06/07/1986
         Et que nous sommes le 20/09/013
         Quand je calcule mon âge
         Alors je suis informé que j'ai 27 ans
-
+        
     Scénario: Calculer l'âge d'une personne depuis une date postérieure à aujourd'hui
         Etant donné que je suis né le 06/07/3013
         Et que nous sommes le 20/09/2013
         Quand je calcule mon âge
         Alors je suis informé que je ne suis pas encore né
-
+        
     Scénario: Calculer l'âge d'une personne dont c'est l'anniversaire aujourd'hui
         Etant donné que je suis né le 06/07/1986
         Et que nous sommes le 06/07/2013
@@ -163,7 +163,7 @@ contenu suivant :
 
 Puis exécutez la commande suivante pour lancer Behat :
 
-    [code bash]
+    [bash]
     ./bin/behat
 
 ![ Les étapes de la fonctionnalité ne sont pas encore traduites : elles sont jaunes ]
@@ -180,7 +180,7 @@ les traduire.
 Par chance, Behat est suffisammet bien fait pour vous fournir une base de travail pour traduire vos fonctionnalités. Il suffit 
 de copier-coller dans le fichier `features/bootstrap/FeatureContext.php` le code PHP qui a été généré par la commande :
 
-    [code bash]
+    [bash]
     ./bin/behat
 
 Pourquoi copier ce code dans ce fichier ? Tout simplement parce que les fichiers `features/bootstrap/*Context.php` vont servir 
@@ -193,17 +193,17 @@ est respectée, mais à surtout l'avantage de rendre ce travail de recette inter
 Traduisez maintenant la fonctionnalité en code source dans le fichier `features/bootstrap/FeatureContext.php`, en adaptant 
 le code PHP fourni par Behat selon votre besoin. Par exemple :
 
-    [code php]
+    [php]
     <?php
     // (...)
-
+    
     class FeatureContext extends BehatContext
     {
-
+    
         private $birthDate;
         private $today;
         private $output;
-
+        
         /**
          * Initializes context.
          * Every scenario gets it's own context object.
@@ -212,9 +212,8 @@ le code PHP fourni par Behat selon votre besoin. Par exemple :
          */
         public function __construct(array $parameters)
         {
-
         }
-
+        
         /**
          * @Given /^que je suis né le (\d+)\/(\d+)\/(\d+)$/
          */
@@ -222,7 +221,7 @@ le code PHP fourni par Behat selon votre besoin. Par exemple :
         {
             $this->birthDate = new \DateTime(sprintf('%d-%d-%d', $year, $month, $day));
         }
-
+        
         /**
          * @Given /^que nous sommes le (\d+)\/(\d+)\/(\d+)$/
          */
@@ -230,7 +229,7 @@ le code PHP fourni par Behat selon votre besoin. Par exemple :
         {
             $this->today = new \DateTime(sprintf('%d-%d-%d', $year, $month, $day));
         }
-
+        
         /**
          * @Given /^je calcule mon âge$/
          */
@@ -238,7 +237,7 @@ le code PHP fourni par Behat selon votre besoin. Par exemple :
         {
             $this->output = shell_exec(sprintf('php src/age.php --birthdate=%s --today=%s', $this->birthDate->format('Y-m-d'), $this->today->format('Y-m-d')));
         }
-
+        
         /**
          * @Given /^je suis informé que j\'ai (\d+) ans$/
          */
@@ -248,7 +247,7 @@ le code PHP fourni par Behat selon votre besoin. Par exemple :
                 throw new Exception();
             }
         }
-
+        
         /**
          * @Given /^je suis informé que je ne suis pas encore né$/
          */
@@ -258,7 +257,7 @@ le code PHP fourni par Behat selon votre besoin. Par exemple :
                 throw new Exception();
             }
         }
-
+        
         /**
          * @Given /^on me souhaite un joyeux anniversaire$/
          */
@@ -281,7 +280,7 @@ Notez ces différents aspects :
 Maintenant, il vous suffit de relancer Behat pour vérifier automatiquement que votre application a bien 
 le comportement attendu :
 
-    [code bash]
+    [bash]
     ./bin/behat
 
 ![ Les fonctionnalités échouent : elles sont rouges ]
@@ -294,26 +293,26 @@ Behat pour vous assurer que vous avez bien traité la demande initiale.
 
 ## Exploitez les jeux d'exemples
 
-![ Les sources de cet exercice sont disponibles sur http://goo.gl/fYZHv ]
+![ Les sources de cet exercice sont disponibles sur http://goo.gl/jaLxP ]
 (dev-qr-exo1-step2.png)
 
 Vous l'avez vu, votre fonctionnel peut vous fournir des exemples, grâce à la syntaxe Gherkin.
 
 On pourrait par exemple modifier notre fonctionnalité de la façon suivante :
 
-    [code gherkin]
+    [gherkin]
     # language: fr
     Fonctionnalité: Calculer l'âge d'une personne
         En tant qu'utilisateur de l'application
         Je veux connaître le nombre d'années écoulées entre deux dates
         De telle sorte que je puisse connaître mon age
-
+        
         Plan du Scénario: Calculer l'âge d'une personne
           Etant donné que je suis né le "<dateNaissance>"
           Et que nous sommes le "<dateDuJour>"
           Quand je calcule mon âge
           Alors on me répond "<reponseAttendu>"
-
+          
           Exemples:
             | dateNaissance | dateDuJour | reponseAttendu                           |
             | 06/07/1986    | 20/09/2013 | Vous avez 27 ans                         |
@@ -330,18 +329,18 @@ sous forme de paramètre de méthode, sans que cela n'ait le moindre impact sur 
 
 Voici une traduction possible de cette fonctionnalité :
 
-    [code php]
+    [php]
     <?php
     // file features/bootstrap/FeatureContext.php
     // (...)
-
+    
     class FeatureContext extends BehatContext
     {
-
+    
         private $birthDate;
         private $today;
         private $output;
-
+        
         /**
          * @Given /^que je suis né le "([^"]*)"$/
          */
@@ -349,7 +348,7 @@ Voici une traduction possible de cette fonctionnalité :
         {
             $this->birthDate = DateTime::createFromFormat('d/m/Y', $date);
         }
-
+        
         /**
          * @Given /^que nous sommes le "([^"]*)"$/
          */
@@ -357,7 +356,7 @@ Voici une traduction possible de cette fonctionnalité :
         {
             $this->today = DateTime::createFromFormat('d/m/Y', $date);
         }
-
+        
         /**
          * @Given /^je calcule mon âge$/
          */
@@ -365,7 +364,7 @@ Voici une traduction possible de cette fonctionnalité :
         {
             $this->output = shell_exec(sprintf('php src/age.php --birthdate=%s --today=%s', $this->birthDate->format('Y-m-d'), $this->today->format('Y-m-d')));
         }
-
+        
         /**
          * @Given /^on me répond "([^"]*)"$/
          */
@@ -385,8 +384,8 @@ Votre fonctionnel peut désormais ajouter autant d'exemples qui le souhaite, vot
 
 ## Réutilisez vos précédents tests
 
-![ Les sources de cet exercice sont disponibles sur http://goo.gl/klmDP ]
-(dev-qr-exo2-step1.png)
+![ Les sources de cet exercice sont disponibles sur http://goo.gl/onk8x ]
+(dev-qr-exo2.png)
 
 
 Vous l'avez vu, la phase de traduction d'une phrase (étape) en code source peut parfois être longue.
@@ -404,18 +403,18 @@ jusqu'à arriver à des expressions atomiques simples*.
 
 Prenez par exemple la phrase suivante :
 
-    [code gherkin]
+    [gherkin]
     Quand j'ajoute dans mon panier "télévision Sony"  depuis le catalogue produit
 
 Cette phrase peut être découpée, par exemple :
 
-    [code gherkin]
+    [gherkin]
     Etant donné que je consulte le catalogue produit
     Quand j'ajoute dans mon panier "télévision Sony"
 
 Qui elles-mêmes peuvent être découpées pour créer des expressions atomiques réutilisables :
 
-    [code gherkin]
+    [gherkin]
     Etant donné que je suis sur la page "/catalogue/produits"
     Quand je coche "télévision Sony"
     Et je clique sur "Ajouter au panier"
@@ -425,7 +424,7 @@ Cela signifie qu'une fois que vous les aurez traduites, vous n'aurez plus jamais
 
 Vous pourriez désormais écrire, par exemple :
 
-    [code gherkin]
+    [gherkin]
     Etant donné que je suis sur la page "/home"
     Etant donné que je suis sur la page "/mon-compte"
     ...
@@ -433,12 +432,12 @@ Vous pourriez désormais écrire, par exemple :
 Cette démarche permet donc de faire du refractoring de phrases pour arriver à des expressions atomiques. Par chance, c'est 
 extrêmement simple à faire avec Behat. Regardez plutôt :
 
-    [code php]
+    [php]
     <?php
     // (...)
-
+    
     use Behat\Behat\Context\Step;
-
+    
     class FeatureContext extends BehatContext
     {
 
@@ -459,15 +458,15 @@ utiliser. Pratique non ?
 
 Ce qui donnerait par exemple dans notre cas :
 
-    [code php]
+    [php]
     <?php
     // (...)
-
+    
     use Behat\Behat\Context\Step;
-
+    
     class FeatureContext extends BehatContext
     {
-
+    
         /**
          * @When /^j\'ajoute dans mon panier "([^"]*)"  depuis le catalogue produit$/
          */
@@ -478,7 +477,7 @@ Ce qui donnerait par exemple dans notre cas :
                 , new Step\When(sprintf('j\'ajoute dans mon panier "%s"', $produit))
             );
         }
-
+        
         /**
          * @Given /^que je consulte le catalogue produit$/
          */
@@ -488,7 +487,7 @@ Ce qui donnerait par exemple dans notre cas :
                 new Step\Given('que je suis sur la page "/catalogue/produits"')
             );
         }
-
+        
         /**
          * @When /^j\'ajoute dans mon panier "([^"]*)"$/
          */
@@ -499,7 +498,7 @@ Ce qui donnerait par exemple dans notre cas :
                 , new Step\When('je clique sur "Ajouter au panier"')
             );
         }
-
+        
         /**
          * @Given /^que je suis sur la page "([^"]*)"$/
          */
@@ -507,7 +506,7 @@ Ce qui donnerait par exemple dans notre cas :
         {
             // ?
         }
-
+        
         /**
          * @When /^je coche "([^"]*)"$/
          */
@@ -515,7 +514,7 @@ Ce qui donnerait par exemple dans notre cas :
         {
             // ?
         }
-
+        
         /**
          * @When /^je clique sur "([^"]*)"$/
          */
@@ -556,11 +555,44 @@ par exemple), ces tests étant en général beaucoup plus lourd et long à s'ex�
 
 Pour commencer, installez `Mink` :
 
-*Code ici*
+### Installer Mink avec Composer
 
-Ensuite, il suffit de configurer Behat pour lui indiquer que l'on utilise Mink. Mink étant une extension de Behat, C'est très simple :
+Modifiez le fichier composer.json que vous avez préalablement créé, et ajoutez-y le code suivant :
 
-*Code ici*
+    [json]
+    "require": {
+        "behat/behat": "2.4.*@stable",
+        "behat/mink": "1.4@stable",
+        "behat/mink-extension": "*",
+        "behat/mink-goutte-driver": "*"
+    }
+
+Puis relancez Composer :
+
+    [bash]
+    php composer.phar update
+
+### Installer Mink sous forme d'archive Phar
+
+Exécutez la commande suivante :
+
+    [bash]
+    wget https://github.com/downloads/Behat/Mink/mink.phar
+
+Il vous suffit ensuite d'ajouter l'inscruction suivantes dans vos fichiers PHP de Contexte :
+
+    [php]
+    require_once 'mink.phar';
+
+Ensuite, il suffit de configurer Behat pour lui indiquer que l'on utilise Mink. Mink étant une extension de Behat, C'est très simple. 
+Il suffit de créer le fichier `behat.yml` à la racine de votre projet :
+
+    [yaml]
+    default:
+      extensions:
+        Behat\MinkExtension\Extension:
+          base_url: http://url-de-votre-site.fr
+          goutte: ~
 
 Voilà, Mink est installé !
 
@@ -571,7 +603,7 @@ un navigateur, que vous pouvez donc réutiliser (`comme "Quand je vais sur "http
 
 Un besoin exprimé de la façon suivante sera donc automatiquement compris par Behat lorsque Mink est installé:
 
-    [code gherkin]
+    [gherkin]
     Scenario: s'identifier au sein de l'application
       Etant donné que je suis sur "/accueil"
       Quand je suis le lien "Me connecter"
@@ -586,7 +618,7 @@ fera le lien pour vous entre les `label`, `title`, `class`... de vos champs de f
 Au fait, avez-vous lancé Behat pour vérifier que cela fonctionne ? Allez-y ; Utiliser Mink ne change rien à l'utilisation de Behat, 
 il suffit comme avant d'exécuter la commande suivante :
 
-    [code bash]
+    [bash]
     php ./bin/behat
 
 Bien entendu, il va souvent arriver que vous ayez besoin de gérer des cas plus complexes que ce qu'il est possible de faire avec
@@ -595,14 +627,14 @@ les exprpessions disponibles nativement dans Mink.
 Dans ce cas, il va s'agir, ni plus ni moins, de piloter votre navigateur (quel qu'il soit). Un très large éventail 
 de méthodes sont disponibles :
 
-    [code php]
+    [php]
     <?php
     class FeatureContext extends MinkContext {
-
+    
         // (...)
         $browser = $this->getMink()->getBrowser();
         $page = $browser->getPage();
-
+        
         $button = $page->find('css', '.class-css-du-bouton');
         $button->click();
     }
@@ -611,7 +643,7 @@ Notez que désormais notre classe n'hérite plus de `BehatContext` mais de `Mink
 
 Examinons ce code ensemble. Tout d'abord, nous récupérons la page courante affichée par le navigateur :
 
-    [code php]
+    [php]
         $browser = $this->getMink()->getBrowser();
         $page = $browser->getPage();
 
@@ -619,22 +651,19 @@ Examinons ce code ensemble. Tout d'abord, nous récupérons la page courante aff
 Ensuite, il suffit de récupérer un élément HTML dans la page, puis d'exécuter l'action souhaitée sur cet élément (ici un click, 
 mais on pourrait imaginer saisir une valeur, le cocher...) :
 
-    [code php]
+    [php]
         $button = $page->find('css', '.class-css-du-bouton');
         $button->click();
 
 Vous avez bien vu : la méthode `find()` permet de récupérer des éléments en utilisant des sélecteurs CSS. Ce sont les mêmes 
 que ce que vous utilisez dans vos feuilles de style CSS. Attention, les pseudo-styles (':hover', etc) ne sont pas supportés. 
 Bien entendu, il est également possible de récupérer des éléments HTML en utilisant des expressions xPath. La 
-[documentation de Mink est assez complète](http://lien-a-mettre.org) sur ce sujet.
+[documentation de Mink est assez complète](http://mink.behat.org/#xpath-selectors) sur ce sujet.
 
 Il ne vous reste plus qu'à traduire les expressions fonctionnelles de vos clients en différentes actions au sein 
 d'un navigateur, et vous saurez traiter alors la majorité des cas.
 
-Pour des exemples concrets d'utilisation de `Mink`, je vous invite à consulter le projet Open Source 
-[`BehatCh`](http://lien-a-mettre.org), qui lui-même enrichit considérablement le vocabulaire de base de `Mink`.
-
-Pour finir sur Mink, il est très simple de piloter un vrai navigateur. C'est utile lorsque l'on souhaite, par exemple, tester 
+Sachez également que Mink permet très facilement de piloter un vrai navigateur. C'est utile lorsque l'on souhaite, par exemple, tester 
 des fonctionnalités qui nécessite un environnement Ajax ou JavaScript. Dans ce cas, juste au dessus des 
 Scénarios ou des Fonctionnalités concernées, il suffit d'ajouter le tag `@javascript`. Ce tag indiquera à Behat que vous souhaitez, dans ces 
 cas spécifiques, lancer un vrai navigateur pour les tests. Bien entendu, dans ce cas, la machine qui exécute les tests doit posséder un 
@@ -643,16 +672,90 @@ environnement graphique (comme c'est le cas pour les ordinateurs de Bureau).
 
 Lorsque l'on souhaite piloter un vrai navigateur, Behat délègue en réalité le travail à des outils spécialisés, comme `Sahi`, ou encore 
 comme `Selenium`. Dans ce cas, ces outils doivent être installés sur votre machine. La procédure pour les installer est en 
-général très simple, et est bien expliquée dans la [documentation officielle](http://lien-a-mettre.org).
+général très simple, et est bien expliquée dans la [documentation officielle](http://mink.behat.org/#different-browsers-drivers).
 
-Voici la configuration à ajouter dans le fichier `behat.yml` pour indiquer que vous souhaitez utiliser Chrome par exemple :
+Voici la configuration à ajouter dans le fichier `behat.yml` pour indiquer que vous souhaitez utiliser Chrome par exemple, grâce au driver Sahi :
 
-*CODE*
+    [yaml]
+    default:
+        extensions:
+            Behat\MinkExtension\Extension:
+                base_url: http://url-de-votre-site.fr/
+                goutte: ~
+                default_session: sahi
+                javascript_session: sahi
+                browser_name: chrome
+                sahi:
+                  host: localhost
+                  port: 9999
 
 Voici celle que vous pourriez utiliser pour piloter Firefox :
 
-*CODE*
+    [yaml]
+    default:
+        extensions:
+            Behat\MinkExtension\Extension:
+                base_url: http://url-de-votre-site.fr/
+                goutte: ~
+                default_session: sahi
+                javascript_session: sahi
+                browser_name: firefox
+                sahi:
+                  host: localhost
+                  port: 9999
 
-Vous avez désormais toutes les connaissances requises pour commencer à tester automatiquement un projet web.
 
-> Mink permet de piloter un navigateur pour tester vos applications web.
+Vous avez désormais toutes les connaissances requises pour commencer à tester automatiquement un projet web. Pourquoi ne pas vous 
+entraîner par exemple sur une petite application web de guichet bancaire ? 
+
+![ La correction et les sources de cet exercice sont disponibles sur http://goo.gl/LISNg ]
+(dev-qr-exo3.png)
+
+Je vous propose de vous entraîner en traduisant le besoin fonctionnel suivant :
+
+    [gherkin]
+    #language: fr
+    Fonctionnalité: Gérer un compte bancaire
+      Afin de gérer mon compte bancaire
+      En tant qu'utilisateur connecté
+      Je peux ajouter ou retirer de l'argent sur mon compte
+      
+      Contexte:
+        Etant donné que je suis connecté en tant que "jean-françois"
+        Et que j'ai "50" euro
+        Et je suis sur "/"
+        
+      Scénario: Consulter mes comptes
+        Alors je devrais voir "Vous avez 50 euro sur votre compte"
+        
+      Plan du Scénario: Ajouter de l'argent
+        Etant donné que j'ai "<montantInitial>" euro
+        Quand je sélectionne "<operation>" depuis "Operation"
+        Et je remplis "Montant" avec "<montant>"
+        Et je presse "Go"
+        Alors je devrais voir "Vous avez <montantFinal> euro sur votre compte"
+        
+        Exemples:
+         | operation     | montantInitial| montant   | montantFinal  |
+         | Ajouter       | 50            | 10        | 60            |
+         | Ajouter       | 50            | 20        | 70            |
+         | Ajouter       | 50            | 5         | 55            |
+         | Ajouter       | 50            | 0         | 50            |
+         | Retirer       | 50            | 10        | 40            |
+         | Retirer       | 50            | 20        | 30            |
+         | Retirer       | 50            | 30        | 20            |
+         
+      Scénario: Les découverts sont interdits
+        Etant donné que j'ai "50" euro
+        Quand je sélectionne "Retirer" depuis "Operation"
+        Et je remplis "Montant" avec "60"
+        Et je presse "Go"
+        Alors je devrais voir "Vous avez 50 euro sur votre compte"
+        Et je devrais voir "Les decouverts ne sont pas autorises"
+
+A vous de jouer ! 
+
+> Mink permet facilement de piloter un navigateur pour tester vos applications web.
+
+## Teser un site web : exercice complet
+

@@ -59,7 +59,7 @@ book:
                 inner:      30mm
                 outter:     20mm
             page_size:      A4
-            theme:          clean
+            theme:          CustomJeff
             toc:
                 deep:       2
                 elements:   ["appendix", "chapter", "part"]

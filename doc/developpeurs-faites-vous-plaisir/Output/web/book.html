@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="author" content="Jean-François Lépine" />
-    <meta name="date" content="24/02/2013"/>
+    <meta name="date" content="02/03/2013"/>
     <meta name="generator" content="easybook 5.0-DEV"/>
 
     <title>Développeurs, faites-vous plaisir !</title>
@@ -908,9 +908,9 @@ titre de votre fonctionnalité.</p>
 titre</strong>. Prenez les fonctionnalités suivantes :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"># Distinguez vos fonctionnalités en leur donnant un titre :
-Fonctionnalité : Retirer de l’argent au distributeur
-Fonctionnalité : Consulter le solde de son compte au distributeur</pre>
+<pre class="gherkin"><span class="co1"># Distinguez vos fonctionnalités en leur donnant un titre :</span><span class="co3">
+Fonctionnalité </span><span class="sy2">: </span>Retirer de l’argent au distributeur<span class="co3">
+Fonctionnalité </span><span class="sy2">: </span>Consulter le solde de son compte au distributeur</pre>
 </div>
 
 <p>Il est facile de les distinguer et de les comprendre non ?</p>
@@ -926,11 +926,11 @@ l'utiliser. <strong>Précisez donc qui est l'utilisateur de votre
 fonctionnalité</strong> :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"># Précisez qui est l’acteur bénéficiaire de votre fonctionnalité :
-En tant que rôle
-En tant que administrateur du site
-En tant que conseiller clientèle
-En tant que ...</pre>
+<pre class="gherkin"><span class="co1"># Précisez qui est l’acteur bénéficiaire de votre fonctionnalité :</span>
+<span class="kw1">En tant que</span> rôle
+<span class="kw1">En tant que</span> administrateur du site
+<span class="kw1">En tant que</span> conseiller clientèle
+<span class="kw1">En tant que</span> <span class="sy1">...</span></pre>
 </div>
 
 <p>Voilà une bonne chose de faite ! <strong>Identifiez maintenant le Service
@@ -940,11 +940,11 @@ dit "c'est génial, en tant que ... vous pouvez faire ça !". Par exemple
 :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"># Identifiez le service délivré par votre fonctionnalité à l’utilisateur :
-Je veux un service rendu
-Je veux retirer de l’argent au distributeur
-Je veux connaître la quantité d’argent qu’il me reste sur mon compte
-Je veux ...</pre>
+<pre class="gherkin"><span class="co1"># Identifiez le service délivré par votre fonctionnalité à l’utilisateur :</span>
+<span class="kw1">Je veux</span> un service rendu
+<span class="kw1">Je veux</span> retirer de l’argent au distributeur
+<span class="kw1">Je veux</span> connaître la quantité d’argent qu’il me reste sur mon compte
+<span class="kw1">Je veux</span> <span class="sy1">...</span></pre>
 </div>
 
 <p>On commence déjà à y voir plus clair. <strong>Il ne reste plus qu'à préciser
@@ -954,20 +954,20 @@ ne voyez pas de bénéfice pour votre fonctionnalité, c'est qu'elle ne
 mérite pas d'être développée. Décrivez ce bénéfice ainsi :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"># Décrivez le bénéfice fonctionnel obtenu par votre fonctionnalité :
-De telle sorte que bénéfice attendu
-De telle sorte que je puisse obtenir de l’argent même quand la banque est fermée
-De telle sorte que ...</pre>
+<pre class="gherkin"><span class="co1"># Décrivez le bénéfice fonctionnel obtenu par votre fonctionnalité :</span>
+<span class="kw1">De telle sorte que</span> bénéfice attendu
+<span class="kw1">De telle sorte que</span> je puisse obtenir de l’argent même <span class="kw1">quand</span> la banque est fermée
+<span class="kw1">De telle sorte que</span> <span class="sy1">...</span></pre>
 </div>
 
 <p>Ce qui fait que <strong>toute fonctionnalité peut être décrite, de manière
 explicite, en quatre courtes lignes</strong> :</p>
 
 <div class="code gherkin">
-<pre class="gherkin">Fonctionnalité : Retirer de l’argent au distributeur
-    En tant que client de la banque
-    Je veux retirer de l’argent au distributeur
-    De telle sorte que je puisse obtenir de l’argent même quand la banque est fermée</pre>
+<pre class="gherkin"><span class="co3">Fonctionnalité </span><span class="sy2">: </span>Retirer de l’argent au distributeur
+    <span class="kw1">En tant que</span> client de la banque
+    <span class="kw1">Je veux</span> retirer de l’argent au distributeur
+    <span class="kw1">De telle sorte que</span> je puisse obtenir de l’argent même <span class="kw1">quand</span> la banque est fermée</pre>
 </div>
 
 <p>N'importe quel membre de votre équipe comprendra ce qu'est cette
@@ -986,8 +986,8 @@ et explicites</strong>. Ils représentent le comportement concret que vous
 attendez pour votre fonctionnalité. Par exemple :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"># Un Scénario est une situation concrète de votre Fonctionnalité :
-Fonctionnalité : Retirer de l’argent au distributeur</pre>
+<pre class="gherkin"><span class="co1"># Un Scénario est une situation concrète de votre Fonctionnalité :</span><span class="co3">
+Fonctionnalité </span><span class="sy2">: </span>Retirer de l’argent au distributeur</pre>
 </div>
 
 <div class="code code">
@@ -1014,12 +1014,12 @@ un contexte, un événement déclencheur ou un résultat attendu.</p>
 conditions d'existence de votre scénario :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"># Un Scénario s’inscrit dans un contexte, une situation initiale :
-Scénario : ...
-    Etant donné que tel contexte existe
-    Etant donné que que je n’ai plus d’argent sur mon compte
-    Etant donné que ma carte est expirée
-    Etant donné que ...</pre>
+<pre class="gherkin"><span class="co1"># Un Scénario s’inscrit dans un contexte, une situation initiale :</span><span class="co3">
+Scénario </span><span class="sy2">: </span><span class="sy1">...</span>
+    <span class="kw1">Etant donné</span> que tel contexte existe
+    <span class="kw1">Etant donné</span> que que je n’ai plus d’argent sur mon compte
+    <span class="kw1">Etant donné</span> que ma carte est expirée
+    <span class="kw1">Etant donné</span> que <span class="sy1">...</span></pre>
 </div>
 
 <p>Toute interaction de l'utilisateur avec votre produit peut se traduire
@@ -1027,13 +1027,13 @@ sous forme d'événement. Un événement est le déclencheur de votre
 scénario, qui vient juste après que le contexte initiale soit situé :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"># Un Scénario se démarque par un événement :
-Scénario : ...
-    ...
-    Quand tel événement déclencheur survient
-    Quand je demande à retirer de l’argent
-    Quand je demande le solde de mon compte
-    Quand ...</pre>
+<pre class="gherkin"><span class="co1"># Un Scénario se démarque par un événement :</span><span class="co3">
+Scénario </span><span class="sy2">: </span><span class="sy1">...</span>
+    <span class="sy1">...</span>
+    <span class="kw1">Quand</span> tel événement déclencheur survient
+    <span class="kw1">Quand</span> je demande à retirer de l’argent
+    <span class="kw1">Quand</span> je demande le solde de mon compte
+    <span class="kw1">Quand</span> <span class="sy1">...</span></pre>
 </div>
 
 <dl>
@@ -1042,13 +1042,13 @@ Scénario : ...
 </dl>
 
 <div class="code gherkin">
-<pre class="gherkin"># Chaque Scénario aboutit à un résultat :
-Scénario : ...
-    ...
-    Alors tel résultat est attendu
-    Alors je reçois 20 euros
-    Alors ma carte est aspirée
-    Alors ...</pre>
+<pre class="gherkin"><span class="co1"># Chaque Scénario aboutit à un résultat :</span><span class="co3">
+Scénario </span><span class="sy2">: </span><span class="sy1">...</span>
+    <span class="sy1">...</span>
+    <span class="kw1">Alors</span> tel résultat est attendu
+    <span class="kw1">Alors</span> je reçois <span class="nu0">20</span> euros
+    <span class="kw1">Alors</span> ma carte est aspirée
+    <span class="kw1">Alors</span> <span class="sy1">...</span></pre>
 </div>
 
 <p>Toute cette syntaxe, qui permet de rendre vos fonctionnalités
@@ -1058,8 +1058,8 @@ pas très compliquée, si ?</p>
 <p>Au final, voici une fonctionnalité plus complète :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"># Toute personne qui connaître votre Langue Commune comprend
-# votre fonctionnalité :</pre>
+<pre class="gherkin"><span class="co1"># Toute personne qui connaître votre Langue Commune comprend</span>
+<span class="co1"># votre fonctionnalité :</span></pre>
 </div>
 
 <div class="code code">
@@ -1098,7 +1098,7 @@ vous pouvez y ajouter vos exemples. Car on est bien d'accords, <strong>rien de
 mieux que des exemples</strong>. Prenons celui-ci :</p>
 
 <div class="code gherkin">
-<pre class="gherkin"># Votre fonctionnalité peut contenir un exemple :</pre>
+<pre class="gherkin"><span class="co1"># Votre fonctionnalité peut contenir un exemple :</span></pre>
 </div>
 
 <div class="code code">
@@ -1114,7 +1114,7 @@ grammaire est riche, et vous pouvez utiliser la syntaxe suivante (votre
 scénario devient alors un Plan de scénario) : </p>
 
 <div class="code gherkin">
-<pre class="gherkin"># Votre fonctionnalité peut contenir plusieurs exemples facilement :</pre>
+<pre class="gherkin"><span class="co1"># Votre fonctionnalité peut contenir plusieurs exemples facilement :</span></pre>
 </div>
 
 <div class="code code">
@@ -1456,10 +1456,10 @@ application mobile.</p>
 <p>Considérez ce scénario, mis en évidence par Liz Keogh:</p>
 
 <div class="code gherkin">
-<pre class="gherkin">Scénario : pouvoir acheter un animal domestique adulte
-    Etant donné qu'un chiot est trop petit pour être vendu
-    Quand j'essaye de l'acheter
-    Alors je suis informé qu'il ne peut être vendu car trop jeune</pre>
+<pre class="gherkin"><span class="co3">Scénario </span><span class="sy2">: </span>pouvoir acheter un animal domestique adulte
+    <span class="kw1">Etant donné</span> qu'un chiot est trop petit pour être vendu
+    <span class="kw1">Quand</span> j'essaye de l'acheter
+    <span class="kw1">Alors</span> je suis informé qu'il ne peut être vendu car trop jeune</pre>
 </div>
 
 <p>Bien. Bien ? Non, pas vraiment... Vous n'avez pas décrit votre besoin,
@@ -1478,11 +1478,11 @@ allers et retours inutiles.</p>
 pourrait être changé en :</p>
 
 <div class="code gherkin">
-<pre class="gherkin">Scénario : pouvoir acheter un animal domestique adulte
-    Etant donné qu'un chiot ne peut être vendu avant qu'il n'ait &quot;2 mois&quot;
-    Et que &quot;Médor le chien&quot; a actuellement &quot;1 mois&quot;
-    Quand j'essaye d'acheter &quot;Médor le chien&quot;
-    Alors on doit me dire &quot;Médor le chient est trop jeune. Veuillez revenir dans 1 mois&quot;</pre>
+<pre class="gherkin"><span class="co3">Scénario </span><span class="sy2">: </span>pouvoir acheter un animal domestique adulte
+    <span class="kw1">Etant donné</span> qu'un chiot ne peut être vendu avant qu'il n'ait <span class="st0">&quot;2 mois&quot;</span>
+    <span class="kw1">Et</span> que <span class="st0">&quot;Médor le chien&quot;</span> a actuellement <span class="st0">&quot;1 mois&quot;</span>
+    <span class="kw1">Quand</span> j'essaye d'acheter <span class="st0">&quot;Médor le chien&quot;</span>
+    <span class="kw1">Alors</span> on doit me dire <span class="st0">&quot;Médor le chient est trop jeune. Veuillez revenir dans 1 mois&quot;</span></pre>
 </div>
 
 <p>C’est un peu plus explicite non ? Et il reste moins de questions. De
@@ -2517,7 +2517,7 @@ quel langage :</p>
 <li>Python : Behave (http://packages.python.org/behave/)</li>
 <li>PHP : Behat (http://behat.org) , PHPSpec (http://www.phpspec.net)</li>
 <li>JavaScript : Jasmine (http://pivotal.github.com/jasmine/)</li>
-<li>.Net: NBehave (http://nbehave.org)</li>
+<li>Net : NBehave (http://nbehave.org)</li>
 </ul>
 
 <p>Il en existe bien d'autres, la liste est loin d'être exhaustive, mais ceux-ci sont particulièrement 
@@ -2544,21 +2544,21 @@ L'installation de PHP est résumée sur cette page : http://php.net/manual/fr/in
 
 <p>Windows :</p>
 
-<div class="code code bash">
-<pre class="codebash">Utilisez WampServer (http://www.wampserver.com)</pre>
+<div class="code bash">
+<pre class="bash">Utilisez WampServer <span class="br0">&#40;</span>http:<span class="sy0">//</span>www.wampserver.com<span class="br0">&#41;</span></pre>
 </div>
 
 <p>Ubuntu, Debian :</p>
 
-<div class="code code bash">
-<pre class="codebash"># en ligne de commande
-apt-get install php5-common php5-cli php5-curl</pre>
+<div class="code bash">
+<pre class="bash"><span class="co0"># en ligne de commande</span>
+<span class="kw2">apt-get install</span> php5-common php5-cli php5-curl</pre>
 </div>
 
 <p>Mac :</p>
 
-<div class="code code bash">
-<pre class="codebash">Utilisez MampServer (http://www.mamp.info)</pre>
+<div class="code bash">
+<pre class="bash">Utilisez MampServer <span class="br0">&#40;</span>http:<span class="sy0">//</span>www.mamp.info<span class="br0">&#41;</span></pre>
 </div>
 
 <p>Installer Behat est simple, peut être fait de plusieurs manières : sous forme d'archive PHP
@@ -2582,9 +2582,9 @@ apt-get install php5-common php5-cli php5-curl</pre>
 <p>Exécutez ensuite la commande suivante dans votre terminal, en vous plaçant àa la racine
 de votre projet :</p>
 
-<div class="code code bash">
-<pre class="codebash">curl http://getcomposer.org/installer | php
-php composer.phar install --prefer-source</pre>
+<div class="code bash">
+<pre class="bash">curl http:<span class="sy0">//</span>getcomposer.org<span class="sy0">/</span>installer <span class="sy0">|</span> php
+php composer.phar <span class="kw2">install</span> <span class="re5">--prefer-source</span></pre>
 </div>
 
 <h3 id="-installation-sous-forme-darchive-phar">4.1.2  Installation sous forme d'archive Phar</h3>
@@ -2593,10 +2593,10 @@ php composer.phar install --prefer-source</pre>
 downloads/behat.phar, et de le placer dans un dossier <code>bin</code> à la racine de votre projet. Vous
 aurez donc l'arborescence suivante :</p>
 
-<div class="code code bash">
-<pre class="codebash">/chemin/vers/mon/projet
-    (...)
-    - bin/
+<div class="code bash">
+<pre class="bash"><span class="sy0">/</span>chemin<span class="sy0">/</span>vers<span class="sy0">/</span>mon<span class="sy0">/</span>projet
+    <span class="br0">&#40;</span>...<span class="br0">&#41;</span>
+    - bin<span class="sy0">/</span>
         - behat.phar</pre>
 </div>
 
@@ -2608,8 +2608,8 @@ PHP que vous utilisez, y compris Behat.</p>
 
 <p>Une fois que Behat est installé, il vous suffit d'exécuter la commande suivante :</p>
 
-<div class="code code bash">
-<pre class="codebash">php ./bin/behat --init</pre>
+<div class="code bash">
+<pre class="bash">php .<span class="sy0">/</span>bin<span class="sy0">/</span>behat <span class="re5">--init</span></pre>
 </div>
 
 <p>Cela aura pour effet de créer dans votre projet tous les éléments dont Behat a besoin pour
@@ -2627,49 +2627,43 @@ fichier</code>.feature<code>. Créez par exemple le fichier</code>features/calcu
 contenu suivant :</p>
 
 <div class="figure center" id="figure-4-1-3">
-    <img src="images/dev-qr-exo1-step1.png" alt="Les sources de cet exercice sont disponibles sur http://goo.gl/4usXU" />
+    <img src="images/dev-qr-exo1-step1.png" alt="Les sources de cet exercice sont disponibles sur http://goo.gl/lgWvy" />
 
-    <p class="caption"><strong>Figure 4.1</strong> Les sources de cet exercice sont disponibles sur http://goo.gl/4usXU</p>
+    <p class="caption"><strong>Figure 4.1</strong> Les sources de cet exercice sont disponibles sur http://goo.gl/lgWvy</p>
 </div>
 
 
-<div class="code code gherkin">
-<pre class="codegherkin"># language: fr
-Fonctionnalité: Calculer l'âge d'une personne
-    En tant qu'utilisateur de l'application
-    Je veux connaître le nombre d'années écoulées entre deux dates
-    De telle sorte que je puisse connaître mon age</pre>
-</div>
-
-<div class="code code">
-<pre class="code">Scénario: Calculer l'âge d'une personne depuis une date antérieure à aujourd'hui
-    Etant donné que je suis né le 06/07/1986
-    Et que nous sommes le 20/09/013
-    Quand je calcule mon âge
-    Alors je suis informé que j'ai 27 ans</pre>
-</div>
-
-<div class="code code">
-<pre class="code">Scénario: Calculer l'âge d'une personne depuis une date postérieure à aujourd'hui
-    Etant donné que je suis né le 06/07/3013
-    Et que nous sommes le 20/09/2013
-    Quand je calcule mon âge
-    Alors je suis informé que je ne suis pas encore né</pre>
-</div>
-
-<div class="code code">
-<pre class="code">Scénario: Calculer l'âge d'une personne dont c'est l'anniversaire aujourd'hui
-    Etant donné que je suis né le 06/07/1986
-    Et que nous sommes le 06/07/2013
-    Quand je calcule mon âge
-    Alors je suis informé que j'ai 27 ans
-    Et on me souhaite un joyeux anniversaire</pre>
+<div class="code gherkin">
+<pre class="gherkin"><span class="co1"># language: fr</span><span class="co3">
+Fonctionnalité</span><span class="sy2">: </span>Calculer l'âge d'une personne
+    <span class="kw1">En tant qu</span>'utilisateur de l'application
+    <span class="kw1">Je veux</span> connaître le nombre d'années écoulées entre deux dates
+    <span class="kw1">De telle sorte que</span> je puisse connaître mon age
+    <span class="co3">
+Scénario</span><span class="sy2">: </span>Calculer l'âge d'une personne depuis une date antérieure à aujourd'hui
+    <span class="kw1">Etant donné</span> que je suis né le 06/07/<span class="nu0">1986</span>
+    <span class="kw1">Et</span> que nous sommes le <span class="nu0">20</span>/09/013
+    <span class="kw1">Quand</span> je calcule mon âge
+    <span class="kw1">Alors</span> je suis informé que j'ai <span class="nu0">27</span> ans
+    <span class="co3">
+Scénario</span><span class="sy2">: </span>Calculer l'âge d'une personne depuis une date postérieure à aujourd'hui
+    <span class="kw1">Etant donné</span> que je suis né le 06/07/<span class="nu0">3013</span>
+    <span class="kw1">Et</span> que nous sommes le <span class="nu0">20</span>/09/<span class="nu0">2013</span>
+    <span class="kw1">Quand</span> je calcule mon âge
+    <span class="kw1">Alors</span> je suis informé que je ne suis pas encore né
+    <span class="co3">
+Scénario</span><span class="sy2">: </span>Calculer l'âge d'une personne dont c'est l'anniversaire aujourd'hui
+    <span class="kw1">Etant donné</span> que je suis né le 06/07/<span class="nu0">1986</span>
+    <span class="kw1">Et</span> que nous sommes le 06/07/<span class="nu0">2013</span>
+    <span class="kw1">Quand</span> je calcule mon âge
+    <span class="kw1">Alors</span> je suis informé que j'ai <span class="nu0">27</span> ans
+    <span class="kw1">Et</span> on me souhaite un joyeux anniversaire</pre>
 </div>
 
 <p>Puis exécutez la commande suivante pour lancer Behat :</p>
 
-<div class="code code bash">
-<pre class="codebash">./bin/behat</pre>
+<div class="code bash">
+<pre class="bash">.<span class="sy0">/</span>bin<span class="sy0">/</span>behat</pre>
 </div>
 
 <div class="figure center" id="figure-4-2">
@@ -2688,8 +2682,8 @@ les traduire.</p>
 <p>Par chance, Behat est suffisammet bien fait pour vous fournir une base de travail pour traduire vos fonctionnalités. Il suffit 
 de copier-coller dans le fichier <code>features/bootstrap/FeatureContext.php</code> le code PHP qui a été généré par la commande :</p>
 
-<div class="code code bash">
-<pre class="codebash">./bin/behat</pre>
+<div class="code bash">
+<pre class="bash">.<span class="sy0">/</span>bin<span class="sy0">/</span>behat</pre>
 </div>
 
 <p>Pourquoi copier ce code dans ce fichier ? Tout simplement parce que les fichiers <code>features/bootstrap/*Context.php</code> vont servir 
@@ -2702,102 +2696,81 @@ est respectée, mais à surtout l'avantage de rendre ce travail de recette inter
 <p>Traduisez maintenant la fonctionnalité en code source dans le fichier <code>features/bootstrap/FeatureContext.php</code>, en adaptant 
 le code PHP fourni par Behat selon votre besoin. Par exemple :</p>
 
-<div class="code code php">
-<pre class="codephp">&lt;?php
-// (...)</pre>
-</div>
-
-<div class="code code">
-<pre class="code">class FeatureContext extends BehatContext
-{</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    private $birthDate;
-    private $today;
-    private $output;</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    /**
+<div class="code php">
+<pre class="php"><span class="kw2">&lt;?php</span>
+<span class="co1">// (...)</span>
+&nbsp;
+<span class="kw2">class</span> FeatureContext <span class="kw2">extends</span> BehatContext
+<span class="br0">&#123;</span>
+&nbsp;
+    <span class="kw2">private</span> <span class="re0">$birthDate</span><span class="sy0">;</span>
+    <span class="kw2">private</span> <span class="re0">$today</span><span class="sy0">;</span>
+    <span class="kw2">private</span> <span class="re0">$output</span><span class="sy0">;</span>
+&nbsp;
+    <span class="co4">/**
      * Initializes context.
      * Every scenario gets it's own context object.
      *
      * @param array $parameters context parameters (set them up through behat.yml)
-     */
-    public function __construct(array $parameters)
-    {</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    }</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    /**
+     */</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> __construct<span class="br0">&#40;</span><span class="kw3">array</span> <span class="re0">$parameters</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+    <span class="br0">&#125;</span>
+&nbsp;
+    <span class="co4">/**
      * @Given /^que je suis né le (\d+)\/(\d+)\/(\d+)$/
-     */
-    public function queJeSuisNeLe($day, $month, $year)
-    {
-        $this-&gt;birthDate = new \DateTime(sprintf('%d-%d-%d', $year, $month, $day));
-    }</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    /**
+     */</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> queJeSuisNeLe<span class="br0">&#40;</span><span class="re0">$day</span><span class="sy0">,</span> <span class="re0">$month</span><span class="sy0">,</span> <span class="re0">$year</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">birthDate</span> <span class="sy0">=</span> <span class="kw2">new</span> \DateTime<span class="br0">&#40;</span><span class="kw3">sprintf</span><span class="br0">&#40;</span><span class="st_h">'%d-%d-%d'</span><span class="sy0">,</span> <span class="re0">$year</span><span class="sy0">,</span> <span class="re0">$month</span><span class="sy0">,</span> <span class="re0">$day</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&nbsp;
+    <span class="co4">/**
      * @Given /^que nous sommes le (\d+)\/(\d+)\/(\d+)$/
-     */
-    public function queNousSommesLe($day, $month, $year)
-    {
-        $this-&gt;today = new \DateTime(sprintf('%d-%d-%d', $year, $month, $day));
-    }</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    /**
+     */</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> queNousSommesLe<span class="br0">&#40;</span><span class="re0">$day</span><span class="sy0">,</span> <span class="re0">$month</span><span class="sy0">,</span> <span class="re0">$year</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">today</span> <span class="sy0">=</span> <span class="kw2">new</span> \DateTime<span class="br0">&#40;</span><span class="kw3">sprintf</span><span class="br0">&#40;</span><span class="st_h">'%d-%d-%d'</span><span class="sy0">,</span> <span class="re0">$year</span><span class="sy0">,</span> <span class="re0">$month</span><span class="sy0">,</span> <span class="re0">$day</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&nbsp;
+    <span class="co4">/**
      * @Given /^je calcule mon âge$/
-     */
-    public function jeCalculeMonAge()
-    {
-        $this-&gt;output = shell_exec(sprintf('php src/age.php --birthdate=%s --today=%s', $this-&gt;birthDate-&gt;format('Y-m-d'), $this-&gt;today-&gt;format('Y-m-d')));
-    }</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    /**
+     */</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> jeCalculeMonAge<span class="br0">&#40;</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">output</span> <span class="sy0">=</span> <span class="kw3">shell_exec</span><span class="br0">&#40;</span><span class="kw3">sprintf</span><span class="br0">&#40;</span><span class="st_h">'php src/age.php --birthdate=%s --today=%s'</span><span class="sy0">,</span> <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">birthDate</span><span class="sy0">-&gt;</span><span class="me1">format</span><span class="br0">&#40;</span><span class="st_h">'Y-m-d'</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">today</span><span class="sy0">-&gt;</span><span class="me1">format</span><span class="br0">&#40;</span><span class="st_h">'Y-m-d'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&nbsp;
+    <span class="co4">/**
      * @Given /^je suis informé que j\'ai (\d+) ans$/
-     */
-    public function jeSuisInformeQueJAiAns($age)
-    {
-        if(!preg_match('!'.$age.' ans!', $this-&gt;output)) {
-            throw new Exception();
-        }
-    }</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    /**
+     */</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> jeSuisInformeQueJAiAns<span class="br0">&#40;</span><span class="re0">$age</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">!</span><span class="kw3">preg_match</span><span class="br0">&#40;</span><span class="st_h">'!'</span><span class="sy0">.</span><span class="re0">$age</span><span class="sy0">.</span><span class="st_h">' ans!'</span><span class="sy0">,</span> <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">output</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            <span class="kw1">throw</span> <span class="kw2">new</span> Exception<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="br0">&#125;</span>
+    <span class="br0">&#125;</span>
+&nbsp;
+    <span class="co4">/**
      * @Given /^je suis informé que je ne suis pas encore né$/
-     */
-    public function jeSuisInformeQueJeNeSuisPasEncoreNe()
-    {
-        if(!preg_match('!Vous n\'êtes pas encore né!', $this-&gt;output)) {
-            throw new Exception();
-        }
-    }</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    /**
+     */</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> jeSuisInformeQueJeNeSuisPasEncoreNe<span class="br0">&#40;</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">!</span><span class="kw3">preg_match</span><span class="br0">&#40;</span><span class="st_h">'!Vous n\'êtes pas encore né!'</span><span class="sy0">,</span> <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">output</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            <span class="kw1">throw</span> <span class="kw2">new</span> Exception<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="br0">&#125;</span>
+    <span class="br0">&#125;</span>
+&nbsp;
+    <span class="co4">/**
      * @Given /^on me souhaite un joyeux anniversaire$/
-     */
-    public function onMeSouhaiteUnJoyeuxAnniversaire()
-    {
-        if(!preg_match('!Joyeux anniversaire!', $this-&gt;output)) {
-            throw new Exception();
-        }
-    }
-}</pre>
+     */</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> onMeSouhaiteUnJoyeuxAnniversaire<span class="br0">&#40;</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="kw1">if</span><span class="br0">&#40;</span><span class="sy0">!</span><span class="kw3">preg_match</span><span class="br0">&#40;</span><span class="st_h">'!Joyeux anniversaire!'</span><span class="sy0">,</span> <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">output</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            <span class="kw1">throw</span> <span class="kw2">new</span> Exception<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="br0">&#125;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
 </div>
 
 <p>Notez ces différents aspects :</p>
@@ -2812,8 +2785,8 @@ le code PHP fourni par Behat selon votre besoin. Par exemple :</p>
 <p>Maintenant, il vous suffit de relancer Behat pour vérifier automatiquement que votre application a bien 
 le comportement attendu :</p>
 
-<div class="code code bash">
-<pre class="codebash">./bin/behat</pre>
+<div class="code bash">
+<pre class="bash">.<span class="sy0">/</span>bin<span class="sy0">/</span>behat</pre>
 </div>
 
 <div class="figure center" id="figure-4-3">
@@ -2829,9 +2802,9 @@ Behat pour vous assurer que vous avez bien traité la demande initiale.</p>
 <h2 id="exploitez-les-jeux-dexemples">4.3 Exploitez les jeux d'exemples</h2>
 
 <div class="figure center" id="figure-4-4">
-    <img src="images/dev-qr-exo1-step2.png" alt="Les sources de cet exercice sont disponibles sur http://goo.gl/fYZHv" />
+    <img src="images/dev-qr-exo1-step2.png" alt="Les sources de cet exercice sont disponibles sur http://goo.gl/jaLxP" />
 
-    <p class="caption"><strong>Figure 4.4</strong> Les sources de cet exercice sont disponibles sur http://goo.gl/fYZHv</p>
+    <p class="caption"><strong>Figure 4.4</strong> Les sources de cet exercice sont disponibles sur http://goo.gl/jaLxP</p>
 </div>
 
 
@@ -2839,29 +2812,25 @@ Behat pour vous assurer que vous avez bien traité la demande initiale.</p>
 
 <p>On pourrait par exemple modifier notre fonctionnalité de la façon suivante :</p>
 
-<div class="code code gherkin">
-<pre class="codegherkin"># language: fr
-Fonctionnalité: Calculer l'âge d'une personne
-    En tant qu'utilisateur de l'application
-    Je veux connaître le nombre d'années écoulées entre deux dates
-    De telle sorte que je puisse connaître mon age</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    Plan du Scénario: Calculer l'âge d'une personne
-      Etant donné que je suis né le &quot;&lt;dateNaissance&gt;&quot;
-      Et que nous sommes le &quot;&lt;dateDuJour&gt;&quot;
-      Quand je calcule mon âge
-      Alors on me répond &quot;&lt;reponseAttendu&gt;&quot;</pre>
-</div>
-
-<div class="code code">
-<pre class="code">      Exemples:
-        | dateNaissance | dateDuJour | reponseAttendu                           |
-        | 06/07/1986    | 20/09/2013 | Vous avez 27 ans                         |
+<div class="code gherkin">
+<pre class="gherkin"><span class="co1"># language: fr</span><span class="co3">
+Fonctionnalité</span><span class="sy2">: </span>Calculer l'âge d'une personne
+    <span class="kw1">En tant qu</span>'utilisateur de l'application
+    <span class="kw1">Je veux</span> connaître le nombre d'années écoulées entre deux dates
+    <span class="kw1">De telle sorte que</span> je puisse connaître mon age
+    <span class="co3">
+    Plan du Scénario</span><span class="sy2">: </span>Calculer l'âge d'une personne
+      <span class="kw1">Etant donné</span> que je suis né le <span class="st0">&quot;&lt;dateNaissance&gt;&quot;</span>
+      <span class="kw1">Et</span> que nous sommes le <span class="st0">&quot;&lt;dateDuJour&gt;&quot;</span>
+      <span class="kw1">Quand</span> je calcule mon âge
+      <span class="kw1">Alors</span> on me répond <span class="st0">&quot;&lt;reponseAttendu&gt;&quot;</span>
+      <span class="co4">
+      Exemples</span><span class="sy2">:
+</span>        | dateNaissance | dateDuJour | reponseAttendu                           <span class="sy2">|
+</span><span class="co0">        | 06/07/1986    | 20/09/2013 | Vous avez 27 ans                         |
         | 06/07/1985    | 20/09/2013 | Vous avez 28 ans                         |
         | 26/11/2020    | 20/09/2013 | Vous n'êtes pas encore né                |
-        | 06/07/1986    | 06/07/2013 | Vous avez 27 ans. Joyeux anniversaire    |</pre>
+        | 06/07/1986    | 06/07/2013 | Vous avez 27 ans. Joyeux anniversaire    |</span></pre>
 </div>
 
 <p>Vous voici avec une fonctionnalité simple, claire et complète.</p>
@@ -2872,64 +2841,52 @@ sous forme de paramètre de méthode, sans que cela n'ait le moindre impact sur 
 
 <p>Voici une traduction possible de cette fonctionnalité :</p>
 
-<div class="code code php">
-<pre class="codephp">&lt;?php
-// file features/bootstrap/FeatureContext.php
-// (...)</pre>
-</div>
-
-<div class="code code">
-<pre class="code">class FeatureContext extends BehatContext
-{</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    private $birthDate;
-    private $today;
-    private $output;</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    /**
+<div class="code php">
+<pre class="php"><span class="kw2">&lt;?php</span>
+<span class="co1">// file features/bootstrap/FeatureContext.php</span>
+<span class="co1">// (...)</span>
+&nbsp;
+<span class="kw2">class</span> FeatureContext <span class="kw2">extends</span> BehatContext
+<span class="br0">&#123;</span>
+&nbsp;
+    <span class="kw2">private</span> <span class="re0">$birthDate</span><span class="sy0">;</span>
+    <span class="kw2">private</span> <span class="re0">$today</span><span class="sy0">;</span>
+    <span class="kw2">private</span> <span class="re0">$output</span><span class="sy0">;</span>
+&nbsp;
+    <span class="co4">/**
      * @Given /^que je suis né le &quot;([^&quot;]*)&quot;$/
-     */
-    public function queJeSuisNeLe($date)
-    {
-        $this-&gt;birthDate = DateTime::createFromFormat('d/m/Y', $date);
-    }</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    /**
+     */</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> queJeSuisNeLe<span class="br0">&#40;</span><span class="re0">$date</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">birthDate</span> <span class="sy0">=</span> DateTime<span class="sy0">::</span><span class="me2">createFromFormat</span><span class="br0">&#40;</span><span class="st_h">'d/m/Y'</span><span class="sy0">,</span> <span class="re0">$date</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&nbsp;
+    <span class="co4">/**
      * @Given /^que nous sommes le &quot;([^&quot;]*)&quot;$/
-     */
-    public function queNousSommesLe($date)
-    {
-        $this-&gt;today = DateTime::createFromFormat('d/m/Y', $date);
-    }</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    /**
+     */</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> queNousSommesLe<span class="br0">&#40;</span><span class="re0">$date</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">today</span> <span class="sy0">=</span> DateTime<span class="sy0">::</span><span class="me2">createFromFormat</span><span class="br0">&#40;</span><span class="st_h">'d/m/Y'</span><span class="sy0">,</span> <span class="re0">$date</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&nbsp;
+    <span class="co4">/**
      * @Given /^je calcule mon âge$/
-     */
-    public function jeCalculeMonAge()
-    {
-        $this-&gt;output = shell_exec(sprintf('php src/age.php --birthdate=%s --today=%s', $this-&gt;birthDate-&gt;format('Y-m-d'), $this-&gt;today-&gt;format('Y-m-d')));
-    }</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    /**
+     */</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> jeCalculeMonAge<span class="br0">&#40;</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">output</span> <span class="sy0">=</span> <span class="kw3">shell_exec</span><span class="br0">&#40;</span><span class="kw3">sprintf</span><span class="br0">&#40;</span><span class="st_h">'php src/age.php --birthdate=%s --today=%s'</span><span class="sy0">,</span> <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">birthDate</span><span class="sy0">-&gt;</span><span class="me1">format</span><span class="br0">&#40;</span><span class="st_h">'Y-m-d'</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">today</span><span class="sy0">-&gt;</span><span class="me1">format</span><span class="br0">&#40;</span><span class="st_h">'Y-m-d'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&nbsp;
+    <span class="co4">/**
      * @Given /^on me répond &quot;([^&quot;]*)&quot;$/
-     */
-    public function onMeRepond($response)
-    {
-        if (false === strpos($this-&gt;output, $response)) {
-            throw new Exception;
-        }
-    }
-}</pre>
+     */</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> onMeRepond<span class="br0">&#40;</span><span class="re0">$response</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw4">false</span> <span class="sy0">===</span> <span class="kw3">strpos</span><span class="br0">&#40;</span><span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">output</span><span class="sy0">,</span> <span class="re0">$response</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            <span class="kw1">throw</span> <span class="kw2">new</span> Exception<span class="sy0">;</span>
+        <span class="br0">&#125;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
 </div>
 
 <p>Votre fonctionnel peut désormais ajouter autant d'exemples qui le souhaite, votre travail de traduction ne changera plus.</p>
@@ -2941,9 +2898,9 @@ sous forme de paramètre de méthode, sans que cela n'ait le moindre impact sur 
 <h2 id="reutilisez-vos-precedents-tests">4.4 Réutilisez vos précédents tests</h2>
 
 <div class="figure center" id="figure-4-5">
-    <img src="images/dev-qr-exo2-step1.png" alt="Les sources de cet exercice sont disponibles sur http://goo.gl/klmDP" />
+    <img src="images/dev-qr-exo2.png" alt="Les sources de cet exercice sont disponibles sur http://goo.gl/onk8x" />
 
-    <p class="caption"><strong>Figure 4.5</strong> Les sources de cet exercice sont disponibles sur http://goo.gl/klmDP</p>
+    <p class="caption"><strong>Figure 4.5</strong> Les sources de cet exercice sont disponibles sur http://goo.gl/onk8x</p>
 </div>
 
 
@@ -2962,23 +2919,23 @@ jusqu'à arriver à des expressions atomiques simples</em>.</p>
 
 <p>Prenez par exemple la phrase suivante :</p>
 
-<div class="code code gherkin">
-<pre class="codegherkin">Quand j'ajoute dans mon panier &quot;télévision Sony&quot;  depuis le catalogue produit</pre>
+<div class="code gherkin">
+<pre class="gherkin"><span class="kw1">Quand</span> j'ajoute dans mon panier <span class="st0">&quot;télévision Sony&quot;</span>  depuis le catalogue produit</pre>
 </div>
 
 <p>Cette phrase peut être découpée, par exemple :</p>
 
-<div class="code code gherkin">
-<pre class="codegherkin">Etant donné que je consulte le catalogue produit
-Quand j'ajoute dans mon panier &quot;télévision Sony&quot;</pre>
+<div class="code gherkin">
+<pre class="gherkin"><span class="kw1">Etant donné</span> que je consulte le catalogue produit
+<span class="kw1">Quand</span> j'ajoute dans mon panier <span class="st0">&quot;télévision Sony&quot;</span></pre>
 </div>
 
 <p>Qui elles-mêmes peuvent être découpées pour créer des expressions atomiques réutilisables :</p>
 
-<div class="code code gherkin">
-<pre class="codegherkin">Etant donné que je suis sur la page &quot;/catalogue/produits&quot;
-Quand je coche &quot;télévision Sony&quot;
-Et je clique sur &quot;Ajouter au panier&quot;</pre>
+<div class="code gherkin">
+<pre class="gherkin"><span class="kw1">Etant donné</span> que je suis sur la page <span class="st0">&quot;/catalogue/produits&quot;</span>
+<span class="kw1">Quand</span> je coche <span class="st0">&quot;télévision Sony&quot;</span>
+<span class="kw1">Et</span> je clique sur <span class="st0">&quot;Ajouter au panier&quot;</span></pre>
 </div>
 
 <p>Vous pouvez constater que les trois dernières expressions sont en réalité des étapes (web) atomiques réutilisables à l'infini. 
@@ -2986,28 +2943,24 @@ Cela signifie qu'une fois que vous les aurez traduites, vous n'aurez plus jamais
 
 <p>Vous pourriez désormais écrire, par exemple :</p>
 
-<div class="code code gherkin">
-<pre class="codegherkin">Etant donné que je suis sur la page &quot;/home&quot;
-Etant donné que je suis sur la page &quot;/mon-compte&quot;
-...
+<div class="code gherkin">
+<pre class="gherkin"><span class="kw1">Etant donné</span> que je suis sur la page <span class="st0">&quot;/home&quot;</span>
+<span class="kw1">Etant donné</span> que je suis sur la page <span class="st0">&quot;/mon-compte&quot;</span>
+<span class="sy1">...</span>
 &nbsp;</pre>
 </div>
 
 <p>Cette démarche permet donc de faire du refractoring de phrases pour arriver à des expressions atomiques. Par chance, c'est 
 extrêmement simple à faire avec Behat. Regardez plutôt :</p>
 
-<div class="code code php">
-<pre class="codephp">&lt;?php
-// (...)</pre>
-</div>
-
-<div class="code code">
-<pre class="code">use Behat\Behat\Context\Step;</pre>
-</div>
-
-<div class="code code">
-<pre class="code">class FeatureContext extends BehatContext
-{</pre>
+<div class="code php">
+<pre class="php"><span class="kw2">&lt;?php</span>
+<span class="co1">// (...)</span>
+&nbsp;
+<span class="kw2">use</span> Behat\Behat\Context\Step<span class="sy0">;</span>
+&nbsp;
+<span class="kw2">class</span> FeatureContext <span class="kw2">extends</span> BehatContext
+<span class="br0">&#123;</span></pre>
 </div>
 
 <div class="code code">
@@ -3024,92 +2977,76 @@ extrêmement simple à faire avec Behat. Regardez plutôt :</p>
 </div>
 
 <p>Comme vous le voyez, il suffit simplement, dans la méthode de définition, de retourner un tableau d'étapes. Chaque 
-étape est en réalité un objet (<code>Given</code>, <code>When</code> ou <code>Then</code>) qui accepte en paramètre de constructeur la phrase que l'on souhaite 
+étape est en réalité un objet PHP (<code>Given</code>, <code>When</code> ou <code>Then</code>) qui accepte en paramètre de constructeur la phrase que l'on souhaite 
 utiliser. Pratique non ?</p>
 
 <p>Ce qui donnerait par exemple dans notre cas :</p>
 
-<div class="code code php">
-<pre class="codephp">&lt;?php
-// (...)</pre>
-</div>
-
-<div class="code code">
-<pre class="code">use Behat\Behat\Context\Step;</pre>
-</div>
-
-<div class="code code">
-<pre class="code">class FeatureContext extends BehatContext
-{</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    /**
+<div class="code php">
+<pre class="php"><span class="kw2">&lt;?php</span>
+<span class="co1">// (...)</span>
+&nbsp;
+<span class="kw2">use</span> Behat\Behat\Context\Step<span class="sy0">;</span>
+&nbsp;
+<span class="kw2">class</span> FeatureContext <span class="kw2">extends</span> BehatContext
+<span class="br0">&#123;</span>
+&nbsp;
+    <span class="co4">/**
      * @When /^j\'ajoute dans mon panier &quot;([^&quot;]*)&quot;  depuis le catalogue produit$/
-     */
-    public function jAjouteDansMonPanierDepuisLeCatalogueProduit($produit)
-    {
-        return array(
-            new Step\Given('que je consulte le catalogue produit')
-            , new Step\When(sprintf('j\'ajoute dans mon panier &quot;%s&quot;', $produit))
-        );
-    }</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    /**
+     */</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> jAjouteDansMonPanierDepuisLeCatalogueProduit<span class="br0">&#40;</span><span class="re0">$produit</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="kw1">return</span> <span class="kw3">array</span><span class="br0">&#40;</span>
+            <span class="kw2">new</span> Step\Given<span class="br0">&#40;</span><span class="st_h">'que je consulte le catalogue produit'</span><span class="br0">&#41;</span>
+            <span class="sy0">,</span> <span class="kw2">new</span> Step\When<span class="br0">&#40;</span><span class="kw3">sprintf</span><span class="br0">&#40;</span><span class="st_h">'j\'ajoute dans mon panier &quot;%s&quot;'</span><span class="sy0">,</span> <span class="re0">$produit</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+        <span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&nbsp;
+    <span class="co4">/**
      * @Given /^que je consulte le catalogue produit$/
-     */
-    public function queJeConsulteLeCatalogueProduit()
-    {
-        return array(
-            new Step\Given('que je suis sur la page &quot;/catalogue/produits&quot;')
-        );
-    }</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    /**
+     */</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> queJeConsulteLeCatalogueProduit<span class="br0">&#40;</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="kw1">return</span> <span class="kw3">array</span><span class="br0">&#40;</span>
+            <span class="kw2">new</span> Step\Given<span class="br0">&#40;</span><span class="st_h">'que je suis sur la page &quot;/catalogue/produits&quot;'</span><span class="br0">&#41;</span>
+        <span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&nbsp;
+    <span class="co4">/**
      * @When /^j\'ajoute dans mon panier &quot;([^&quot;]*)&quot;$/
-     */
-    public function jAjouteDansMonPanier($produit)
-    {
-        return array(
-            new Step\When(sprintf('je coche &quot;%s&quot;', $produit))
-            , new Step\When('je clique sur &quot;Ajouter au panier&quot;')
-        );
-    }</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    /**
+     */</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> jAjouteDansMonPanier<span class="br0">&#40;</span><span class="re0">$produit</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="kw1">return</span> <span class="kw3">array</span><span class="br0">&#40;</span>
+            <span class="kw2">new</span> Step\When<span class="br0">&#40;</span><span class="kw3">sprintf</span><span class="br0">&#40;</span><span class="st_h">'je coche &quot;%s&quot;'</span><span class="sy0">,</span> <span class="re0">$produit</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+            <span class="sy0">,</span> <span class="kw2">new</span> Step\When<span class="br0">&#40;</span><span class="st_h">'je clique sur &quot;Ajouter au panier&quot;'</span><span class="br0">&#41;</span>
+        <span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+&nbsp;
+    <span class="co4">/**
      * @Given /^que je suis sur la page &quot;([^&quot;]*)&quot;$/
-     */
-    public function queJeSuisSurLaPage($url)
-    {
-        // ?
-    }</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    /**
+     */</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> queJeSuisSurLaPage<span class="br0">&#40;</span><span class="re0">$url</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="co1">// ?</span>
+    <span class="br0">&#125;</span>
+&nbsp;
+    <span class="co4">/**
      * @When /^je coche &quot;([^&quot;]*)&quot;$/
-     */
-    public function jeCoche($produit)
-    {
-        // ?
-    }</pre>
-</div>
-
-<div class="code code">
-<pre class="code">    /**
+     */</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> jeCoche<span class="br0">&#40;</span><span class="re0">$produit</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="co1">// ?</span>
+    <span class="br0">&#125;</span>
+&nbsp;
+    <span class="co4">/**
      * @When /^je clique sur &quot;([^&quot;]*)&quot;$/
-     */
-    public function jeCliqueSur($bouton)
-    {
-        // ?
-    }
-}</pre>
+     */</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> jeCliqueSur<span class="br0">&#40;</span><span class="re0">$bouton</span><span class="br0">&#41;</span>
+    <span class="br0">&#123;</span>
+        <span class="co1">// ?</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
 </div>
 
 <p>Notez les trois dernières traduction (les méthodes ̀ queJeSuisSurLaPage()<code>,</code>jeCoche()<code>et</code>jeCliqueSur()`). Ces méthodes 
@@ -3120,20 +3057,271 @@ qu'il faille effectuer des actions qui n'existent que dans un navigateur. Vous a
   <p>Oubliez le refractoring de code. Vous devez apprendre à faire du refractoring de phrases.</p>
 </blockquote>
 
-<h2 id="testez-dans-un-vrai-navigateur">4.5 Testez dans un vrai navigateur</h2>
+<h2 id="testez-une-application-web">4.5 Testez une application Web</h2>
 
-<h2 id="organisez-vos-contextes-de-tests">Organisez vos Contextes de tests</h2>
+<p>Vous savez désormais automatiser une recette fonctionnelle d'une applicatif. Cependant, dans le cadre d'une application internet, 
+la recette fonctionnelle consiste le plus souvent à parcourir des pages web, vérifier leur conformité (délivrent-elles le service 
+attendu ?), en soumettant un formulaire, en cliquant sur un lien... Bref, en surfant sur un site web.</p>
+
+<p>Heureusement, il est aujourd'hui très simple d'automatiser une recette fonctionnelle, quand bien même elle concerne une 
+application web. Allons-y !</p>
+
+<p>Une fois de plus nous allons utiliser Behat. Plus précisément, nous allons utiliser un module de Behat, appelé Mink, qui permet de 
+naviguer dans une application web et de lancer des tests automatisés lors decette navigation.</p>
+
+<p>Concrètement, Mink permet une double approche :</p>
+
+<ul>
+<li>Exécuter des tests fonctionnels dans un navigateur virtuel (émulateur)</li>
+<li>Exécuter des tests fonctionnels au sein d'un vrai navigateur, comme Chrome ou Firefox par exemple</li>
+</ul>
+
+<p>Il peut sembler étrange d'exécuter des tests dans un navigateur virtuel. Cependant, bien souvent le comportement fonctionnel 
+que l'on souhaite tester est en réalité disponible driectement au sein des pages web, dans le HTML. <em>On préferera alors priviléger 
+les tests lancés dans un vrai navigateur uniquement lorsque le test porte sur des fonctionnalités complexes (en Javascript ou en Ajax 
+par exemple), ces tests étant en général beaucoup plus lourd et long à s'exécuter que les autres</em>.</p>
+
+<p>Pour commencer, installez <code>Mink</code> :</p>
+
+<h3 id="installer-mink-avec-composer">4.5.1 Installer Mink avec Composer</h3>
+
+<p>Modifiez le fichier composer.json que vous avez préalablement créé, et ajoutez-y le code suivant :</p>
+
+<div class="code json">
+<pre class="json">&quot;require&quot;: {
+    &quot;behat/behat&quot;: &quot;2.4.*@stable&quot;,
+    &quot;behat/mink&quot;: &quot;1.4@stable&quot;,
+    &quot;behat/mink-extension&quot;: &quot;*&quot;,
+    &quot;behat/mink-goutte-driver&quot;: &quot;*&quot;
+}</pre>
+</div>
+
+<p>Puis relancez Composer :</p>
+
+<div class="code bash">
+<pre class="bash">php composer.phar update</pre>
+</div>
+
+<h3 id="installer-mink-sous-forme-darchive-phar">4.5.2 Installer Mink sous forme d'archive Phar</h3>
+
+<p>Exécutez la commande suivante :</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">wget</span> https:<span class="sy0">//</span>github.com<span class="sy0">/</span>downloads<span class="sy0">/</span>Behat<span class="sy0">/</span>Mink<span class="sy0">/</span>mink.phar</pre>
+</div>
+
+<p>Il vous suffit ensuite d'ajouter l'inscruction suivantes dans vos fichiers PHP de Contexte :</p>
+
+<div class="code php">
+<pre class="php"><span class="kw1">require_once</span> <span class="st_h">'mink.phar'</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Ensuite, il suffit de configurer Behat pour lui indiquer que l'on utilise Mink. Mink étant une extension de Behat, C'est très simple. 
+Il suffit de créer le fichier <code>behat.yml</code> à la racine de votre projet :</p>
+
+<div class="code yaml">
+<pre class="yaml"><span class="co4">default</span>:<span class="co4">
+  extensions</span>:<span class="co4">
+    Behat\MinkExtension\Extension</span>:<span class="co3">
+      base_url</span><span class="sy2">: </span>http://url-de-votre-site.fr<span class="co3">
+      goutte</span><span class="sy2">: </span>~</pre>
+</div>
+
+<p>Voilà, Mink est installé !</p>
+
+<p>Rappelez-vous, le travail de Spécification fonctionelle passe par l'utilisation d'expressions, elles-mêmes organisés autour 
+d'une grammaire : Gherkin. Mink a ceci d'intéressant qu'il propose nativement un panel assez large d'expressions qui concernent 
+un navigateur, que vous pouvez donc réutiliser (<code>comme "Quand je vais sur "http://..."</code>, ou encore <code>Quand je remplis "Votre prénom" avec 
+"Jean-François"</code>...).</p>
+
+<p>Un besoin exprimé de la façon suivante sera donc automatiquement compris par Behat lorsque Mink est installé:</p>
+
+<div class="code gherkin">
+<pre class="gherkin"><span class="co3">Scenario</span><span class="sy2">: </span>s'identifier au sein de l'application
+  <span class="kw1">Etant donné</span> que je suis sur <span class="st0">&quot;/accueil&quot;</span>
+  <span class="kw1">Quand</span> je suis le lien <span class="st0">&quot;Me connecter&quot;</span>
+  <span class="kw1">Et</span> que je remplis <span class="st0">&quot;Identifiant&quot;</span> avec <span class="st0">&quot;Jean-François&quot;</span>
+  <span class="kw1">Et</span> que je remplis <span class="st0">&quot;Mot de passe&quot;</span> avec <span class="st0">&quot;azerty&quot;</span>
+  <span class="kw1">Et</span> que je clique sur <span class="st0">&quot;Valider&quot;</span>
+  <span class="kw1">Alors</span> <span class="kw1">je dois</span> voir <span class="st0">&quot;Bienvenue Jean-François&quot;</span></pre>
+</div>
+
+<p>Pratique non ? Constatez que vous n'avez même pas besoin de parler de nom (attribut <code>name</code>) des champs HTML ; non, Behat 
+fera le lien pour vous entre les <code>label</code>, <code>title</code>, <code>class</code>... de vos champs de formulaire et l'expression que vous avez utilisée.</p>
+
+<p>Au fait, avez-vous lancé Behat pour vérifier que cela fonctionne ? Allez-y ; Utiliser Mink ne change rien à l'utilisation de Behat, 
+il suffit comme avant d'exécuter la commande suivante :</p>
+
+<div class="code bash">
+<pre class="bash">php .<span class="sy0">/</span>bin<span class="sy0">/</span>behat</pre>
+</div>
+
+<p>Bien entendu, il va souvent arriver que vous ayez besoin de gérer des cas plus complexes que ce qu'il est possible de faire avec
+les exprpessions disponibles nativement dans Mink.</p>
+
+<p>Dans ce cas, il va s'agir, ni plus ni moins, de piloter votre navigateur (quel qu'il soit). Un très large éventail 
+de méthodes sont disponibles :</p>
+
+<div class="code php">
+<pre class="php"><span class="kw2">&lt;?php</span>
+<span class="kw2">class</span> FeatureContext <span class="kw2">extends</span> MinkContext <span class="br0">&#123;</span>
+&nbsp;
+    <span class="co1">// (...)</span>
+    <span class="re0">$browser</span> <span class="sy0">=</span> <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">getMink</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">-&gt;</span><span class="me1">getBrowser</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="re0">$page</span> <span class="sy0">=</span> <span class="re0">$browser</span><span class="sy0">-&gt;</span><span class="me1">getPage</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="re0">$button</span> <span class="sy0">=</span> <span class="re0">$page</span><span class="sy0">-&gt;</span><span class="me1">find</span><span class="br0">&#40;</span><span class="st_h">'css'</span><span class="sy0">,</span> <span class="st_h">'.class-css-du-bouton'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="re0">$button</span><span class="sy0">-&gt;</span><span class="me1">click</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Notez que désormais notre classe n'hérite plus de <code>BehatContext</code> mais de <code>MinkContext</code>.</p>
+
+<p>Examinons ce code ensemble. Tout d'abord, nous récupérons la page courante affichée par le navigateur :</p>
+
+<div class="code php">
+<pre class="php">    <span class="re0">$browser</span> <span class="sy0">=</span> <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">getMink</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">-&gt;</span><span class="me1">getBrowser</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="re0">$page</span> <span class="sy0">=</span> <span class="re0">$browser</span><span class="sy0">-&gt;</span><span class="me1">getPage</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Ensuite, il suffit de récupérer un élément HTML dans la page, puis d'exécuter l'action souhaitée sur cet élément (ici un click, 
+mais on pourrait imaginer saisir une valeur, le cocher...) :</p>
+
+<div class="code php">
+<pre class="php">    <span class="re0">$button</span> <span class="sy0">=</span> <span class="re0">$page</span><span class="sy0">-&gt;</span><span class="me1">find</span><span class="br0">&#40;</span><span class="st_h">'css'</span><span class="sy0">,</span> <span class="st_h">'.class-css-du-bouton'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="re0">$button</span><span class="sy0">-&gt;</span><span class="me1">click</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Vous avez bien vu : la méthode <code>find()</code> permet de récupérer des éléments en utilisant des sélecteurs CSS. Ce sont les mêmes 
+que ce que vous utilisez dans vos feuilles de style CSS. Attention, les pseudo-styles (':hover', etc) ne sont pas supportés. 
+Bien entendu, il est également possible de récupérer des éléments HTML en utilisant des expressions xPath. La 
+<a href="http://mink.behat.org/#xpath-selectors">documentation de Mink est assez complète</a> sur ce sujet.</p>
+
+<p>Il ne vous reste plus qu'à traduire les expressions fonctionnelles de vos clients en différentes actions au sein 
+d'un navigateur, et vous saurez traiter alors la majorité des cas.</p>
+
+<p>Sachez également que Mink permet très facilement de piloter un vrai navigateur. C'est utile lorsque l'on souhaite, par exemple, tester 
+des fonctionnalités qui nécessite un environnement Ajax ou JavaScript. Dans ce cas, juste au dessus des 
+Scénarios ou des Fonctionnalités concernées, il suffit d'ajouter le tag <code>@javascript</code>. Ce tag indiquera à Behat que vous souhaitez, dans ces 
+cas spécifiques, lancer un vrai navigateur pour les tests. Bien entendu, dans ce cas, la machine qui exécute les tests doit posséder un 
+environnement graphique (comme c'est le cas pour les ordinateurs de Bureau).</p>
+
+<p>Lorsque l'on souhaite piloter un vrai navigateur, Behat délègue en réalité le travail à des outils spécialisés, comme <code>Sahi</code>, ou encore 
+comme <code>Selenium</code>. Dans ce cas, ces outils doivent être installés sur votre machine. La procédure pour les installer est en 
+général très simple, et est bien expliquée dans la <a href="http://mink.behat.org/#different-browsers-drivers">documentation officielle</a>.</p>
+
+<p>Voici la configuration à ajouter dans le fichier <code>behat.yml</code> pour indiquer que vous souhaitez utiliser Chrome par exemple, grâce au driver Sahi :</p>
+
+<div class="code yaml">
+<pre class="yaml"><span class="co4">default</span>:<span class="co4">
+    extensions</span>:<span class="co4">
+        Behat\MinkExtension\Extension</span>:<span class="co3">
+            base_url</span><span class="sy2">: </span>http://url-de-votre-site.fr/<span class="co3">
+            goutte</span><span class="sy2">: </span>~<span class="co3">
+            default_session</span><span class="sy2">: </span>sahi<span class="co3">
+            javascript_session</span><span class="sy2">: </span>sahi<span class="co3">
+            browser_name</span><span class="sy2">: </span>chrome<span class="co4">
+            sahi</span>:<span class="co3">
+              host</span><span class="sy2">: </span>localhost<span class="co3">
+              port</span><span class="sy2">: </span><span class="nu0">9999</span></pre>
+</div>
+
+<p>Voici celle que vous pourriez utiliser pour piloter Firefox :</p>
+
+<div class="code yaml">
+<pre class="yaml"><span class="co4">default</span>:<span class="co4">
+    extensions</span>:<span class="co4">
+        Behat\MinkExtension\Extension</span>:<span class="co3">
+            base_url</span><span class="sy2">: </span>http://url-de-votre-site.fr/<span class="co3">
+            goutte</span><span class="sy2">: </span>~<span class="co3">
+            default_session</span><span class="sy2">: </span>sahi<span class="co3">
+            javascript_session</span><span class="sy2">: </span>sahi<span class="co3">
+            browser_name</span><span class="sy2">: </span>firefox<span class="co4">
+            sahi</span>:<span class="co3">
+              host</span><span class="sy2">: </span>localhost<span class="co3">
+              port</span><span class="sy2">: </span><span class="nu0">9999</span></pre>
+</div>
+
+<p>Vous avez désormais toutes les connaissances requises pour commencer à tester automatiquement un projet web. Pourquoi ne pas vous 
+entraîner par exemple sur une petite application web de guichet bancaire ?</p>
+
+<div class="figure center" id="figure-4-6">
+    <img src="images/dev-qr-exo3.png" alt="La correction de cet exercice est disponible sur http://goo.gl/LISNg" />
+
+    <p class="caption"><strong>Figure 4.6</strong> La correction de cet exercice est disponible sur http://goo.gl/LISNg</p>
+</div>
+
+
+<p>Je vous propose de vous entraîner en traduisant le besoin 
+suivant en tests, dans un Contexte de définition :</p>
+
+<div class="code gherkin">
+<pre class="gherkin"><span class="co1">#language: fr</span><span class="co3">
+Fonctionnalité</span><span class="sy2">: </span>Gérer un compte bancaire
+  <span class="kw1">Afin de</span> gérer mon compte bancaire
+  <span class="kw1">En tant qu</span>'utilisateur connecté
+  Je peux ajouter ou retirer de l'argent sur mon compte
+  <span class="co4">
+  Contexte</span><span class="sy2">:
+</span>    <span class="kw1">Etant donné</span> que je suis connecté <span class="kw1">en tant que</span> <span class="st0">&quot;jean-françois&quot;</span>
+    <span class="kw1">Et</span> que j'ai <span class="st0">&quot;50&quot;</span> euro
+    <span class="kw1">Et</span> je suis sur <span class="st0">&quot;/&quot;</span>
+    <span class="co3">
+  Scénario</span><span class="sy2">: </span>Consulter mes comptes
+    <span class="kw1">Alors</span> je devrais voir <span class="st0">&quot;Vous avez 50 euro sur votre compte&quot;</span>
+    <span class="co3">
+  Plan du Scénario</span><span class="sy2">: </span>Ajouter de l'argent
+    <span class="kw1">Etant donné</span> que j'ai <span class="st0">&quot;&lt;montantInitial&gt;&quot;</span> euro
+    <span class="kw1">Quand</span> je sélectionne <span class="st0">&quot;&lt;operation&gt;&quot;</span> depuis <span class="st0">&quot;Operation&quot;</span>
+    <span class="kw1">Et</span> je remplis <span class="st0">&quot;Montant&quot;</span> avec <span class="st0">&quot;&lt;montant&gt;&quot;</span>
+    <span class="kw1">Et</span> je presse <span class="st0">&quot;Go&quot;</span>
+    <span class="kw1">Alors</span> je devrais voir <span class="st0">&quot;Vous avez &lt;montantFinal&gt; euro sur votre compte&quot;</span>
+    <span class="co4">
+    Exemples</span><span class="sy2">:
+</span>     | operation     | montantInitial| montant   | montantFinal  <span class="sy2">|
+</span><span class="co0">     | Ajouter       | 50            | 10        | 60            |
+     | Ajouter       | 50            | 20        | 70            |
+     | Ajouter       | 50            | 5         | 55            |
+     | Ajouter       | 50            | 0         | 50            |
+     | Retirer       | 50            | 10        | 40            |
+     | Retirer       | 50            | 20        | 30            |
+     | Retirer       | 50            | 30        | 20            |
+     </span><span class="co3">
+  Scénario</span><span class="sy2">: </span>Les découverts sont interdits
+    <span class="kw1">Etant donné</span> que j'ai <span class="st0">&quot;50&quot;</span> euro
+    <span class="kw1">Quand</span> je sélectionne <span class="st0">&quot;Retirer&quot;</span> depuis <span class="st0">&quot;Operation&quot;</span>
+    <span class="kw1">Et</span> je remplis <span class="st0">&quot;Montant&quot;</span> avec <span class="st0">&quot;60&quot;</span>
+    <span class="kw1">Et</span> je presse <span class="st0">&quot;Go&quot;</span>
+    <span class="kw1">Alors</span> je devrais voir <span class="st0">&quot;Vous avez 50 euro sur votre compte&quot;</span>
+    <span class="kw1">Et</span> je devrais voir <span class="st0">&quot;Les decouverts ne sont pas autorises&quot;</span></pre>
+</div>
+
+<p>A vous de jouer !</p>
+
+<blockquote>
+  <p>Mink permet facilement de piloter un navigateur pour tester vos applications web.</p>
+</blockquote>
+
+<h2 id="-teser-un-site-web-exercice-complet"> Teser un site web : exercice complet</h2>
 
 </div>
         <div class="item chapter">
     <h1 id="optimisez-vos-tests-fonctionnels"><span>Chapitre 5</span> Optimisez vos tests fonctionnels</h1>
-    <h2 id="ne-misez-pas-sur-linterface-graphique">5.1 Ne misez pas sur l'Interface graphique</h2>
+    <h2 id="organisez-vos-contextes-de-tests">5.1 Organisez vos Contextes de tests</h2>
 
-<h2 id="creez-une-couche-disolation-de-lihm">5.2 Créez une couche d'isolation de l'IHM</h2>
+<p>cf. Blog</p>
 
-<h2 id="exploitez-les-compte-rendus-de-tests-html-xml-txt">5.3 Exploitez les compte-rendus de tests (html, xml, txt)</h2>
+<h2 id="ne-misez-pas-sur-linterface-graphique">5.2 Ne misez pas sur l'Interface graphique</h2>
 
-<h2 id="anticipez-les-problemes">5.4 Anticipez les problèmes</h2>
+<p>cf. Blog</p>
+
+<h2 id="creez-une-couche-disolation-de-lihm">5.3 Créez une couche d'isolation de l'IHM</h2>
+
+<p>cf. Blog</p>
+
+<h2 id="exploitez-les-compte-rendus-de-tests-html-xml-txt">5.4 Exploitez les compte-rendus de tests (html, xml, txt)</h2>
+
+<h2 id="anticipez-les-problemes">5.5 Anticipez les problèmes</h2>
 
 <h2 id="ne-jetez-pas-le-duck-typing-tout-ne-pourra-pas-etre-teste">Ne jetez pas le "duck typing" : tout ne pourra pas être testé</h2>
 
@@ -3320,28 +3508,31 @@ qu'il faille effectuer des actions qui n'existent que dans un navigateur. Vous a
             <span>4.4</span> <a href="#reutilisez-vos-precedents-tests">Réutilisez vos précédents tests</a>
         </li>
             <li class="chapter level-2">
-            <span>4.5</span> <a href="#testez-dans-un-vrai-navigateur">Testez dans un vrai navigateur</a>
+            <span>4.5</span> <a href="#testez-une-application-web">Testez une application Web</a>
         </li>
             <li class="chapter level-2">
-            <span>4.6</span> <a href="#organisez-vos-contextes-de-tests">Organisez vos Contextes de tests</a>
+            <span>4.6</span> <a href="#-teser-un-site-web-exercice-complet"> Teser un site web : exercice complet</a>
         </li>
                 <li class="chapter level-1">
             <span>Chapitre 5</span> <a href="#optimisez-vos-tests-fonctionnels">Optimisez vos tests fonctionnels</a>
         </li>
             <li class="chapter level-2">
-            <span>5.1</span> <a href="#ne-misez-pas-sur-linterface-graphique">Ne misez pas sur l'Interface graphique</a>
+            <span>5.1</span> <a href="#organisez-vos-contextes-de-tests">Organisez vos Contextes de tests</a>
         </li>
             <li class="chapter level-2">
-            <span>5.2</span> <a href="#creez-une-couche-disolation-de-lihm">Créez une couche d'isolation de l'IHM</a>
+            <span>5.2</span> <a href="#ne-misez-pas-sur-linterface-graphique">Ne misez pas sur l'Interface graphique</a>
         </li>
             <li class="chapter level-2">
-            <span>5.3</span> <a href="#exploitez-les-compte-rendus-de-tests-html-xml-txt">Exploitez les compte-rendus de tests (html, xml, txt)</a>
+            <span>5.3</span> <a href="#creez-une-couche-disolation-de-lihm">Créez une couche d'isolation de l'IHM</a>
         </li>
             <li class="chapter level-2">
-            <span>5.4</span> <a href="#anticipez-les-problemes">Anticipez les problèmes</a>
+            <span>5.4</span> <a href="#exploitez-les-compte-rendus-de-tests-html-xml-txt">Exploitez les compte-rendus de tests (html, xml, txt)</a>
         </li>
             <li class="chapter level-2">
-            <span>5.5</span> <a href="#ne-jetez-pas-le-duck-typing-tout-ne-pourra-pas-etre-teste">Ne jetez pas le "duck typing" : tout ne pourra pas être testé</a>
+            <span>5.5</span> <a href="#anticipez-les-problemes">Anticipez les problèmes</a>
+        </li>
+            <li class="chapter level-2">
+            <span>5.6</span> <a href="#ne-jetez-pas-le-duck-typing-tout-ne-pourra-pas-etre-teste">Ne jetez pas le "duck typing" : tout ne pourra pas être testé</a>
         </li>
     </ul>
 
