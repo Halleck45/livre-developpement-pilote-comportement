@@ -3,10 +3,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="author" content="Jean-François Lépine" />
-    <meta name="date" content="02/03/2013"/>
+    <meta name="date" content="03/03/2013"/>
     <meta name="generator" content="easybook 5.0-DEV"/>
 
-    <title>Optimisez vos tests fonctionnels | Développeurs, faites-vous plaisir !</title>
+    <title>Optimisez vos tests fonctionnels | Le développement piloté par le comportement</title>
 
     <link rel="stylesheet" href="./css/easybook.css" />
 
@@ -16,7 +16,7 @@
 <div class="container">
 <div class="menu">
     <div class="row">
-        <h1 class="span9"><a href="./index.html">Développeurs, faites-vous plaisir !</a></h1>
+        <h1 class="span9"><a href="./index.html">Le développement piloté par le comportement</a></h1>
         <p class="span3">
                         <a href="./chapitre-4.html"><span>&larr;</span> Précédent</a>
             
@@ -30,21 +30,223 @@
         <h1 id="chapitre-5"><span>Chapitre 5</span> Optimisez vos tests fonctionnels</h1>
         <h2 id="organisez-vos-contextes-de-tests">5.1 Organisez vos Contextes de tests</h2>
 
-<p>cf. Blog</p>
+<p>Vous l'avez vu, l'ensemble des définitions (traduction d'une fonctionnalité) est stocké au sein 
+d'une classe PHP, ici <code>FeatureContext</code>.</p>
 
-<h2 id="ne-misez-pas-sur-linterface-graphique">5.2 Ne misez pas sur l'Interface graphique</h2>
+<p>Vous aurez très rapidement besoin d'organiser vos définitions de manière à vous y retrouver facilement. En effet, vous aurez 
+de plus en plus de définitions au fur-et-à-mesure que votre application grossira.</p>
 
-<p>cf. Blog</p>
+<p>Il est très simple avec Behat de créer plusieurs Contextes de définitions. Par exemple, pour une application bancaire, on pourrait créer 
+les contextes de définition suivants :</p>
 
-<h2 id="creez-une-couche-disolation-de-lihm">5.3 Créez une couche d'isolation de l'IHM</h2>
+<ul>
+<li>Contexte de définitions pour les clients</li>
+<li>Contexte de définitions pour les banquiers</li>
+<li>Contexte de définitions pour les comptes bancaires</li>
+<li>etc.</li>
+</ul>
 
-<p>cf. Blog</p>
+<p>Pour cela, il suffit simplement de créer un fichier PHP (et une classe) par Contetxe de définition, par exemple :</p>
 
-<h2 id="exploitez-les-compte-rendus-de-tests-html-xml-txt">5.4 Exploitez les compte-rendus de tests (html, xml, txt)</h2>
+<ul>
+<li><code>ClientContext.php</code></li>
+<li><code>BanquierContext.php</code></li>
+<li><code>CompteContext.php</code></li>
+</ul>
 
-<h2 id="anticipez-les-problemes">5.5 Anticipez les problèmes</h2>
+<p>Puis de les initialiser dans le fichier principal <code>FeatureContext</code> :</p>
 
-<h2 id="ne-jetez-pas-le-duck-typing-tout-ne-pourra-pas-etre-teste">Ne jetez pas le "duck typing" : tout ne pourra pas être testé</h2>
+<div class="code php">
+<pre class="php"><span class="kw2">class</span> FeatureContext <span class="kw2">extends</span> BehatContext
+<span class="br0">&#123;</span>
+    <span class="kw2">public</span> <span class="kw2">function</span> __construct<span class="br0">&#40;</span><span class="kw3">array</span> <span class="re0">$parameters</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">useContext</span><span class="br0">&#40;</span><span class="st_h">'client'</span><span class="sy0">,</span> <span class="kw2">new</span> ClientContext<span class="br0">&#40;</span><span class="re0">$parameters</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">useContext</span><span class="br0">&#40;</span><span class="st_h">'banquier'</span><span class="sy0">,</span> <span class="kw2">new</span> BanquierContext<span class="br0">&#40;</span><span class="re0">$parameters</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">useContext</span><span class="br0">&#40;</span><span class="st_h">'compte'</span><span class="sy0">,</span> <span class="kw2">new</span> CompteContext<span class="br0">&#40;</span><span class="re0">$parameters</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Désormais Behat utilisera l'ensemble des contextes disponibles pour traduire les expressions qu'il reçoit.</p>
+
+<p>Remarquez les alias de Contexte que nous avons utilisés, par exemple "mink" dans le code suivant :</p>
+
+<div class="code php">
+<pre class="php"><span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">useContext</span><span class="br0">&#40;</span><span class="st_h">'mink'</span><span class="sy0">,</span> <span class="kw2">new</span> MinkContext<span class="br0">&#40;</span><span class="re0">$parameters</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Ces alias vont vous permettre de récupérer facilement vos Contextes d'une Classe PHP à l'autre. Par exemple 
+pour récupérer votre contexte <code>mink</code> depuis le context <code>client</code>, il vous suffit d'utiliser le code suivant :</p>
+
+<div class="code php">
+<pre class="php"><span class="re0">$mink</span> <span class="sy0">=</span> <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">getMainContext</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">-&gt;</span><span class="me1">getSubContext</span><span class="br0">&#40;</span><span class="st_h">'mink'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$session</span> <span class="sy0">=</span> <span class="re0">$mink</span><span class="sy0">-&gt;</span><span class="me1">getSession</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>N'hésitez pas à découper vos Contextes de manière à les rendre facilement réutilisables par la suite. Cela vous évitera de mauvaises surprises 
+lorsque votre applicationg grossira et que vous aurez à naviguer parmi plusieurs centaines de définitions.</p>
+
+<blockquote>
+  <p>Découpez et organisez vos Contextes de définition</p>
+</blockquote>
+
+<h2 id="creez-une-couche-disolation-de-lihm">5.2 Créez une couche d'isolation de l'IHM</h2>
+
+<p>Une grande (très grande!) difficulté du développement piloté par le Comportement consiste à réussir 
+à s'abstraire de l'interface graphique.</p>
+
+<p>Imaginez par exemple la situation suivante : vous avez développé un site web pour votre client. Tout marche à merveille, 
+vous avez de très nombreuses définitions pour vérifier avec Behat que le besoin est bien implémenté...</p>
+
+<p>Votre client est tellement content que désormais il souhaite disposer d'une application mobile, identique au site web. 
+Vous voyez le problème ? Vous allez devoir récrire toutes les définitions où vous avez écrit des choses comme</p>
+
+<div class="code php">
+<pre class="php"><span class="kw1">return</span> <span class="kw3">array</span><span class="br0">&#40;</span>
+    <span class="st_h">'Etant donné que je suis sur &quot;/login&quot;'</span>
+    <span class="sy0">,</span><span class="st_h">'Quand je presse &quot;Me connecter&quot;
+);</span></pre>
+</div>
+
+<p>Car oui, sur mobile, il est fort probable que la manière de vérifier si le besoin est bien implémenté change radicalement par rapport 
+à un site web.</p>
+
+<p>Et même sans un changement aussi radical que le passage d'un site web à une application mobile, comment gérer facilement les changements 
+d'interface graphique : une <code>table</code> devient une <code>div</code>, le bouton <code>Se connecter</code> devient <code>Connexion</code>...</p>
+
+<p>Le seul moyen d'éviter de devoir réécrire toutes ses définitions lorsqu'un changement d'interface survient (ce qui est le cas dans les 
+deux précédents exemples) est de <em>créer des couches d'isolation de l'interface</em>.</p>
+
+<p>Concrètement, c'est très simple : il suffit de créer des Contextes de définition spécialisé dans l'affichage des pages. On peut 
+imaginer par exemple un Contexte de définition consacré à l'affichage des pages Web, qui contiendra donc nos définitions liées à l'affichage :</p>
+
+<div class="code php">
+<pre class="php"><span class="kw2">namespace</span> View<span class="sy0">;</span>
+<span class="kw2">class</span> WebContext <span class="kw2">extends</span> BehatContext <span class="br0">&#123;</span>
+    <span class="co1">// (...)</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Et une autre, le jour où l'on en a besoin, consacré à l'afficage sur mobile :</p>
+
+<div class="code php">
+<pre class="php"><span class="kw2">namespace</span> View<span class="sy0">;</span>
+<span class="kw2">class</span> MobileContext <span class="kw2">extends</span> BehatContext <span class="br0">&#123;</span>
+    <span class="co1">// (...)</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Désormais, il suffit d'ajouter un paramètre de configuration spécifique dans le fichier <code>behat.yml</code>, que l'on utilisera 
+pour définir quel Contexte de définition l'on souhaite utiliser :</p>
+
+<div class="code yaml">
+<pre class="yaml"><span class="co4">default</span>:<span class="co4">
+    context</span>:<span class="co4">
+      parameters</span>:<span class="co3">
+        view</span><span class="sy2">: </span>web <span class="co1"># mobile | web ...</span></pre>
+</div>
+
+<p>Une simple condition suffit à nous permettre d'utiliser le bon Contexte :</p>
+
+<div class="code php">
+<pre class="php"><span class="kw2">public</span> <span class="kw2">function</span> __construct<span class="br0">&#40;</span><span class="kw3">array</span> <span class="re0">$parameters</span><span class="br0">&#41;</span>
+<span class="br0">&#123;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$parameters</span><span class="br0">&#91;</span><span class="st_h">'view'</span><span class="br0">&#93;</span> <span class="sy0">==</span> <span class="st_h">'mobile'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">useContext</span><span class="br0">&#40;</span><span class="st_h">'view'</span><span class="sy0">,</span> <span class="kw2">new</span> View\MobileContext<span class="br0">&#40;</span><span class="re0">$parameters</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+        <span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">useContext</span><span class="br0">&#40;</span><span class="st_h">'view'</span><span class="sy0">,</span> <span class="kw2">new</span> View\WebContext<span class="br0">&#40;</span><span class="re0">$parameters</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Pour les applications assez conséquentes, il devient rapidement intéressant de créer même un Contexte 
+de définition par page (ou par lot fonctionnel) :</p>
+
+<div class="code php">
+<pre class="php"><span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">useContext</span><span class="br0">&#40;</span><span class="st_h">'view.catalogue'</span><span class="sy0">,</span> <span class="kw2">new</span> View\Web\CatalogueContext<span class="br0">&#40;</span><span class="re0">$parameters</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="re0">$this</span><span class="sy0">-&gt;</span><span class="me1">useContext</span><span class="br0">&#40;</span><span class="st_h">'view.panier'</span><span class="sy0">,</span> <span class="kw2">new</span> View\Web\PanierContext<span class="br0">&#40;</span><span class="re0">$parameters</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Cette pratique, que l'on pourrait désigner par Isolation de l'IHM, peut sembler complexe, mais est 
+en réalité le seul moyen de péreniser les définitions au cours de la vie d'un projet.</p>
+
+<blockquote>
+  <p>Isolez ce qui concerne l'interface graphique dans des Contextes spécifiques</p>
+</blockquote>
+
+<h2 id="exploitez-les-compte-rendus-de-tests">5.3 Exploitez les compte-rendus de tests</h2>
+
+<p>Vous avez désormais un outil pour valider et vérifier qu'un besoin métier a bel et bien été implémenté. Pour l'instant, 
+vous avez exécuté vous-même Behat pour afficher ces informations dans un terminal. Vous vous en doutez, Behat va pouvoir 
+en faire bien plus.</p>
+
+<p>Pour commencer, il est tout à fait possible de générer une page web synthétique des résultats des tests. Pour cela, 
+il suffit d'exécuter Behat en spécifiant le <code>html</code> comme format de sortie :</p>
+
+<div class="code bash">
+<pre class="bash">php .<span class="sy0">/</span>bin<span class="sy0">/</span>behat <span class="re5">--format</span> html <span class="re5">--out</span> resultat.html</pre>
+</div>
+
+<p>Vous disposerez donc d'une page web, graphique, que vous pouvez fournir à votre fonctionnel pour lui 
+indiquer de manière claire ce qui est fait ou reste à faire parmi les spécifications.</p>
+
+<div class="figure center" id="figure-5-1">
+    <img src="images/screen-export-html.jpg" alt="Le résultat de chaque Fonctionnalité et Scénario est visible dans une page web" />
+
+    <p class="caption"><strong>Figure 5.1</strong> Le résultat de chaque Fonctionnalité et Scénario est visible dans une page web</p>
+</div>
+
+
+<p>Bien entendu, ce n'est pas tout. La majorité des outils de tests automatisés sont capables de générer des 
+fichiers de sortie dans un format standard (xml). Ces fichiers peuvent donc être fournis à des logiciels tiers, 
+capables de les traiter ou de les transformer selon leurs spécificité.</p>
+
+<p>Il est par exemple tout à fait possible d'intégrer Behat à une plate-forme d'intégration continue, comme Jenkins. 
+Une plate-forme d'intégration continue a pour objectif de délivrer en permanence du code source (déploiement continu), 
+c'est-à-dire de permettre à un site web d'être mis à jour très régulièrement.</p>
+
+<p>Indirectement, les plate-formes d'intégration continue (PIC) fournissent une vision d'ensemble sur un projet : les 
+bonnes pratiques sont-elles respectées ? Le code est-il fiable ? Le besoin est-il respecté ? Behat va pouvoir se greffer 
+au coeur de cette plate-forme et va ainsi fournir des indices précieux pour la pilotage du projet.</p>
+
+<p>Pour générer un résultat réutilisable par une plate-forme d'intégration continue, il suffit d'exécuter la commande suivante :</p>
+
+<div class="code bash">
+<pre class="bash">php .<span class="sy0">/</span>bin<span class="sy0">/</span>behat <span class="re5">--format</span> junit <span class="re5">--out</span> resultat.xml   </pre>
+</div>
+
+<p>Pour aller plus loin avec les plate-formes d'ingréation continue, je vous invite par exemple à consulter le site http://jenkins-php.org/.</p>
+
+<p>Il existe également des outils visuels, basés sur ce format de sortie, pour fournir aux fonctionnels une vraie interface graphique 
+pour rédiger les spécifications, mais aussi pour avoir une vue d'ensemble des résultats des implémentations de ces spécifications.</p>
+
+<div class="figure center" id="figure-5-2">
+    <img src="images/behat-wizard-home.jpg" alt="Des outils graphiques pour visualiser et éditer les spécifications" />
+
+    <p class="caption"><strong>Figure 5.2</strong> Des outils graphiques pour visualiser et éditer les spécifications</p>
+</div>
+
+
+<p>Parmi ces outils, on peut mentionner par exemple <a href="http://halleck45.github.com/BehatWizardBundle/demo/behat/wizard/list.html">BehatWizard</a> 
+ou <a href="https://github.com/behat-viewer/BehatViewer">BehatViewer</a>.</p>
+
+<p>Pour éviter de préciser manuellement quel format de sortie vous souhaitez utiliser lorsque vous lancez Behat, vous pouvez tout à 
+fait les préciser une bonne fois pour toute dans votre configuration, c'est-à-dire dans le fichier <code>behat.yml</code> :</p>
+
+<div class="code yaml">
+<pre class="yaml"><span class="co4">default</span>:<span class="co4">
+formatter</span>:<span class="co3">
+  name</span><span class="sy2">: </span>                  pretty,junit,html<span class="co4">
+  parameters</span>:<span class="co3">
+    output_path</span><span class="sy2">: </span>         null,junit,report.html</pre>
+</div>
+
+<p>Cette configation vous permet par exemple d'afficher le résultat dans votre terminal, mais aussi générer des fichiers 
+de compte-rendu en Html et en XML.</p>
+
+<blockquote>
+  <p>Multiplier les formats de sortie de compte-rendus permet de multipliser les usages</p>
+</blockquote>
 
     </div>
 
@@ -63,23 +265,11 @@
                     </li>
                                     <li class="level-2">
                         <span>5.2</span>
-                        <a href="#ne-misez-pas-sur-linterface-graphique">Ne misez pas sur l'Interface graphique</a>
-                    </li>
-                                    <li class="level-2">
-                        <span>5.3</span>
                         <a href="#creez-une-couche-disolation-de-lihm">Créez une couche d'isolation de l'IHM</a>
                     </li>
                                     <li class="level-2">
-                        <span>5.4</span>
-                        <a href="#exploitez-les-compte-rendus-de-tests-html-xml-txt">Exploitez les compte-rendus de tests (html, xml, txt)</a>
-                    </li>
-                                    <li class="level-2">
-                        <span>5.5</span>
-                        <a href="#anticipez-les-problemes">Anticipez les problèmes</a>
-                    </li>
-                                    <li class="level-2">
-                        <span>5.6</span>
-                        <a href="#ne-jetez-pas-le-duck-typing-tout-ne-pourra-pas-etre-teste">Ne jetez pas le "duck typing" : tout ne pourra pas être testé</a>
+                        <span>5.3</span>
+                        <a href="#exploitez-les-compte-rendus-de-tests">Exploitez les compte-rendus de tests</a>
                     </li>
                                         </ul>
         </div>

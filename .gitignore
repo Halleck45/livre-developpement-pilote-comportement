@@ -4,6 +4,8 @@
 ._*
 .Spotlight-V100
 .Trashes
+/vendor
+vendor
 vendor/
 vendor*
 composer.phar

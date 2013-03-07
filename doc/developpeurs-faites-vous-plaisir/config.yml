@@ -1,5 +1,6 @@
 book:
-    title:            "Développeurs, faites-vous plaisir !"
+    title:            "Le développement piloté par le comportement"
+    subtitle:         "Partie 1 : Communiquez avec vos développeurs<br />Partie 2 : Développeurs, faites-vous plaisir !"
     author:           "Jean-François Lépine"
     edition:          "First edition"
     language:         fr
@@ -33,6 +34,7 @@ book:
         - { element: chapter, number: 3, content: dev-comprenez-la-demande-du-client.md }
         - { element: chapter, number: 4, content: dev-automatisez-votre-recette.md }
         - { element: chapter, number: 5, content: dev-optimisez-vos-tests-fonctionnels.md }
+        - { element: chapter, number: 6, content: dev-conclusion.md }
 
 
 
