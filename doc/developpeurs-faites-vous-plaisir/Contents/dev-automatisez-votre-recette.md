@@ -756,6 +756,3 @@ Je vous propose de vous entraîner en traduisant le besoin fonctionnel suivant :
 A vous de jouer ! 
 
 > Mink permet facilement de piloter un navigateur pour tester vos applications web.
-
-## Teser un site web : exercice complet
-

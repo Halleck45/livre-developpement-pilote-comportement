@@ -130,12 +130,62 @@ en réalité le seul moyen de péreniser les définitions au cours de la vie d'u
 
 > Isolez ce qui concerne l'interface graphique dans des Contextes spécifiques
 
+## Exploitez les compte-rendus de tests
 
+Vous avez désormais un outil pour valider et vérifier qu'un besoin métier a bel et bien été implémenté. Pour l'instant, 
+vous avez exécuté vous-même Behat pour afficher ces informations dans un terminal. Vous vous en doutez, Behat va pouvoir 
+en faire bien plus.
 
-cf. Blog
+Pour commencer, il est tout à fait possible de générer une page web synthétique des résultats des tests. Pour cela, 
+il suffit d'exécuter Behat en spécifiant le `html` comme format de sortie :
 
-## Les principales causes d’échec du BDD
-## Exploitez les compte-rendus de tests (html, xml, txt)
-## Anticipez les problèmes
-## Ne confondez pas ATTD et BDD
-## Ne jetez pas le "duck typing" : tout ne pourra pas être testé
+    [bash]
+    php ./bin/behat --format html --out resultat.html
+
+Vous disposerez donc d'une page web, graphique, que vous pouvez fournir à votre fonctionnel pour lui 
+indiquer de manière claire ce qui est fait ou reste à faire parmi les spécifications.
+
+![ Le résultat de chaque Fonctionnalité et Scénario est visible dans une page web ](screen-export-html.jpg)
+
+Bien entendu, ce n'est pas tout. La majorité des outils de tests automatisés sont capables de générer des 
+fichiers de sortie dans un format standard (xml). Ces fichiers peuvent donc être fournis à des logiciels tiers, 
+capables de les traiter ou de les transformer selon leurs spécificité.
+
+Il est par exemple tout à fait possible d'intégrer Behat à une plate-forme d'intégration continue, comme Jenkins. 
+Une plate-forme d'intégration continue a pour objectif de délivrer en permanence du code source (déploiement continu), 
+c'est-à-dire de permettre à un site web d'être mis à jour très régulièrement.
+
+Indirectement, les plate-formes d'intégration continue (PIC) fournissent une vision d'ensemble sur un projet : les 
+bonnes pratiques sont-elles respectées ? Le code est-il fiable ? Le besoin est-il respecté ? Behat va pouvoir se greffer 
+au coeur de cette plate-forme et va ainsi fournir des indices précieux pour la pilotage du projet.
+
+Pour générer un résultat réutilisable par une plate-forme d'intégration continue, il suffit d'exécuter la commande suivante :
+
+    [bash]
+    php ./bin/behat --format junit --out resultat.xml   
+
+Pour aller plus loin avec les plate-formes d'ingréation continue, je vous invite par exemple à consulter le site http://jenkins-php.org/.
+
+Il existe également des outils visuels, basés sur ce format de sortie, pour fournir aux fonctionnels une vraie interface graphique 
+pour rédiger les spécifications, mais aussi pour avoir une vue d'ensemble des résultats des implémentations de ces spécifications.
+
+![ Des outils graphiques pour visualiser et éditer les spécifications ](behat-wizard-home.jpg)
+
+Parmi ces outils, on peut mentionner par exemple [BehatWizard](http://halleck45.github.com/BehatWizardBundle/demo/behat/wizard/list.html) 
+ou [BehatViewer](https://github.com/behat-viewer/BehatViewer).
+
+Pour éviter de préciser manuellement quel format de sortie vous souhaitez utiliser lorsque vous lancez Behat, vous pouvez tout à 
+fait les préciser une bonne fois pour toute dans votre configuration, c'est-à-dire dans le fichier `behat.yml` :
+
+    [yaml]
+    default:
+    formatter:
+      name:                   pretty,junit,html
+      parameters:
+        output_path:          null,junit,report.html
+
+Cette configation vous permet par exemple d'afficher le résultat dans votre terminal, mais aussi générer des fichiers 
+de compte-rendu en Html et en XML.
+
+> Multiplier les formats de sortie de compte-rendus permet de multipliser les usages
+
