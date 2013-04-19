@@ -14,7 +14,7 @@ en réalité très simple : il s'agit d'une démarche pour faciliter la communic
  et techniques, démarche soutenue par l'utilisation d'une langue et d'une grammaire commune.
 
 Cette grammaire commune (appelée "Gherkin") est simple, facile à apprendre, et compréhensible tout 
-autant par un informaticien que par votre voisin, votre coinjoint(e)..., et par là-même par votre client.
+autant par un informaticien que par votre voisin, votre conjoint(e)..., et par là-même par votre client.
 
 Utiliser cette grammaire vous offrira un certain nombre d'avantages :
 
@@ -23,7 +23,7 @@ Utiliser cette grammaire vous offrira un certain nombre d'avantages :
 + il sera plus facile d'identifier et de gérer les changements fonctionnels de dernière minute
 + vous saurez à tout moment ce qu'il vous reste à faire
 
-Attention, le Développement piloté par le comporement a un pré-requis majeur et non
+Attention, le Développement piloté par le comportement a un pré-requis majeur et non
 négociable : *le client doit s'investir*. Il faudra que le client (ou son représentant fonctionnel) 
 soit disponible pour répondre à chacune de vos questions, en permanence. Si personne autour de vous 
 n'est prêt à s'investir pour exprimer le besoin clairement, oubliez l'idée de pratiquer le Développement 
@@ -34,10 +34,9 @@ piloté par le comportement : vous n'aurez pas les moyens d'y parvenir.
 ## Le besoin doit être exprimé par des Fonctionnalités
 
 Concrètement, comment démarrer ? La première tâche revient à votre client. C'est lui qui
-va dévoir recencer la liste des Fonctionnalités qu'il souhaite voir dans son application.
+va devoir recenser la liste des Fonctionnalités qu'il souhaite voir dans son application.
 
-Pour cela, il va devoir identifier chaque fonctionnalité par un titre simple, court, expli-
-cite et unique :
+Pour cela, il va devoir identifier chaque fonctionnalité par un titre simple, court, explicite et unique :
 
     [code gherkin]
     # Le client va distinguer les fonctionnalités en leur donnant un titre 
@@ -92,7 +91,7 @@ Chaque fonctionnalité peut donc être exprimée en quatre lignes, très simples
 
 Pratique non ? Cette manière d'exprimer les fonctionnalités (dénommée "Gherkin"), est
 simple, mais surtout est compréhensible par tous. C'est le rôle de votre client (ou fonctionnel) 
-de recencer l'ensemble des fonctionnalités du projet de cette manière.
+de recenser l'ensemble des fonctionnalités du projet de cette manière.
 Mais, vous vous en doutez, cela ne suffit pas. Il va falloir maintenant comprendre en détail 
 chaque fonctionnalité ; c'est un travail que vous ferez en commun
 
@@ -114,11 +113,11 @@ ou encore "je ne comprend pas le bénéfice tiré de cette fonctionnalité pour 
 
 Posez, donc, toutes ces questions. Et surtout planifiez systématiquement un moment,
 avant chaque itération, où votre fonctionnel et l'ensemble des équipes techniques (oui,
-toutes lers personnes qui sont concernées), vont se réunir pour cette interview.
+toutes les personnes qui sont concernées), vont se réunir pour cette interview.
 
 J'insiste : il ne s'agit pas d'une réunion facultative : comment ferait-on sans cela pour être
 sûr d'avoir bien compris la demande du client ? Le temps passé n'est pas perdu, loin de là :
-c'est du temps de gagné sur la future maintenance, les futures recettes et les futurs vas-et-vients 
+c'est du temps de gagné sur la future maintenance, les futures recettes et les futurs va-et-vient 
 entre le client et les équipes techniques.
 
 L'objectif de ces interviews est de comprendre exactement, sans aucune ambiguïté possible, 
@@ -168,7 +167,7 @@ permettra de connaître le *Contexte de votre Scénario*:
       Etant donné ...
 
 Une application consiste généralement à réagir à des *événements*. Précisez-donc quels
-sont ces événéments :
+sont ces événements :
 
     [code gherkin]
     Scénario : ...
@@ -192,7 +191,7 @@ survient :
 
 
 Cette syntaxe, simple, que l'on nomme Gherkin, va suffire dans la majorité des cas pour
-que le fonctionnel puisse exprimer son besoin et surtout pour que vous puissez comprendre 
+que le fonctionnel puisse exprimer son besoin et surtout pour que vous puissiez comprendre 
 sans ambiguïté ce qui vous ai demandé.
 
 Voici un exemple de Fonctionnalité :

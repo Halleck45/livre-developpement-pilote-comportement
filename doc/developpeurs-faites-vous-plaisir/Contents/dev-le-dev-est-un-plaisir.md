@@ -1,6 +1,6 @@
 # Le développement est un plaisir
 "Le client ne sait jamais ce qu'il veut". Comment-pouvez-vous dans ce cas faire en sorte qu'il soit satisfait ?
-Etes-vous condamné à délivrer des logiciels, sites web ou applications dont le client ne sera pas réellement
+Êtes-vous condamné à délivrer des logiciels, sites web ou applications dont le client ne sera pas réellement
 satisfait ?
 
 Et vous-même, êtes-vous vraiment obligé de subir les contraintes fonctionnelles, de brider vos compétences

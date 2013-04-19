@@ -13,8 +13,8 @@ qu'une simple ligne de commande dans un terminal vous indique si ce que vous ave
 conforme ou non.
 
 L'ensemble des exemples que nous allons voir sont écrits en PHP. Pourquoi ? Tout simplement 
-parce que la communauté PHP a très fortement et très rapidement adheré au Déve-
-loppement piloté par le comportement. Les outils PHP pour le Développement piloté par
+parce que la communauté PHP a très fortement et très rapidement adhéré au Développement 
+piloté par le comportement. Les outils PHP pour le Développement piloté par
 le comportement sont matures, nombreux, et surtout offrent une souplesse qui, à ce jour,
 ne se retrouve pas dans d'autres langages.
 
@@ -87,7 +87,7 @@ Créez un fichier composer.json à la racine de votre projet, avec le contenu su
     }
 
 
-Exécutez ensuite la commande suivante dans votre terminal, en vous plaçant àa la racine
+Exécutez ensuite la commande suivante dans votre terminal, en vous plaçant à la racine
 de votre projet :
 
     [bash]
@@ -107,7 +107,7 @@ aurez donc l'arborescence suivante :
             - behat.phar
 
 
-Pour des raisons de maintenabilité, il est préferable d'utiliser la méthode d'installation
+Pour des raisons de maintenabilité, il est préférable d'utiliser la méthode d'installation
 avec Composer, qui vous permettra de mettre à jour très facilement l'ensemble des librairies 
 PHP que vous utilisez, y compris Behat.
 
@@ -119,7 +119,7 @@ Une fois que Behat est installé, il vous suffit d'exécuter la commande suivant
     php ./bin/behat --init
 
 Cela aura pour effet de créer dans votre projet tous les éléments dont Behat a besoin pour
-fonctionner. Votre arboresence ressemble désormais à :
+fonctionner. Votre arborescence ressemble désormais à :
 
 Vous voici désormais avec les dossiers suivants :
 
@@ -177,7 +177,7 @@ les traduire.
 ## Traduire une Fonctionnalité en code source
 
 
-Par chance, Behat est suffisammet bien fait pour vous fournir une base de travail pour traduire vos fonctionnalités. Il suffit 
+Par chance, Behat est suffisamment bien fait pour vous fournir une base de travail pour traduire vos fonctionnalités. Il suffit 
 de copier-coller dans le fichier `features/bootstrap/FeatureContext.php` le code PHP qui a été généré par la commande :
 
     [bash]
@@ -395,7 +395,7 @@ vous parle en aucun cas ici de découper votre code comme vous le feriez dans un
 principes SOLID, découpage des méthodes...).
 
 Non, la réutilisabilité dans les Contextes de traduction (fichiers `*Context.php`) ne passe pas par une réutilisation du code source, 
-mais bel et bien par une réutilisation de phrases. *En réalité, vous devez apprendre à faire du refractoring de phrases*.
+mais bel et bien par une réutilisation de phrases. *En réalité, vous devez apprendre à faire du refactoring de phrases*.
 
 Cette tâche n'est pas simple au départ, mais est en réalité assez naturelle. Chaque phrase, qui correspond à un contexte, un 
 élément déclencheur ou un résultat attendu, peut être découpée en différentes étapes, qui *elles-mêmes pourront être décomposées 
@@ -429,7 +429,7 @@ Vous pourriez désormais écrire, par exemple :
     Etant donné que je suis sur la page "/mon-compte"
     ...
     
-Cette démarche permet donc de faire du refractoring de phrases pour arriver à des expressions atomiques. Par chance, c'est 
+Cette démarche permet donc de faire du refactoring de phrases pour arriver à des expressions atomiques. Par chance, c'est 
 extrêmement simple à faire avec Behat. Regardez plutôt :
 
     [php]
@@ -529,7 +529,7 @@ Notez les trois dernières traduction (les méthodes ̀ queJeSuisSurLaPage()`, `
 de traduction concernent le comportement d'un navigateur web, comme Firefox ou Chrome... Il arrive en effet très souvent 
 qu'il faille effectuer des actions qui n'existent que dans un navigateur. Vous allez voir qu'avec Behat c'est très facile !
 
-> Oubliez le refractoring de code. Vous devez apprendre à faire du refractoring de phrases.
+> Oubliez le refactoring de code. Vous devez apprendre à faire du refactoring de phrases.
 
 ## Testez une application Web
 
@@ -541,7 +541,7 @@ Heureusement, il est aujourd'hui très simple d'automatiser une recette fonction
 application web. Allons-y !
 
 Une fois de plus nous allons utiliser Behat. Plus précisément, nous allons utiliser un module de Behat, appelé Mink, qui permet de 
-naviguer dans une application web et de lancer des tests automatisés lors decette navigation.
+naviguer dans une application web et de lancer des tests automatisés lors de cette navigation.
 
 Concrètement, Mink permet une double approche :
 
@@ -549,7 +549,7 @@ Concrètement, Mink permet une double approche :
 + Exécuter des tests fonctionnels au sein d'un vrai navigateur, comme Chrome ou Firefox par exemple
 
 Il peut sembler étrange d'exécuter des tests dans un navigateur virtuel. Cependant, bien souvent le comportement fonctionnel 
-que l'on souhaite tester est en réalité disponible driectement au sein des pages web, dans le HTML. *On préferera alors priviléger 
+que l'on souhaite tester est en réalité disponible directement au sein des pages web, dans le HTML. *On préférera alors privilégier 
 les tests lancés dans un vrai navigateur uniquement lorsque le test porte sur des fonctionnalités complexes (en Javascript ou en Ajax 
 par exemple), ces tests étant en général beaucoup plus lourd et long à s'exécuter que les autres*.
 
@@ -579,7 +579,7 @@ Exécutez la commande suivante :
     [bash]
     wget https://github.com/downloads/Behat/Mink/mink.phar
 
-Il vous suffit ensuite d'ajouter l'inscruction suivantes dans vos fichiers PHP de Contexte :
+Il vous suffit ensuite d'ajouter l'instruction suivantes dans vos fichiers PHP de Contexte :
 
     [php]
     require_once 'mink.phar';
@@ -596,7 +596,7 @@ Il suffit de créer le fichier `behat.yml` à la racine de votre projet :
 
 Voilà, Mink est installé !
 
-Rappelez-vous, le travail de Spécification fonctionelle passe par l'utilisation d'expressions, elles-mêmes organisés autour 
+Rappelez-vous, le travail de Spécification fonctionnelle passe par l'utilisation d'expressions, elles-mêmes organisés autour 
 d'une grammaire : Gherkin. Mink a ceci d'intéressant qu'il propose nativement un panel assez large d'expressions qui concernent 
 un navigateur, que vous pouvez donc réutiliser (`comme "Quand je vais sur "http://..."`, ou encore `Quand je remplis "Votre prénom" avec 
 "Jean-François"`...). 
@@ -622,7 +622,7 @@ il suffit comme avant d'exécuter la commande suivante :
     php ./bin/behat
 
 Bien entendu, il va souvent arriver que vous ayez besoin de gérer des cas plus complexes que ce qu'il est possible de faire avec
-les exprpessions disponibles nativement dans Mink. 
+les expressions disponibles nativement dans Mink. 
 
 Dans ce cas, il va s'agir, ni plus ni moins, de piloter votre navigateur (quel qu'il soit). Un très large éventail 
 de méthodes sont disponibles :
@@ -648,7 +648,7 @@ Examinons ce code ensemble. Tout d'abord, nous récupérons la page courante aff
         $page = $browser->getPage();
 
 
-Ensuite, il suffit de récupérer un élément HTML dans la page, puis d'exécuter l'action souhaitée sur cet élément (ici un click, 
+Ensuite, il suffit de récupérer un élément HTML dans la page, puis d'exécuter l'action souhaitée sur cet élément (ici un clic, 
 mais on pourrait imaginer saisir une valeur, le cocher...) :
 
     [php]

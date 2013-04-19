@@ -200,7 +200,7 @@ moindre demande de changement.
 
 Le Domain Driven Design propose une approche différente : les
 développeurs vont se focaliser uniquement sur le besoin métier, et
-concevoir leur code source autour de ce besoin. Ca peut paraître une
+concevoir leur code source autour de ce besoin. Ça peut paraître une
 évidence, mais c'est loin d'être le cas, croyez-moi ! Le code source
 sera alors le reflet du besoin métier.
 

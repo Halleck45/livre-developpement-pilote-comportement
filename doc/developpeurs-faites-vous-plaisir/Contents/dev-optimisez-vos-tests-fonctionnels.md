@@ -16,7 +16,7 @@ les contextes de définition suivants :
 + Contexte de définitions pour les comptes bancaires
 + etc.
 
-Pour cela, il suffit simplement de créer un fichier PHP (et une classe) par Contetxe de définition, par exemple :
+Pour cela, il suffit simplement de créer un fichier PHP (et une classe) par Contexte de définition, par exemple :
 
 + `ClientContext.php`
 + `BanquierContext.php`
@@ -49,7 +49,7 @@ pour récupérer votre contexte `mink` depuis le context `client`, il vous suffi
     $session = $mink->getSession();
 
 N'hésitez pas à découper vos Contextes de manière à les rendre facilement réutilisables par la suite. Cela vous évitera de mauvaises surprises 
-lorsque votre applicationg grossira et que vous aurez à naviguer parmi plusieurs centaines de définitions.
+lorsque votre application grossira et que vous aurez à naviguer parmi plusieurs centaines de définitions.
 
 > Découpez et organisez vos Contextes de définition
 
@@ -88,7 +88,7 @@ imaginer par exemple un Contexte de définition consacré à l'affichage des pag
         // (...)
     }
 
-Et une autre, le jour où l'on en a besoin, consacré à l'afficage sur mobile :
+Et une autre, le jour où l'on en a besoin, consacré à l'affichage sur mobile :
 
     [php]
     namespace View;

@@ -70,9 +70,9 @@ une valeur d'une variable, c'est long, ennuyant, et on risque de faire des erreu
 
 En réalité, faire un var_dump() pour afficher une information à l'écran n'est ni plus ni moins qu'un contrôle sur 
 l'état d'une variable. Or il est très facile d'imaginer des robots dont la seule fonction est de s'assurer en permanence 
-de l'état d'une variable. Et ces robots, infatiguables et extrêmement rapides, ne se tromperont jamais.
+de l'état d'une variable. Et ces robots, infatigables et extrêmement rapides, ne se tromperont jamais.
 
-Ces robots, ce sont les tests unitaires automatisés. Ecrire des tests unitaires est, à ce jour, l'un des seuls moyens vraiment efficaces 
+Ces robots, ce sont les tests unitaires automatisés. Écrire des tests unitaires est, à ce jour, l'un des seuls moyens vraiment efficaces 
 pour faciliter la vie d'un développeur, fiabiliser son code et réduire les coûts de maintenance d'une application.
 
 Il existe dans tous les langages de programmation des outils qui facilitent la rédaction de tests unitaires : JUnit en Java, QUnit en JavaScript...
@@ -96,10 +96,10 @@ fonction PHP native `assert()` :
     $resultat = addition(5,5);
     assert($resultat === 10);
 
-Ce code PHP génerera une erreur si la fonction addition() ne renvoie pas "10".
+Ce code PHP générera une erreur si la fonction addition() ne renvoie pas "10".
 
 L'avantage d'utiliser un outil de tests automatisés sera de pouvoir organiser ses tests facilement et efficacement. Chaque 
-assertion valide sera afficée en vert, les erreurs seront remontées aux développeur en un instant. 
+assertion valide sera affichée en vert, les erreurs seront remontées aux développeur en un instant. 
 
 > Les tests unitaires sont le seul moyen efficaces de fiabiliser un code source
 
@@ -137,4 +137,4 @@ d'erreurs, et surtout il est impossible de contrôler à la main, lors de chaque
 l'ensemble de l'application fonctionne toujours de la manière attendue.
 
 C'est pour cela qu'il existe désormais des outils de tests fonctionnels automatisés. C'est outils sont 
-infatiguables: ils traquent en permanence votre application à la recherche d'anomalies fonctionnelles.
+infatigables: ils traquent en permanence votre application à la recherche d'anomalies fonctionnelles.

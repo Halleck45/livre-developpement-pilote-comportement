@@ -47,7 +47,7 @@ c'est une plate-forme communautaire, avec des amis, relations, des groupes, des 
 Bref c'est Facebook.
 
 Pour votre client, un "réseau social" c'est (par exemple) un espace où des employés font des demandes
-de documents, découvrent les actualités de l'entreprises, échangent des informations sur les commandes...
+de documents, découvrent les actualités de l'entreprise, échangent des informations sur les commandes...
 Bref, c'est un intranet.
 
 Attendez... Mais comment donc voulez-vous réussir à satisfaire votre client si vous ne vous n'employez

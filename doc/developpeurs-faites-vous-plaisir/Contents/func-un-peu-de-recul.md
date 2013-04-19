@@ -149,7 +149,7 @@ webmail. Mais c'est  justement pour cela que GMail c'est :
 
 
 Tous ces services desservent la même vision. C'est ce qui fait que GMail
-plait autant. Et c'est cette vision qui assure la cohérence de
+plaît autant. Et c'est cette vision qui assure la cohérence de
 l'ensemble : **il vous faudra parfois refuser certaines
 fonctionnalités**, même si à court terme elles semblent rentables. 
 

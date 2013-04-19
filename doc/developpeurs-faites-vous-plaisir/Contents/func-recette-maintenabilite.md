@@ -12,7 +12,7 @@ permettre d'automatiser la recette de votre application**. Vraiment !
 
 
 Et je nous vous parle pas d'outils, si vous en avez déjà utilisé, qui
-vont enregistrer puis reproduire les click et saisies que vous faites
+vont enregistrer puis reproduire les clics et saisies que vous faites
 sur une page web (Selenium...). Non, surtout pas ! Je vous parle
 d'outils pour lesquels vous n'avez rien à faire...
 

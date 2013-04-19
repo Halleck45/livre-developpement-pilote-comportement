@@ -131,7 +131,7 @@ bouton, chaque champ de saisie... tout cela doit fournir un bénéfice à
 l'utilisateur de votre produit ! 
 
 
-Ca peut paraître évident... Mais alors pourquoi consacrer autant
+Ça peut paraître évident... Mais alors pourquoi consacrer autant
 d'énergie sur des choses inutiles fonctionnellement ? Si si, ça arrive
 tout le temps ! En tant que développeur j'ai souvent eu l'occasion de le
 voir : une grosse partie de mon temps était consacré à du superflu

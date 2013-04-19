@@ -346,7 +346,7 @@ vous permettre de rédiger vos features selon une approche plus agréable,
 tandis même qu'ils vont présenter à vos développeurs votre besoin sous
 forme de fichiers clairs qu'ils pourront directement exploiter.
 
-![ Il existe des assistants visuels pour faciliter votre expressionde besoin ](behat-wizard-edit.jpg)
+![ Il existe des assistants visuels pour faciliter votre expression de besoin ](behat-wizard-edit.jpg)
 
 Il existe plusieurs outils, qui ont tous leurs avantages. On peut penser
 par exemple à BehatViewer, ou à BehatWizard... N'hésitez pas à demander
