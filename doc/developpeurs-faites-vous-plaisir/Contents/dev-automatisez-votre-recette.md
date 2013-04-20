@@ -440,7 +440,7 @@ extrêmement simple à faire avec Behat. Regardez plutôt :
     
     class FeatureContext extends BehatContext
     {
-
+    
         /**
          * @When /^j\'ajoute dans mon panier "([^"]*)"  depuis le catalogue produit$/
          */

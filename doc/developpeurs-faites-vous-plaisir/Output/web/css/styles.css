@@ -26,10 +26,38 @@ em {
     font-size:12px;
     color:#c20cb9;
 }
+.item.part h1 {
+    text-align:center;
+    font-size:40px;
+}
 
-.figure.center {
-    text-align:left;
+/* --- gherkin --- */
+/*texte*/
+div.code.gherkin { 
+    color:#C5C8C6;
 }
-.figure img {
-    max-width:700px;
+/*commentaire*/
+div.code.gherkin .co1 { 
+    color:#969896;
 }
+/*clef*/
+div.code.gherkin .co3 { 
+    color:#DE935F;
+}
+/*Exemples*/
+div.code.gherkin .co4 { 
+    color:#DE935F;
+}
+/*mot clef*/
+div.code.gherkin .kw1 { 
+    color:#81A2BE;
+}
+/*
+vert    #B5BD68
+orange  #DE935F
+violet  #B294BB
+bleu    #81A2BE
+blanc   #C5C8C6
+gris    #969896
+jaune   #B5BD68
+*/

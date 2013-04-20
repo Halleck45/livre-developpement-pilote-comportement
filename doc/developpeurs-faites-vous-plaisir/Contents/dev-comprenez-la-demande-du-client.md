@@ -38,12 +38,12 @@ va devoir recenser la liste des Fonctionnalités qu'il souhaite voir dans son ap
 
 Pour cela, il va devoir identifier chaque fonctionnalité par un titre simple, court, explicite et unique :
 
-    [code gherkin]
+    [gherkin]
     # Le client va distinguer les fonctionnalités en leur donnant un titre 
-    Fonctionnalité : Avoir accès à la liste des animaux de compagnie
-    Fonctionnalité : Choisir un animal de compagnie
-    Fonctionnalité : Acheter un animal de compagnie
-    Fonctionnalité : ...
+    Fonctionnalité: Avoir accès à la liste des animaux de compagnie
+    Fonctionnalité: Choisir un animal de compagnie
+    Fonctionnalité: Acheter un animal de compagnie
+    Fonctionnalité: ...
 
 Il est impératif qu'à cette étape les titres des fonctionnalités soient clairs et explicites.
 
@@ -51,7 +51,7 @@ Ensuite, il va lui suffire de contextualiser un peu cette fonctionnalité. Par e
 indiquer qui est le bénéficiaire de cette fonctionnalité :
 
 
-    [code gherkin]
+    [gherkin]
     En tant que vendeur
     En tant que acheteur
     En tant que propriétaire de la boutique
@@ -60,7 +60,7 @@ indiquer qui est le bénéficiaire de cette fonctionnalité :
 Vous avez donc désormais connaissance de l'acteur bénéficiaire de la fonctionnalité. Il
 reste encore à identifier le service offert par la fonctionnalité. C'est cela que vous aurez, finalement, à programmer :
 
-    [code gherkin]
+    [gherkin]
     Je veux acheter un animal de compagnie
     Je veux connaître la liste des animaux de compagnie de mon magasin
     Je veux connaître la liste des vendeurs
@@ -74,7 +74,7 @@ Lorsque vous travaillez, le fruit de votre travail est vraiment utile ; et il es
 de voir que l'on a rendu service à quelqu'un. C'est pour cela qu'il est important que le
 client exprime le bénéfice obtenu par la fonctionnalité :
 
-    [code gherkin]
+    [gherkin]
     De telle sorte que je puisse repartir avec un nouveau compagnon
     De telle sorte que je sache s'il me faut renouveler le stock
     De telle sorte que je puisse organiser les congés de chacun
@@ -83,7 +83,7 @@ client exprime le bénéfice obtenu par la fonctionnalité :
 Chaque fonctionnalité peut donc être exprimée en quatre lignes, très simples et compréhensibles par tous :
 
 
-    [code gherkin]
+    [gherkin]
     Fonctionnalité : Connaître la liste des animaux de compagnie disponibles
       En tant que vendeur
       Je veux connaître la liste des animaux de compagnie disponibles à la vente
@@ -143,12 +143,12 @@ avec le fonctionnel et les équipes techniques.
 Chaque Fonctionnalité peut contenir un ou plusieurs Scénarios, et chaque Scénario doit
 pouvoir se distinguer facilement des autres par un titre :
 
-    [code gherkin]
+    [gherkin]
     Fonctionnalité : acheter un animal de compagnie
       (...)
-      Scénario : acheter un animal de compagnie disponible à la vente
-      Scénario : tenter d'acheter un animal de compagnie qui est trop jeune
-      Scénario : tenter d'acheter un animal de compagnie qui est réservé
+      Scénario: acheter un animal de compagnie disponible à la vente
+      Scénario: tenter d'acheter un animal de compagnie qui est trop jeune
+      Scénario: tenter d'acheter un animal de compagnie qui est réservé
       ...
 
 Votre travail de développeur va consister à rendre ces Scénarios effectifs dans
@@ -159,7 +159,7 @@ Vous vous en doutez : un simple titre ne suffit pas ; il va falloir compléter c
 Posez par exemple cette question : "dans quel cadre ce scénario se situe t-il ?". Cela vous 
 permettra de connaître le *Contexte de votre Scénario*:
 
-    [code gherkin]
+    [gherkin]
     Scénario : ...
       Etant donné que tel contexte existe
       Etant donné que je souhaite acheter un chien
@@ -169,7 +169,7 @@ permettra de connaître le *Contexte de votre Scénario*:
 Une application consiste généralement à réagir à des *événements*. Précisez-donc quels
 sont ces événements :
 
-    [code gherkin]
+    [gherkin]
     Scénario : ...
       (...)
       Quand j'essaye d'acheter un chien
@@ -181,7 +181,7 @@ sont ces événements :
 Dès lors, il ne vous reste plus qu'à préciser le *Résultat attendu* lorsque cet événement
 survient :
 
-    [code gherkin]
+    [gherkin]
     Scénario : ...
       (...)
       Alors je peux repartir avec un petit chien
@@ -196,7 +196,7 @@ sans ambiguïté ce qui vous ai demandé.
 
 Voici un exemple de Fonctionnalité :
 
-    [code gherkin]
+    [gherkin]
     Fonctionnalité : acheter un chiot
     En tant que client du magasin
     Je veux pouvoir acheter un chiot
@@ -219,7 +219,7 @@ Pratique non ?
 Rappelez-vous que l'objectif du Développement piloté par le comportement est de lever
 toutes les ambiguïtés. Pourtant, dans le scénario suivant, il reste des questions :
 
-    [code gherkin]
+    [gherkin]
     Scénario:  acheter un chiot sevré
       Etant donné qu'un chiot est trop jeune pour être vendu
       Quand j'essaye d'acheter ce chiot
@@ -238,7 +238,7 @@ recommencer son développement !
 Heureusement, il est tout à fait possible, avec Gherkin, de préciser des valeurs à utiliser. Il
 suffit de les encadrer dans des guillemets :
 
-    [code gherkin]
+    [gherkin]
     Scénario : acheter un chiot sevré
       Etant donné qu'un chiot ne peut être vendu avant qu'il n'ait "2 mois"
       Et que "Médor le chien" a actuellement "1 mois"
@@ -253,7 +253,7 @@ de problèmes, Gherkin vous permet d'utiliser des exemples facilement ; il suffi
 sous forme de tableaux. Les variables sont alors à encadrer par les symboles "<" (plus petit que) 
 et ">" (plus grand que).
 
-    [code gherkin]
+    [gherkin]
     Plan de Scénario : acheter un chiot sevré
       Etant donné qu'un chiot ne peut être vendu avant qu'il n'ait "2 mois"
       Et que "<nom-du-chien>" a actuellement "<age-du-chien>"

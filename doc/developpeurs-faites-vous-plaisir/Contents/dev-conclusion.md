@@ -2,8 +2,7 @@
 
 Connaissez-vous le "Duck Typing" (traduit par "typage canard") ? La légende veut que le poète James Whitcomb Riley soit à l'origine de cette expression :
 
-    [bash]
-    Si je vois un animal qui vole comme un canard, cancane comme un canard, et nage comme un canard, alors j'appelle cet oiseau un canard
+> Si je vois un animal qui vole comme un canard, cancane comme un canard, et nage comme un canard, alors j'appelle cet oiseau un canard
 
 Ce principe peut s'appliquer au test logiciel : si un module fonctionnel semble avoir le comportement attendu, possède l'apparence souhaitée, 
 ne génère pas d'erreur, est utilisable facilement, a été utilisé par plusieurs personnes... Alors on peut sans risque penser que 
