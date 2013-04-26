@@ -4,7 +4,7 @@
 ## Un projet est comme un Film
 
 Drôle de titre, n'est-ce pas ? Pourtant on peut le dire, un projet
-informatique, c'est comme un film : on peut prendre plaisir à le
+informatique, c'est un peu comme un film : on peut prendre plaisir à le
 tourner, y apprendre des choses, mais l'essentiel reste que ce film voit
 le jour.
 
@@ -53,7 +53,7 @@ En général, voici les rôles qui seront associés à votre projet :
 
 
 Bien, ça, c'est dit. Bien entendu, il est fréquent que certains de ces
-rôles se chevauchent, le plus souvent pour des raisons de coût :
+rôles se chevauchent, le plus souvent pour des raisons de coût ou de ressources :
 l'ergonome est graphiste, l'analyste fonctionnel est propriétaire du
 produit, etc.
 
@@ -99,14 +99,9 @@ C'est assez classique dans les préceptes agiles : à la fin de chaque
 cycle l'équipe technique va vous présenter ce qu'elle vous propose, et
 ce pour différentes raisons :
 
-cela vous permet de valider votre demande initiale
-
-cela permet d'impliquer l'équipe technique dans la bonne marche
-fonctionnelle de votre produit
-
-cela permet aux acteurs de votre projet d'éprouver régulièrement de la
-satisfaction personnelle en réussissant à vous livrer dans les temps
-quelque chose qui fonctionne
++ cela vous permet de valider votre demande initiale
++ cela permet d'impliquer l'équipe technique dans la bonne marche fonctionnelle de votre produit
++ cela permet aux acteurs de votre projet d'éprouver régulièrement de la satisfaction personnelle en réussissant à vous livrer dans les temps quelque chose qui fonctionne
 
 Une simple présentation d'une heure, pourquoi pas un vendredi sur deux,
 par l'équipe technique, vous permet donc d'impliquer dans votre projet
@@ -151,3 +146,5 @@ problèmes, et eux-mêmes sont utilisateurs de produits. 
 Restez maître de votre Produit, mais, après tout, ce qui compte c'est de
 rendre service, au mieux, à vos utilisateurs. Prenez les bonnes idées là
 où elles sont...
+
+> Imprégnez vos développeurs de votre besoin pour leur laisser l'occasion de trouver de bonnes idées

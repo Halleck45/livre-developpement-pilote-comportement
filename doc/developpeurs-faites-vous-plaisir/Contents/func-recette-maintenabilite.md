@@ -13,8 +13,8 @@ permettre d'automatiser la recette de votre application**. Vraiment !
 
 Et je nous vous parle pas d'outils, si vous en avez déjà utilisé, qui
 vont enregistrer puis reproduire les clics et saisies que vous faites
-sur une page web (Selenium...). Non, surtout pas ! Je vous parle
-d'outils pour lesquels vous n'avez rien à faire...
+sur une page web (comme avec [Selenium](seleniumhq.org/...). Non, surtout pas ! 
+Je vous parle d'outils pour lesquels vous n'avez rien à faire...
 
 
 Après tout, **si vous avez fait l'effort de respecter une syntaxe
@@ -34,14 +34,14 @@ avez demandé.
 
 
 Par la suite vous disposerez d'une interface où chaque fonctionnalité,
-chaque scénario et chaque étape seront, soit verte (terminée), soit
-jaune (pas encore développé), soit rouge (ne répond pas au besoin
+chaque scénario et chaque étape seront, ou bien verte (terminée), ou bien 
+jaune (pas encore développé), ou bien rouge (ne répond pas au besoin
 initial).
 
 
 ![ Retrouvez toutes vos fonctionnalités au sein d'une même interface. ](behat-wizard-home.jpg)
 
-Utiliser de tels outils a donc un coût puisqu'il exige un travail de
+Utiliser de tels outils a un coût puisqu'il exige un travail de
 traduction par l'équipe technique. Ce coût peut être important, cela
 peut demander du temps non négligeable, en plus d'une montée en
 compétence des équipes techniques (très rapide en général),

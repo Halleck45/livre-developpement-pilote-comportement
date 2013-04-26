@@ -22,7 +22,9 @@ la documentation.
 
 Il est assez facile d’imaginer, par exemple, prendre l’ensemble de vos
 fichiers de Fonctionnalités et les transformer en un fichier .pdf, ou
-encore d’en faire un manuel en ligne.
+encore d’en faire un manuel en ligne. C'est ce que font, par exemple, 
+[Relish](https://www.relishapp.com) (hébergé, payant) ou 
+[Pickles](https://github.com/picklesdoc/pickles) (gratuit, à installer soi-même).
 
 Bien plus, aucun changement fonctionnel de code source ne peut être
 réalisé sans que l’un de vos fichiers de Fonctionnalités  n’ait été
@@ -40,10 +42,11 @@ Si ce n'est pas le cas, c'est :
 + que vous avez modifié votre Fonctionnalité sans en rédiger les Scénarios directement avec l'équipe technique. Votre erreur sera d'avoir rompu le dialogue avec vos équipes,
 + ou que les équipes n'auront pas encore réalisé votre demande de changement. Il faudra dans ce cas prioriser ce changement parmi l'ensemble de fonctionnalités qu'ils ont à développer.
 
+> Spécification = Documentation = toujours à jour
 
 ## Servez-vous de vos fonctionnalités pour prioriser
 
-Pensez à ceci : vous pouvez si vous le souhaitez associer un état à
+Pensez à ceci : vous pouvez, si vous le souhaitez, associer un état à
 chacun de vos fonctionnalités et scénarios. Par exemple :
 
 + En attente
@@ -73,7 +76,7 @@ Vous l'aurez compris : ce découpage en fonctionnalités, puis en
 scénarios, va vous permettre de prioriser intelligemment votre projet.
 Bien plus, cela va vous pousser à abandonner certains points pour en
 introduire de nouveaux, plus pertinents pour vos utilisateurs finaux ;
-et puisque ça fait partie de votre Produit même, ce changement
+et puisque cela fait partie de votre Produit même, ce changement
 fonctionnel sera à la fois rapide et peu coûteux !
 
 
@@ -85,14 +88,14 @@ fonctionnel sera à la fois rapide et peu coûteux !
 C'est souvent la même chose : on surveille le temps passé, les tâches
 réalisées... Mais on a tous le même problème : passer beaucoup de temps
 ne veut pas dire obtenir un résultat. **Pourquoi mesurer ce temps passé
-si vous n'avez pas le résultat attendu** **?** Ce qui compte, c'est
+si vous n'avez pas le résultat attendu** **?** Ce qui compte, ce sont 
 uniquement les fonctionnalités.
 
 
 Les outils classiques vous proposent de découper chaque besoin en tâche,
 puis chaque tâche en temps. Or une tâche n'a aucun sens fonctionnel !
 Vraiment ! C'est comme si vous demandiez à une chauffeur routier combien
-de litres d'essence il a consommé ; oui c'est important d'un point de
+de litres d'essence il a consommé ;  certes, c'est important d'un point de
 vue financier, mais ce qui compte c'est quand même de savoir s'il a pu
 livrer tous ses clients, vous ne croyez pas ?
 
@@ -114,9 +117,9 @@ en tâches, mais :
 fournissant un service, autrement dit une fonctionnalité.
 
 
->Le client final n'est pas content parce qu'une tâche est accomplie ;
+> Le client final n'est pas content parce qu'une tâche est accomplie ;
 il est content parce qu'une fonctionnalité lui est offerte et qu'elle
-répond a son besoin"
+répond a son besoin
 
 ## Une bonne fonctionnalité sert la Vision Produit
 
@@ -125,14 +128,14 @@ fonctionnalité sert votre Vision. Si ce n'est pas le cas ... Et bien
 oubliez la !
 
 
-A contrario, ne vous limitez pas à un cadre. Après tout ce qui compte ce
+A contrario, ne vous limitez pas à un cadre. Après tout, ce qui compte vraiment ce
 n'est pas la somme de fonctionnalités, c'est de réussir à satisfaire
 votre Vision.
 
 
 Prenez GMail, de Google, par exemple. Chaque fonctionnalité est
 sélectionnée pour répondre à cette vision simple : "permettre à chacun
-de communiquer facilement avec ses proches". Peut importe le cadre, du
+de communiquer facilement avec ses proches". Peu importe le cadre ; du
 moment qu'une fonctionnalité sert cette vision, elle est bonne.
 
 
@@ -176,7 +179,7 @@ du Produit
 
 Fatigué ? Pourquoi ne pas faire un petit jeu ? Vous connaissez Google
 Calendar ? mais si, vous savez, le calendrier de Google, très pratique,
-que vous retrouvez sur calendar.google.com ?
+que vous retrouvez sur calendar.google.com...
 
 
 A votre avis :
@@ -192,7 +195,7 @@ A votre avis :
 
 
 A risque de surprendre, la réponse est partout la même : "oui" ! Oui,
-même sans page web !
+même si Internet n'existait pas !
 
 
 Arès tout, qui nous dit que le web que nous connaissons ne va pas
@@ -205,11 +208,11 @@ moyen pour délivrer ses services.
 Considérez en effet cette Vision de Google Calendar : "permettre à
 chacun de connaître facilement  les événements à venir qui le
 concernent". Pas besoin de page web, d'application mobile... Un simple
-courrier pour ajouter un événement, puis quelqu'un qui vient frapper à
-notre porte à chaque fois qu'un événement va arriver suffit, non ? 
+courrier postal pour ajouter un événement, puis quelqu'un qui vient frapper à
+notre porte à chaque fois qu'un événement va arriver... C'est suffisant, non ?
 
 
-Certes commercialement ce n'est pas l'idéal, mais même si Google
+Certes, commercialement ce n'est pas l'idéal, mais même si Google
 Calendar changeait pour désormais envoyer quelqu'un frapper chez nous à
 chaque événement, le Produit serait inchangé ; seul le support matériel
 serait modifié. Autrement dit : **le support n'a aucune importance
@@ -217,7 +220,7 @@ lorsque vous décrivez votre Produit !**
 
 
 Quand vous décrivez votre produit, écrivez vos fonctionnalités de sorte
-à ce qu'elles soient valables même sur internet, même sur application
+à ce qu'elles soient valables, même sur internet, même sur application
 mobile, et même par courrier postal. c'est la seule façon de pérenniser
 votre projet. Si vous avez un site web, vos Fonctionnalités et Scénarios
 ne doivent pas changer d'un pouce lorsque vous décrivez votre
@@ -246,7 +249,7 @@ vos développeurs. Leur réaction face à ce scénario ne peut être que
 
 
 Tant qu'il reste des questions en suspend, quelque chose ne va pas.
-N'oubliez pas que **vous décrivez vos Fonctionnalités et Scénarios, non
+N'oubliez pas que **vous décrivez vos Fonctionnalités et vos Scénarios, non
 pas d'abord pour valider un travail fourni, mais avant tout pour être
 sûr que tout le monde a bien compris votre besoin** et pour éviter les
 allers et retours inutiles.
@@ -287,9 +290,9 @@ Vision**.
 
 Je pense que la première cause d'échec vient de la **difficulté à
 identifier clairement les fonctionnalités d'un Produit**. On a tous en
-tête des idées géniales, le site web qui va tuer Facebook et Ebay ; le
-vrai souci est de savoir comment dans la pratique ce site web va rendre
-service aux utilisateurs, quelles sont les fonctionnalités qu'on va lui
+tête des idées géniales, le site web qui va tuer Facebook et eBay ; le
+vrai souci est de savoir comment, dans la pratique, ce site web va rendre 
+service aux utilisateurs, et quelles sont les fonctionnalités qu'on va lui
 offrir.
 
 

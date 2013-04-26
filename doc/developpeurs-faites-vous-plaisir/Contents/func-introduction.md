@@ -46,7 +46,7 @@ préparer aux éventuels retard, de les limiter ? De réorienter votre
 demande en cours de route ?
 
 
-C'est justement l'objet de ce livre. Bon, nous n'allons certainement pas
+C'est justement l'objet de ce livre. Bien évidemment, ce livre ne va pas
 vous offrir un moyen magique de réussir un projet informatique. Non, ça
 n'existe pas, il n'y a jamais de *silver bullet*. Rien n'est magique :
 **c'est à vous, et à vous seul, de faire réussir vos projets

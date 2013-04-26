@@ -42,7 +42,7 @@ Pour synthétiser cette Langue Commune en quelques mots, elle permet :
 besoins fonctionnels (le jargon métier)
 + que tout le monde "parle" votre projet comme vous le "pensez"
 + d'éviter de vous retrouver avec des surprises idiotes, dues à des
-incompréhensions sémantiques ou des ambiguïtés.
+incompréhensions sémantiques ou à des ambiguïtés.
 
 
 
@@ -67,7 +67,7 @@ voiture. Et croyez-moi, je n'en ai rien à faire ! 
 
 Je dois vous avouer une chose : quand j'ai une panne, je vais voir mon
 garagiste et je lui fais confiance. Quand il m'explique le problème, je
-dis des "ah oui ?" avec un air curieux. Mais je ne comprend rien ! Et
+dis des "ah oui ?" avec un air curieux. Mais je ne comprend rien ! Et c'est 
 tant mieux !
 
 
@@ -76,8 +76,7 @@ Pourquoi serait-ce différent pour l'informatique ? Mettre les mains
 
 + de brider vos demandes quand vous allez imaginer qu'un point va être
 techniquement coûteux alors qu'il n'en n'est rien
-+ de vous faire adopter une angle de vue différent (celui des
-+ développeurs) au détriment de votre vision initiale
++ de vous faire adopter une angle de vue différent (celui des développeurs) au détriment de votre vision initiale
 + de laisser le code dominer le domaine fonctionnel
 + de vous faire perdre votre force fonctionnel
 
@@ -140,7 +139,7 @@ votre projet
 + Ils ne perdent pas de temps à traduire votre message
 
 C'est d'ailleurs comme ça que vous allez vous rendre compte que certains
-points demeurent obscurs, malgré tous vos efforts. Ce sera peut-être que
+points demeurent obscurs, malgré tous vos efforts. Cela signifiera peut-être que 
 ces points sont plus importants que vous ne l'estimiez, et il sera
 peut-être utile d'y consacrer plus de temps.
 
@@ -157,13 +156,8 @@ Oubliez cette masse de documentation d'autant plus qu'elle va être un
 frein à votre besoin de changements : très vite, avec de nombreux
 documents, vous allez : 
 
-ou bien avoir un décalage conséquent entre vos spécifications et votre
-produit (quid des nouveaux arrivants sur le projet ?),
-
-ou bien devoir passer un temps précieux à mettre à jour vos
-spécifications à chaque changement. Et ça, croyez-moi, dans la vraie vie
-ça n'arrive jamais si vous n'avez pas une ressource dédiée à cette
-tâche, à temps plein !
++ ou bien avoir un décalage conséquent entre vos spécifications et votre produit (quid des nouveaux arrivants sur le projet ?),
++ ou bien devoir passer un temps précieux à mettre à jour vos spécifications à chaque changement. Et ça, croyez-moi, dans la vraie vie ça n'arrive jamais si vous n'avez pas une ressource dédiée à cette tâche, à temps plein !
 
 
 Vous allez le voir, il existe d'autres moyens de préciser votre besoin.
@@ -188,7 +182,7 @@ le Domain Driven Design, ou Conception Pilotée par le Métier.
 En général, au fil du temps, les développeurs qui auront travaillé sur
 votre projet vont mettre en place ce qu'on appelle familièrement des
 "rustines", des morceaux de code source rapides à mettre en place mais
-peu maintenables, destinés à gérer vos demandes de changements.
+peu maintenables, destinés à gérer vos demandes de changements fonctionnels.
 
 
 Pire, dès le départ, les développeurs vont se focaliser sur les aspects
@@ -199,7 +193,7 @@ importante que votre projet risque de vous mettre sur la paille à la
 moindre demande de changement.
 
 Le Domain Driven Design propose une approche différente : les
-développeurs vont se focaliser uniquement sur le besoin métier, et
+développeurs vont se focaliser avant tout sur le besoin métier, et
 concevoir leur code source autour de ce besoin. Ça peut paraître une
 évidence, mais c'est loin d'être le cas, croyez-moi ! Le code source
 sera alors le reflet du besoin métier.
@@ -241,7 +235,7 @@ Vos équipes ne doivent commencer à travailler sur l'indispensable.
 L'utile et le pratique viendront après.
 
 
-> Prenez un papier et un crayon, puis faites la cartographie
+> Prenez un papier et un crayon, puis dessinez la cartographie
 fonctionnelle de votre Produit
 
 
@@ -250,13 +244,13 @@ fonctionnelle de votre Produit
 Mais attention, cette cartographie fonctionnelle, en réalité... ce n'est
 pas à vous de la faire !
 
-Pourquoi donc cet air surpris sur votre visage ? Si si, je vous assure,
-ce n'est pas à vous de la réaliser, mais rassurez-vous, vous en serez le
+Pourquoi donc cet air surpris sur votre visage ? Je veux simplement dire que ce 
+n'est pas à vous *seul* de la réaliser. Mais rassurez-vous, vous en serez le 
 moteur.
 
 Concrètement, vous devez dans un premier temps discuter avec vos
-développeurs, mais surtout ceux-ci doivent réaliser un travail d'enquête
-: vos développeurs doivent vous interviewer. 
+développeurs, mais surtout ceux-ci doivent réaliser un travail d'enquête : 
+vos développeurs doivent vous interviewer. 
 
 Ou plutôt ils doivent interviewer le Produit. Après tout... vous êtes le
 porte-parole de votre produit.
@@ -285,6 +279,7 @@ personne du métier, mais totalement inconnus des équipes techniques
 + vous permettre de prendre du recul sur votre métier et votre besoin en
 l'expliquant à des néophytes.
 
+> Les équipes techniques doient interviewer le porte-parole du produit
 
 ## Les tâches ne servent à rien
 

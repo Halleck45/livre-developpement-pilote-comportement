@@ -12,7 +12,7 @@ Pour remédier à cela, il est possible d'utiliser une autre approche,
 celle préconisée par le Développement Piloté par le Comportement.
 
 
-"Quel terme barbare !" me direz-vous. C'est vrai. Mais en fait rien de
+"Quel terme barbare !" me direz-vous. C'est vrai. Mais, en fait, rien de
 technique ou de geek derrière ce terme. C'est simplement une démarche
 qui consiste à communiquer avec vos développeurs d'une autre manière, de
 sorte qu'il vous comprennent.
@@ -99,15 +99,15 @@ dit "c'est génial, en tant que ... vous pouvez faire ça !". Par exemple
 
     [gherkin]
     # Identifiez le service délivré par votre fonctionnalité à l’utilisateur :
-    Je veux un service rendu
-    Je veux retirer de l’argent au distributeur
-    Je veux connaître la quantité d’argent qu’il me reste sur mon compte
-    Je veux ...
+    Je peux un service rendu
+    Je peux retirer de l’argent au distributeur
+    Je peux connaître la quantité d’argent qu’il me reste sur mon compte
+    Je peux ...
 
 On commence déjà à y voir plus clair. **Il ne reste plus qu'à préciser
 le bénéfice métier** de votre fonctionnalité. Car oui, une
 fonctionnalité sans bénéfice pour l'utilisateur ne sert à rien. Si vous
-ne voyez pas de bénéfice pour votre fonctionnalité, c'est qu'elle ne
+ne voyez pas de bénéfice pour votre fonctionnalité, c'est sans doute qu'elle ne
 mérite pas d'être développée. Décrivez ce bénéfice ainsi :
 
     [gherkin]
@@ -122,7 +122,7 @@ explicite, en quatre courtes lignes** :
     [gherkin]
     Fonctionnalité : Retirer de l’argent au distributeur
         En tant que client de la banque
-        Je veux retirer de l’argent au distributeur
+        Je peux retirer de l’argent au distributeur
         De telle sorte que je puisse obtenir de l’argent même quand la banque est fermée
 
 N'importe quel membre de votre équipe comprendra ce qu'est cette
@@ -145,14 +145,14 @@ attendez pour votre fonctionnalité. Par exemple :
     [gherkin]
     # Un Scénario est une situation concrète de votre Fonctionnalité :
     Fonctionnalité : Retirer de l’argent au distributeur
-
+    
     Scénario : Retirer de l’argent avec une carte valide
     Scénario : Retirer de l’argent avec une carte expirée
     Scénario : Retirer de l’argent sur un distributeur qui ne contient
       plus d’argent
     Scénario : ...
 
-La réalisation ou non de ces scénarios détermine l'avancée de votre
+La réalisation (ou non) dans votre application de ces scénarios détermine l'avancée de votre
 fonctionnalité.
 
 
@@ -167,7 +167,7 @@ Vous vous en doutez, il peut arriver qu'une simple phrase ne suffise pas
 un contexte, un événement déclencheur ou un résultat attendu.
 
 
-Le contexte du scénario est introduit par "étant donné". Il situe les
+Le contexte du scénario est introduit par l'expression "étant donné". Il situe les
 conditions d'existence de votre scénario :
 
     [gherkin]
@@ -191,8 +191,8 @@ scénario, qui vient juste après que le contexte initiale soit situé :
         Quand je demande le solde de mon compte
         Quand ...
 
-Si chaque action a une conséquence, il en va de même pour les événements
-: chaque événement attend un résultat, exprimé par "alors" :
+Si chaque action a une conséquence, il en va de même pour les événements : 
+chaque événement attend un résultat, exprimé par l'expression "alors" :
 
     [gherkin]
     # Chaque Scénario aboutit à un résultat :
@@ -213,13 +213,13 @@ Au final, voici une fonctionnalité plus complète :
     [gherkin]
     # Toute personne qui connaître votre Langue Commune comprend
     # votre fonctionnalité :
-
+    
     Fonctionnalité : Retirer de l’argent au distributeur
         En tant que client de la banque
-        Je veux retirer de l’argent au distributeur
+        Je peux retirer de l’argent au distributeur
         De telle sorte que je puisse obtenir de l’argent
           même quand la banque est fermée
-
+    
     Scénario : Retirer de l’argent avec une carte valide et un
       compte approvisionné
         Etant donné que je détiens un compte bancaire soldé de 100 euros
@@ -227,7 +227,7 @@ Au final, voici une fonctionnalité plus complète :
         Quand je demande à retirer 20 euros
         Alors je reçois 20 euros
         Et ma carte m’est restituée
-
+    
     Scénario : Retirer de l’argent avec une carte expirée
         Etant donné que ma carte est expirée
         Quand je demande à retirer 20 euros
@@ -256,16 +256,16 @@ mieux que des exemples**. Prenons celui-ci :
 Bon, c'est simple, mais limité, car cela nous oblige à recopier le
 scénario autant de fois que nous avons d'exemples. Heureusement, notre
 grammaire est riche, et vous pouvez utiliser la syntaxe suivante (votre
-scénario devient alors un Plan de scénario) : 
+scénario devient alors un Plan du scénario) : 
 
     [gherkin]
     # Votre fonctionnalité peut contenir plusieurs exemples facilement :
 
-    Plan de Scénario : Retirer de l’argent avec un compte approvisionné
+    Plan du Scénario : Retirer de l’argent avec un compte approvisionné
         Etant donné que ma carte expire l’an prochain
         Quand je demande à retirer "<montant-demandé>" euros
         Alors je reçois "<montant-reçu>" euros
-
+    
     Exemples :
         | montant-demandé   | montant-reçu  |
         | 20                | 20            |
@@ -275,6 +275,10 @@ scénario devient alors un Plan de scénario) : 
 Pratique non ? Les symboles < et \> indiquent une valeur d'exemple, à
 rechercher dans le tableau juste en dessous.
 
+Le tableau est dessiné grâce au caractère "pipe". Si vous ne savez pas le situer 
+sur votre clavier, il suffit de taper `Alt Gr" + 6`, ou `Alt + Maj + L` si vous 
+utilisez un Mac. Rassurez-vous, comme vous le verrez par la suite, il existe des 
+outils graphiques pour vous faciliter la vie.
 
 ## Travaillez en équipe
 
@@ -287,18 +291,10 @@ projet**.
 Lorsque vous allez rédiger vos scénarios, voici ce qui risque de se
 passer :
 
-Vous allez devoir les expliquer à votre équipe technique lorsque vous
-les leur fournirez
-
-Vous n'allez peut être pas penser à tout, et vos équipes devront vous
-solliciter très (trop) régulièrement pour des aspects que vous aurez
-oublié
-
-Certains de vos scénarios ne seront pas clairs ou n'emploieront pas le
-vocabulaire de la Langue Commune (on a toujours tendance à se trouver
-soi-même très clair ; ce n'est pas toujours vrai...)
-
-L'équipe risque de ne pas se sentir suffisamment impliquée
++ Vous allez devoir les expliquer à votre équipe technique lorsque vous les leur fournirez
++ Vous n'allez peut être pas penser à tout, et vos équipes devront vous solliciter très (trop) régulièrement pour des aspects que vous aurez oublié
++ Certains de vos scénarios ne seront pas clairs ou n'emploieront pas le vocabulaire de la Langue Commune (on a toujours tendance à se trouver soi-même très clair ; ce n'est pas toujours vrai...)
++ L'équipe risque de ne pas se sentir suffisamment impliquée
 
 
 Ces écueils ne sont bien sûr systématiques, mais le risque est là.
@@ -313,7 +309,7 @@ le traduire en scénarios**, de telle sorte que tous comprennent
 clairement ce que vous attendez d'eux.
 
 
-Pour résumé, écoutez les remarques de vos équipes lors de la rédaction
+Pour résumer, écoutez les remarques de vos équipes lors de la rédaction
 des scénarios. Idéalement, vous devriez entendre des "oui mais qu'est-ce
 qui se passe si..." et "je ne comprend ce que devient...". Si c'est le
 cas, le pari est réussi !
@@ -332,7 +328,7 @@ va-et-vient incessants au cours du développement"
 
 Vous aviez déjà le vocabulaire (la Langue Commune), vous voici désormais
 avec la grammaire nécessaire pour exprimer votre besoin. Mais on est
-tous les mêmes : on n'aime pas la grammaire.
+tous les mêmes : personne n'aime pas la grammaire !
 
 
 Après tout, si votre véritable objectif est de vous focaliser sur

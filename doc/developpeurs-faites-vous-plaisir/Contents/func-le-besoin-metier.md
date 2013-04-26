@@ -22,14 +22,14 @@ intervenants, où qu'ils soient dans le monde.
 
 
 Votre produit est pareil : **il doit pouvoir se définir en une courte
-phrase**, et en fait ne sert qu'à une chose. Si si, tout le reste est
+phrase**, et en réalité ne sert qu'à une chose. Si si, tout le reste est
 utile commercialement, esthétiquement, fonctionnellement... Mais votre
 produit possède un coeur, et la première chose à faire est de
 l'identifier.
 
 
 Cela vous permettra de savoir vraiment ce dont vous avez besoin. Si vous
-demandez au père de famille. dont nous parlions plus haut, de décrire sa
+demandez au père de famille, dont nous parlions plus haut, de décrire sa
 voiture, il va peut-être dire qu'il veut un break Citroen de 120 chevaux
 gris métallisé, avec 5 portes. Il sait ce qu'il veut... Pourtant il
 oublie l'essentiel : la voiture doit lui permettre de se rendre d'un
@@ -37,7 +37,7 @@ point A à un point B.
 
 
 Oui, c'est évident : une voiture permet de se déplacer. Mais pourtant,
-évident ou pas, une voiture, ce n'est rien d'autre, c'est ce qui reste
+évident ou pas, une voiture, ce n'est rien d'autre ; c'est ce qui reste
 une fois qu'on a enlevé tout le reste : retirez la climatisation, la
 peinture métallisée, le cuir... Il nous reste le coeur de la voiture, ni
 plus ni moyen qu'un moyen de locomotion.
@@ -48,7 +48,7 @@ toujours une voiture ? Oui, sans aucun doute, le moteur n'est qu'un
 moyen pour cette fin, ultime, de permettre aux gens de se déplacer : une
 voiture à cheval n'en reste pas moins une voiture. Certes, elle n'est
 peut-être pas optimale, pas rapide, pas jolie, tout ce que vous
-voulez... Mais C'EST UNE VOITURE. Et peut-être moins cher en plus !
+voudrez... Mais C'EST UNE VOITURE. Et peut-être moins cher en plus !
 
 
 Pour votre logiciel, votre intranet, votre application mobile, c'est
@@ -81,7 +81,7 @@ vie de celui qui l'utilise.
 Ils auraient pu choisir de concevoir un logiciel riche, multi-fonction
 et polyvalent ; ils ne l'ont pas fait. Pourquoi ? Tout simplement parce
 que cela n'aurait pas servi leur vision. On pourrait vouloir un CRM dans
-Basecamp, ou un intranet, ou tout ce que vous voulez. Tous ces modules
+Basecamp, ou un intranet, ou tout ce que vous voudrez. Tous ces modules
 pourraient être forts agréables, utiles et d'excellents arguments
 commerciaux. Mais ils ne servent pas la vision du produit. Et c'est
 justement pour ça que Basecamp plaît autant : il ne fait qu'une chose,
@@ -112,6 +112,7 @@ toute l'énergie disponible (développeurs, serveurs, graphistes,
 ergonomes...) sur ce qui répond à cette vision, autrement dit sur ce qui
 est vraiment utile.
 
+> Retirez de votre Produit tout ce qui ne sert par votre Vision
 
 ## Vous attendez des résultats métiers
 
@@ -155,7 +156,7 @@ main les meilleurs atouts pour le vendre.
 
 Le bénéfice sera d'autant plus grand que, au lieu de perdre du temps sur
 des choses moins utiles, vos développeurs, prestataires ou la société
-qui a en charge votre projet vont mieux comprendre votre besoin, sans se
+qui a en charge votre projet, vont mieux comprendre votre besoin, sans se
 perdre en détails inutiles pour le moment.
 
 
@@ -231,9 +232,10 @@ généralement :**
 + source d'erreurs et de bugs
 + difficile et démoralisant pour les équipes
 
-
 L'idée pour résoudre ces difficultés est assez simple, mais parfois
 difficile à mettre en place, comme nous allons le voir. 
+
+> Vous devez trouver une solution pour faciliter le changement
 
 ## Gérez votre besoin de changements
 
@@ -247,7 +249,7 @@ dévastateur. 
 
 
 Qui ne connaît pas le célèbre tableau de Léonard de Vinci : La Joconde ?
-Que se serait-il passé si Léonard de Vinci devait peindre Mona Lisa
+Que se serait-il passé si Léonard de Vinci avait dû peindre Mona Lisa
 comme on travaille généralement sur un projet informatique ? Cela
 donnerait à peu près ceci :
 
@@ -301,11 +303,7 @@ livré à temps et avec un produit fini.
 Mais le changement vers l'agilité peut être simple et rapide, sous deux
 conditions : 
 
-**vous DEVEZ vous impliquer dans votre projet !** C'est à vous de
-prioriser, de dire ce qui va, ne va pas, régulièrement.
++ **vous DEVEZ vous impliquer dans votre projet !** C'est à vous de prioriser, de dire ce qui va, ne va pas, régulièrement.
++ Vous devez accepter de vous faire aider : **les changements à adopter ne sont pas que méthodologiques, ils sont aussi conceptuels**. De nombreuses sociétés agiles sauront vous guider et vous conseiller. Et croyez moi, l'investissement en vaut la peine, largement !
 
-Vous devez accepter de vous faire aider : **les changements à adopter ne
-sont pas que méthodologiques, ils sont aussi conceptuels**. De
-nombreuses sociétés agiles sauront vous guider et vous conseiller. Et
-croyez moi, l'investissement en vaut la peine, largement !
-
+> Itération, feedback; itération, feedback; itération ...
