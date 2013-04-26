@@ -12,14 +12,14 @@ Je vous propose de voir comment traduire ce besoin en tests automatisés, de tel
 qu'une simple ligne de commande dans un terminal vous indique si ce que vous avez développé est 
 conforme ou non.
 
-L'ensemble des exemples que nous allons voir sont écrits en PHP. Pourquoi ? Tout simplement 
+L'ensemble des exemples que nous allons voir est écrit en PHP. Pourquoi ? Tout simplement 
 parce que la communauté PHP a très fortement et très rapidement adhéré au Développement 
 piloté par le comportement. Les outils PHP pour le Développement piloté par
 le comportement sont matures, nombreux, et surtout offrent une souplesse qui, à ce jour,
 ne se retrouve pas dans d'autres langages.
 
-Cependant, il existe des outils pour écrire et lancer des tests automatisés dans n'importe
-quel langage :
+Cependant, il existe des outils pour écrire et lancer des tests automatisés dans à 
+peu près n'importe quel langage :
 
 + Ruby : Cucumber (http://cukes.info)
 + Java : JBehave (http://jbehave.org)
@@ -69,7 +69,7 @@ Mac :
     Utilisez MampServer (http://www.mamp.info)
 
 
-Installer Behat est simple, peut être fait de plusieurs manières : sous forme d'archive PHP
+Installer Behat est simple, et peut être fait de plusieurs manières : sous forme d'archive PHP
 (phar) ou en utilisant un gestionnaire de dépendance.
 
 ### Installation avec Composer
@@ -97,7 +97,7 @@ de votre projet :
 ### Installation sous forme d'archive Phar
 
 Il vous suffit de télécharger le fichier behat.phar à l'adresse suivante : http://behat.org/
-downloads/behat.phar, et de le placer dans un dossier `bin` à la racine de votre projet. Vous
+downloads/behat.phar. Placez-le ensuite dans un dossier `bin` à la racine de votre projet. Vous
 aurez donc l'arborescence suivante :
 
     [bash]
@@ -119,15 +119,15 @@ Une fois que Behat est installé, il vous suffit d'exécuter la commande suivant
     php ./bin/behat --init
 
 Cela aura pour effet de créer dans votre projet tous les éléments dont Behat a besoin pour
-fonctionner. Votre arborescence ressemble désormais à :
+fonctionner.   
 
 Vous voici désormais avec les dossiers suivants :
 
 + `features` : contient la listes des fonctionnalités, sous forme de fichier `.feature`
 + `features/bootstrap` : contient les fichiers PHP de traduction de Fonctionnalité en code source
 
-Chaque nouvelle fonctionnalité devra donc être ajoutée dans le dossier ̀ features`, sous forme d'un 
-fichier `.feature`. Créez par exemple le fichier  `features/calculer-mon-age.feature`, avec le 
+Chaque nouvelle fonctionnalité devra donc être ajoutée dans le dossier `features`, sous forme d'un 
+fichier `.feature`. Créez par exemple le fichier `features/calculer-mon-age.feature`, avec le 
 contenu suivant :
 
 
@@ -188,7 +188,7 @@ de passerelle entre le besoin exprimé (sous forme de phrases) et votre applicat
 
 Il vous appartient de modifier ces fichiers pour faire la traduction du besoin fonctionnel. C'est un travail 
 qui semble long, mais en réalité il n'est pas beaucoup plus long que de tester vous-même à main que la demande initiale 
-est respectée, mais à surtout l'avantage de rendre ce travail de recette interne totalement automatique.
+est respectée, mais possède surtout l'avantage de rendre ce travail de recette interne totalement automatique.
 
 Traduisez maintenant la fonctionnalité en code source dans le fichier `features/bootstrap/FeatureContext.php`, en adaptant 
 le code PHP fourni par Behat selon votre besoin. Par exemple :
@@ -275,7 +275,7 @@ Notez ces différents aspects :
 + le lien entre les phrases et les méthodes PHP est effectué par un expression régulière (par exemple : `/^on me souhaite un joyeux anniversaire$/`)
 + vous devez traduire chaque étape. Behat comprendra qu'une étape n'est pas valide si vous levez une exception, comme c'est le cas dans la méthode `onMeSouhaiteUnJoyeuxAnniversaire()`
 + il est possible de recevoir certaines informations (nombres, exemples...) sous forme de paramètres de méthodes.
-
++ l'application qui va être testée fonctionne en ligne de commande (`php src/age.php`)
 
 Maintenant, il vous suffit de relancer Behat pour vérifier automatiquement que votre application a bien 
 le comportement attendu :
@@ -283,7 +283,7 @@ le comportement attendu :
     [bash]
     ./bin/behat
 
-![ Les fonctionnalités échouent : elles sont rouges ]
+![ Les tests échouent ; c'est normal, les fonctionnalités n'ont pas encore été développées ]
 (dev-behat-exo-date-fail.jpg)
 
 
@@ -395,11 +395,11 @@ vous parle en aucun cas ici de découper votre code comme vous le feriez dans un
 principes SOLID, découpage des méthodes...).
 
 Non, la réutilisabilité dans les Contextes de traduction (fichiers `*Context.php`) ne passe pas par une réutilisation du code source, 
-mais bel et bien par une réutilisation de phrases. *En réalité, vous devez apprendre à faire du refactoring de phrases*.
+mais bel et bien par une réutilisation de phrases. **En réalité, vous devez apprendre à faire du refactoring de phrases**.
 
 Cette tâche n'est pas simple au départ, mais est en réalité assez naturelle. Chaque phrase, qui correspond à un contexte, un 
-élément déclencheur ou un résultat attendu, peut être découpée en différentes étapes, qui *elles-mêmes pourront être décomposées 
-jusqu'à arriver à des expressions atomiques simples*.
+élément déclencheur ou un résultat attendu, peut être découpée en différentes étapes, qui **elles-mêmes pourront être décomposées 
+jusqu'à arriver à des expressions atomiques simples**.
 
 Prenez par exemple la phrase suivante :
 
@@ -525,7 +525,7 @@ Ce qui donnerait par exemple dans notre cas :
     }
 
 
-Notez les trois dernières traduction (les méthodes ̀ queJeSuisSurLaPage()`, `jeCoche()` et `jeCliqueSur()`). Ces méthodes 
+Notez les trois dernières traduction (les méthodes  ̀ queJeSuisSurLaPage()`, `jeCoche()` et `jeCliqueSur()` ). Ces méthodes 
 de traduction concernent le comportement d'un navigateur web, comme Firefox ou Chrome... Il arrive en effet très souvent 
 qu'il faille effectuer des actions qui n'existent que dans un navigateur. Vous allez voir qu'avec Behat c'est très facile !
 
@@ -540,7 +540,7 @@ attendu ?), en soumettant un formulaire, en cliquant sur un lien... Bref, en sur
 Heureusement, il est aujourd'hui très simple d'automatiser une recette fonctionnelle, quand bien même elle concerne une 
 application web. Allons-y !
 
-Une fois de plus nous allons utiliser Behat. Plus précisément, nous allons utiliser un module de Behat, appelé Mink, qui permet de 
+Une fois de plus nous allons utiliser Behat. Plus précisément, nous allons utiliser une extension de Behat, appelée Mink, qui permet de 
 naviguer dans une application web et de lancer des tests automatisés lors de cette navigation.
 
 Concrètement, Mink permet une double approche :
@@ -584,7 +584,9 @@ Il vous suffit ensuite d'ajouter l'instruction suivantes dans vos fichiers PHP d
     [php]
     require_once 'mink.phar';
 
-Ensuite, il suffit de configurer Behat pour lui indiquer que l'on utilise Mink. Mink étant une extension de Behat, C'est très simple. 
+### Configurer Mink
+
+Maintenant, il suffit de configurer Behat pour lui indiquer que l'on utilise Mink. Mink étant une extension de Behat, C'est très simple. 
 Il suffit de créer le fichier `behat.yml` à la racine de votre projet :
 
     [yaml]

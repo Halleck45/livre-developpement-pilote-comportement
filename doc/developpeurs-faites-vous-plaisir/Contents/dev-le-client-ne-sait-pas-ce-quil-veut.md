@@ -35,7 +35,7 @@ Sans Vision, le projet est condamné à être un échec, ou au mieux une semi-r�
 Votre client doit impérativement vous fournir cette Vision. S'il en est incapable, insistez pour qu'il soit
 aidé : faites lui lire le premier tome de ce livre, faites le coacher par une société spécialisée...
 Sans cela, vous ne pourrez pas travailler efficacement avec lui et ne prendrez pas autant de plaisir
-que vous le mériter dans votre travail.
+que vous le méritez dans votre travail.
 
 > La plupart des projets informatiques échouent car ils ne sont pas motivés par une Vision.
 
@@ -83,6 +83,7 @@ client une Langue Commune.
 
 
 ## Engagez-vous à livrer régulièrement
+
 Quoi de plus frustrant, après de longues semaines de travail acharné, d'entendre un si triste
 "Mais ce n'est pas du tout ce que j'avais demandé" ?
 
@@ -122,7 +123,7 @@ fonctionnalité plus complète par là, un autre lors de l'itération suivante..
 (mona-lisa-iterative.jpg)
 
 
-Bien entendu, cela ne vas pas sans un changement des méthodologies de travail : il va falloir découper
+Bien entendu, cela ne va pas sans un changement des méthodologies de travail : il va falloir découper
 les fonctionnalités pour faire en sorte qu'elle puisse être développées rapidement, il faut optimiser
 les recettes (pourquoi ne pas en profiter pour utiliser des tests automatisés, comme des tests
 unitaires ?)...
@@ -150,6 +151,7 @@ légitime que tout le monde sache de quoi il était question.
 
 
 ## Adoptez le point de vue de l'utilisateur final
+
 Chaque projet informatique, qu'il s'agisse d'un site web, d'un intranet, d'une application... tout
 projet dessert un objectif : rendre service à quelqu'un. Il faut vous mettre dans la peau de cette personne.
 
@@ -170,7 +172,7 @@ pouvez discuter avec elles, adopter leur vocabulaire, et donc profitez directeme
 petit, ce feedback sera de plus en plus positif ; ce sera alors de plus en plus agréable de voir que les gens
 sont contents de ce que vous leurs offrez.
 
-Cela vous permettra aussi de quitter à l'occasion de casquette de développeur pour, pourquoi pas, proposer
+Cela vous permettra aussi de quitter à l'occasion la casquette de développeur pour, pourquoi pas, proposer
 des améliorations, discuter de l'orientation du projet... Si vous savez comment va être utilisé le Produit,
 qu'est-ce qui vous empêche d'essayer de l'améliorer ?
 
@@ -180,8 +182,8 @@ un projet pour des besoins alimentaires. C'est légitime. Mais autant faire en s
 alimentaires, vous apportent de la satisfaction humaine. Adopter la vision de l'utilisateur final vous
 permettra toujours d'échanger : échanger avec votre client, les utilisateurs finaux, vos collègues...
 
-Il y a quelques temps, j'ai lancé un sondage auprès des développeurs de la société dans laquelle je
-travaille. Une des questions était à peu près la suivante : "Prenez-vous plaisir dans votre travail?".
+Il y a quelques temps, j'ai lancé un sondage auprès des développeurs de la société que j'ai accompagnée. 
+Une des questions était à peu près la suivante : "Prenez-vous plaisir dans votre travail?".
 Près d'un quart des réponses était négatif. Quel dommage !
 
 N'oubliez pas que vous travaillez dans un monde d'humains : plus vous interagirez avec eux, plus vous

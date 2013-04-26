@@ -1,5 +1,5 @@
 # Le développement est un plaisir
-"Le client ne sait jamais ce qu'il veut". Comment-pouvez-vous dans ce cas faire en sorte qu'il soit satisfait ?
+"Le client ne sait jamais ce qu'il veut". Comment-pouvez-vous, dans ce cas, faire en sorte qu'il soit satisfait ?
 Êtes-vous condamné à délivrer des logiciels, sites web ou applications dont le client ne sera pas réellement
 satisfait ?
 
@@ -9,8 +9,8 @@ plaisir ! Et c'est tellement décevant d'entendre cette fameuse phrase : "ce n'e
 
 Il m'arrive de poser cette question aux personnes que je rencontre : "avez-vous, au moins une fois,
 participé à un projet informatique où le projet a été livré à l'heure, et où, non seulement le client,
-mais aussi le développeur, ont été pleinement satisfaits?" . A l'heure où j'écris ces lignes, seule
-une personne m'a répondu "oui".
+mais aussi le développeur, le testeur, l'intégrateur... ont été pleinement satisfaits et y ont pris plaisir ?". 
+A l'heure où j'écris ces lignes, seule une personne m'a répondu "oui".
 
 Quoi ?! Une seule personne ? Mais pourtant tous les projets devraient se passer comme ça.
 Tous les projets devraient être livrés à l'heure, devraient être intéressants, enrichissants...

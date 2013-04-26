@@ -97,14 +97,14 @@ avec des outils spécialisés.
     application mobile... Ce qui compte vraiment c'est le comportement de
     votre Produit.
 
-5) **L'automatisation des recettes n'est qu'un bonus**
+5) **L'automatisation des recettes fonctionnelles n'est qu'un bonus**
 
-:   Automatiser des recettes fonctionnelles n'a de sens que si au préalable
+:   Automatiser des recettes fonctionnelles n'a de sens uniquement si au préalable
     vous avez réussi à faire comprendre votre besoin. Sans dialogue ni
     échanges, les tests automatisés testeront que l'application fait bien
     quelque chose, mais pas forcément ce que vous attendez.
 
-6) **L'automatisation des tests du code source est primordiale**
+6) **L'automatisation des tests techniques est primordiale**
 
 :   Laissez le temps aux équipes techniques et poussez-les à écrire des
     tests automatisés de code source (test unitaire). C'est le seul moyen
@@ -130,7 +130,7 @@ avec des outils spécialisés.
     communication pour décrire votre besoin. Illustrez votre besoin par des
     exemples, pourquoi pas avec humour, pour effacer toute ambiguïté.  
 
-10) **Le Développement piloté par le Comportement n'est pas un miracle**
+10) **Le Développement piloté par le Comportement n'est pas une recette miracle**
 
 :   La recette miracle n'existe pas. Mais c'est au moins un bonne démarche,
     éprouvée, pour vous faire comprendre et faciliter la communication entre

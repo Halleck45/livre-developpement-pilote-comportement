@@ -46,7 +46,7 @@ demande de changement fonctionnel : il lui "suffit" de superposer le nouveau bes
 sur l'ancien code source.
 
 De cette manière, toute modification technique devient représentative des modifications fonctionnelles : 
-une modification fonctionnelle mineure ne peut plus entraîner une refonte technique longue et coûteuse. 
+une modification fonctionnelle mineure risque moins d'entraîner une refonte technique longue et coûteuse. 
 Et a contrario, il est totalement légitime qu'une évolution fonctionnelle lourde nécessite une refonte 
 tout autant importante du code source.
 
@@ -59,7 +59,8 @@ façon à répondre au mieux et le plus facilement à ce besoin.
 ## Les tests unitaires sont indispensables
 
 En informatique on adore les sigles ; connaissez-vous le VDD ? C'est un sigle à la mode qui désigne
-le "var_dump driven development", ou autrement dit, le développement piloté par la fonction var_dump() de PHP.
+le "var_dump driven development", ou autrement dit, le développement piloté par la fonction `var_dump()` de PHP. 
+Notez que ça marche aussi si vous faites un `console.log()` en JavaScript, ou dans n'importe quel langage...
 
 Pourquoi est-ce une expression à la mode ? Tout simplement parce qu'elle désigne une pratique de développement 
 vouée à l'extinction, qui consiste pour le développeur à afficher à l'écran les valeurs de certaines variables pour 
@@ -77,7 +78,7 @@ pour faciliter la vie d'un développeur, fiabiliser son code et réduire les co�
 
 Il existe dans tous les langages de programmation des outils qui facilitent la rédaction de tests unitaires : JUnit en Java, QUnit en JavaScript...
 En PHP, deux outils se démarquent par leur fiabilité et leur grande communauté: [PHPUnit](http://phpunit.de), développé par Sebastian Bergmann, 
-et [atoum][http://docs.atoum.org], développé par Frédéric Hardy. Ces deux outils proposent une approche légèrement différente des tests unitaires, 
+et [atoum](http://docs.atoum.org), développé par Frédéric Hardy. Ces deux outils proposent une approche légèrement différente des tests unitaires, 
 mais sont tous les deux simples, efficaces et complets.
 
 De manière générale, rédiger un test unitaire consiste à dérouler un processus simple :
@@ -86,8 +87,9 @@ De manière générale, rédiger un test unitaire consiste à dérouler un proce
 + exécuter une commande : il s'agit de ce que l'on souhaite tester
 + décrire quel doit être l'effet de la commande : il s'agit alors du résultat attendu
 
-Lors que l'on affiche une variable à l'écran pour vérifier sa valeur, finalement ce que l'on fait c'est exiger que 
-cette variable ait telle ou telle valeur. En d'autres termes, on fait une assertion sur la valeur de la variable.
+Lorsque l'on affiche une variable à l'écran pour vérifier sa valeur, en réalité, tout ce que l'on fait c'est exiger que 
+cette variable ait telle ou telle valeur. En d'autres termes, *on fait une assertion sur la valeur de la variable*. 
+Et toute assertion peut être traduite en code source.
 
 On peut imaginer, par exemple, créer un test unitaire automatisé pour une fonction d'addition, qui utiliserait la 
 fonction PHP native `assert()` :
@@ -101,14 +103,20 @@ Ce code PHP générera une erreur si la fonction addition() ne renvoie pas "10".
 L'avantage d'utiliser un outil de tests automatisés sera de pouvoir organiser ses tests facilement et efficacement. Chaque 
 assertion valide sera affichée en vert, les erreurs seront remontées aux développeur en un instant. 
 
-> Les tests unitaires sont le seul moyen efficaces de fiabiliser un code source
+
+![ Les tests unitaires permettent de s'assurent que le code fonctionne comme prévu](phpunit.png)
+
+Grâce aux tests automatisés, vous saurez à tout instant si vous venez de tout casser ou pas ; 
+ce sera d'autant plus facile de tout réparer...
+
+> Les tests unitaires sont le seul moyen efficace de fiabiliser un code source
 
 ## Tester le besoin métier est indispensable
 
 Tester son code source est bien. C'est même déjà pas mal du tout ! Mais une application web est plus qu'un code source : c'est 
-un assemblage de comportements (code source) vis-à-vis d'informations (données, souvent issues d'une base de données), pour 
-délivrer un message (par exemple une page web), le tout exécuté dans un environnement spécifique (serveur), le tout 
-vis-à-vis d'un utilisateur (navigateur).
+un assemblage de *comportements* (code source) *vis-à-vis d'informations* (données, souvent issues d'une base de données), *pour 
+délivrer un message* (par exemple une page web), le tout exécuté dans un environnement spécifique (serveur), le tout 
+*vis-à-vis d'un utilisateur* (navigateur).
 
 On comprend vite du coup que ce n'est pas parce qu'un code source fonctionne de la manière attendue que l'application, elle aussi, 
 aura le comportement désiré.
@@ -138,3 +146,7 @@ l'ensemble de l'application fonctionne toujours de la manière attendue.
 
 C'est pour cela qu'il existe désormais des outils de tests fonctionnels automatisés. C'est outils sont 
 infatigables: ils traquent en permanence votre application à la recherche d'anomalies fonctionnelles.
+
+Nous verrons par la suite comment mettre en place ces outils. Mais avant de faire une recette fonctionnelle, 
+il faut déjà commencer par comprendre la demande initiale. Il est temps de découvrir comment faciliter la compréhension 
+d'une demande fonctionnelle.

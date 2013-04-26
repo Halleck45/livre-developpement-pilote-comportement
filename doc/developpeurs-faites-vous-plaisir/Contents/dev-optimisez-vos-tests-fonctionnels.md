@@ -41,8 +41,8 @@ Remarquez les alias de Contexte que nous avons utilisés, par exemple "mink" dan
     [php]
     $this->useContext('mink', new MinkContext($parameters));
 
-Ces alias vont vous permettre de récupérer facilement vos Contextes d'une Classe PHP à l'autre. Par exemple 
-pour récupérer votre contexte `mink` depuis le context `client`, il vous suffit d'utiliser le code suivant :
+Ces alias vont vous permettre de récupérer facilement vos Contextes d'un Contexte à l'autre. Par exemple 
+pour récupérer votre contexte `mink` depuis le contexte `client`, il vous suffit d'utiliser le code suivant :
 
     [php]
     $mink = $this->getMainContext()->getSubContext('mink');
@@ -74,10 +74,10 @@ Car oui, sur mobile, il est fort probable que la manière de vérifier si le bes
 à un site web.
 
 Et même sans un changement aussi radical que le passage d'un site web à une application mobile, comment gérer facilement les changements 
-d'interface graphique : une `table` devient une `div`, le bouton `Se connecter` devient `Connexion`... 
+d'interface graphique : une `table` devient une `div`, le texte du bouton `Se connecter` devient `Connexion`... 
 
 Le seul moyen d'éviter de devoir réécrire toutes ses définitions lorsqu'un changement d'interface survient (ce qui est le cas dans les 
-deux précédents exemples) est de *créer des couches d'isolation de l'interface*.
+deux précédents exemples) est de **créer des couches d'isolation de l'interface**.
 
 Concrètement, c'est très simple : il suffit de créer des Contextes de définition spécialisé dans l'affichage des pages. On peut 
 imaginer par exemple un Contexte de définition consacré à l'affichage des pages Web, qui contiendra donc nos définitions liées à l'affichage :
@@ -105,7 +105,7 @@ pour définir quel Contexte de définition l'on souhaite utiliser :
           parameters:
             view: web # mobile | web ...
 
-Une simple condition suffit à nous permettre d'utiliser le bon Contexte :
+Une simple condition dans le constructeur du Contexte principal suffit à nous permettre d'utiliser le bon Contexte :
 
     [php]
     public function __construct(array $parameters)
@@ -126,7 +126,10 @@ de définition par page (ou par lot fonctionnel) :
     $this->useContext('view.panier', new View\Web\PanierContext($parameters));
 
 Cette pratique, que l'on pourrait désigner par Isolation de l'IHM, peut sembler complexe, mais est 
-en réalité le seul moyen de péreniser les définitions au cours de la vie d'un projet.
+en réalité le seul moyen efficace de péreniser les définitions au cours de la vie d'un projet.
+
+N'hésitez pas à consulter la documentation de [BehatPageObjectExtension](https://github.com/sensiolabs/BehatPageObjectExtension), 
+qui est une extension de Behat dédiée à cet usage.
 
 > Isolez ce qui concerne l'interface graphique dans des Contextes spécifiques
 
@@ -152,7 +155,7 @@ fichiers de sortie dans un format standard (xml). Ces fichiers peuvent donc êtr
 capables de les traiter ou de les transformer selon leurs spécificité.
 
 Il est par exemple tout à fait possible d'intégrer Behat à une plate-forme d'intégration continue, comme Jenkins. 
-Une plate-forme d'intégration continue a pour objectif de délivrer en permanence du code source (déploiement continu), 
+Une plate-forme d'intégration continue permet de délivrer en permanence du code source (déploiement continu), 
 c'est-à-dire de permettre à un site web d'être mis à jour très régulièrement.
 
 Indirectement, les plate-formes d'intégration continue (PIC) fournissent une vision d'ensemble sur un projet : les 

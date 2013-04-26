@@ -1,7 +1,7 @@
 # Comprenez (enfin!) ce que votre client vous demande
 
 
-Vous l'avez compris : votre client ne parle pas la même langue que vous. Comment comprendre ce qu'il vous demande dans ce cas ?
+Votre client ne parle pas la même langue que vous. Comment comprendre ce qu'il vous demande dans ce cas ?
 Certains vous répondront : "utilisez UML". D'autres vous diront qu'il faut demander à
 votre client de s'exprimer sous forme de "si...alors". J'imagine que cela doit être possible
 dans certain cas. Mais dans la majorité des situations, exiger de vos clients qu'ils apprennent l'UML, 
@@ -57,7 +57,7 @@ indiquer qui est le bénéficiaire de cette fonctionnalité :
     En tant que propriétaire de la boutique
     En tant que ...
 
-Vous avez donc désormais connaissance de l'acteur bénéficiaire de la fonctionnalité. Il
+Vous aurez donc désormais connaissance de l'acteur bénéficiaire de la fonctionnalité. Il
 reste encore à identifier le service offert par la fonctionnalité. C'est cela que vous aurez, finalement, à programmer :
 
     [gherkin]
@@ -95,7 +95,7 @@ de recenser l'ensemble des fonctionnalités du projet de cette manière.
 Mais, vous vous en doutez, cela ne suffit pas. Il va falloir maintenant comprendre en détail 
 chaque fonctionnalité ; c'est un travail que vous ferez en commun
 
-
+> Gherkin permet de décrire des fonctionnalités
 
 ## Vous êtes un journaliste : interviewez !
 
@@ -192,7 +192,7 @@ survient :
 
 Cette syntaxe, simple, que l'on nomme Gherkin, va suffire dans la majorité des cas pour
 que le fonctionnel puisse exprimer son besoin et surtout pour que vous puissiez comprendre 
-sans ambiguïté ce qui vous ai demandé.
+sans ambiguïté ce qui vous est demandé.
 
 Voici un exemple de Fonctionnalité :
 
@@ -233,7 +233,7 @@ Ces questions sont nombreuses :
 
 Autant de questions auxquelles, si vous ne les posez pas maintenant, vous serez obligé de
 répondre vous-même, avec tous les risques que cela comporte, notamment celui de devoir
-recommencer son développement !
+recommencer votre développement !
 
 Heureusement, il est tout à fait possible, avec Gherkin, de préciser des valeurs à utiliser. Il
 suffit de les encadrer dans des guillemets :
@@ -254,7 +254,7 @@ sous forme de tableaux. Les variables sont alors à encadrer par les symboles "<
 et ">" (plus grand que).
 
     [gherkin]
-    Plan de Scénario : acheter un chiot sevré
+    Plan du Scénario : acheter un chiot sevré
       Etant donné qu'un chiot ne peut être vendu avant qu'il n'ait "2 mois"
       Et que "<nom-du-chien>" a actuellement "<age-du-chien>"
       Quand j'essaye d'acheter "<nom-du-chien>"
@@ -266,6 +266,6 @@ et ">" (plus grand que).
       | rex         | 1 mois et 3 jours     |
       | rantanplan    | 15 jours            |
 
-Remarquez qu'il ne s'agit plus dans ce cas d'un "Scénario" mais d'un "Plan de Scénario".
+Remarquez qu'il ne s'agit plus dans ce cas d'un "Scénario" mais d'un "Plan du Scénario".
 
 Vous voici donc avec un besoin simple, découpé et exprimé clairement. A vous de jouer !
