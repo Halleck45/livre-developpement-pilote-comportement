@@ -1,28 +1,31 @@
 #!/usr/bin/env php
 <?php
-/* book app inspired from easybook/book */
 
-/** autoload **/
-// composer autoloader
-//require_once __DIR__.'/vendor/.composer/autoload.php';
+/*
+ * This file is part of the easybook application.
+ *
+ * (c) Javier Eguiluz <javier.eguiluz@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
-require_once __DIR__.'/vendor/autoload.php';
+if (!file_exists(__DIR__.'/vendor/autoload.php')) {
+    throw new \RuntimeException(
+        "\n"
+        ."[ERROR] easybook depends on some external libraries and components.\n"
+        ."It seems that those dependencies aren't properly installed.\n\n"
+        ."Perhaps you forgot to execute 'php composer.phar install' before\n"
+        ."using easybook for the first time?\n\n"
+        ."This command requires that you have previously installed Composer.\n"
+        ."To do so, execute the following command:\n\n"
+        ." $ curl -s http://getcomposer.org/installer | php"
+        ."\n\n"
+    );
+}
 
-// custom autoloader
-require_once __DIR__.'/vendor/symfony/class-loader/Symfony/Component/ClassLoader/UniversalClassLoader.php';
- 
-use Symfony\Component\ClassLoader\UniversalClassLoader;
- 
-$loader = new UniversalClassLoader();
+require __DIR__.'/vendor/autoload.php';
 
-$loader->registerNamespaces(array(
-    'Easybook' => __DIR__.'/vendor/easybook/easybook/src/',
-));
-
-$loader->register();
-
-
-/** book app **/
 use Easybook\DependencyInjection\Application;
 use Easybook\Console\ConsoleApplication;
 
