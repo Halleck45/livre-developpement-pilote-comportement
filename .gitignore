@@ -10,4 +10,5 @@ vendor/
 vendor*
 composer.phar
 composer.lock
-
+Output
+*/Output

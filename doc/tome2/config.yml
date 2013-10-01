@@ -1,6 +1,6 @@
 book:
     title:            "Le développement piloté par le comportement"
-    subtitle:         "Partie 1 : Communiquez avec vos développeurs<br />Partie 2 : Développeurs, faites-vous plaisir !"
+    subtitle:         "Développeurs, faites-vous plaisir !"
     author:           "Jean-François Lépine"
     edition:          "First edition"
     language:         fr
@@ -15,19 +15,6 @@ book:
         # tables), part, preface, prologue, title, toc (table of contents)
         - { element: cover }
         - { element: toc   }
-
-        - { element: part, title: "Communiquez avec vos développeurs"}
-        - { element: introduction, content: func-introduction.md }
-        - { element: chapter, number: 1, content: func-le-besoin-metier.md }
-        - { element: chapter, number: 2, content: func-communiquez.md }
-        - { element: chapter, number: 3, content: func-impliquez-les-parties-prenantes.md }
-        - { element: chapter, number: 4, content: func-exprimez-le-besoin.md }
-        - { element: chapter, number: 5, content: func-un-peu-de-recul.md }
-        - { element: chapter, number: 6, content: func-recette-maintenabilite.md }
-        - { element: chapter, number: 7, content: func-conclusion.md }
-
-
-        - { element: part, title: "Développeurs, faites-vous plaisir !"  }
         - { element: introduction, content: dev-le-dev-est-un-plaisir.md }
         - { element: chapter, number: 1, content: dev-le-client-ne-sait-pas-ce-quil-veut.md }
         - { element: chapter, number: 2, content: dev-votre-code-doit-refleter-le-besoin-fonctionnel.md }
