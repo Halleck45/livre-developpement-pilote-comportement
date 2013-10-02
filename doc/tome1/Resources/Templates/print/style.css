@@ -4,7 +4,9 @@ body {
     font-size: 14px;
     line-height: 20px;
 }
-
+p strong, li strong {
+    color:#008287;
+}
 .code {
     background:#000;
 }

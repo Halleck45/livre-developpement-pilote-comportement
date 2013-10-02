@@ -4,7 +4,9 @@ body {
     font-size: 14px;
     line-height: 20px;
 }
-
+p strong, li strong {
+    color:#008287;
+}
 .code {
     background:#000;
 }
@@ -13,7 +15,7 @@ body {
 }
 
 h1 {
-    
+
 }
 h2 {
     background-color: #F7F7F9;
@@ -51,23 +53,23 @@ blockquote p {
 
 /* --- gherkin --- */
 /*texte*/
-div.code.gherkin { 
+div.code.gherkin {
     color:#C5C8C6;
 }
 /*commentaire*/
-div.code.gherkin .co1 { 
+div.code.gherkin .co1 {
     color:#969896;
 }
 /*clef*/
-div.code.gherkin .co3 { 
+div.code.gherkin .co3 {
     color:#DE935F;
 }
 /*Exemples*/
-div.code.gherkin .co4 { 
+div.code.gherkin .co4 {
     color:#DE935F;
 }
 /*mot clef*/
-div.code.gherkin .kw1 { 
+div.code.gherkin .kw1 {
     color:#81A2BE;
 }
 /*
