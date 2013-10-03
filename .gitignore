@@ -12,3 +12,4 @@ composer.phar
 composer.lock
 Output
 */Output
+build.sh

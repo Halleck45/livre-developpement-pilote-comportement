@@ -24,6 +24,7 @@ book:
         - { element: chapter, number: 6, content: dev-conclusion.md }
         
         - { element: author, content: author.md }
+        - { element: license, content: license.md }
 
 
 
