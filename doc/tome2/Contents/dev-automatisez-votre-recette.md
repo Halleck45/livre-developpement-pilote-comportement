@@ -78,8 +78,8 @@ Créez un fichier composer.json à la racine de votre projet, avec le contenu su
 
     [json]
     {
-        "require": {
-            "behat/behat": "2.4.*@stable"
+        "require-dev": {
+            "behat/behat": "2.5.*@stable"
         },
         "config": {
             "bin-dir": "bin/"
@@ -560,11 +560,11 @@ Pour commencer, installez `Mink` :
 Modifiez le fichier composer.json que vous avez préalablement créé, et ajoutez-y le code suivant :
 
     [json]
-    "require": {
-        "behat/behat": "2.4.*@stable",
-        "behat/mink": "1.4@stable",
-        "behat/mink-extension": "*",
-        "behat/mink-goutte-driver": "*"
+    "require-dev": {
+        "behat/behat": "2.5.*@stable",
+        "behat/mink": "1.4.*@stable",
+        "behat/mink-extension": "~1.3",
+        "behat/mink-goutte-driver": "~1.1"
     }
 
 Puis relancez Composer :
