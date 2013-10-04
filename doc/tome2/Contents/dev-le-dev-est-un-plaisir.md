@@ -1,5 +1,5 @@
 # Le développement est un plaisir
-"Le client ne sait jamais ce qu'il veut". Comment-pouvez-vous, dans ce cas, faire en sorte qu'il soit satisfait ?
+"Le client ne sait jamais ce qu'il veut". Comment pouvez-vous, dans ce cas, faire en sorte qu'il soit satisfait ?
 Êtes-vous condamné à délivrer des logiciels, sites web ou applications dont le client ne sera pas réellement
 satisfait ?
 
