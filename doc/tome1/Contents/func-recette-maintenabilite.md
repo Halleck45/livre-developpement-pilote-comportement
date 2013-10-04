@@ -11,9 +11,9 @@ J'ai une excellente nouvelle pour vous : **cette syntaxe va vous
 permettre d'automatiser la recette de votre application**. Vraiment !
 
 
-Et je nous vous parle pas d'outils, si vous en avez déjà utilisé, qui
+Et je ne vous parle pas d'outils, si vous en avez déjà utilisé, qui
 vont enregistrer puis reproduire les clics et saisies que vous faites
-sur une page web (comme avec [Selenium](seleniumhq.org/...). Non, surtout pas ! 
+sur une page web (comme avec [Selenium](seleniumhq.org/...)). Non, surtout pas ! 
 Je vous parle d'outils pour lesquels vous n'avez rien à faire...
 
 
@@ -102,7 +102,7 @@ en laissant à court terme une plus grande marge de manœuvre aux équipes
 techniques pour fiabiliser leur code source et en écrivant des tests
 automatisés. Ne soyez pas un mauvais économe : laissez leur le temps
 qu'il faut pour vous fournir un produit plus stable et plus fiable. Vous
-y  gagnerez sur le long terme.
+y gagnerez sur le long terme.
 
 
 > Laissez le temps aux développeurs de fiabiliser leur code : aucune
