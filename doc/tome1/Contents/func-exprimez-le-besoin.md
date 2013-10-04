@@ -180,7 +180,7 @@ conditions d'existence de votre scénario :
 
 Toute interaction de l'utilisateur avec votre produit peut se traduire
 sous forme d'événement. Un événement est le déclencheur de votre
-scénario, qui vient juste après que le contexte initiale soit situé :
+scénario, qui vient juste après que le contexte initial soit situé :
 
     [gherkin]
     # Un Scénario se démarque par un événement :
@@ -292,7 +292,7 @@ Lorsque vous allez rédiger vos scénarios, voici ce qui risque de se
 passer :
 
 + Vous allez devoir les expliquer à votre équipe technique lorsque vous les leur fournirez
-+ Vous n'allez peut être pas penser à tout, et vos équipes devront vous solliciter très (trop) régulièrement pour des aspects que vous aurez oublié
++ Vous n'allez peut-être pas penser à tout, et vos équipes devront vous solliciter très (trop) régulièrement pour des aspects que vous aurez oubliés
 + Certains de vos scénarios ne seront pas clairs ou n'emploieront pas le vocabulaire de la Langue Commune (on a toujours tendance à se trouver soi-même très clair ; ce n'est pas toujours vrai...)
 + L'équipe risque de ne pas se sentir suffisamment impliquée
 
@@ -303,7 +303,7 @@ Pourquoi prendre ce risque alors que la solution est simple ?
 
 Il suffit en effet de faire participer toutes les équipes lors de la
 rédaction des scénarios. Attention, il ne s'agit pas de laisser
-n'importe qui faire n'importe quoi... Non, **c'est a vous d'expliquer
+n'importe qui faire n'importe quoi... Non, **c'est à vous d'expliquer
 votre besoin**, dans la Langue Commune, et **ensuite vous allez ensemble
 le traduire en scénarios**, de telle sorte que tous comprennent
 clairement ce que vous attendez d'eux.
