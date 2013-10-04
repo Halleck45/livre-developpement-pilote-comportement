@@ -5,8 +5,8 @@ la vie d'un projet. Et, parfois, une évolution fonctionnelle, même mineure, pe
 entraîner une refonte majeure d'un code source.
 
 C'est l'effet boule de neige : modifier un bloc de code va avoir un impact sur une 
-grande partie de code source, qui elle même va concerner des domaines fonctionnels très variés, 
-entraînant des régression fonctionnelle nombreuses et imprévisibles.
+grande partie de code source, qui elle-même va concerner des domaines fonctionnels très variés, 
+entraînant des régressions fonctionnelles nombreuses et imprévisibles.
 
 Si vous l'avez vécu, vous savez que c'est quelque chose qui est totalement 
 incompréhensible pour une personne qui n'est pas développeur. Ce n'est pas de la mauvaise 
@@ -38,7 +38,7 @@ vous ne pourrez plus vous en passer.
 
 L'idée générale est d'élaborer une Langue commune (cette Langue dont nous avons déjà parlé) avec 
 le fonctionnel, puis de concevoir une cartographie fonctionnelle de l'application, afin 
-de n'utiliser, dans le code source, uniquement des concepts présents dans le domaine fonctionnel.
+d'utiliser, dans le code source, uniquement des concepts présents dans le domaine fonctionnel.
 
 Dès lors, si cette démarche a été accomplie, il devient facile pour le développeur 
 d'identifier quelle proportion de code et quels modules techniques seront impactés par une 
@@ -144,7 +144,7 @@ Mais justement, ce contrôle, autrement dit ce travail de Recette client, est lo
 d'erreurs, et surtout il est impossible de contrôler à la main, lors de chaque évolution fonctionnelle, que 
 l'ensemble de l'application fonctionne toujours de la manière attendue.
 
-C'est pour cela qu'il existe désormais des outils de tests fonctionnels automatisés. C'est outils sont 
+C'est pour cela qu'il existe désormais des outils de tests fonctionnels automatisés. Ces outils sont 
 infatigables: ils traquent en permanence votre application à la recherche d'anomalies fonctionnelles.
 
 Nous verrons par la suite comment mettre en place ces outils. Mais avant de faire une recette fonctionnelle, 
