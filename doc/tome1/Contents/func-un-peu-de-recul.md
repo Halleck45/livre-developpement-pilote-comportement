@@ -166,8 +166,8 @@ vous voulez !
 
 
 Si vous tenez absolument à ajouter une fonctionnalité qui sert une autre
-vision, créez une autre projet, avec d'autres équipes, mais ne la
-greffez par artificiellement à celui-ci.
+vision, créez un autre projet, avec d'autres équipes, mais ne la
+greffez pas artificiellement à celui-ci.
 
 
 > Respecter scrupuleusement une Vision assure la cohérence et la clarté
@@ -200,7 +200,7 @@ même si Internet n'existait pas !
 
 Arès tout, qui nous dit que le web que nous connaissons ne va pas
 disparaître ? Google Calendar pourrait très bien n'exister que sur
-téléphone mobile. Mieux, sans électronique. Arès tout, si Google avait
+téléphone mobile. Mieux, sans électronique. Après tout, si Google avait
 existé au début du XXème siècle, il lui aurait fallu trouver un autre
 moyen pour délivrer ses services.
 
@@ -221,7 +221,7 @@ lorsque vous décrivez votre Produit !**
 
 Quand vous décrivez votre produit, écrivez vos fonctionnalités de sorte
 à ce qu'elles soient valables, même sur internet, même sur application
-mobile, et même par courrier postal. c'est la seule façon de pérenniser
+mobile, et même par courrier postal. C'est la seule façon de pérenniser
 votre projet. Si vous avez un site web, vos Fonctionnalités et Scénarios
 ne doivent pas changer d'un pouce lorsque vous décrivez votre
 application mobile.
