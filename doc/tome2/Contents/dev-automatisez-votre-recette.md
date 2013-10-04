@@ -144,7 +144,7 @@ contenu suivant :
         
     Scénario: Calculer l'âge d'une personne depuis une date antérieure à aujourd'hui
         Etant donné que je suis né le 06/07/1986
-        Et que nous sommes le 20/09/013
+        Et que nous sommes le 20/09/2013
         Quand je calcule mon âge
         Alors je suis informé que j'ai 27 ans
         
@@ -231,7 +231,7 @@ le code PHP fourni par Behat selon votre besoin. Par exemple :
         }
         
         /**
-         * @Given /^je calcule mon âge$/
+         * @When /^je calcule mon âge$/
          */
         public function jeCalculeMonAge()
         {
@@ -239,7 +239,7 @@ le code PHP fourni par Behat selon votre besoin. Par exemple :
         }
         
         /**
-         * @Given /^je suis informé que j\'ai (\d+) ans$/
+         * @Then /^je suis informé que j\'ai (\d+) ans$/
          */
         public function jeSuisInformeQueJAiAns($age)
         {
@@ -249,7 +249,7 @@ le code PHP fourni par Behat selon votre besoin. Par exemple :
         }
         
         /**
-         * @Given /^je suis informé que je ne suis pas encore né$/
+         * @Then /^je suis informé que je ne suis pas encore né$/
          */
         public function jeSuisInformeQueJeNeSuisPasEncoreNe()
         {
@@ -259,7 +259,7 @@ le code PHP fourni par Behat selon votre besoin. Par exemple :
         }
         
         /**
-         * @Given /^on me souhaite un joyeux anniversaire$/
+         * @Then /^on me souhaite un joyeux anniversaire$/
          */
         public function onMeSouhaiteUnJoyeuxAnniversaire()
         {
@@ -311,10 +311,10 @@ On pourrait par exemple modifier notre fonctionnalité de la façon suivante :
           Etant donné que je suis né le "<dateNaissance>"
           Et que nous sommes le "<dateDuJour>"
           Quand je calcule mon âge
-          Alors on me répond "<reponseAttendu>"
+          Alors on me répond "<reponseAttendue>"
           
           Exemples:
-            | dateNaissance | dateDuJour | reponseAttendu                           |
+            | dateNaissance | dateDuJour | reponseAttendue                          |
             | 06/07/1986    | 20/09/2013 | Vous avez 27 ans                         |
             | 06/07/1985    | 20/09/2013 | Vous avez 28 ans                         |
             | 26/11/2020    | 20/09/2013 | Vous n'êtes pas encore né                |
@@ -358,7 +358,7 @@ Voici une traduction possible de cette fonctionnalité :
         }
         
         /**
-         * @Given /^je calcule mon âge$/
+         * @When /^je calcule mon âge$/
          */
         public function jeCalculeMonAge()
         {
@@ -366,7 +366,7 @@ Voici une traduction possible de cette fonctionnalité :
         }
         
         /**
-         * @Given /^on me répond "([^"]*)"$/
+         * @Then /^on me répond "([^"]*)"$/
          */
         public function onMeRepond($response)
         {
@@ -391,7 +391,7 @@ Votre fonctionnel peut désormais ajouter autant d'exemples qui le souhaite, vot
 Vous l'avez vu, la phase de traduction d'une phrase (étape) en code source peut parfois être longue.
 
 C'est pour cela que vous devez faire en sorte de faciliter votre travail : réutilisez au maximum vos définitions. Attention, je ne 
-vous parle en aucun cas ici de découper votre code comme vous le feriez dans une application (refractoring, respect des 
+vous parle en aucun cas ici de découper votre code comme vous le feriez dans une application (refactoring, respect des 
 principes SOLID, découpage des méthodes...).
 
 Non, la réutilisabilité dans les Contextes de traduction (fichiers `*Context.php`) ne passe pas par une réutilisation du code source, 
@@ -533,7 +533,7 @@ qu'il faille effectuer des actions qui n'existent que dans un navigateur. Vous a
 
 ## Testez une application Web
 
-Vous savez désormais automatiser une recette fonctionnelle d'une applicatif. Cependant, dans le cadre d'une application internet, 
+Vous savez désormais automatiser une recette fonctionnelle d'un applicatif. Cependant, dans le cadre d'une application internet, 
 la recette fonctionnelle consiste le plus souvent à parcourir des pages web, vérifier leur conformité (délivrent-elles le service 
 attendu ?), en soumettant un formulaire, en cliquant sur un lien... Bref, en surfant sur un site web.
 
@@ -634,8 +634,8 @@ de méthodes sont disponibles :
     class FeatureContext extends MinkContext {
     
         // (...)
-        $browser = $this->getMink()->getBrowser();
-        $page = $browser->getPage();
+        $session = $this->getMink()->getSession();
+        $page = $session->getPage();
         
         $button = $page->find('css', '.class-css-du-bouton');
         $button->click();
@@ -646,8 +646,8 @@ Notez que désormais notre classe n'hérite plus de `BehatContext` mais de `Mink
 Examinons ce code ensemble. Tout d'abord, nous récupérons la page courante affichée par le navigateur :
 
     [php]
-        $browser = $this->getMink()->getBrowser();
-        $page = $browser->getPage();
+        $session = $this->getMink()->getSession();
+        $page = $session->getPage();
 
 
 Ensuite, il suffit de récupérer un élément HTML dans la page, puis d'exécuter l'action souhaitée sur cet élément (ici un clic, 
@@ -688,8 +688,8 @@ Voici la configuration à ajouter dans le fichier `behat.yml` pour indiquer que 
                 javascript_session: sahi
                 browser_name: chrome
                 sahi:
-                  host: localhost
-                  port: 9999
+                    host: localhost
+                    port: 9999
 
 Voici celle que vous pourriez utiliser pour piloter Firefox :
 
@@ -703,8 +703,8 @@ Voici celle que vous pourriez utiliser pour piloter Firefox :
                 javascript_session: sahi
                 browser_name: firefox
                 sahi:
-                  host: localhost
-                  port: 9999
+                    host: localhost
+                    port: 9999
 
 
 Vous avez désormais toutes les connaissances requises pour commencer à tester automatiquement un projet web. Pourquoi ne pas vous 
@@ -753,7 +753,7 @@ Je vous propose de vous entraîner en traduisant le besoin fonctionnel suivant :
         Et je remplis "Montant" avec "60"
         Et je presse "Go"
         Alors je devrais voir "Vous avez 50 euro sur votre compte"
-        Et je devrais voir "Les decouverts ne sont pas autorises"
+        Et je devrais voir "Les découverts ne sont pas autorises"
 
 A vous de jouer ! 
 
