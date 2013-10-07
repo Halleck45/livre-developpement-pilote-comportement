@@ -282,7 +282,7 @@ outils graphiques pour vous faciliter la vie.
 
 ## Travaillez en équipe
 
-Vous être maître de votre Produit, et c'est vous qui décidez de vos
+Vous êtes maître de votre Produit, et c'est vous qui décidez de vos
 Fonctionnalités. Par contre, n'oubliez pas que **le dialogue et
 l'échange sont primordiaux pour éviter les ambiguïtés dans votre
 projet**.
