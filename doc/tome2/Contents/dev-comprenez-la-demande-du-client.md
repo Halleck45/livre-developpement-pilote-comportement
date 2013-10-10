@@ -126,7 +126,7 @@ Fonctionnalités que vous aurez à développer en "Scénarios".
 
 
 
-## Chaque Fonctionnalité peut être découpé en Scénarios
+## Chaque Fonctionnalité peut être découpée en Scénarios
 
 Chaque Fonctionnalité peut être décrite en quatre points :
 
