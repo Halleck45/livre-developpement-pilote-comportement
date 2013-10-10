@@ -182,13 +182,13 @@ fait les préciser une bonne fois pour toute dans votre configuration, c'est-à-
 
     [yaml]
     default:
-    formatter:
-      name:                   pretty,junit,html
-      parameters:
-        output_path:          null,junit,report.html
+        formatter:
+          name:                   pretty,junit,html
+          parameters:
+            output_path:          null,junit,report.html
 
 Cette configation vous permet par exemple d'afficher le résultat dans votre terminal, mais aussi générer des fichiers 
-de compte-rendu en Html et en XML.
+de compte-rendu en HTML et en XML.
 
-> Multiplier les formats de sortie de compte-rendus permet de multipliser les usages
+> Multiplier les formats de sortie de compte-rendus permet de multiplier les usages
 
