@@ -132,12 +132,12 @@ accord avec votre vision, les implémenter.
 
 
 Après tout, votre spécialité c'est la connaissance du domaine
-fonctionnelle. Votre produit peut répondre à un besoin de bien des
+fonctionnel. Votre produit peut répondre à un besoin de bien des
 manières, et même d'une façon que vous n'avez pas encore imaginée.
 
 
 Vos développeurs ne connaissent pas à la base votre besoin fonctionnel,
-mais leur métier les amène a observer et comprendre une multitude de
+mais leur métier les amène à observer et comprendre une multitude de
 manières de répondre à un problème. Chaque site internet qu'ils visitent
 répond à une problématique, chaque site a une approche différente des
 problèmes, et eux-mêmes sont utilisateurs de produits. 
