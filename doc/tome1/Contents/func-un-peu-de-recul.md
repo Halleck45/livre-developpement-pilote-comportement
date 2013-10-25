@@ -198,7 +198,7 @@ A risque de surprendre, la réponse est partout la même : "oui" ! Oui,
 même si Internet n'existait pas !
 
 
-Arès tout, qui nous dit que le web que nous connaissons ne va pas
+Après tout, qui nous dit que le web que nous connaissons ne va pas
 disparaître ? Google Calendar pourrait très bien n'exister que sur
 téléphone mobile. Mieux, sans électronique. Après tout, si Google avait
 existé au début du XXème siècle, il lui aurait fallu trouver un autre

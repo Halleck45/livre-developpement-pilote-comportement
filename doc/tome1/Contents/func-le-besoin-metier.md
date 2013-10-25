@@ -112,7 +112,7 @@ toute l'énergie disponible (développeurs, serveurs, graphistes,
 ergonomes...) sur ce qui répond à cette vision, autrement dit sur ce qui
 est vraiment utile.
 
-> Retirez de votre Produit tout ce qui ne sert par votre Vision
+> Retirez de votre Produit tout ce qui ne sert pas votre Vision
 
 ## Vous attendez des résultats métiers
 
