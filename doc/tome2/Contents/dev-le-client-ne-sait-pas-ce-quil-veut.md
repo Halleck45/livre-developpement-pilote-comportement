@@ -50,7 +50,7 @@ Pour votre client, un "réseau social" c'est (par exemple) un espace où des emp
 de documents, découvrent les actualités de l'entreprise, échangent des informations sur les commandes...
 Bref, c'est un intranet.
 
-Attendez... Mais comment donc voulez-vous réussir à satisfaire votre client si vous ne vous n'employez
+Attendez... Mais comment donc voulez-vous réussir à satisfaire votre client si vous n'employez
 pas le même vocabulaire sur des choses si fondamentales ?
 
 Ajoutez à cela que votre client va toujours avoir tendance à faire deux choses :
