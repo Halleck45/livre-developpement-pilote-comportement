@@ -15,7 +15,7 @@ ou que l'on a un besoin bien précis que l'on sait comment résoudre ce besoin, 
 
 Est-ce la faute du développeur, qui semble incapable de comprendre ce qu'on lui demande ? Personnellement
 j'ai toujours essayé de faire de mon mieux, même si je suis conscient de ne pas avoir toujours été à la hauteur.
-Et je crois que la plupart des développeurs fait de même.
+Et je crois que la plupart des développeurs font de même.
 
 Alors ? Et si personne n'était en tort ? En réalité, la plupart des projets informatiques échouent car
 ils ne sont pas motivés par une Vision. Certes on veut délivrer un super site web, avec plein de fonctionnalités
