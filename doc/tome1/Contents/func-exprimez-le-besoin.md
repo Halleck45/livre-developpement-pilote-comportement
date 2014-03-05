@@ -76,7 +76,7 @@ Identifier clairement ces fonctionnalités est important : cela vous
 permettra de les prioriser plus facilement.
 
 
-Bon, vous allez me dire qu'une petite phrase de rien du tout ça lasse la
+Bon, vous allez me dire qu'une petite phrase de rien du tout ça laisse la
 place à beaucoup d'ambiguïtés ; et vous aurez bien raison !
 
 
