@@ -231,7 +231,7 @@ conséquences.
 
 Cette cartographie vous servira également : elle va vous permettre
 d'identifier l'indispensable, l'utile et le pratique dans votre produit.
-Vos équipes ne doivent commencer à travailler sur l'indispensable.
+Vos équipes doivent commencer à travailler sur l'indispensable.
 L'utile et le pratique viendront après.
 
 
