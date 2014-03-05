@@ -229,7 +229,7 @@ Ce comportement étant désormais identifié, il sera plus facile pour les
 conséquences.
 
 
-Cette cartographie vous sera utile à vous aussi : elle va vous permettre
+Cette cartographie vous servira également : elle va vous permettre
 d'identifier l'indispensable, l'utile et le pratique dans votre produit.
 Vos équipes ne doivent commencer à travailler sur l'indispensable.
 L'utile et le pratique viendront après.
