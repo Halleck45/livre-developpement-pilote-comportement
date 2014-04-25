@@ -93,7 +93,7 @@ fonctionnalité** :
 
 Voilà une bonne chose de faite ! **Identifiez maintenant le Service
 rendu par votre fonctionnalité**. Je conseille toujours de voir le
-service comme ni plus ni moins ce que votre commercial entend lorsqu'il
+service comme ni plus ni moins que ce que votre commercial entend lorsqu'il
 dit "c'est génial, en tant que ... vous pouvez faire ça !". Par exemple
 :
 
