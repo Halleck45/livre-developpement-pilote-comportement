@@ -126,7 +126,7 @@ explicite, en quatre courtes lignes** :
         De telle sorte que je puisse obtenir de l’argent même quand la banque est fermée
 
 N'importe quel membre de votre équipe comprendra ce qu'est cette
-fonctionnalité. N'oubliez de n'employer que le vocabulaire de votre
+fonctionnalité. Faites attention à n'employer que le vocabulaire de votre
 Langue Commune pour éviter toute ambiguïté.
 
 
