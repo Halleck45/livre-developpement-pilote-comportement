@@ -93,7 +93,7 @@ fonctionnalité** :
 
 Voilà une bonne chose de faite ! **Identifiez maintenant le Service
 rendu par votre fonctionnalité**. Je conseille toujours de voir le
-service comme ni plus ni moins ce que votre commercial entend lorsqu'il
+service comme ni plus ni moins que ce que votre commercial entend lorsqu'il
 dit "c'est génial, en tant que ... vous pouvez faire ça !". Par exemple
 :
 
@@ -126,7 +126,7 @@ explicite, en quatre courtes lignes** :
         De telle sorte que je puisse obtenir de l’argent même quand la banque est fermée
 
 N'importe quel membre de votre équipe comprendra ce qu'est cette
-fonctionnalité. N'oubliez de n'employer que le vocabulaire de votre
+fonctionnalité. Faites attention à n'employer que le vocabulaire de votre
 Langue Commune pour éviter toute ambiguïté.
 
 
