@@ -94,7 +94,7 @@ uniquement les fonctionnalités.
 
 Les outils classiques vous proposent de découper chaque besoin en tâche,
 puis chaque tâche en temps. Or une tâche n'a aucun sens fonctionnel !
-Vraiment ! C'est comme si vous demandiez à une chauffeur routier combien
+Vraiment ! C'est comme si vous demandiez à un chauffeur routier combien
 de litres d'essence il a consommé ;  certes, c'est important d'un point de
 vue financier, mais ce qui compte c'est quand même de savoir s'il a pu
 livrer tous ses clients, vous ne croyez pas ?
@@ -194,7 +194,7 @@ A votre avis :
 | Si Internet n’existait pas ?                              | ☐&nbsp;oui&nbsp;☐&nbsp;non   |
 
 
-A risque de surprendre, la réponse est partout la même : "oui" ! Oui,
+Au risque de surprendre, la réponse est partout la même : "oui" ! Oui,
 même si Internet n'existait pas !
 
 
