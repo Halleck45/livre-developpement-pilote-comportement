@@ -168,7 +168,7 @@ Pourquoi se poser ces questions ? Tout simplement pour prendre plus de plaisir d
 être plus efficace. Tant que ça ? Oui oui...
 
 Après tout, si vous connaissez les personnes qui vont utiliser ce que vous êtes en train de développer, vous
-pouvez discuter avec elles, adopter leur vocabulaire, et donc profitez directement de leur feedback. Petit à
+pouvez discuter avec elles, adopter leur vocabulaire, et donc profiter directement de leur feedback. Petit à
 petit, ce feedback sera de plus en plus positif ; ce sera alors de plus en plus agréable de voir que les gens
 sont contents de ce que vous leurs offrez.
 
