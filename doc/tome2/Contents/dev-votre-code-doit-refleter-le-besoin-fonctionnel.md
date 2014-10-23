@@ -15,7 +15,7 @@ du code source permet au final d'avoir une application qui marche, comprendre qu
 dans le code source des interactions fines, complexes et non liées aux domaines fonctionnels est 
 une chose quasiment impossible pour un fonctionnel.
 
-Il faut donc trouver une solution pour répondre à ceux deux questions fondamentales :
+Il faut donc trouver une solution pour répondre à ces deux questions fondamentales :
 
 + comment assurer la cohérence des changements techniques face aux changements fonctionnels ?
 + comment permettre aux fonctionnels d'anticiper le coût technique d'un changement fonctionnel ?
@@ -28,7 +28,7 @@ quelques pages. Non, il existe des livres très bien conçus, que je ne peux que
 lire *(cf. Domain Driven Design Vite Fait + DDD de Eric Envans) - Liens à mettre*
 
 Non, l'objectif ici est de comprendre qu'il existe des démarches de travail et de conception 
-logicielle qui permette de faciliter la gestion du besoin fonctionnel. Et c'est là, justement, l'objet du DDD.
+logicielle qui permettent de faciliter la gestion du besoin fonctionnel. Et c'est là, justement, l'objet du DDD.
 
 Le DDD est une démarche d'échange, de conception et de développement, dont l'objectif est de calquer 
 le code source (code, base de données, ressources...) sur le besoin métier.
