@@ -167,7 +167,7 @@ Pour générer un résultat réutilisable par une plate-forme d'intégration con
     [bash]
     php ./bin/behat --format junit --out resultat.xml   
 
-Pour aller plus loin avec les plate-formes d'ingréation continue, je vous invite par exemple à consulter le site http://jenkins-php.org/.
+Pour aller plus loin avec les plate-formes d'intégration continue, je vous invite par exemple à consulter le site http://jenkins-php.org/.
 
 Il existe également des outils visuels, basés sur ce format de sortie, pour fournir aux fonctionnels une vraie interface graphique 
 pour rédiger les spécifications, mais aussi pour avoir une vue d'ensemble des résultats des implémentations de ces spécifications.
