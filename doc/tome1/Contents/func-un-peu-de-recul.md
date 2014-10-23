@@ -301,7 +301,7 @@ support visuel pour réfléchir à quelque chose. **Il n'est pas simple de
 ne se focaliser uniquement sur le Comportement d'un Produit, sans se
 soucier de son apparence**, de son interface graphique. Ce sera d'autant
 plus vrai si vous avez un profil technique ou si vous êtes très
-familiarisé avec les nouvelles technologiques. 
+familiarisé avec les nouvelles technologies. 
 
 
 Pour résoudre cette difficulté, tentez systématiquement de vous
