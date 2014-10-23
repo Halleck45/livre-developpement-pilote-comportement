@@ -124,7 +124,7 @@ fonctionnalité plus complète par là, un autre lors de l'itération suivante..
 
 
 Bien entendu, cela ne va pas sans un changement des méthodologies de travail : il va falloir découper
-les fonctionnalités pour faire en sorte qu'elle puisse être développées rapidement, il faut optimiser
+les fonctionnalités pour faire en sorte qu'elles puissent être développées rapidement, il faut optimiser
 les recettes (pourquoi ne pas en profiter pour utiliser des tests automatisés, comme des tests
 unitaires ?)...
 
