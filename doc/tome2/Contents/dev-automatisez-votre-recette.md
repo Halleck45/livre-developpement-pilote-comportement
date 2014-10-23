@@ -377,7 +377,7 @@ Voici une traduction possible de cette fonctionnalité :
     }
 
 
-Votre fonctionnel peut désormais ajouter autant d'exemples qui le souhaite, votre travail de traduction ne changera plus.
+Votre fonctionnel peut désormais ajouter autant d'exemples qu'il le souhaite, votre travail de traduction ne changera plus.
 
 > Utiliser des exemples est très simple avec Behat.
 
