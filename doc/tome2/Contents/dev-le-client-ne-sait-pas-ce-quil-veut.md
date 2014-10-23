@@ -160,7 +160,7 @@ vous développez un intranet, ce sont les employés qui utiliseront l'intranet q
 du service.
 
 Dans les deux cas, vous aurez besoin de comprendre comment le Produit va être utilisé. Finalement, à quoi
-sert cette fonctionnalité ? Pourquoi est-elle utile ? Comment va elle rendre service ? Va t-elle faciliter
+sert cette fonctionnalité ? Pourquoi est-elle utile ? Comment va t-elle rendre service ? Va t-elle faciliter
 la vie de l'utilisateur ? Va t-elle lui permettre de réaliser quelque chose de nouveau ? Lui faire gagner
 du temps ? Bref, quel est le bénéfice métier de la fonctionnalité que je vais développer ?
 
