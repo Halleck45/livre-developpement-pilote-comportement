@@ -38,7 +38,7 @@ représentation peut concerner l'ensemble ou une partie de votre Produit.
 
 :   Besoin métier spécifique. Elle est représentée par un texte court qui
 communique ce besoin métier au reste de l'équipe. Elle concerne le
-service rendu à un utilisateur, et décrit le bénéfice fonctionnelle qui
+service rendu à un utilisateur, et décrit le bénéfice fonctionnel qui
 en est tiré.
 
 **Scénario**
