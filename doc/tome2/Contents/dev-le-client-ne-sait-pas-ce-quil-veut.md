@@ -184,7 +184,7 @@ permettra toujours d'échanger : échanger avec votre client, les utilisateurs f
 
 Il y a quelques temps, j'ai lancé un sondage auprès des développeurs de la société que j'ai accompagnée. 
 Une des questions était à peu près la suivante : "Prenez-vous plaisir dans votre travail?".
-Près d'un quart des réponses était négatif. Quel dommage !
+Près d'un quart des réponses étaient négatives. Quel dommage !
 
 N'oubliez pas que vous travaillez dans un monde d'humains : plus vous interagirez avec eux, plus vous
 fournirez un travail qui leur procurera satisfaction, plus vous même éprouverez du plaisir à travailler.
