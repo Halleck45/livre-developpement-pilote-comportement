@@ -124,7 +124,7 @@ fonctionnalité plus complète par là, un autre lors de l'itération suivante..
 
 
 Bien entendu, cela ne va pas sans un changement des méthodologies de travail : il va falloir découper
-les fonctionnalités pour faire en sorte qu'elle puisse être développées rapidement, il faut optimiser
+les fonctionnalités pour faire en sorte qu'elles puissent être développées rapidement, il faut optimiser
 les recettes (pourquoi ne pas en profiter pour utiliser des tests automatisés, comme des tests
 unitaires ?)...
 
@@ -160,7 +160,7 @@ vous développez un intranet, ce sont les employés qui utiliseront l'intranet q
 du service.
 
 Dans les deux cas, vous aurez besoin de comprendre comment le Produit va être utilisé. Finalement, à quoi
-sert cette fonctionnalité ? Pourquoi est-elle utile ? Comment va elle rendre service ? Va t-elle faciliter
+sert cette fonctionnalité ? Pourquoi est-elle utile ? Comment va t-elle rendre service ? Va t-elle faciliter
 la vie de l'utilisateur ? Va t-elle lui permettre de réaliser quelque chose de nouveau ? Lui faire gagner
 du temps ? Bref, quel est le bénéfice métier de la fonctionnalité que je vais développer ?
 
@@ -168,7 +168,7 @@ Pourquoi se poser ces questions ? Tout simplement pour prendre plus de plaisir d
 être plus efficace. Tant que ça ? Oui oui...
 
 Après tout, si vous connaissez les personnes qui vont utiliser ce que vous êtes en train de développer, vous
-pouvez discuter avec elles, adopter leur vocabulaire, et donc profitez directement de leur feedback. Petit à
+pouvez discuter avec elles, adopter leur vocabulaire, et donc profiter directement de leur feedback. Petit à
 petit, ce feedback sera de plus en plus positif ; ce sera alors de plus en plus agréable de voir que les gens
 sont contents de ce que vous leurs offrez.
 
@@ -184,7 +184,7 @@ permettra toujours d'échanger : échanger avec votre client, les utilisateurs f
 
 Il y a quelques temps, j'ai lancé un sondage auprès des développeurs de la société que j'ai accompagnée. 
 Une des questions était à peu près la suivante : "Prenez-vous plaisir dans votre travail?".
-Près d'un quart des réponses était négatif. Quel dommage !
+Près d'un quart des réponses étaient négatives. Quel dommage !
 
 N'oubliez pas que vous travaillez dans un monde d'humains : plus vous interagirez avec eux, plus vous
 fournirez un travail qui leur procurera satisfaction, plus vous même éprouverez du plaisir à travailler.

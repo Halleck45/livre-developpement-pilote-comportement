@@ -243,7 +243,7 @@ suffit de les encadrer dans des guillemets :
       Etant donné qu'un chiot ne peut être vendu avant qu'il n'ait "2 mois"
       Et que "Médor le chien" a actuellement "1 mois"
       Quand j'essaye d'acheter "Médor le chien"
-      Alors on doit me dire "Médor le chient est trop jeune !"
+      Alors on doit me dire "Médor le chien est trop jeune !"
 
 
 

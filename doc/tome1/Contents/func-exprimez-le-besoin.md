@@ -297,7 +297,7 @@ passer :
 + L'équipe risque de ne pas se sentir suffisamment impliquée
 
 
-Ces écueils ne sont bien sûr systématiques, mais le risque est là.
+Ces écueils ne sont bien sûr pas systématiques, mais le risque est là.
 Pourquoi prendre ce risque alors que la solution est simple ?
 
 
