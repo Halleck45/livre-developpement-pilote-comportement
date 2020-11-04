@@ -1,11 +1,11 @@
 # Livre sur le Développement piloté par le comportement
 
-Ce livre est publié avec EasyBook.
+![](https://repository-images.githubusercontent.com/13304945/f5f26600-1e9b-11eb-84e7-fbbf90790e49)
 
-## Télécharger les livres
+## Télécharger les ebooks
 
-+ Tome 1 : à destination des personnes "métier" ([pdf](https://github.com/Halleck45/livre-developpement-pilote-comportement/releases/download/1.0.0/developpement-pilote-par-le-comportement-tome1.pdf) | [epub](https://github.com/Halleck45/livre-developpement-pilote-comportement/releases/download/1.0.0/developpement-pilote-par-le-comportement-tome1.epub))
-+ Tome 2 : pour les développeurs ([pdf](https://github.com/Halleck45/livre-developpement-pilote-comportement/releases/download/1.0.0/developpement-pilote-par-le-comportement-tome2.pdf) | [epub](https://github.com/Halleck45/livre-developpement-pilote-comportement/releases/download/1.0.0/developpement-pilote-par-le-comportement-tome2.epub))
++ **Tome 1 : à destination des personnes "métier"** ([pdf](https://github.com/Halleck45/livre-developpement-pilote-comportement/releases/download/1.0.0/developpement-pilote-par-le-comportement-tome1.pdf) | [epub](https://github.com/Halleck45/livre-developpement-pilote-comportement/releases/download/1.0.0/developpement-pilote-par-le-comportement-tome1.epub))
++ **Tome 2 : pour les développeurs** ([pdf](https://github.com/Halleck45/livre-developpement-pilote-comportement/releases/download/1.0.0/developpement-pilote-par-le-comportement-tome2.pdf) | [epub](https://github.com/Halleck45/livre-developpement-pilote-comportement/releases/download/1.0.0/developpement-pilote-par-le-comportement-tome2.epub))
 
 ## Générer les livres locallement
 
@@ -16,6 +16,8 @@ Par exemple:
 ```./book --dir=doc publish tome1 print```
 
 ## Copyright
+
+Ce livre est publié avec EasyBook.
 
 Copyright (c) 2013 Jean-François Lépine. See LICENSE for details.
 
