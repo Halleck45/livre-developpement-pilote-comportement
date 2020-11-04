@@ -1,6 +1,11 @@
-# Livre sur le Développement piloté par le comportement
+# Livre sur le Développement piloté par le comportement
 
 Ce livre est publié avec EasyBook.
+
+## Télécharger les livres
+
++ Tome 1 : à destination des personnes "métier" ([pdf](https://github.com/Halleck45/livre-developpement-pilote-comportement/releases/download/1.0.0/developpement-pilote-par-le-comportement-tome1.pdf) | [epub](https://github.com/Halleck45/livre-developpement-pilote-comportement/releases/download/1.0.0/developpement-pilote-par-le-comportement-tome1.epub))
++ Tome 2 : pour les développeurs ([pdf](https://github.com/Halleck45/livre-developpement-pilote-comportement/releases/download/1.0.0/developpement-pilote-par-le-comportement-tome2.pdf) | [epub](https://github.com/Halleck45/livre-developpement-pilote-comportement/releases/download/1.0.0/developpement-pilote-par-le-comportement-tome2.epub))
 
 ## Générer les documents
 
